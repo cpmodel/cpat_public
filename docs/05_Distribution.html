@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>CPAT Documentation - 5&nbsp; Distribution Module</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./06_Air_pollution.html" rel="next">
+<link href="./04_Multipliers.html" rel="prev">
+<link href="././00/media/image1.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Distribution Module</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">CPAT Documentation</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/wb-mrio/cpat_public" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+    <a href="./CPAT-Documentation.pdf" title="Download PDF" class="sidebar-tool px-1"><i class="bi bi-file-pdf"></i></a>
+  <a href="" class="quarto-reader-toggle sidebar-tool" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><strong>Cover</strong></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_User_Guide.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">User Guide and Climate Policies in CPAT</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02_Summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary of the approach and applications</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_Mitigation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Mitigation overview and methodology</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_Multipliers.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Multipliers</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05_Distribution.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Distribution Module</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_Air_pollution.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Air pollution module</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07_Road_Transport.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Road Transport Module</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title"><strong><em>Chapter Contents</em></strong></h2>
+   
+  <ul>
+  <li><a href="#sec-5_1" id="toc-sec-5_1" class="nav-link active" data-scroll-target="#sec-5_1"><span class="toc-section-number">5.1</span>  Introduction</a>
+  <ul>
+  <li><a href="#sec-5_1_1" id="toc-sec-5_1_1" class="nav-link" data-scroll-target="#sec-5_1_1"><span class="toc-section-number">5.1.1</span>  Summary: Distribution Module Overview</a>
+  <ul class="collapse">
+  <li><a href="#sec-5_1_1_1" id="toc-sec-5_1_1_1" class="nav-link" data-scroll-target="#sec-5_1_1_1"><span class="toc-section-number">5.1.1.1</span>  Problem definition and approach</a></li>
+  <li><a href="#sec-5_1_1_2" id="toc-sec-5_1_1_2" class="nav-link" data-scroll-target="#sec-5_1_1_2"><span class="toc-section-number">5.1.1.2</span>  Functionalities</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#sec-5_2" id="toc-sec-5_2" class="nav-link" data-scroll-target="#sec-5_2"><span class="toc-section-number">5.2</span>  Household budget survey preparation</a>
+  <ul>
+  <li><a href="#sec-5_2_1" id="toc-sec-5_2_1" class="nav-link" data-scroll-target="#sec-5_2_1"><span class="toc-section-number">5.2.1</span>  Household budget shares</a></li>
+  <li><a href="#sec-5_2_2" id="toc-sec-5_2_2" class="nav-link" data-scroll-target="#sec-5_2_2"><span class="toc-section-number">5.2.2</span>  Household infrastructure access</a></li>
+  </ul></li>
+  <li><a href="#sec-5_3" id="toc-sec-5_3" class="nav-link" data-scroll-target="#sec-5_3"><span class="toc-section-number">5.3</span>  Microsimulation Method</a>
+  <ul>
+  <li><a href="#sec-5_3_1" id="toc-sec-5_3_1" class="nav-link" data-scroll-target="#sec-5_3_1"><span class="toc-section-number">5.3.1</span>  Tax incidence analysis</a></li>
+  <li><a href="#sec-5_3_2" id="toc-sec-5_3_2" class="nav-link" data-scroll-target="#sec-5_3_2"><span class="toc-section-number">5.3.2</span>  Optional features for tax incidence analysis</a>
+  <ul class="collapse">
+  <li><a href="#sec-5_3_2_1" id="toc-sec-5_3_2_1" class="nav-link" data-scroll-target="#sec-5_3_2_1"><span class="toc-section-number">5.3.2.1</span>  Mitigation-adjusted tax incidence</a></li>
+  <li><a href="#sec-5_3_2_2" id="toc-sec-5_3_2_2" class="nav-link" data-scroll-target="#sec-5_3_2_2"><span class="toc-section-number">5.3.2.2</span>  Decile-specific price elasticities of demand</a></li>
+  <li><a href="#sec-5_3_2_3" id="toc-sec-5_3_2_3" class="nav-link" data-scroll-target="#sec-5_3_2_3"><span class="toc-section-number">5.3.2.3</span>  Imperfect pass-through</a></li>
+  <li><a href="#sec-5_3_2_4" id="toc-sec-5_3_2_4" class="nav-link" data-scroll-target="#sec-5_3_2_4"><span class="toc-section-number">5.3.2.4</span>  Emissions-based adjustment of sectoral price changes</a></li>
+  <li><a href="#sec-5_3_2_5" id="toc-sec-5_3_2_5" class="nav-link" data-scroll-target="#sec-5_3_2_5"><span class="toc-section-number">5.3.2.5</span>  Cooking-fuel adjusted tax incidence</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#sec-5_4" id="toc-sec-5_4" class="nav-link" data-scroll-target="#sec-5_4"><span class="toc-section-number">5.4</span>  Incidence of compensatory transfers</a>
+  <ul>
+  <li><a href="#sec-5_4_1" id="toc-sec-5_4_1" class="nav-link" data-scroll-target="#sec-5_4_1"><span class="toc-section-number">5.4.1</span>  Targeted and infrastructure-based transfers</a></li>
+  <li><a href="#transfers-through-existing-social-protection-schemes" id="toc-transfers-through-existing-social-protection-schemes" class="nav-link" data-scroll-target="#transfers-through-existing-social-protection-schemes"><span class="toc-section-number">5.4.2</span>  Transfers through existing social protection schemes</a></li>
+  <li><a href="#carbon-price-revenue-recycling-via-personal-income-tax-reductions" id="toc-carbon-price-revenue-recycling-via-personal-income-tax-reductions" class="nav-link" data-scroll-target="#carbon-price-revenue-recycling-via-personal-income-tax-reductions"><span class="toc-section-number">5.4.3</span>  Carbon Price Revenue Recycling via Personal Income Tax Reductions</a>
+  <ul class="collapse">
+  <li><a href="#section-1-data-requirements-and-setup" id="toc-section-1-data-requirements-and-setup" class="nav-link" data-scroll-target="#section-1-data-requirements-and-setup"><span class="toc-section-number">5.4.3.1</span>  Section 1: Data Requirements and Setup</a></li>
+  <li><a href="#section-2-calculations" id="toc-section-2-calculations" class="nav-link" data-scroll-target="#section-2-calculations"><span class="toc-section-number">5.4.3.2</span>  Section 2: Calculations</a></li>
+  <li><a href="#section-3-assumptions-and-caveats" id="toc-section-3-assumptions-and-caveats" class="nav-link" data-scroll-target="#section-3-assumptions-and-caveats"><span class="toc-section-number">5.4.3.3</span>  Section 3: Assumptions and Caveats</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/wb-mrio/cpat_public/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Distribution Module</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="sec-5_1" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="sec-5_1"><span class="header-section-number">5.1</span> Introduction</h2>
+<p>Income inequality, poverty and, more generally, social justice considerations are increasingly becoming a centerpiece of governments’ fiscal policy decisions. With the COVID-19 pandemic leading to sharp increases in inequality and poverty, distributional considerations have become even more relevant to decision-makers. In the realm of environmental fiscal reforms, equity and poverty concerns often receive more political attention than in the context of ‘traditional’ fiscal reforms. Public acceptance is strongly driven by reforms’ perceived fairness and impact on low-income households.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>The Distribution Module of CPAT1.0 aims to inform the spread of the immediate fiscal incidence <em>across</em> (vertical distribution) and <em>within</em> (horizontal distribution) income groups, focusing on consumption effects and compensatory schemes. Tax-induced consumer price changes and revenue recycling in the form of direct transfers have been at the center of the literature on fiscal distribution, since such salient, short-term effects are arguably the most relevant from a political economy perspective.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>The Distribution Module allows the user to estimate the <u>carbon tax incidence on consumption</u>, taking into account the direct effect from the use of fuels, as well as the indirect effect from the consumption of other, non-fuel/-energy goods and services. We follow the standard approach in the literature, combining household budget survey (HBS) information with input-output (IO) data, adjusted such that they yield the same effective carbon price revenues as the ones produced by the Mitigation Module.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> Country-fuel-sector- price increases are based on scenario-specific estimates from CPAT’s Mitigation Module. Further, the user is provided with two options to relax the typical IO assumptions of full cost-push impacts and absence of behavioral adjustments. Additionally, there is one option to rebate the price increases of a country’s primary cooking fossil fuel to selected bottom deciles to help prevent them from switching to biomass. Results from the Distribution Module have been cross-checked and verified against peer-reviewed country case studies (c.f. Table VI-4 in the Appendix).<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<p>Four modes of <u>direct and indirect transfer schemes</u> can be simulated, once the user inputs the share of revenues allocated under each scheme type: i) new or existing targeted transfers (for which the user can decide the targeted percentiles, among other features); ii) transfers towards public investment in infrastructure access; and iii) scaling up an existing social protection scheme (following the targeting of the initial scheme)), and iv) reforming countries’ personal income tax (PIT) schemes. The revenue amounts available for redistribution are based on scenario-specific estimates from the Mitigation Module. New or existing targeted transfers are universal among the targeted percentiles, while infrastructure transfers are targeted to those households without initial access to clean water, affordable electricity, clean sanitation, Information and Communication Technologies (ICT), or public transport, based on HBS microdata. Revenue recycling that increases current public spending is proportional to the existing social protection schemes, such as social assistance, insurance, or in-kind benefit schemes. Further to the above, transfer scheme targeting is also available for decile-specific population shares that are below international poverty lines (incomes of 1.9 or 3.2 2011 PPP USD/day) via “poverty-conditional cash transfers”.</p>
+<p>Both negative consumption effects as well as positive compensation scheme effects are expressed as shares of pre-reform consumption and in absolute, per-capita monetary terms on a decile level, separately for the rural, urban, and overall (or national) populations.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> For vertical distribution graphs, the user can further choose between decile mean and median consumption data inputs. Horizontal distribution between the 25<sup>th</sup> and 75<sup>th</sup> percentile of consumption data inputs within each decile is available for consumption effects (both absent as well as net of compensation schemes).</p>
+<section id="sec-5_1_1" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="sec-5_1_1"><span class="header-section-number">5.1.1</span> Summary: Distribution Module Overview</h3>
+<section id="sec-5_1_1_1" class="level4" data-number="5.1.1.1">
+<h4 data-number="5.1.1.1" class="anchored" data-anchor-id="sec-5_1_1_1"><span class="header-section-number">5.1.1.1</span> Problem definition and approach</h4>
+<p>Both taxation and spending policies may aim to redistribute in a way that post-tax income equality is ameliorated relative to pre-tax income equality, often with a special emphasis on the poorest segments of the population. Thus, the progressivity or regressivity (that is, the vertical incidence of fiscal policy options across income groups) are policy-relevant considerations. In addition, horizontal distribution (i.e., distribution within the same income group) has gained increasing attention, as the within-income-group spread of the incidence (expressed as a share of consumption) has been found to be potentially larger than the spread of incidence across income groups due to heterogeneous socioeconomic conditions.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> Horizontal distributional policy analysis is of particular interest with respect to political economy as well as poverty considerations. Identifying the parts of the population which will benefit/pay the most, relative to their income, is crucial to designing and evaluating any tax or social assistance scheme.</p>
+<p>We measure distributional effects of both tax incidence and revenue recycling in a narrow monetary sense, proxied by relative changes in consumption. Our estimates overstate the negative taxation effects, while understating the positive effects of climate change mitigation and compensation measures. Specifically, the tax incidence analysis focuses on the consumption channel, disregarding structural effects on wages and overall employment, which may positively outweigh consumption-side effects, as they tend to be positive, larger and progressive.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> In addition, we disregard the large health co-benefits from improved air and environmental quality as well as reduced traffic accidents, road damage and congestion (please, refer to Technical Appendices of Air Pollution and Transport Modules for further details).</p>
+<p>CPAT’s proposed compensation schemes can facilitate the reduction of more fundamental inequalities, due to their economic co-benefits of improved health, education, and opportunity. in this sense, proxying compensation scheme benefits to households by using their monetary amounts is an underestimate of said benefits. For example, sustained conditional cash transfer programs to poorer households can significantly improve child health and educational outcomes and, thus, promote the formation of human capital.<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> Unconditional cash transfers to the ultra-poor can accelerate the energy transition to cleaner fuels and reduce energy poverty.<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a> Increasing the quality and quantity of and access to infrastructure has been found to significantly reduce income inequality, poverty and to accelerate growth.<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a> Furthermore, scaled-up social protection measures and access to clean sanitation or clean energy can have similar positive, long-term effects regarding development and human capital outcomes. Finally, improving PIT progressivity has been associated with lower levels of income inequality.<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a></p>
+</section>
+<section id="sec-5_1_1_2" class="level4" data-number="5.1.1.2">
+<h4 data-number="5.1.1.2" class="anchored" data-anchor-id="sec-5_1_1_2"><span class="header-section-number">5.1.1.2</span> Functionalities</h4>
+<p>CPAT’s Distribution Module enables <em>ex-ante</em> analyses necessary for informed decision making with respect to how equitable and pro-poor environmental fiscal reform packages would be across countries. As there is no “one-size-fits-all” fiscal reform, the user can choose between several policy design options, particularly with respect to distributional implications within and across household income groups.</p>
+<p>The Distribution Module includes the following features:</p>
+<p><strong>Tax incidence:</strong></p>
+<ul>
+<li><p>Consumption effect (from direct and indirect energy consumption)</p></li>
+<li><p>Adjustments to consumption effect:</p>
+<ul>
+<li><p>Mitigation-adjusted tax incidence (“behavioral and structural change”)</p></li>
+<li><p>“Emissions-based adjustment of product price changes” (implied revenues on households from IO data consistent with calculated revenues in Mitigation Module)</p></li>
+<li><p>Reduced cost pass-through (of energy price increases)</p></li>
+<li><p>Behavioral adjustments, considering consumption decile-specific price elasticities of demand</p></li>
+<li><p>Special tax rebate for poor households: exemption of cooking fuels</p></li>
+</ul></li>
+</ul>
+<p><strong>Compensatory scheme incidence:</strong></p>
+<ul>
+<li><p>Various transfer schemes:</p>
+<ul>
+<li><p>Targeted transfers (new or existing social protection scheme(s))</p></li>
+<li><p>Public investment (in infrastructure access spending – e.g., toward SDGs, proxied as cash</p></li>
+</ul></li>
+<li><p>Current (non-targeted) spending (e.g., scaling up existing social protection scheme(s))Choice of receiving income percentiles and precision of targeting under “Targeted transfers”</p></li>
+<li><p>Cash transfers to people below poverty line: targeting of decile-specific population that is below international poverty lines (incomes of 1.9 or 3.2 2011 PPP USD/day)</p></li>
+<li><p>Reduction in PIT liabilities</p></li>
+</ul>
+<p><strong>Socioeconomic heterogeneity</strong>: results using median/mean HBS decile-level data, across overall, rural and urban (sub-)samples, horizontal/vertical distribution of effects, consumption effects absent (and net of) compensation schemes Some features may not be available for all countries covered, due to data-related availability constraints. The Distribution sheet in CPAT lists the countries available in the Module. .</p>
+<p>The full <a href="https://worldbankgroup-my.sharepoint.com/:f:/g/personal/dheine_worldbank_org/EkSiwIBBzxdGh7jePslDsUMBy-f_rMWlAFgC05Ag1wQ0vQ?e=eegMbF">Guiding Package for CPAT microdata harmonization</a>, i.e.&nbsp;for preparing a country’s household microdata for inclusion in the Distribution Module, includes a Codebook, supplementary Guidebook, as well as two coding templates (in STATA format) containing data harmonization, preparation and cleaning processes.</p>
+</section>
+</section>
+</section>
+<section id="sec-5_2" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="sec-5_2"><span class="header-section-number">5.2</span> Household budget survey preparation</h2>
+<p><strong>Estimations of the distribution of carbon tax burdens as well as revenue recycling scheme benefits are largely based on microdata in the form of national household budget surveys (HBSs). This section describes how the primary household-level data are harmonized and aggregated before they are incorporated into CPAT.</strong></p>
+<section id="sec-5_2_1" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="sec-5_2_1"><span class="header-section-number">5.2.1</span> Household budget shares</h3>
+<p><span class="math inline">\(\pi^{\text{dg}}\)</span> is the budget share of expenditures on a given, category <span class="math inline">\(g\)</span> item by a household in decile <span class="math inline">\(d\)</span>. It represents the consumption as observed in a survey year in a specific country. Household consumption shares are processed from HBSs, which are country-specific and heterogenous in terms of structure and coverage. Where possible, CPAT aims to incorporate the latest HBS of the country. This section describes how these shares are calculated.</p>
+<p>First <span class="math inline">\(C_{j}^{g}\)</span>, household <span class="math inline">\(j\)</span>’s annual consumption on expenditure category <span class="math inline">\(g\)</span>, is estimated from HBSs. There are two types of expenditure categories: i) direct fuel/energy consumption expenditures: electricity, natural gas, gasoline, diesel, coal, oil/lubricants, LPG, kerosene, charcoal, ethanol and firewood (listed in <a href="#fig-5_1">Figure&nbsp;<span>5.1</span></a>) and ii) non-direct fuel/energy consumption expenditure<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a>: appliances, chemicals, clothing, communications, education, food, health services, housing, paper, pharmaceuticals and medicine, recreation and tourism, transportation equipment, public transportation, and other expenditures <a href="#tbl-5_2">Table&nbsp;<span>5.2</span></a>. Expenditure items in household surveys are mapped to these CPAT expenditure categories<a href="#fn13" class="footnote-ref" id="fnref13" role="doc-noteref"><sup>13</sup></a> and aggregated to create household consumption under said categories.</p>
+<p>In addition to budget shares, CPAT captures households’ poverty status with respect to the PPP USD 2011 1.9 and 3.2 daily poverty lines. Dummy variables indicate position with respect to the poverty line(s) based on households’ per capita total consumption including actual (not imputed) rent. Poverty incidence is then summed by decile and informs poverty-conditional cash transfers CPAT.</p>
+<p>Subsequently, household budget shares <span class="math inline">\(\pi_{j}^{g}\)</span> are calculated for each household <span class="math inline">\(j\)</span> from by dividing each household’s consumption of each expenditure category <span class="math inline">\(g\)</span> by total household consumption (<span class="math inline">\(C_{j}\)</span>). Total consumption (for the purposes of budget share estimation) is the sum of consumption in all expenditure categories g, where the category “housing” (see Table VI-3) does not include imputed rent of a dwelling.<a href="#fn14" class="footnote-ref" id="fnref14" role="doc-noteref"><sup>14</sup></a></p>
+<p><span id="eq-5_1"><span class="math display">\[\pi_{j}^{g} = \frac{C_{j}^{g}}{C_{j}} = \frac{C_{j}^{g}}{\sum C_{j}^{g}} \tag{5.1}\]</span></span></p>
+<p>Household budget shares <span class="math inline">\(\pi_{j}^{g}\)</span> are aggregated at the household per-capita consumption decile to arrive at <span class="math inline">\(\pi^{\text{dg}}\)</span>. Household per-capita consumption-based decile generation (as well as any associated percentile statistics) are weighed by the corresponding survey per-capita population weights (<span class="math inline">\(popw\)</span>) to ensure sample representativeness at the national level. Household per-capita consumption (<span class="math inline">\(cons\_ pc)\)</span> for the purposes of decile generation is total household consumption including imputed rent (<span class="math inline">\(tot\_cons\)</span>) divided by household size (<span class="math inline">\(hhsize\)</span>): <span class="math inline">\(cons\_ pc = tot\_cons/hhsize\)</span>. Following the literature, CPAT, thus, proxies lifetime income, or standard of living, with consumption expenditures, as they are widely considered a better proxy for welfare than nominal (e.g., wage) income.<a href="#fn15" class="footnote-ref" id="fnref15" role="doc-noteref"><sup>15</sup></a></p>
+<p><span class="math inline">\(\pi^{\text{dg}}\)</span> is estimated for the overall (i.e., national) sample of households as well as separately for urban and rural households. In addition to average household budget shares, the median, 25<sup>th</sup> percentile, and 75<sup>th</sup> percentile statistics are generated for all three samples (overall, urban and rural) at the decile level.</p>
+<p><em>Outlier treatment</em>: Any non-missing consumption shares that lie above three (3) standard deviations (SD) of their corresponding (popw-weighted) means in each specific expenditure category are treated as outliers. The outliers are replaced, by decile, with the decile’s popw-weighted mean household consumption share in the specific expenditure category.</p>
+<p><em>Decile sensitivity check</em>: Household per-capita consumption deciles are based on total household consumption, including imputed rent. The sensitivity of these deciles is checked against the number of households shifting deciles when total household consumption is defined as excluding any rent (<em>tot_cons_norent in 1</em>).</p>
+</section>
+<section id="sec-5_2_2" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="sec-5_2_2"><span class="header-section-number">5.2.2</span> Household infrastructure access</h3>
+<p>In addition to household budget shares, indicators for household access to infrastructure are generated and used within CPAT. <span class="math inline">\(\digamma^{\text{di}}\)</span> is the weighted share of households (in percent) within decile d which have access to infrastructure category <em>i</em>. These categories are access to i) water; ii) electricity; iii) sanitation; iv) ICT; and v) public transportation (listed and defined in <a href="#tbl-5_3">Table&nbsp;<span>5.3</span></a> under “infrastructure access”).</p>
+<p>First, <span class="math inline">\(\digamma_{j}^{i}\)</span>, a binary variable taking the value of 1 if a household has access to infrastructure category I (0 otherwise), is generated for each household j in the HBS. Next, <span class="math inline">\(\digamma^{\text{di}}\)</span>, the popw-weighted average share of <span class="math inline">\(\digamma_{j}^{i}\)</span> , is calculated for each decile. Note that, since weights are per capita weights, infrastructure access shares represent individuals (not households). Shares are calculated for the overall, urban, and rural sub-samples.</p>
+</section>
+</section>
+<section id="sec-5_3" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="sec-5_3"><span class="header-section-number">5.3</span> Microsimulation Method</h2>
+<p>CPAT’s Distribution Module enables <em>ex-ante</em> analysis of distributional effects of user-defined environmental fiscal reform packages, focusing on consumption effects and compensatory schemes (see Figure 5‑1 for an overview). Section 5.3.1 outlines the carbon tax incidence analysis, section 5.3.2 presents further options with regard to tax incidence estimates; section 5.4 introduces the estimation of compensatory schemes, including transfers and reductions in PIT liabilities.</p>
+<div id="fig-5_1" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="./05/media/image1.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;5.1: Overview of the deployed microsimulation approach and respective functionalities. Note: for the first step (calculating direct and indirect energy consumption), please refer to section 5.2 Household data preparation.</figcaption><p></p>
+</figure>
+</div>
+<section id="sec-5_3_1" class="level3" data-number="5.3.1">
+<h3 data-number="5.3.1" class="anchored" data-anchor-id="sec-5_3_1"><span class="header-section-number">5.3.1</span> Tax incidence analysis</h3>
+<p>CPAT assesses the consumption incidence of carbon fiscal policies across different income groups by means of a microsimulation model. Consumption effects are measured as the costs of maintaining pre-reform consumption (i.e., households’ additional expenditures), observed from country-level HBS data, with the user-defined carbon tax scenario in place. Thus, this microsimulation focuses on the short-term consumption changes in terms of compensating variation, assuming fixed consumption patterns. In other words, households are assumed not to adjust their behavior in response to the carbon price, and consumption effects represent upper-bound estimates (Dorband et al 2019). Estimating price and income elasticities of demand, differentiated across countries, income levels and energy/non-energy products is a data- and resource-intensive task, which can be partly integrated into the analysis via a user option to apply decile-specific price elasticities of demand (based on USDA data<a href="#fn16" class="footnote-ref" id="fnref16" role="doc-noteref"><sup>16</sup></a>) to said microsimulation estimates (see also Section 4.3.2).</p>
+<p>The <strong>consumer incidence of an energy-based upstream carbon tax</strong> is determined by the tax-induced price changes of fossil fuels, as well as by the direct and indirect energy consumption bundles of households; that is, by households’ direct fuel combustion or use of electricity, and the indirect consumption of energy embedded in other goods and services. Thus, the proportion of additional expenditures <em>P</em> of individual <em>j</em> after the policy intervention is a multiplicative function of (i) average energy intensities <span class="math inline">\(\overline{e_{\text{fg}}}\)</span> (USD/USD) of fuel <em>f</em> of consumption items from each sector <em>g (note that f</em> ∈ <em>g</em>); (ii) total expenditures <span class="math inline">\(C\)</span><em>;</em> and (iii) the tax rate <em>t for fuel f in sector g, expressed as the price increase post- (p2) relative to pre-reform (p1)</em> (USD<sub>p2</sub>/USD<sub>p1</sub>) (c.f. endnote 3).</p>
+<p><span id="eq-5_2"><span class="math display">\[p_{j} = \sum_{\text{fg}}p_{\text{fgj}}  = \frac{\sum_{\text{fg}}{\overline{e_{\text{fg}}}\ *t_{\text{fg}}* C_{\text{gj}}}}{C_{j}} \;\; , f \in g \tag{5.2}\]</span></span></p>
+<p>The <strong>tax-induced price changes of fossil fuels</strong> (c.f. <a href="#tbl-5_1">Table&nbsp;<span>5.1</span></a> for a list of fuels), which determine households’ additional expenditures on direct fuel consumption (for f=g, in <span class="quarto-unresolved-ref">?eq-5_3</span>), are a function of fuels’ carbon intensities, <span class="math inline">\(e_{f}\)</span>, measured by emissions factors, and pre-existing price distortions in the Mitigation Module. For each user-defined carbon fiscal scenario, price changes are obtained from the Mitigation Module (see respective Mitigation Module Documentation). As price increases vary for each fuel by sector (due to varying emissions factors and baseline pricing), price changes are estimated for each country, year and fuel-sector pair <span class="math inline">\(t_{\text{fg}}\)</span>, where “sectors” here are power, industry, and residential. Residential sector fuel price changes are used to calculate the direct consumption effects.</p>
+<p>The <strong>tax-induced price changes of goods and services based on the domestic carbon price</strong>, which determine households’ additional expenditures on indirect fuel consumption (for <em>f</em> ∉ <em>g</em>, in <a href="#eq-5_4">Equation&nbsp;<span>5.3</span></a>), follow a standard input-output (IO) approach. Consistent with much of the carbon tax literature, all price increases resulting from the user-defined carbon fiscal reform are expected to be fully passed forward, from producers and suppliers to final consumers. Estimated consumer price increases are, thus, absolute upper bounds.<a href="#fn17" class="footnote-ref" id="fnref17" role="doc-noteref"><sup>17</sup></a> Adapted from basic IO analyses (cf.&nbsp;Leontief, 1986; Minx et al., 2009), household energy intensities <span class="math inline">\(\overline{e_{g}}\)</span> result as entries of the vector:</p>
+<p><span id="eq-5_4"><span class="math display">\[e_{g} = f\left( I - A \right)^{- 1}, \; f \notin g \tag{5.3}\]</span></span></p>
+<p>where each fossil fuel sector, <em>f</em> is a vector assigning an energy intensity coefficient to each non-fuel sector. The $( I - A )^{- 1}$matrix, or Leontief inverse (cf.&nbsp;Leontief, 1986), accounts for all upstream inputs that are required to produce one unit of final demand for each sector. <span class="math inline">\(I\)</span> is the identity matrix and <span class="math inline">\(\text{A\ }\)</span>is a normalized matrix of technical coefficients based on inter-sectoral commodity flows.</p>
+<p>For <strong>(IO) data</strong>, we use the Global Trade Analysis Project (GTAP-10)<a href="#fn18" class="footnote-ref" id="fnref18" role="doc-noteref"><sup>18</sup></a> to compute fossil fuel/energy intensities, and respective price changes for non-fuel sectors. The GTAP-10 database has several advantages. First, it is a consistent global database which harmonizes and scales data for 65 disaggregated sectors (g) and 141 world regions to the year 2014. Such harmonized data improve comparability across country-specific results in CPAT. Important for the estimation of sectoral effects from country-fuel-sector price changes is that GTAP-10 provides a more granular disaggregation of energy sectors than other global IO data with similar regional coverage (e.g., EORA). Yet, while CPAT distinguishes between eight fossil fuel/energy carriers, GTAP-10 includes only five fossil fuel sectors and electricity (c.f. ). Based on the concordance table, for GTAP’s “Petroleum and coke products” (p_c) sector, CPAT calculates the weighted average price change, using the economy-wide fuel use volumes of these products (in ktoe from IEA 2020) as weights.</p>
+<div id="tbl-5_1" class="anchored">
+<table class="table">
+<caption>Table&nbsp;5.1: Concordance table of CPAT fossil fuels (with acronyms) to GTAP-10 fossil fuel sectors</caption>
+<thead>
+<tr class="header">
+<th><strong>CPAT fossil fuel (f)</strong></th>
+<th><strong>GTAP10 sector (f)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Coal (coa)</td>
+<td>coa</td>
+</tr>
+<tr class="even">
+<td>Electricity (ely)</td>
+<td>ely</td>
+</tr>
+<tr class="odd">
+<td>Natural gas (nga)</td>
+<td>gas/gdt</td>
+</tr>
+<tr class="even">
+<td>Other oil products (oop)</td>
+<td>oil</td>
+</tr>
+<tr class="odd">
+<td>Gasoline (gso)</td>
+<td>p_c</td>
+</tr>
+<tr class="even">
+<td>Diesel (die)</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>LPG (lpg)</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Kerosene (ker)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Finally, sectoral energy intensities, <span class="math inline">\(e_{g}\)</span>, and household expenditures, <span class="math inline">\(C_{\text{gj}}\)</span>, are produced for 14 indirect fuel consumption categories. Household consumption is computed as described in section 5.2 from primary HBS data. Individual consumer items reported in the surveys are mapped to the respective GTAP sectors, which, in turn, are mapped to the 14 consumption categories (c.f. <a href="#tbl-5_1">Table&nbsp;<span>5.1</span></a> for concordance between categories and sectors). Thus, all of the 59 non-energy GTAP sectors, which produce end-consumer goods and services, are aggregated into 14 average product categories. Groupings are determined on the grounds of comparable average levels of energy-intensity, as well as to match IEA sectoral definitions used in CPAT. For a complete concordance table among relevant sources of data, please, refer to CPAT’s ‘Mapping’ tab. Thus, for each GTAP fuel sector, <span class="math inline">\(f\)</span>, energy intensities, <span class="math inline">\(e_{g}\)</span> in <a href="#eq-5_4">Equation&nbsp;<span>5.3</span></a>, of the 14 CPAT consumption categories, g, are a weighted average of the energy intensities of the respective non-fuel GTAP sectors, weighted by GTAP’s household final demand vector, <span class="math inline">\(Y\)</span>.</p>
+<p>The CPAT Distribution Module is an improvement over the <strong>standard approach in the literature</strong>. CPAT explicitly models a domestic carbon price reform. This means, Leontiefs between fossil fuels and sectors of production reflect only the domestically burned fuels. ‘Embedded’ fuel inputs in imports are not considered in the carbon price-induced price change of goods and services. Particularly in countries with high shares of imports in the goods and services consumed domestically, this approach may yield lower, but more accurate, results on consumption incidence.</p>
+</section>
+<section id="sec-5_3_2" class="level3" data-number="5.3.2">
+<h3 data-number="5.3.2" class="anchored" data-anchor-id="sec-5_3_2"><span class="header-section-number">5.3.2</span> Optional features for tax incidence analysis</h3>
+<section id="sec-5_3_2_1" class="level4" data-number="5.3.2.1">
+<h4 data-number="5.3.2.1" class="anchored" data-anchor-id="sec-5_3_2_1"><span class="header-section-number">5.3.2.1</span> Mitigation-adjusted tax incidence</h4>
+<p>The Module provides the user with an option to roughly assess how the consumption effects would decrease if emissions reductions induced by the carbon price reform were taken into account. This adjustment scales down overall consumer price increases relative to the scheme’s mitigation effect, thus relaxing the cost-push assumption. The Mitigation Module provides estimates of economy-wide GHG emissions reductions and tax revenues from carbon taxation over time. As noted above, the sectorally more disaggregated Distribution Module is based on IO Leontief production functions. This assumes fixed technical coefficients and, thus, full price pass-through, such that the estimated tax incidence is to be understood as an absolute upper bound, or short-term, estimate. CPAT provides the user with an approximate measure of the extent to which consumption effects would decrease if behavioral responses and structural change were accounted for: for the (future) year of interest, CPAT compares the tax revenue estimates of the elasticities-driven Mitigation Module with the tax revenues of the IO-based Distribution Module<a href="#fn19" class="footnote-ref" id="fnref19" role="doc-noteref"><sup>19</sup></a>, i.e.&nbsp;the proportion of revenues raised after and before taking into account behavioral responses:</p>
+<p>Let the economy-wide tax burden, or total tax revenues, estimated in the Mitigation Module be <span class="math inline">\(P_{M}^{y}\)</span> for year y, and in the Distribution Module be <span class="math inline">\(P_{D}^{y}\)</span> (<span class="math inline">\(P_{M}^{y} &lt; P_{D}^{y}\)</span>), where:</p>
+<p><span id="eq-5_5"><span class="math display">\[P_{D} = \sum_{j}{p_{j}*C_{j}} \tag{5.4}\]</span></span></p>
+<p>represents the total revenues expected based on representative HBS consumption data C<sub>j</sub>. As survey data aggregates usually do not match national accounts, and as total revenues should compare for the year of interest in the simulation, CPAT scales <span class="math inline">\(P_{D}\)</span> to match the national accounts in the year of interest y (2022 <span class="math inline">\(\leq\)</span> y <span class="math inline">\(\leq\)</span> 2030), such that:</p>
+<p><span id="eq-5_6"><span class="math display">\[P_{D}^{y} = P_{D}* \frac{\text{GDP}^{y}*\theta_{c}}{\sum C_{j}} \tag{5.5}\]</span></span></p>
+<p>where GDP<sup>y</sup> represents the expected GDP in the year of interest in the simulation and <span class="math inline">\(\theta_{c}\)</span> represents the final consumption expenditure to GDP ratio for the latest available year from World Bank’s World Development Indicators (WDI) database.<a href="#fn20" class="footnote-ref" id="fnref20" role="doc-noteref"><sup>20</sup></a> Then, the downward adjustment factor to the tax incidence on consumers, <span class="math inline">\(p_{\text{Adj}}\)</span> follows as:</p>
+<p><span id="eq-5_7"><span class="math display">\[p_{\text{Adj}} = \frac{P_{D}^{y} - P_{M}^{y}}{P_{D}^{y}} \; , \;P_{M}^{y} &lt; P_{D}^{y} \tag{5.6}\]</span></span></p>
+<p>The adjustment factor <span class="math inline">\(p_{\text{Adj}}\)</span> is applied homogenously across the population, represented as a positive relative consumption effect in CPAT. This approach will be refined in subsequent versions of CPAT: estimating with more precision the distributional effects of relaxing the assumption of full pass-through of tax-induced price changes to the end-consumer requires sophisticated data on production- and consumption-side energy price elasticities. Within countries, households of different income strata consume different product bundles (as discussed in the extensive literature on Engel Curves). Thus, for a thorough distributional analysis one needs to determine: a) how price elasticities vary across sectors/products; and b) how price elasticities of demand for products vary with income.</p>
+</section>
+<section id="sec-5_3_2_2" class="level4" data-number="5.3.2.2">
+<h4 data-number="5.3.2.2" class="anchored" data-anchor-id="sec-5_3_2_2"><span class="header-section-number">5.3.2.2</span> Decile-specific price elasticities of demand</h4>
+<p>CPAT allows the user to model short-term adjustments on the demand side alone, using decile-, country-, and item-specific price elasticities of demand based on (Muhammad et al., 2011). The price elasticities provided are by country and consumption category (COICOP), as well as for high, middle and low income countries. Based on standard concordance tables (ISIC Rev.&nbsp;4 and CPC 2.1), CPAT maps the elasticities to CPAT consumption categories. CPAT, then, adopts the countries’ elasticity reported for the middle deciles and assumes that the upper and lower deciles’ elasticities will deviate from the elasticity reported by the same proportion as the elasticities for low- and high-income countries deviate from that of middle-income countries for each consumption item. Following the same approach as in the Mitigation Module, the country-decile-specific price elasticity of demand for consumption category g, <span class="math inline">\({\epsilon_{\text{use}}}^{g}\)</span> is changing <span class="math inline">\(C_{j}^{g}\)</span> as follows:</p>
+<p><span id="eq-5_8"><span class="math display">\[C_{j}^{g}* \left( \frac{p_{t}}{p_{t - 1}} \right)^{\epsilon_{\text{use}}} \tag{5.7}\]</span></span></p>
+</section>
+<section id="sec-5_3_2_3" class="level4" data-number="5.3.2.3">
+<h4 data-number="5.3.2.3" class="anchored" data-anchor-id="sec-5_3_2_3"><span class="header-section-number">5.3.2.3</span> Imperfect pass-through</h4>
+<p>CPAT also provides the user with the option to allow producers to absorb, i.e.&nbsp;not “pass through”, part of the tax-induced price increase. There is ample evidence that (irrespective of any fuel saving/switching behavior) firms pass forward only a portion of the tax-induced energy price increase.<a href="#fn21" class="footnote-ref" id="fnref21" role="doc-noteref"><sup>21</sup></a> The Distribution Module differentiates pass-through coefficients for 14 transport and industrial sectors, with coefficients ranging from 0.7 to 0.9, and averaging 0.8. Coefficients <span class="math inline">\(\gamma_{g}\$(\)</span>_{g} )$ are applied to the tax rate <em>t for sector g, expressed as the price increase post- relative to pre-reform</em><a href="#fn22" class="footnote-ref" id="fnref22" role="doc-noteref"><sup>22</sup></a><em>, such that the downward-adjusted energy price change</em> <span class="math inline">\({\ t}_{\text{fg}}^{*}\)</span> <em>can be expressed as:</em></p>
+<p><span id="eq-5_9"><span class="math display">\[t_{\text{fg}}^{*} = t_{\text{fg}}*\gamma_{g} \tag{5.8}\]</span></span></p>
+</section>
+<section id="sec-5_3_2_4" class="level4" data-number="5.3.2.4">
+<h4 data-number="5.3.2.4" class="anchored" data-anchor-id="sec-5_3_2_4"><span class="header-section-number">5.3.2.4</span> Emissions-based adjustment of sectoral price changes</h4>
+<p>As described above, the incidence of goods’ and services’ price changes on consumers is based on GTAP-related fuel-sector Leontiefs. Multiplying the Leontief with the respective fuel’s price change, we obtain ‘indirect’ consumer price changes (in the static option). This multiplication implicitly introduces a price assumption to the GTAP monetary flow of energy: based on observed fuel prices (USD/volume or weight of fuel in 2021), the Mitigation Module estimates expected fuel price changes. Thus, this calculation assumes a corresponding energy flow. However, this energy flow might not necessarily match the observed energy flow by fuel and sector (which CPAT takes from IEA Energy Balances). To correct for this potential imbalance, CPAT allows the user to adjust consumer price incidence by theoretical time-zero revenue flows from the carbon pricing reform modelled. This means that, using the best available empirical data (IEA Energy Balances, GAINS emissions factors, and IMF combined fuel price data), CPAT calculates the revenues that would be raised if no price-induced adjustments were to take place – hence the term time-zero revenues. These theoretical revenue streams are calculated by fuel and CPAT sector. The final demand portion of this price incidence on the economy (usually around 60%, as the remainder is accounted for by goods which are exported or consumed by government and fixed capital formation) is equivalent to the static consumption incidence which should be reflected in the analysis. CPAT, thus, allows the user to scale the baseline incidence to this level. If chosen, additional adjustments are, then, calculated using this new baseline.</p>
+</section>
+<section id="sec-5_3_2_5" class="level4" data-number="5.3.2.5">
+<h4 data-number="5.3.2.5" class="anchored" data-anchor-id="sec-5_3_2_5"><span class="header-section-number">5.3.2.5</span> Cooking-fuel adjusted tax incidence</h4>
+<p>For selected deciles (starting from the poorest one), CPAT provides the user with the option to exclude from taxation the fossil fuel which is used as a primary cooking fuel. The rationale is as follows: when taxing primary cooking fuels (e.g., LPG), there may be a risk of households being pushed into using traditional, unsustainable biomass (e.g., firewood or charcoal). Therefore, the user can model distributional effects of carbon taxes when households in the bottom (e.g., one or two) deciles do not face an increase in the price of their primary cooking fossil fuel. From a policy design standpoint, this option is to be understood as a rebate. That is, the household will pay the tax when buying the fuel but will receive a compensatory transfer for its cooking needs. Such rebate schemes have received particular attention during India’s LPG subsidy reform, which implemented the Direct Benefit Transfer Scheme for LPG (“Pratyaksha Hastaantarit Laabh (PAHAL)”) program.<a href="#fn23" class="footnote-ref" id="fnref23" role="doc-noteref"><sup>23</sup></a></p>
+<p>Primary cooking fossil fuels are identified for each country based on the World Health Organization (WHO) Household Energy Database<a href="#fn24" class="footnote-ref" id="fnref24" role="doc-noteref"><sup>24</sup></a>. Covering 161 countries, the database collects and harmonizes household survey data on the portion of the population cooking with each of fourteen disaggregated fuels, considering surveys between 1970-2014. For each country, and the latest available year of survey data, CPAT determines which of the eight fossil fuels listed in <a href="#tbl-5_1">Table&nbsp;<span>5.1</span></a> is most widely used for cooking.</p>
+</section>
+</section>
+</section>
+<section id="sec-5_4" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="sec-5_4"><span class="header-section-number">5.4</span> Incidence of compensatory transfers</h2>
+<p>Given countries’ heterogeneous development status, and political and socioeconomic realities, the design of environmental fiscal reforms varies widely. CPAT provides the user with various options for recycling revenues from environmental fiscal policy scenarios, including via direct and indirect support schemes. Direct transfer schemes to households provide a particularly suitable instrument for increasing public acceptance of tax reforms. This is because they are salient, immediate, and well-targetable. Additionally, direct transfer programs are widely adopted globally, as they have proven to be an effective means of achieving key development goals, with some of them being more administratively simple to implement, due to digitization.</p>
+<p>In CPAT, the user can choose among three general options for redistribution via transfers to households. All three redistribution options are modelled as direct, per capita payments averaged by deciles:</p>
+<ol type="1">
+<li><p>Decile-targeted transfers (new or existing social protection scheme(s))</p></li>
+<li><p>Public investment (in infrastructure access)</p></li>
+<li><p>Current spending (e.g., scaling up existing social protection scheme(s))</p></li>
+<li><p>Labor tax reforms (as personal income tax reforms)</p></li>
+</ol>
+<section id="sec-5_4_1" class="level3" data-number="5.4.1">
+<h3 data-number="5.4.1" class="anchored" data-anchor-id="sec-5_4_1"><span class="header-section-number">5.4.1</span> Targeted and infrastructure-based transfers</h3>
+<p>Beyond the choice among (<em>a)-c)</em> above), the following four parameters are user-defined:</p>
+<ol type="1">
+<li><p>the percentage share of total revenues to be used for (new, existing) targeted and/or public spending transfers;</p></li>
+<li><p>(for new/existing targeted transfers only) the per capita income percentiles to receive the chosen transfer (starting from the bottom of the income distribution; <span class="math inline">\((C_{jT} \leq p(T) C_j)\)</span>;</p></li>
+<li><p>(for new/existing targeted transfers only) the “coverage rate”, i.e. the share of the population targeted actually receiving the transfer; and</p></li>
+<li><p>(for new/existing targeted transfers only) the “leakage rate”, i.e. the share of the untargeted population receiving the transfer.</p></li>
+</ol>
+<p>Options 3. and 4. allow the user to consider imperfect implementation of cash transfer schemes, such that parts of the population which would qualify for the transfer do not receive it, while other parts of the population (not qualifying) do so, due to imperfect targeting. Such leakage is assumed to be spread equally across the non-targeted population.</p>
+<p>The amount of the targeted, per capita transfer, T, for the targeted population, pop<sub>T</sub>, is calculated by dividing total transferred revenues by the total eligible or ‘targeted’ population in the year of interest y, such that:</p>
+<p><span id="eq-5_10"><span class="math display">\[T^{y} = \frac{P_{M}^{y}}{\text{pop}_{T}^{y}} \tag{5.9}\]</span></span></p>
+<p>Where the survey population (i.e., the sum of per capita population weights)<a href="#fn25" class="footnote-ref" id="fnref25" role="doc-noteref"><sup>25</sup></a> is scaled to match the projected national accounts, <span class="math inline">\(pop\)</span>, based on the IMF’s 2022 World Economic Outlook vintage, for the year of interest, such that:</p>
+<p><span id="eq-5_11"><span class="math display">\[\text{pop}*{T}^{y} = (\sum \text{popw}_{T})* \theta_{\text{pop}}^{y} \tag{5.10}\]</span></span></p>
+<p>where</p>
+<p><span id="eq-5_12"><span class="math display">\[\theta_{\text{pop}}^{y} = \ \frac{\text{pop}^{y}}{\sum\text{popw}} \tag{5.11}\]</span></span></p>
+<p><strong>New targeted transfers</strong> are conditional on per capita consumption (user-choice 2. above). Thus, the average per capita transfer, <span class="math inline">\(T_{d}^{y}\)</span>, for decile d depends on the portion of the decile population, <span class="math inline">\(\text{pop}_{T}^{\text{dy}}\)</span> , below the targeted consumption threshold (i.e.&nbsp;for which <span class="math inline">\(C_{jT} \leq p(T) C_j\)</span>) such that:</p>
+<p><span id="eq-5_13"><span class="math display">\[T_{d\ }^{y} = \ T^{y}*\frac{\sum \text{pop}_{T}^{\text{dy}}}{\sum \text{pop}^{\text{dy}}} \tag{5.12}\]</span></span></p>
+<p><strong>Transfers toward infrastructure access</strong> are received only by those individuals without initial access to infrastructure type i, <span class="math inline">\(\digamma_{j}^{i}\)</span> (refer to section 5.2 for details). The user can choose between five different types of infrastructure provision: CPAT defines infrastructure access in line with the WHO’s WASH database<a href="#fn26" class="footnote-ref" id="fnref26" role="doc-noteref"><sup>26</sup></a> and WB WDI database indicators as follows:</p>
+<ol type="1">
+<li><p>Access to improved water source: piped water on premises (piped household water connection located inside the user’s dwelling, plot or yard), other improved drinking water sources public taps or standpipes, tube wells or boreholes, protected dug wells, protected springs, and rainwater collection</p></li>
+<li><p>Access to improved sanitation facilities: flush/pour flush (to piped sewer system, septic tank, pit latrine), ventilated improved pit (VIP) latrine, pit latrine with slab, and composting toilet</p></li>
+<li><p>Access to electricity: household connection to local/village/national grid/network; not: battery, generator, PV system</p></li>
+<li><p>Access to information &amp; communication technology (ICT): ownership of mobile phone/computer, household internet access</p></li>
+<li><p>Access to public transport</p></li>
+</ol>
+<p>The portion of the decile population, <span class="math inline">\(\text{pop}_{T}^{\text{dy}}\)</span>, receiving the transfer, as per <a href="#eq-5_13">Equation&nbsp;<span>5.12</span></a> is calculated based on the weighted share of households in decile d who have access to infrastructure category <em>i,</em> <span class="math inline">\(\digamma^{\text{di}}\)</span>, such that</p>
+<p><span id="eq-5_14"><span class="math display">\[\text{pop}_{\text{Ti}}^{\text{dy}} = \sum_{d = 1}^{10}\text{pop}^{\text{dy}}*(1 - \digamma^{\text{di}}) \tag{5.13}\]</span></span></p>
+</section>
+<section id="transfers-through-existing-social-protection-schemes" class="level3" data-number="5.4.2">
+<h3 data-number="5.4.2" class="anchored" data-anchor-id="transfers-through-existing-social-protection-schemes"><span class="header-section-number">5.4.2</span> Transfers through existing social protection schemes</h3>
+<p>Policy makers may favor extending existing social safety nets for the transfer of carbon tax revenues to households. CPAT, thus, provides the option to proportionally scale up existing social protection schemes, based on the Atlas of Social Protection Indicators of Resilience and Equity (ASPIRE) dataset. For 104 countries, ASPIRE provides quintile-level estimates of per capita transfers received through various benefit schemes, including social assistance measures such as targeted subsidies, in-kind assistance and existing cash transfer programs, labor market protection schemes as well as social insurance (please, refer to the ASPIRE documentation for a full catalog of covered schemes by country<a href="#fn27" class="footnote-ref" id="fnref27" role="doc-noteref"><sup>27</sup></a>).</p>
+<p>As CPAT simulates a proportional scaling of existing schemes, it first determines the proportion $A$by which the protection scheme <em>a</em> can be scaled up. Following <a href="#eq-5_10">Equation&nbsp;<span>5.9</span></a> above, CPAT defines:</p>
+<p><span id="eq-5_15"><span class="math display">\[{\mathrm{\Delta}A}_{a}^{y} = \frac{P_{M}^{y}}{A_{a}^{y}} \tag{5.14}\]</span></span></p>
+<p>where <span class="math inline">\(A_{a}^{y}\)</span> is the inflation-adjusted total government spending on protection scheme <em>a</em> in the year of interest y. For calculating total government spending, CPAT first multiplies per capita quintile transfer amounts by a fifth of the population pop<sub>y</sub> in the year of interest y, to arrive at total spending by quintile, which is, then, summed up. CPAT arrives at average decile transfers assuming that every two deciles receive the same amount (in per capita terms) as their corresponding quintile (e.g., deciles 1 and 2 receive the per-capita transfer of quintile 1 and so on). The approach described here (in tandem with options 1-4 listed under Section 5.4.1 above) also applies when users choose to recycle carbon tax revenues via existing (as opposed to new) targeted transfers.</p>
+</section>
+<section id="carbon-price-revenue-recycling-via-personal-income-tax-reductions" class="level3" data-number="5.4.3">
+<h3 data-number="5.4.3" class="anchored" data-anchor-id="carbon-price-revenue-recycling-via-personal-income-tax-reductions"><span class="header-section-number">5.4.3</span> Carbon Price Revenue Recycling via Personal Income Tax Reductions</h3>
+<section id="section-1-data-requirements-and-setup" class="level4" data-number="5.4.3.1">
+<h4 data-number="5.4.3.1" class="anchored" data-anchor-id="section-1-data-requirements-and-setup"><span class="header-section-number">5.4.3.1</span> Section 1: Data Requirements and Setup</h4>
+<p>The distributional effects of carbon price (CP) revenue recycling via personal income tax (PIT) reductions depend on the baseline PIT liabilities of individuals at different segments of the income distribution. Broadly speaking, these liabilities are a function of two components: taxable (i.e., “gross”) income and PIT schedules. To circumvent the modeling of (often complex) PIT systems around the world, CPAT, instead, obtains this information via data on the share of each (disposable, market) income decile’s PIT liabilities in economy-wide PIT liabilities. This information should already account for elements such as, for example, the decile-specific incidence of non-standard PIT regimes, informality, and tax evasion/avoidance, without the need for additional assumptions in this regard.</p>
+<p>Decile-specific shares in aggregate PIT liabilities are based on nominal PIT liability data by decile, which is collected from two main sources. First, CPAT relies on the latest vintage(s) of the Luxembourg Income Study (LIS)<a href="#fn28" class="footnote-ref" id="fnref28" role="doc-noteref"><sup>28</sup></a>. The LIS contains nationally representative household (HH) survey data on income, demographics and labor market characteristics. Using the LIS, disposable income<a href="#fn29" class="footnote-ref" id="fnref29" role="doc-noteref"><sup>29</sup></a> decile-specific, PIT liabilities are, thus, obtained as the HH-weighted sum of the “hxitax” variable<a href="#fn30" class="footnote-ref" id="fnref30" role="doc-noteref"><sup>30</sup></a>. Second, CPAT also obtains similar data from the latest vintage of the Commitment to Equity (CEQ) “Standard Indicators” database<a href="#fn31" class="footnote-ref" id="fnref31" role="doc-noteref"><sup>31</sup></a> for each country. In particular, this database contains information on the incidence (in percent of total market income) of “direct taxes” paid by market income<a href="#fn32" class="footnote-ref" id="fnref32" role="doc-noteref"><sup>32</sup></a> decile. From this data, CPAT obtains the decile-specific sum of direct taxes paid. Across both data sources, decile-specific shares of income/direct taxes paid are calculated as the ratios of the decile-specific total tax liabilities to the sum of all tax liabilities across deciles.<a href="#fn33" class="footnote-ref" id="fnref33" role="doc-noteref"><sup>33</sup></a> Taking income/direct taxes as a proxy for PIT liability, the above results in a database of PIT liability shares at the country-year-decile level.<a href="#fn34" class="footnote-ref" id="fnref34" role="doc-noteref"><sup>34</sup></a> For the purposes of estimation within the CPAT 1.1. Distribution Module, decile-specific PIT liability shares in economy-wide PIT paid are assumed to be constant over time.</p>
+<p>Economy-wide PIT paid is, subsequently, calibrated to equal the product of: i) the average PIT-to-GDP ratio<a href="#fn35" class="footnote-ref" id="fnref35" role="doc-noteref"><sup>35</sup></a> during the period 2010-2019<a href="#fn36" class="footnote-ref" id="fnref36" role="doc-noteref"><sup>36</sup></a>; and ii) GDP in the year of interest for the distributional effects analysis, <span class="math inline">\(y\)</span>.</p>
+<p>Analytically:</p>
+<p><span class="math inline">\(L_{\text{dcy}} = \ s_{\text{dc}}*{AVG\_ PIT\_ GDP}_{c}*\text{RGDP}_{\text{cy}}\)</span> and <span class="math inline">\(l_{\text{dcy}} = \ L_{\text{dcy}}/P_{\text{dcy}}\)</span></p>
+<p>where <span class="math inline">\(L_{\text{dcy}}\)</span> and $l_{}$stand for the total and per-capita PIT liabilities of decile <span class="math inline">\(\text{d\ }\)</span>in country <span class="math inline">\(\text{c\ }\)</span>and analysis year <span class="math inline">\(y\)</span>. <span class="math inline">\({AVG\_ PIT\_ GDP}_{2010 - 2019}\)</span> is the 2010-2019 average PIT-to-GDP ratio for country <span class="math inline">\(c\)</span> (assumed to be constant over time), <span class="math inline">\(\text{RGDP}_{\text{cy}}\)</span> is the real GDP in constant 2021 local currency units (LCU) in country <span class="math inline">\(\text{c\ }\)</span>and analysis year <span class="math inline">\(y\)</span> and <span class="math inline">\(P_{\text{dcy}}\)</span> is the total population of decile <span class="math inline">\(\text{d\ }\)</span>in country <span class="math inline">\(\text{c\ }\)</span>and analysis year <span class="math inline">\(y\)</span>. <span class="math inline">\(P_{\text{dcy}}\)</span> is calibrated to national population in country <span class="math inline">\(\text{c\ }\)</span>and analysis year <span class="math inline">\(y\)</span>, based on the country-specific population distributions obtained from household budget surveys (HBSs) as part of the data requirements for the CPAT consumption incidence calculations. Finally, <span class="math inline">\(s_{\text{dcy}}\)</span> is the share of PIT liability of decile <span class="math inline">\(\text{d\ }\)</span>in country <span class="math inline">\(\text{c\ }\)</span>and analysis year <span class="math inline">\(y\)</span>, proxied by data on direct or individual income taxes as described above.</p>
+<p>The resulting estimates are merged with each country’s, decile-level HBS data for the overall sample<a href="#fn37" class="footnote-ref" id="fnref37" role="doc-noteref"><sup>37</sup></a>, assuming a 1:1 correspondence between the LIS/disposable income and CEQ/market income deciles and the consumption deciles from the various HBSs. In cases, where LIS and CEQ country coverage overlaps<a href="#fn38" class="footnote-ref" id="fnref38" role="doc-noteref"><sup>38</sup></a>, CPAT prioritizes the source which covers the latest available year of data<a href="#fn39" class="footnote-ref" id="fnref39" role="doc-noteref"><sup>39</sup></a>.</p>
+</section>
+<section id="section-2-calculations" class="level4" data-number="5.4.3.2">
+<h4 data-number="5.4.3.2" class="anchored" data-anchor-id="section-2-calculations"><span class="header-section-number">5.4.3.2</span> Section 2: Calculations</h4>
+<p>If the user chooses to recycle a percentage of CP revenues towards “labor tax reductions”, the Distribution Module within CPAT 1.1 estimates resulting per-capita decile-specific gains (in real 2021 LCU) under three (mutually exclusive) PIT liability reduction scenarios:</p>
+<p><strong>Targeted Exemption</strong>. Under this scenario, selected HH consumption deciles gain the baseline amount of PIT they pay, conditional on available CP revenues. In other words, the allocation of CP revenues would be such that said deciles would not be liable for PIT. In this case, the per-capita LCU gain <span class="math inline">\(g\)</span> for (HH per-capita consumption) decile <span class="math inline">\(\text{d\ }\)</span>in country <span class="math inline">\(\text{c\ }\)</span>and analysis year <span class="math inline">\(y\)</span> can be written as:</p>
+<p><span class="math display">\[g_{dcy\_ TE} = l_{\text{dcy}}\mathbb{I\lbrack}d = exempt\rbrack\mathbb{I}\lbrack 0\  \leq remaining\ CT\ revenues\  \leq l_{\text{dcy}}\rbrack\]</span></p>
+<p>where <span class="math inline">\(l_{\text{dcy}}\)</span> stands for the per-capita PIT liability of decile <span class="math inline">\(\text{d\ }\)</span>in country <span class="math inline">\(\text{c\ }\)</span>and analysis year <span class="math inline">\(y\)</span>. $d = exempt $is an indicator function denoting that decile <span class="math inline">\(d\)</span> has been selected as the decile to be fully exempt from PIT via the use of CP revenues. <span class="math inline">\(\mathbb{I}\lbrack 0\  \leq remaining\ CT\ revenues\  \leq l_{\text{dy}}\rbrack\)</span> is another indicator function denoting that decile <span class="math inline">\(d\)</span> will only benefit from a full PIT exemption of an amount up to (or less than)<span class="math inline">\(\ l_{\text{dcy}}\)</span>, provided that a non-zero amount of CP revenues is available for said purpose. It should, thus, be noted that, even if CP revenues are not enough to fully offset the PIT liability of decile <span class="math inline">\(d\)</span> under this scenario, the Distribution Module will still allocate any remaining CP revenue amounts starting from this decile (and moving upwards onto any remaining deciles), provided that these amounts are available to be allocated.</p>
+<p><strong>Personal Allowance</strong>. Under this scenario, PIT liabilities are (in absolute terms) uniformly reduced across the PIT-paying population, similar to a per-capita lump-sum transfer to the working population. The respective (equal, per-capita) gains are calculated by dividing the proportion of CP revenues used for PIT reductions by the sum of all individuals in the country. The calculated amount is the maximum available transfer for PIT reduction purposes. Hence, the per-capita LCU gain <span class="math inline">\(g\)</span> for (HH per-capita consumption) decile <span class="math inline">\(\text{d\ }\)</span>in country <span class="math inline">\(\text{c\ }\)</span>and analysis year <span class="math inline">\(y\)</span> can be written as:</p>
+<p><span class="math display">\[g_{dcy\_ PE} = {min\{ l_{\text{dcy}},\ r}_{\text{cy}}\}\]</span></p>
+<p>where <span class="math inline">\(l_{\text{dcy}}\)</span> stands for the per-capita PIT liability of decile <span class="math inline">\(\text{d\ }\)</span>in country <span class="math inline">\(\text{c\ }\)</span>and analysis year <span class="math inline">\(y\)</span>. Additionally, <span class="math inline">\(r_{\text{cy}}\)</span> is the ratio of all available CT revenues to the sum of all individuals in the country and represents the maximum possible mean per-capita gain of a given decile <span class="math inline">\(d\)</span>. Decile <span class="math inline">\(d\)</span> is, hence, guaranteed <span class="math inline">\(l_{\text{dcy}}\)</span> provided that $l_{} &lt; r_{}$. Finally, <span class="math inline">\(r_{\text{cy}}\)</span> is parametrized such that it reflects use of all CP revenues made available for PIT liability reductions across deciles. Specifically, any remaining revenues following the aforementioned calculations are, once again, equally divided across all individuals in the country and paid out as additional gains under this reform scenario. Since this scenario resembles a lump-sum, per-capita transfer to the working population, gains are likely to be, by default, progressively distributed. This is because transfers tend to represent a larger proportion of poorer households’ incomes.</p>
+<p><strong>Proportional Compensation</strong>. Under this scenario, each (HH consumption) decile receives an average per-capita gain that increases with the HH’s baseline PIT liability. In other words, the more PIT a decile pays, the higher the gain. Therefore, the per-capita LCU gain <span class="math inline">\(g\)</span> for (HH per-capita consumption) decile <span class="math inline">\(\text{d\ }\)</span>in country <span class="math inline">\(\text{c\ }\)</span>and analysis year <span class="math inline">\(y\)</span> can be written as:</p>
+<p><span class="math display">\[g_{dcy\_ PC} = \ l_{\text{dcy}}*f_{\text{cy}}\]</span></p>
+<p>where <span class="math inline">\(l_{\text{dcy}}\)</span> stands for the per-capita PIT liability of decile <span class="math inline">\(\text{d\ }\)</span>in country <span class="math inline">\(\text{c\ }\)</span>and analysis year <span class="math inline">\(y\)</span>. Additionally, <span class="math inline">\(f_{\text{cy}}\)</span> is a scalar representing the LCU gain from CP revenue recycling per LCU of baseline PIT paid. This is, in turn, calculated as the total LCU amount of available CP revenues divided by the total LCU amount of PIT paid across all deciles. For instance, a value of 0.5 would be interpreted as each HH consumption decile gaining 0.5 LCUs from CP revenue recycling for each LCU of baseline PIT it pays. In general (depending on the distribution and magnitudes of decile-specific PIT liability shares), this scenario results in a relatively more regressive effect of CP revenue recycling across HH consumption deciles.</p>
+</section>
+<section id="section-3-assumptions-and-caveats" class="level4" data-number="5.4.3.3">
+<h4 data-number="5.4.3.3" class="anchored" data-anchor-id="section-3-assumptions-and-caveats"><span class="header-section-number">5.4.3.3</span> Section 3: Assumptions and Caveats</h4>
+<p>The methodology described here is subject to a series of assumptions and caveats.</p>
+<ol type="a">
+<li><p>The PIT liability calculations assume away any estimates based on actual fiscal regime data (e.g., detailed modeling of tax credits, surtaxes and potential (sector-specific) deductions, etc.). More importantly, no distinction is made in terms of different types of PIT liabilities (e.g., those for self-employed vs.&nbsp;non-self-employed workers). Said distinction could be crucial in determining heterogeneity in the size and dispersion of PIT reduction gains, given that self-employed workers usually face a different PIT schedule.</p></li>
+<li><p>The PIT liability share calculations also assume that the household survey-type data available via the LIS and CEQ accurately capture the entirety of PIT paid across the income distribution. Ideally, PIT liability calculations would need to draw upon gross income and taxes paid as these are reported in tax return data. However, databases containing such information suffer from sparse country-year coverage and often lack reporting of decile-specific information.<a href="#fn40" class="footnote-ref" id="fnref40" role="doc-noteref"><sup>40</sup></a> On a similar note, the “income taxes” and “direct taxes” variables in the LIS and CEQ databases are assumed to be good proxies for the PIT, which might not be the case given other potential taxes that could be captured therein (e.g., capital gains taxes, etc.).</p></li>
+<li><p>Any gains from PIT reductions are assumed to be distributed equally across all population sub-groups (i.e., working and non-working individuals, adults and children, men and women, etc.). This is likely to misstate impacts on different deciles to the extent that the demographic composition of population varies substantially across deciles.</p></li>
+<li><p>The data-generating process outlined above assumes perfect correspondence between consumption and income deciles. The individuals within HH consumption decile 1 (per the HBS data) may not be the same as the ones under income decile 1 (per the LIS and CEQ data). This implies a certain degree of inaccuracy in the use of revenue recycling gains from PIT reductions to offset specific consumer surplus losses from a given CP.</p></li>
+<li><p>In keeping with the static, partial equilibrium framework of the Distribution Module within CPAT 1.1, the revenue recycling calculations also assume no changes in PIT payments/compliance in response to the CP scenario analyzed in CPAT 1.1. Relatedly, the calculations also abstract from trends in PIT liability patterns, since decile-specific PIT liability shares and PIT-to-GDP ratios are assumed constant over time.</p></li>
+<li><p>The calculations presented above remain agnostic as to the size and distribution of PIT reduction gains for the urban vs.&nbsp;rural sub-samples in CPAT. To address this issue, CPAT scales any gains by the share of urban and rural population to total population, thus yielding the gains for the urban and rural sub-samples respectively.</p></li>
+</ol>
+<div id="tbl-5_2" class="anchored">
+<table class="table">
+<caption>Table&nbsp;5.2: Aggregate and direct fuel consumption expenditure categories</caption>
+<colgroup>
+<col style="width: 30%">
+<col style="width: 30%">
+<col style="width: 30%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Variable name</strong></td>
+<td><strong>Unit</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="even">
+<td><strong><em>Auxiliary &amp; demographic variables</em></strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>hhid</td>
+<td>Serial number</td>
+<td>Unique household (HH) identifier</td>
+</tr>
+<tr class="even">
+<td>iso3</td>
+<td>ISO-3 Code</td>
+<td>Country ISO-3 code</td>
+</tr>
+<tr class="odd">
+<td>year</td>
+<td>Year (YYYY)</td>
+<td>HH interview year</td>
+</tr>
+<tr class="even">
+<td>hhsize</td>
+<td>Individuals (Count)</td>
+<td>Number of members per HH</td>
+</tr>
+<tr class="odd">
+<td>popw_hh</td>
+<td>Weight (Count: HHs)</td>
+<td>HH population weight</td>
+</tr>
+<tr class="even">
+<td>popw</td>
+<td>Weight (Count: National Population per hhid)</td>
+<td><p>Per-capita population weight (used for binning/deciles);</p>
+<p>national population represented by each hhid. Calculated as: hhsize*popw_hh. The sum of popw across all HHs should sum up to the national population in the survey year</p></td>
+</tr>
+<tr class="odd">
+<td>urban</td>
+<td>Binary Dummy (0,1)</td>
+<td>Urban=1 (0) if the HH is in an urban (rural) area</td>
+</tr>
+<tr class="even">
+<td><strong><em>Consumption expenditure aggregates and direct fuel expenditures</em></strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>rent_actual</td>
+<td>Local Currency Units (LCU)</td>
+<td>(Annualized) HH housing rent paid/reported</td>
+</tr>
+<tr class="even">
+<td>rent_imputed</td>
+<td>LCU</td>
+<td>(Annualized) HH unpaid/imputed housing rent <em>(“how much rent would you have paid if you were to pay rent for your home…?”);</em> this should <u>not</u> be included in the “housing” variable (see Guidebook)</td>
+</tr>
+<tr class="odd">
+<td>rent_total</td>
+<td>LCU</td>
+<td>(Annualized) HH housing rent paid/reported + unpaid/imputed, calculated as: rent_actual + rent_imputed</td>
+</tr>
+<tr class="even">
+<td>tot_cons</td>
+<td>LCU</td>
+<td><p>(Annualized) HH consumption, calculated as the sum of all consumption expenditures of HH</p>
+<p><em>note: this <u>i n cludes</u> paid housing rent AND unpaid/imputed housing rent (“how much rent would you have paid if you were to pay rent for your home”)</em></p></td>
+</tr>
+<tr class="odd">
+<td>tot_cons_acrent</td>
+<td>LCU</td>
+<td><p>(Annualized) HH consumption, calculated as the sum of all consumption expenditures of HH (= tot_cons - rent_imputed)</p>
+<p><em>note: this <u>e x cludes</u> unpaid/imputed housing rent (“how much rent would you have paid if you were to pay rent for your home…”)</em></p></td>
+</tr>
+<tr class="even">
+<td>tot_cons_norent</td>
+<td>LCU</td>
+<td><p>(Annualized) HH consumption, calculated as the sum of all consumption expenditures of HH (= tot_cons - rent_actual – rent_imputed)</p>
+<p><em>note: this <u>excludes all</u> housing rent</em></p></td>
+</tr>
+<tr class="odd">
+<td>cons_pc</td>
+<td>LCU</td>
+<td>(Annualized) per-capita consumption, calculated as: tot_cons/hhsize</td>
+</tr>
+<tr class="even">
+<td>cons_pc_acrent</td>
+<td>LCU</td>
+<td>(Annualized) per-capita consumption, calculated as: to t<br>
+<br>
+_cons_acrent/hhsize</td>
+</tr>
+<tr class="odd">
+<td>cons_pc_norent</td>
+<td>LCU</td>
+<td>(Annualized) per-capita consumption, calculated as: to t<br>
+<br>
+_cons_norent/hhsize</td>
+</tr>
+<tr class="even">
+<td>ely</td>
+<td>LCU</td>
+<td>(Annualized) HH expenditure on electricity (including subscription and connection fees)</td>
+</tr>
+<tr class="odd">
+<td>gso</td>
+<td>LCU</td>
+<td>(Annualized) HH expenditure on gasoline</td>
+</tr>
+<tr class="even">
+<td>die</td>
+<td>LCU</td>
+<td>(Annualized) HH expenditure on diesel</td>
+</tr>
+<tr class="odd">
+<td>ethanol</td>
+<td>LCU</td>
+<td>(Annualized) HH expenditure on ethanol (if applicable, otherwise leave as=0)</td>
+</tr>
+<tr class="even">
+<td>ker</td>
+<td>LCU</td>
+<td>(Annualized) HH expenditure on kerosene</td>
+</tr>
+<tr class="odd">
+<td>lpg</td>
+<td>LCU</td>
+<td>(Annualized) HH expenditure on LPG</td>
+</tr>
+<tr class="even">
+<td>nga</td>
+<td>LCU</td>
+<td>(Annualized) HH expenditure on natural gas</td>
+</tr>
+<tr class="odd">
+<td>oil</td>
+<td>LCU</td>
+<td>(Annualized) HH expenditure on (heat) oil, lubricants</td>
+</tr>
+<tr class="even">
+<td>coa</td>
+<td>LCU</td>
+<td>(Annualized) HH expenditure on coal</td>
+</tr>
+<tr class="odd">
+<td>ccl</td>
+<td>LCU</td>
+<td>(Annualized) HH expenditure on charcoal</td>
+</tr>
+<tr class="even">
+<td>fwd</td>
+<td>LCU</td>
+<td><p>(Annualized) HH expenditure on firewood</p>
+<p><em>note: imputed <u>and</u> paid</em></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tbl-5_3" class="anchored">
+<table class="table">
+<caption>Table&nbsp;5.3: Infraestructure access variables</caption>
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 71%">
+<col style="width: 1%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>wtr_acs</td>
+<td>Binary Dummy (0,1)</td>
+<td>Access to improved water sources (1=yes; 0=no); World Bank WDI definition: “piped water on premises (piped household water connection located inside the user’s dwelling, plot or yard), other improved drinking water sources public taps or standpipes, tube wells or boreholes, protected dug wells, protected springs, and rainwater collection (excl. non-stationary sources such as packaged or delivered water)”</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>ely_acs</td>
+<td>Binary Dummy (0,1)</td>
+<td>Access to electricity (1=yes; 0=no); defined as HH connection to the local/village/national grid/network (excludes battery, generator, PV system; <em>can be approximated by large appliances ownership</em>)</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>sani_acs</td>
+<td>Binary Dummy (0,1)</td>
+<td>Access to improved sanitation facilities (1=yes; 0=no); World Bank WDI definition: “flush/pour flush (to piped sewer system, septic tank, pit latrine), ventilated improved pit (VIP) latrine, pit latrine with slab, and composting toilet”</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>ICT_acs</td>
+<td>Binary Dummy (0,1)</td>
+<td>Access to Information and Communication Technologies (ICT) (1=yes; 0=no); ownership of mobile phone/computer, HH internet access, etc.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td colspan="4">transp_p| Binary | Access to public transportation (1=yes; 0=no); ub_acs | Dummy | (<em>can be approximated by non-zero expenditures on | | (0,1) | taxis/autobuses, etc.)</em> |</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tbl-5_4" class="anchored">
+<table class="table">
+<caption>Table&nbsp;5.4: Indirect fuel consumption expenditure categories mapped to GTAP-10 sectors</caption>
+<colgroup>
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>GTAP10 Sector</strong></th>
+<th><strong>GTAP10 Code</strong></th>
+<th><strong>GTAP10 Description</strong></th>
+<th><strong>CPAT Consumption Categories</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>40</td>
+<td>ele</td>
+<td>Manufacture of computer, electronic and optical products</td>
+<td>appliances</td>
+</tr>
+<tr class="even">
+<td>41</td>
+<td>eeq</td>
+<td>Manufacture of electrical equipment</td>
+<td>appliances</td>
+</tr>
+<tr class="odd">
+<td>42</td>
+<td>ome</td>
+<td>Manufacture of machinery and equipment n.e.c.</td>
+<td>appliances</td>
+</tr>
+<tr class="even">
+<td>33</td>
+<td>chm</td>
+<td>Manufacture of chemicals and chemical products</td>
+<td>chemicals</td>
+</tr>
+<tr class="odd">
+<td>35</td>
+<td>rpp</td>
+<td>Manufacture of rubber and plastics products</td>
+<td>chemicals</td>
+</tr>
+<tr class="even">
+<td>27</td>
+<td>tex</td>
+<td>Manufacture of textiles</td>
+<td>clothing</td>
+</tr>
+<tr class="odd">
+<td>28</td>
+<td>wap</td>
+<td>Manufacture of wearing apparel</td>
+<td>clothing</td>
+</tr>
+<tr class="even">
+<td>29</td>
+<td>lea</td>
+<td>Manufacture of leather and related products</td>
+<td>clothing</td>
+</tr>
+<tr class="odd">
+<td>56</td>
+<td>cmn</td>
+<td>Information and communication</td>
+<td>communications</td>
+</tr>
+<tr class="even">
+<td>63</td>
+<td>edu</td>
+<td>Education</td>
+<td>education</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>pdr</td>
+<td>Rice: seed, paddy (not husked)</td>
+<td>food</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>wht</td>
+<td>Wheat: seed, other</td>
+<td>food</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>gro</td>
+<td>Other Grains: maize (corn), sorghum, barley, rye, oats, millets, other cereals</td>
+<td>food</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>v_f</td>
+<td>Veg &amp; Fruit: vegetables, fruit and nuts, edible roots and tubers, pulses</td>
+<td>food</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>osd</td>
+<td>Oil Seeds: oil seeds and oleaginous fruit</td>
+<td>food</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>c_b</td>
+<td>Cane &amp; Beet: sugar crops</td>
+<td>food</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>pfb</td>
+<td>Fibres crops</td>
+<td>food</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>ocr</td>
+<td>Other Crops: stimulant; spice and aromatic crops; forage products; plants and parts of plants used primarily in perfumery, pharmacy, or for insecticidal, fungicidal or similar purposes; beet seeds (excluding sugar beet seeds) and seeds of forage plants; natural rubber in primary forms or in plates, sheets or strip, living plants; cut flowers and flower buds; flower seeds, u nmanufactured tobacco; other raw vegetable materials nec</td>
+<td>food</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>ctl</td>
+<td>Cattle: bovine animals, live, other ruminants, horses and other equines, bovine semen</td>
+<td>food</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>oap</td>
+<td>Other Animal Products: swine; poultry; other live animals; eggs of hens or other birds in shell, fresh; reproductive materials of animals; natural honey; snails, fresh, chilled, frozen, dried, salted or in brine, except sea snails; edible products of animal origin n.e.c.; hides, skins and furskins, raw; insect waxes and spermaceti, whether or not refined or coloured</td>
+<td>food</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>rmk</td>
+<td>Raw milk</td>
+<td>food</td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td>fsh</td>
+<td>Fishing: hunting, trapping and game propagation including related service activities, fishing, fish farms; service activities incidental to fishing</td>
+<td>food</td>
+</tr>
+<tr class="odd">
+<td>19</td>
+<td>cmt</td>
+<td>Cattle Meat: fresh or chilled; meat of buffalo, fresh or chilled; meat of sheep, fresh or chilled; meat of goat, fresh or chilled; meat of camels and camelids, fresh or chilled; meat of horses and other equines, fresh or chilled; other meat of mammals, fresh or chilled; meat of mammals, frozen; edible offal of mammals, fresh, chilled or frozen</td>
+<td>food</td>
+</tr>
+<tr class="even">
+<td>20</td>
+<td>omt</td>
+<td>Other Meat: meat of pigs, fresh or chilled; meat of rabbits and hares, fresh or chilled; meat of poultry, fresh or chilled; meat of poultry, frozen; edible offal of poultry, fresh, chilled or frozen; other meat and edible offal, fresh, chilled or frozen; preserves and preparations of meat, meat offal or blood; flours, meals and pellets of meat or meat offal, inedible; greaves</td>
+<td>food</td>
+</tr>
+<tr class="odd">
+<td>21</td>
+<td>vol</td>
+<td>Vegetable Oils: margarine and similar preparations; cotton linters; oil-cake and other residues resulting from the extraction of vegetable fats or oils; flours and meals of oil seeds or oleaginous fruits, except those of mustard; vegetable waxes, except t riglycerides; degras; residues resulting from the treatment of fatty substances or animal or vegetable waxes; animal fats</td>
+<td>food</td>
+</tr>
+<tr class="even">
+<td>22</td>
+<td>mil</td>
+<td>Milk: dairy products</td>
+<td>food</td>
+</tr>
+<tr class="odd">
+<td>23</td>
+<td>pcr</td>
+<td>Processed Rice: semi- or wholly milled, or husked</td>
+<td>food</td>
+</tr>
+<tr class="even">
+<td>24</td>
+<td>sgr</td>
+<td>Sugar and molasses</td>
+<td>food</td>
+</tr>
+<tr class="odd">
+<td>25</td>
+<td>ofd</td>
+<td>Other Food: prepared and preserved fish, crustaceans, molluscs and other aquatic i nvertebrates; prepared and preserved vegetables, pulses and potatoes; prepared and preserved fruits and nuts; wheat and meslin flour; other cereal flours; groats, meal and pellets of wheat and other cereals; other cereal grain products (including corn flakes); other vegetable flours and meals; mixes and doughs for the preparation of bakers’ wares; starches and starch products; sugars and sugar syrups n.e.c.; preparations used in animal feeding; lucerne (alfalfa) meal and pellets; bakery products; cocoa, chocolate and sugar c onfectionery; macaroni, noodles, couscous and similar farinaceous products; food products n.e.c.</td>
+<td>food</td>
+</tr>
+<tr class="even">
+<td>26</td>
+<td>b_t</td>
+<td>Beverages and Tobacco products</td>
+<td>food</td>
+</tr>
+<tr class="odd">
+<td>64</td>
+<td>hht</td>
+<td>Human health and social work</td>
+<td>health_ srv</td>
+</tr>
+<tr class="even">
+<td>45</td>
+<td>omf</td>
+<td>Other M anufacturing: includes furniture</td>
+<td>housing</td>
+</tr>
+<tr class="odd">
+<td>48</td>
+<td>wtr</td>
+<td>Water supply; sewerage, waste management and remediation activities</td>
+<td>housing</td>
+</tr>
+<tr class="even">
+<td>49</td>
+<td>cns</td>
+<td>Construction: building houses factories offices and roads</td>
+<td>housing</td>
+</tr>
+<tr class="odd">
+<td>65</td>
+<td>dwe</td>
+<td>Dwelling</td>
+<td>housing</td>
+</tr>
+<tr class="even">
+<td>30</td>
+<td>lum</td>
+<td>Lumber: manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials</td>
+<td>paper</td>
+</tr>
+<tr class="odd">
+<td>31</td>
+<td>ppp</td>
+<td>Paper &amp; Paper Products: includes printing and reproduction of recorded media</td>
+<td>paper</td>
+</tr>
+<tr class="even">
+<td>34</td>
+<td>bph</td>
+<td>Manufacture of ph a rmaceuticals, medicinal chemical and botanical products</td>
+<td>pharma</td>
+</tr>
+<tr class="odd">
+<td>51</td>
+<td>afs</td>
+<td>Accommodation, Food and service activities</td>
+<td>rectourism</td>
+</tr>
+<tr class="even">
+<td>61</td>
+<td>ros</td>
+<td>Recreation &amp; Other Services: recreational, cultural and sporting activities, other service activities; private households with employed persons (servants)</td>
+<td>rectourism</td>
+</tr>
+<tr class="odd">
+<td>43</td>
+<td>mvh</td>
+<td>Manufacture of motor vehicles, trailers and semi-trailers</td>
+<td>transp_ eqt</td>
+</tr>
+<tr class="even">
+<td>44</td>
+<td>otn</td>
+<td>Manufacture of other transport equipment</td>
+<td>transp_ eqt</td>
+</tr>
+<tr class="odd">
+<td>50</td>
+<td>trd</td>
+<td>Wholesale and retail trade; repair of motor vehicles and motorcycles</td>
+<td>transp_ eqt</td>
+</tr>
+<tr class="even">
+<td>52</td>
+<td>otp</td>
+<td>Land transport and transport via pipelines</td>
+<td>transp_ pub</td>
+</tr>
+<tr class="odd">
+<td>53</td>
+<td>wtp</td>
+<td>Water transport</td>
+<td>transp_ pub</td>
+</tr>
+<tr class="even">
+<td>54</td>
+<td>atp</td>
+<td>Air transport</td>
+<td>transp_ pub</td>
+</tr>
+<tr class="odd">
+<td>55</td>
+<td>whs</td>
+<td>Warehousing and support activities</td>
+<td>transp_ pub</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>wol</td>
+<td>Wool: wool, silk, and other raw animal materials used in textile</td>
+<td>clothing</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>frs</td>
+<td>Forestry: forestry, logging and related service activities</td>
+<td>housing</td>
+</tr>
+<tr class="even">
+<td>18</td>
+<td>oxt</td>
+<td>Other Mining Extraction (formerly omn): mining of metal ores; other mining and quarrying</td>
+<td>appliances</td>
+</tr>
+<tr class="odd">
+<td>36</td>
+<td>nmm</td>
+<td>Manufacture of other non-metallic mineral products</td>
+<td>housing</td>
+</tr>
+<tr class="even">
+<td>37</td>
+<td>i_s</td>
+<td>Iron &amp; Steel: basic production and casting</td>
+<td>housing</td>
+</tr>
+<tr class="odd">
+<td>38</td>
+<td>nfm</td>
+<td>Non-Ferrous Metals: production and casting of copper, aluminium, zinc, lead, gold, and silver</td>
+<td>appliances</td>
+</tr>
+<tr class="even">
+<td>39</td>
+<td>fmp</td>
+<td>Manufacture of fabricated metal products, except machinery and equipment</td>
+<td>appliances</td>
+</tr>
+<tr class="odd">
+<td>57</td>
+<td>ofi</td>
+<td>Other Financial I n termediation: includes auxiliary activities but not insurance and pension funding</td>
+<td>other</td>
+</tr>
+<tr class="even">
+<td>58</td>
+<td>ins</td>
+<td>Insurance (formerly isr): includes pension funding, except compulsory social security</td>
+<td>other</td>
+</tr>
+<tr class="odd">
+<td>59</td>
+<td>rsa</td>
+<td>Real estate activities</td>
+<td>other</td>
+</tr>
+<tr class="even">
+<td>60</td>
+<td>obs</td>
+<td>Other Business Services nec</td>
+<td>other</td>
+</tr>
+<tr class="odd">
+<td>62</td>
+<td>osg</td>
+<td>Other Services (Government): public a dministration and defense; compulsory social security, activities of membership organizations n.e.c., ext r a-territorial organizations and bodies</td>
+<td>other</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tbl-5_5" class="anchored">
+<table class="table">
+<caption>Table&nbsp;5.5: Literature comparison used in the validation of CPAT Distribution Module estimates</caption>
+<colgroup>
+<col style="width: 47%">
+<col style="width: 47%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Country</strong></td>
+<td><strong>Reference source</strong></td>
+</tr>
+<tr class="even">
+<td>China</td>
+<td>Jiang, Zhujun; Shao, Shuai. 2014. Distributional effects of a carbon tax on Chinese households: A case of Shanghai. Energy Policy, Vol. 13, pp. 269 - 277. DOI: 10.1016/j.enpol.2014.06.005</td>
+</tr>
+<tr class="odd">
+<td>Costa Rica</td>
+<td>Vogt Schlib, et al, 2019. Cash transfers for pro-poor carbon taxes<br>
+in Latin America and the Caribbean, IDB Working Paper Series, No.&nbsp;IDB-WP-1046, Inter-<br>
+American Development Bank (IDB), Washington, DC. DOI: ht t p://dx.doi.org/10.18235/0001930</td>
+</tr>
+<tr class="even">
+<td>Cyprus</td>
+<td>Pashardes et al , 2014. Estimating welfare aspects of changes in energy prices from<br>
+preference heterogeneity. Energy Economics, Vol. 42, pp. 58-66. DOI: http://dx.doi . org/10.1016/j.eneco.2013.12.002</td>
+</tr>
+<tr class="odd">
+<td>Denmark</td>
+<td>Wier et al, 2005. Are CO2 taxes regressive? Evidence from the Danish experience. Ecology Economics, Vol. 52. pp. 239-251. 10.1016/j.ecolecon.2004.08.005</td>
+</tr>
+<tr class="even">
+<td>Estonia</td>
+<td>Poltimae, 2014. U. Tartu PhD Dissertation. The distributional and behavioural effects<br>
+of Estonian environmental taxes. DOI: N.A</td>
+</tr>
+<tr class="odd">
+<td>Spain</td>
+<td>Sterner, 2012. Distributional effects of taxing transport fuel. Energy Policy, Vol. 41, pp.&nbsp;75-83. DOI: https://doi . org/10.1016/j.enpol.2010.03.012</td>
+</tr>
+<tr class="even">
+<td>France</td>
+<td>Sterner, 2012. Distributional effects of taxing transport fuel. Energy Policy, Vol. 41, pp.&nbsp;75-83. DOI: https://doi . org/10.1016/j.enpol.2010.03.012</td>
+</tr>
+<tr class="odd">
+<td>Ireland</td>
+<td>Farrell, Niall. 2015. What factors drive inequalities in carbon tax<br>
+incidence? Decomposing socioeconomic inequalities<br>
+in carbon tax incidence in Ireland. ESRI<br>
+Working Paper, No.&nbsp;519, The Economic and Social Research Institute (ESRI), Dublin. DOI: htt p ://aei.pitt.edu/id/eprint/88310</td>
+</tr>
+<tr class="even">
+<td>Italy</td>
+<td>Sterner, 2012. Distributional effects of taxing transport fuel. Energy Policy, Vol. 41, pp.&nbsp;75-83. DOI: https://doi . org/10.1016/j.enpol.2010.03.012</td>
+</tr>
+<tr class="odd">
+<td>Sweden</td>
+<td>Sterner, 2012. Distributional effects of taxing transport fuel. Energy Policy, Vol. 41, pp.&nbsp;75-83. DOI: https://doi . org/10.1016/j.enpol.2010.03.012</td>
+</tr>
+<tr class="even">
+<td>Vietnam</td>
+<td>Nurdianto, Ditya and Resosudarmo, Budy. 2016. The Economy-wide Impact of a<br>
+Uniform Carbon Tax in ASEAN. Journal of Southeast Asian Economies Vol. 33, No.&nbsp;1 (2016), pp.&nbsp;1–22. DOI: 10.1355/ae33-1a</td>
+</tr>
+<tr class="odd">
+<td>Brazil</td>
+<td>Vogt Schlib, et al, 2019. Cash transfers for pro-poor carbon taxes<br>
+in Latin America and the Caribbean, IDB Working Paper Series, No.&nbsp;IDB-WP-1046, Inter-<br>
+American Development Bank (IDB), Washington, DC. DOI: ht t p://dx.doi.org/10.18235/0001930</td>
+</tr>
+<tr class="even">
+<td>Canada</td>
+<td>Dissou and Siddiqui, 2014. Can carbon taxes be progressive? Energy Economics, Vol. 42, pp. 88-100. DOI: http://dx.doi . org/10.1016/j.eneco.2013.11.010</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+</section>
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Klenert, D., Mattauch, L., Combet, E., Edenhofer, O., Hepburn, C., Rafaty, R., &amp; Stern, N. (2018). Making carbon pricing work for citizens. <em>Nature Climate Change</em>, <em>8</em>(8), 669–677. <a href="https://doi.org/10.1038/s41558-018-0201-2" class="uri">https://doi.org/10.1038/s41558-018-0201-2</a>; Baranzini, A., van den Bergh, J. C. J. M., Carattini, S., Howarth, R. B., Padilla, E., &amp; Roca, J. (2017). Carbon pricing in climate policy: seven reasons, complementary instruments, and political economy considerations. <em>Wiley Interdisciplinary Reviews: Climate Change</em>, <em>8</em>(4), e462. https://doi.org/10.1002/wcc.462<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Note that longer-term structural effects on wages and overall employment may outweigh consumption-side effects as they tend to be positive, larger and progressive (Metcalf 2019; Markandya et al. 2017). Source-side effects and their distribution (beyond compensation measures) will be considered in version 2.0 of CPAT.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Hubacek, K., Baiocchi, G., Feng, K., &amp; Patwardhan, A. (2017). Poverty eradication in a carbon constrained world. <em>Nature Communications</em>, <em>8</em>(1), 1–9. <a href="https://doi.org/10.1038/s41467-017-00919-4" class="uri">https://doi.org/10.1038/s41467-017-00919-4</a>; Olivier, Anne; Ruggeri Laderchi, Caterina. 2018.&nbsp;<em>Analyzing the Incidence of Consumer Price Subsidies and the Impact of Reform on Households — Quantitative Analysis: Energy Subsidy Reform Assessment Framework (ESRAF) Good Practice Note</em>&nbsp;<em>3</em>. ESMAP Paper. Washington, D.C.: World Bank Group; Vogt-Schilb, A., Walsh, B., Feng, K., Di Capua, L., Liu, Y., Zuluaga, D., Robles, M., &amp; Hubaceck, K. (2019). Cash transfers for pro-poor carbon taxes in Latin America and the Caribbean. <em>Nature Sustainability</em>, <em>2</em>(10), 941–948. <a href="https://doi.org/10.1038/s41893-019-0385-0" class="uri">https://doi.org/10.1038/s41893-019-0385-0</a>; Schaffitzel, F., Jakob, M., Soria, R., Vogt-Schilb, A., &amp; Ward, H. (2020). Can government transfers make energy subsidy reform socially acceptable? A case study on Ecuador. <em>Energy Policy</em>, <em>137</em>, 111120. <a href="https://doi.org/10.1016/j.enpol.2019.111120" class="uri">https://doi.org/10.1016/j.enpol.2019.111120</a>; Dorband, I. I., Jakob, M., Kalkuhl, M., &amp; Steckel, J. C. (2019). Poverty and distributional effects of carbon pricing in low- and middle-income countries – A global comparative analysis. <em>World Development</em>, <em>115</em>, 246–257. <a href="https://doi.org/10.1016/j.worlddev.2018.11.015" class="uri">https://doi.org/10.1016/j.worlddev.2018.11.015</a><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>da Silva Freitas, L. F., de Santana Ribeiro, L. C., de Souza, K. B., &amp; Hewings, G. J. D. (2016). The distributional effects of emissions taxation in Brazil and their implications for climate policy. <em>Energy Economics</em>, <em>59</em>, 37–44. <a href="https://doi.org/10.1016/j.eneco.2016.07.021" class="uri">https://doi.org/10.1016/j.eneco.2016.07.021</a>; Farrell, N. (2017). What Factors Drive Inequalities in Carbon Tax Incidence? Decomposing Socioeconomic Inequalities in Carbon Tax Incidence in Ireland. <em>Ecological Economics</em>, <em>142</em>, 31–45. <a href="https://doi.org/10.1016/j.ecolecon.2017.04.004" class="uri">https://doi.org/10.1016/j.ecolecon.2017.04.004</a>; Wier, M., Birr-Pedersen, K., Jacobsen, H. K., &amp; Klok, J. (2005). Are CO2 taxes regressive? Evidence from the Danish experience. <em>Ecological Economics</em>, <em>52</em>(2), 239–251. <a href="https://doi.org/10.1016/j.ecolecon.2004.08.005" class="uri">https://doi.org/10.1016/j.ecolecon.2004.08.005</a>; Jiang, Z., &amp; Shao, S. (2014). Distributional effects of a carbon tax on Chinese households: A case of Shanghai. <em>Energy Policy</em>, <em>73</em>, 269–277. <a href="https://doi.org/10.1016/j.enpol.2014.06.005" class="uri">https://doi.org/10.1016/j.enpol.2014.06.005</a>; Sterner, T. (2012). <em>Fuel Taxes and the Poor</em>. Routledge.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Note that un-adjusted consumption effects should be interpreted as upper-bound estimates in terms of Laspeyres Variation, while positive compensation effects should be interpreted as lower-bound estimates, capturing only the direct monetary benefit, but not the economic co-benefits of, for example, improved health, education, and opportunity.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>Fischer, C., &amp; Pizer, W. A. (2019). Horizontal Equity Effects in Energy Regulation. <em>Journal of the Association of Environmental and Resource Economists</em>, <em>6</em>(S1), S209–S237. <a href="https://doi.org/10.1086/701192" class="uri">https://doi.org/10.1086/701192</a><a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>Markandya, A., Arto, I., González-Eguino, M., &amp; Román, M. V. (2016). Towards a green energy economy? Tracking the employment effects of low-carbon technologies in the European Union. <em>Applied Energy</em>, <em>179</em>(2016), 1342–1350. <a href="https://doi.org/10.1016/j.apenergy.2016.02.122" class="uri">https://doi.org/10.1016/j.apenergy.2016.02.122</a>; Metcalf, G. E. (2019). The distributional impacts of U.S. energy policy. <em>Energy Policy</em>, <em>129</em>, 926–929. <a href="https://doi.org/10.1016/j.enpol.2019.01.076" class="uri">https://doi.org/10.1016/j.enpol.2019.01.076</a><a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>Cahyadi, N., Hanna, R., Olken, B. A., Prima, R. A., Satriawan, E., &amp; Syamsulhakim, E. (2020). Cumulative Impacts of Conditional Cash Transfer Programs: Experimental Evidence from Indonesia. <em>American Economic Journal: Economic Policy</em>, <em>12</em>(4), 88–110. https://doi.org/10.1257/pol.20190245<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>Aung, T., Bailis, R., Chilongo, T., Ghilardi, A., Jumbe, C., &amp; Jagger, P. (2021). Energy access and the ultra-poor: Do unconditional social cash transfers close the energy access gap in Malawi? <em>Energy for Sustainable Development</em>, <em>60</em>, 102–112. https://doi.org/10.1016/j.esd.2020.12.003<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p>Calderón, C., &amp; Servén, L. (2004). The effects of infrastructure development on growth and income distribution. The World Bank.<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn11"><p>Gerber, C., Klemm, A., Liu, L., &amp; Mylonas, V. (2020). Income tax progressivity: trends and implications. Oxford Bulletin of Economics and Statistics, 82(2), 365-386.<a href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn12"><p>Via the consumption of non-energy goods/services that use energy products as inputs into their production process.<a href="#fnref12" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn13"><p><a href="#tbl-5_4">Table&nbsp;<span>5.4</span></a> provides a mapping of CPAT non-fuel/energy expenditure categories to GTAP-10 sectors, which is used as a reference for mapping the HBS expenditure items to CPAT expenditure categories.<a href="#fnref13" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn14"><p>Rents are imputed in household surveys for households who own their dwelling.<a href="#fnref14" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn15"><p>Deaton, A. (1997). The analysis of household surveys: a micro-econometric approach to development policy. World Bank Publications.<a href="#fnref15" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn16"><p>See: <a href="https://data.ers.usda.gov/reports.aspx?ID=17825" class="uri">https://data.ers.usda.gov/reports.aspx?ID=17825</a><a href="#fnref16" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn17"><p>Note that CPAT provides the user with an option to approximately estimate how the consumption effects would decrease if the pass-through assumption was relaxed. The approach is explained in Section 5.3.2 and will be refined in subsequent versions of CPAT.<a href="#fnref17" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn18"><p>Aguiar, A., Chepeliev, M., Corong, E. L., McDougall, R., &amp; van der Mensbrugghe, D. (2019). The GTAP Data Base: Version 10. Journal of Global Economic Analysis, 4(1), 1–27. <a href="https://doi.org/10.21642/jgea.040101af" class="uri">https://doi.org/10.21642/jgea.040101af</a><a href="#fnref18" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn19"><p>Please, note that we apply appropriate scaling factors to scale the aggregate microdata from the HBS to match national accounts.<a href="#fnref19" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn20"><p>WDI 2020: ‘Households and NPISHs final consumption expenditure’ (% of GDP; NE.CON.PRVT.ZS)<a href="#fnref20" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn21"><p>Ganapati, S., Shapiro, J. S., &amp; Walker, R. (2020). Energy Cost Pass-Through in US Manufacturing: Estimates and Implications for Carbon Taxes. <em>American Economic Journal: Applied Economics</em>, <em>12</em>(2), 303–342. <a href="https://doi.org/10.1257/app.20180474" class="uri">https://doi.org/10.1257/app.20180474</a>; IMF (2020). <em>The Time is Right! Reforming Fuel Product Pricing Under Low Oil Prices</em>. Special Series on COVID 19. IMF: Washington D.C..<a href="#fnref21" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn22"><p>Note that this adjustment is carried out in the Distribution Module alone and does not alter revenue estimates in/from the Mitigation Module.<a href="#fnref22" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn23"><p>ESMAP (2016) <a href="https://www.esmap.org/node/74415">LPG Subsidy Reform in India | Put the Right Systems in Place First</a>. News. Oct 19 2016<a href="#fnref23" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn24"><p>See: <a href="https://www.who.int/airpollution/data/household-energy-database/en/" class="uri">https://www.who.int/airpollution/data/household-energy-database/en/</a><a href="#fnref24" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn25"><p>Refer to <a href="#sec-5_2"><span>Section&nbsp;5.2</span></a> for a description of the per-capita population weight, <span class="math inline">\(popw\)</span>.<a href="#fnref25" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn26"><p>WHO, UNICEF (2020). WHO / UNICEF Joint Monitoring Programme: Data &amp; estimates. World Health Organization and United Nations Children’s Fund, Geneva and New York. Available from: <a href="https://washdata.org/data" class="uri">https://washdata.org/data</a><a href="#fnref26" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn27"><p>ASPIRE documentation of covered schemes by country: <a href="http://pubdocs.worldbank.org/en/531411485449033265/ASPIRE-expenditure-program-documentation.xlsx" class="uri">http://pubdocs.worldbank.org/en/531411485449033265/ASPIRE-expenditure-program-documentation.xlsx</a><a href="#fnref27" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn28"><p>See: <a href="https://www.lisdatacenter.org/" class="uri">https://www.lisdatacenter.org/</a>.<a href="#fnref28" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn29"><p>The LIS does not, generally, collect consumption information, making it difficult to obtain income taxes paid by household (weighted) per-capita consumption decile.<a href="#fnref29" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn30"><p>This variable contains annual “income taxes” paid by households in the survey year and is available for 26 countries (across all World Bank income groups). The surveys mostly date from the period 2010-2019, with the exception of data for the Dominican Republic (2007), Romania (1997) and Sweden (2005).<a href="#fnref30" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn31"><p>The CEQ “Standard Indicators” database contains data on 42 countries (across all World Bank income groups), based on CEQ analyses covering the period 2009-2017. See: <a href="https://commitmentoequity.org/indicators.php" class="uri">https://commitmentoequity.org/indicators.php</a><a href="#fnref31" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn32"><p>Similar to the LIS data described above, the CEQ database does not contain data at the consumption decile level.<a href="#fnref32" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn33"><p>CPAT complements the LIS and CEQ data discussed here with information on PIT paid by household per-capita consumption decile from the household budget surveys discussed above. However, said information is only available for a few countries (Egypt, Pakistan, the Philippines and Ukraine).<a href="#fnref33" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn34"><p>Any missing country observations are replaced with the mean (or median, should the user choose to report median distributional effects in CPAT) of the country’s World Bank income or regional (depending on what the user selects in CPAT) group. See: <a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups" class="uri">https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups</a><a href="#fnref34" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn35"><p>Data on annual, country-level PIT-to-GDP ratios is obtained from the IMF’s World Revenue Longitudinal Database (WoRLD). See: <a href="https://data.imf.org/?sk=77413f1d-1525-450a-a23a-47aeed40fe78" class="uri">https://data.imf.org/?sk=77413f1d-1525-450a-a23a-47aeed40fe78</a>.<a href="#fnref35" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn36"><p>The analysis excludes countries with missing 2010-2019 average PIT-to-GDP ratios. Most of these countries (e.g., the Bahamas, Brunei, Oman, Qatar, United Arab Emirates) do not have a PIT regime in place.<a href="#fnref36" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn37"><p>Given the nature of the underlying data and calculations, it was not possible to estimate PIT liabilities by type of sub-sample (e.g., urban vs.&nbsp;rural) and statistic (e.g., median, p25, p75). However, median income/regional group averages will be used for countries that lack decile-specific PIT liability shares, if CPAT users choose to show median distributional effects in CPAT (for all remaining countries median liabilities are assumed to equal mean liabilities).<a href="#fnref37" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn38"><p>This is the case for the following countries: Brazil, Colombia, Dominican Republic, Peru, Russia, South Africa and the United States.<a href="#fnref38" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn39"><p>With the exception of the Dominican Republic, CPAT prioritizes LIS over CEQ, due to the former’s coverage of more recent data. LIS is also preferable, owing to its inclusion of data at the disposable income decile level. This is because disposable income-level data is a better proxy for consumption (and, thus, welfare) relative to the market income decile-level data in CEQ. By virtue of this, the LIS deciles are also more comparable to the HBS deciles that CPAT uses when estimating consumption incidence effects.<a href="#fnref39" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn40"><p>For example, see: <a href="https://wid.world/" class="uri">https://wid.world/</a><a href="#fnref40" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./04_Multipliers.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Multipliers</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./06_Air_pollution.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Air pollution module</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center">WB-IMF Climate Policy Assessment Tool, 2023</div>
+  </div>
+</footer>
+
+
+
+</body></html>
