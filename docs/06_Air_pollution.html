@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.3.306">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,14 +17,15 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
 }
-.hanging div.csl-entry {
+.hanging-indent div.csl-entry {
   margin-left:2em;
   text-indent:-2em;
 }
@@ -38,8 +39,7 @@ div.csl-right-inline {
 }
 div.csl-indent {
   margin-left: 2em;
-}
-</style>
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -81,6 +81,7 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
@@ -89,11 +90,16 @@ div.csl-indent {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Air pollution module</span></h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./06_Air_pollution.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Air pollution module</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
@@ -101,13 +107,13 @@ div.csl-indent {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">CPAT Documentation</a> 
         <div class="sidebar-tools-main">
-    <a href="https://github.com/wb-mrio/cpat_public" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
-  <a href="" class="quarto-reader-toggle sidebar-tool" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+    <a href="https://github.com/wb-mrio/cpat_public" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
@@ -115,51 +121,59 @@ div.csl-indent {
 </div>
     </div>
       </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link"><strong>Cover</strong></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Cover</strong></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./01_User_Guide.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">User Guide and Climate Policies in CPAT</span></a>
+  <a href="./01_User_Guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">User Guide and Climate Policies in CPAT</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02_Summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary of the approach and applications</span></a>
+  <a href="./02_Summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary of the approach and applications</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03_Mitigation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Mitigation overview and methodology</span></a>
+  <a href="./03_Mitigation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Mitigation overview and methodology</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04_Multipliers.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Multipliers</span></a>
+  <a href="./04_Multipliers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Multipliers</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./05_Distribution.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Distribution Module</span></a>
+  <a href="./05_Distribution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Distribution Module</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./06_Air_pollution.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Air pollution module</span></a>
+  <a href="./06_Air_pollution.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Air pollution module</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./07_Road_Transport.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Road Transport Module</span></a>
+  <a href="./07_Road_Transport.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Road Transport Module</span></span></a>
   </div>
 </li>
     </ul>
@@ -168,95 +182,96 @@ div.csl-indent {
     <h2 id="toc-title"><strong><em>Chapter Contents</em></strong></h2>
    
   <ul>
-  <li><a href="#executive-summary" id="toc-executive-summary" class="nav-link active" data-scroll-target="#executive-summary"><span class="toc-section-number">6.1</span>  Executive summary</a></li>
-  <li><a href="#list-of-acronyms" id="toc-list-of-acronyms" class="nav-link" data-scroll-target="#list-of-acronyms"><span class="toc-section-number">6.2</span>  List of Acronyms</a></li>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="toc-section-number">6.3</span>  Introduction</a></li>
-  <li><a href="#sec-calc_em" id="toc-sec-calc_em" class="nav-link" data-scroll-target="#sec-calc_em"><span class="toc-section-number">6.4</span>  Methods for calculating emissions</a>
+  <li><a href="#executive-summary" id="toc-executive-summary" class="nav-link active" data-scroll-target="#executive-summary"><span class="header-section-number">6.1</span> Executive summary</a></li>
+  <li><a href="#list-of-acronyms" id="toc-list-of-acronyms" class="nav-link" data-scroll-target="#list-of-acronyms"><span class="header-section-number">6.2</span> List of Acronyms</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">6.3</span> Introduction</a></li>
+  <li><a href="#sec-calc_em" id="toc-sec-calc_em" class="nav-link" data-scroll-target="#sec-calc_em"><span class="header-section-number">6.4</span> Methods for calculating emissions</a>
   <ul>
-  <li><a href="#data-sources-for-emissions" id="toc-data-sources-for-emissions" class="nav-link" data-scroll-target="#data-sources-for-emissions"><span class="toc-section-number">6.4.1</span>  Data sources for emissions</a></li>
-  <li><a href="#emission-factors-from-gains" id="toc-emission-factors-from-gains" class="nav-link" data-scroll-target="#emission-factors-from-gains"><span class="toc-section-number">6.4.2</span>  Emission factors from GAINS</a></li>
-  <li><a href="#radiative-forcing-coefficients" id="toc-radiative-forcing-coefficients" class="nav-link" data-scroll-target="#radiative-forcing-coefficients"><span class="toc-section-number">6.4.3</span>  Radiative forcing coefficients</a></li>
+  <li><a href="#data-sources-for-emissions" id="toc-data-sources-for-emissions" class="nav-link" data-scroll-target="#data-sources-for-emissions"><span class="header-section-number">6.4.1</span> Data sources for emissions</a></li>
+  <li><a href="#emission-factors-from-gains" id="toc-emission-factors-from-gains" class="nav-link" data-scroll-target="#emission-factors-from-gains"><span class="header-section-number">6.4.2</span> Emission factors from GAINS</a></li>
+  <li><a href="#radiative-forcing-coefficients" id="toc-radiative-forcing-coefficients" class="nav-link" data-scroll-target="#radiative-forcing-coefficients"><span class="header-section-number">6.4.3</span> Radiative forcing coefficients</a></li>
   </ul></li>
-  <li><a href="#sec-em_ap" id="toc-sec-em_ap" class="nav-link" data-scroll-target="#sec-em_ap"><span class="toc-section-number">6.5</span>  Methods to relate emissions and ambient pollution</a>
+  <li><a href="#sec-em_ap" id="toc-sec-em_ap" class="nav-link" data-scroll-target="#sec-em_ap"><span class="header-section-number">6.5</span> Methods to relate emissions and ambient pollution</a>
   <ul>
-  <li><a href="#data-sources-to-relate-emissions-and-ambient-concentrations" id="toc-data-sources-to-relate-emissions-and-ambient-concentrations" class="nav-link" data-scroll-target="#data-sources-to-relate-emissions-and-ambient-concentrations"><span class="toc-section-number">6.5.1</span>  Data sources to relate emissions and ambient concentrations</a></li>
-  <li><a href="#sec-tmfasst" id="toc-sec-tmfasst" class="nav-link" data-scroll-target="#sec-tmfasst"><span class="toc-section-number">6.5.2</span>  Option 1: TM5-FASST</a>
+  <li><a href="#data-sources-to-relate-emissions-and-ambient-concentrations" id="toc-data-sources-to-relate-emissions-and-ambient-concentrations" class="nav-link" data-scroll-target="#data-sources-to-relate-emissions-and-ambient-concentrations"><span class="header-section-number">6.5.1</span> Data sources to relate emissions and ambient concentrations</a></li>
+  <li><a href="#sec-tmfasst" id="toc-sec-tmfasst" class="nav-link" data-scroll-target="#sec-tmfasst"><span class="header-section-number">6.5.2</span> Option 1: TM5-FASST</a>
   <ul class="collapse">
-  <li><a href="#from-fasst-spreadsheet-to-cpat" id="toc-from-fasst-spreadsheet-to-cpat" class="nav-link" data-scroll-target="#from-fasst-spreadsheet-to-cpat"><span class="toc-section-number">6.5.2.1</span>  From FASST spreadsheet to CPAT</a></li>
+  <li><a href="#from-fasst-spreadsheet-to-cpat" id="toc-from-fasst-spreadsheet-to-cpat" class="nav-link" data-scroll-target="#from-fasst-spreadsheet-to-cpat"><span class="header-section-number">6.5.2.1</span> From FASST spreadsheet to CPAT</a></li>
   </ul></li>
-  <li><a href="#sec-apportinfo" id="toc-sec-apportinfo" class="nav-link" data-scroll-target="#sec-apportinfo"><span class="toc-section-number">6.5.3</span>  Option 2: Source apportionment information</a></li>
-  <li><a href="#option-3-elastic-net-model-and-ols-model" id="toc-option-3-elastic-net-model-and-ols-model" class="nav-link" data-scroll-target="#option-3-elastic-net-model-and-ols-model"><span class="toc-section-number">6.5.4</span>  Option 3: Elastic Net model and OLS model</a>
+  <li><a href="#sec-apportinfo" id="toc-sec-apportinfo" class="nav-link" data-scroll-target="#sec-apportinfo"><span class="header-section-number">6.5.3</span> Option 2: Source apportionment information</a></li>
+  <li><a href="#option-3-elastic-net-model-and-ols-model" id="toc-option-3-elastic-net-model-and-ols-model" class="nav-link" data-scroll-target="#option-3-elastic-net-model-and-ols-model"><span class="header-section-number">6.5.4</span> Option 3: Elastic Net model and OLS model</a>
   <ul class="collapse">
-  <li><a href="#elastic-net-model" id="toc-elastic-net-model" class="nav-link" data-scroll-target="#elastic-net-model"><span class="toc-section-number">6.5.4.1</span>  Elastic net model</a></li>
-  <li><a href="#ols-model" id="toc-ols-model" class="nav-link" data-scroll-target="#ols-model"><span class="toc-section-number">6.5.4.2</span>  OLS model</a></li>
+  <li><a href="#elastic-net-model" id="toc-elastic-net-model" class="nav-link" data-scroll-target="#elastic-net-model"><span class="header-section-number">6.5.4.1</span> Elastic net model</a></li>
+  <li><a href="#ols-model" id="toc-ols-model" class="nav-link" data-scroll-target="#ols-model"><span class="header-section-number">6.5.4.2</span> OLS model</a></li>
   </ul></li>
-  <li><a href="#sec-if" id="toc-sec-if" class="nav-link" data-scroll-target="#sec-if"><span class="toc-section-number">6.5.5</span>  Option 4: Intake fractions</a>
+  <li><a href="#sec-if" id="toc-sec-if" class="nav-link" data-scroll-target="#sec-if"><span class="header-section-number">6.5.5</span> Option 4: Intake fractions</a>
   <ul class="collapse">
-  <li><a href="#intake-fractions-for-ground-level-low-and-high-stack-emission-sources" id="toc-intake-fractions-for-ground-level-low-and-high-stack-emission-sources" class="nav-link" data-scroll-target="#intake-fractions-for-ground-level-low-and-high-stack-emission-sources"><span class="toc-section-number">6.5.5.1</span>  Intake fractions for ground level, low and high stack emission sources</a></li>
-  <li><a href="#intake-fractions-from-power-plants" id="toc-intake-fractions-from-power-plants" class="nav-link" data-scroll-target="#intake-fractions-from-power-plants"><span class="toc-section-number">6.5.5.2</span>  Intake fractions from power plants</a></li>
+  <li><a href="#intake-fractions-for-ground-level-low-and-high-stack-emission-sources" id="toc-intake-fractions-for-ground-level-low-and-high-stack-emission-sources" class="nav-link" data-scroll-target="#intake-fractions-for-ground-level-low-and-high-stack-emission-sources"><span class="header-section-number">6.5.5.1</span> Intake fractions for ground level, low and high stack emission sources</a></li>
+  <li><a href="#intake-fractions-from-power-plants" id="toc-intake-fractions-from-power-plants" class="nav-link" data-scroll-target="#intake-fractions-from-power-plants"><span class="header-section-number">6.5.5.2</span> Intake fractions from power plants</a></li>
   </ul></li>
-  <li><a href="#sec-machlearn" id="toc-sec-machlearn" class="nav-link" data-scroll-target="#sec-machlearn"><span class="toc-section-number">6.5.6</span>  Option 5: Machine learning</a></li>
-  <li><a href="#option-6-average-between-two-methods" id="toc-option-6-average-between-two-methods" class="nav-link" data-scroll-target="#option-6-average-between-two-methods"><span class="toc-section-number">6.5.7</span>  Option 6: Average between two methods</a></li>
-  <li><a href="#modeled-and-total-ambient-pollution" id="toc-modeled-and-total-ambient-pollution" class="nav-link" data-scroll-target="#modeled-and-total-ambient-pollution"><span class="toc-section-number">6.5.8</span>  Modeled and total ambient pollution</a></li>
+  <li><a href="#sec-machlearn" id="toc-sec-machlearn" class="nav-link" data-scroll-target="#sec-machlearn"><span class="header-section-number">6.5.6</span> Option 5: Machine learning</a></li>
+  <li><a href="#option-6-average-between-two-methods" id="toc-option-6-average-between-two-methods" class="nav-link" data-scroll-target="#option-6-average-between-two-methods"><span class="header-section-number">6.5.7</span> Option 6: Average between two methods</a></li>
+  <li><a href="#modeled-and-total-ambient-pollution" id="toc-modeled-and-total-ambient-pollution" class="nav-link" data-scroll-target="#modeled-and-total-ambient-pollution"><span class="header-section-number">6.5.8</span> Modeled and total ambient pollution</a></li>
   </ul></li>
-  <li><a href="#sec-health_ap" id="toc-sec-health_ap" class="nav-link" data-scroll-target="#sec-health_ap"><span class="toc-section-number">6.6</span>  Methods to calculate the health burden of air pollution</a>
+  <li><a href="#sec-health_ap" id="toc-sec-health_ap" class="nav-link" data-scroll-target="#sec-health_ap"><span class="header-section-number">6.6</span> Methods to calculate the health burden of air pollution</a>
   <ul>
-  <li><a href="#data-sources-to-estimate-health-impacts" id="toc-data-sources-to-estimate-health-impacts" class="nav-link" data-scroll-target="#data-sources-to-estimate-health-impacts"><span class="toc-section-number">6.6.1</span>  Data sources to estimate health impacts</a></li>
-  <li><a href="#definitions-of-key-technical-terms" id="toc-definitions-of-key-technical-terms" class="nav-link" data-scroll-target="#definitions-of-key-technical-terms"><span class="toc-section-number">6.6.2</span>  Definitions of key technical terms</a></li>
-  <li><a href="#sec-healthburdenpoll" id="toc-sec-healthburdenpoll" class="nav-link" data-scroll-target="#sec-healthburdenpoll"><span class="toc-section-number">6.6.3</span>  The health burden of pollution</a>
+  <li><a href="#data-sources-to-estimate-health-impacts" id="toc-data-sources-to-estimate-health-impacts" class="nav-link" data-scroll-target="#data-sources-to-estimate-health-impacts"><span class="header-section-number">6.6.1</span> Data sources to estimate health impacts</a></li>
+  <li><a href="#definitions-of-key-technical-terms" id="toc-definitions-of-key-technical-terms" class="nav-link" data-scroll-target="#definitions-of-key-technical-terms"><span class="header-section-number">6.6.2</span> Definitions of key technical terms</a></li>
+  <li><a href="#sec-healthburdenpoll" id="toc-sec-healthburdenpoll" class="nav-link" data-scroll-target="#sec-healthburdenpoll"><span class="header-section-number">6.6.3</span> The health burden of pollution</a>
   <ul class="collapse">
-  <li><a href="#joint-ambient-and-household-air-pollution-murray2020global" id="toc-joint-ambient-and-household-air-pollution-murray2020global" class="nav-link" data-scroll-target="#joint-ambient-and-household-air-pollution-murray2020global"><span class="toc-section-number">6.6.3.1</span>  Joint ambient and household air pollution (<span class="citation" data-cites="murray2020global">Murray et al. (2020)</span>)</a></li>
-  <li><a href="#sec-healthout" id="toc-sec-healthout" class="nav-link" data-scroll-target="#sec-healthout"><span class="toc-section-number">6.6.3.2</span>  Health outcomes in CPAT</a></li>
-  <li><a href="#ozone-air-pollution" id="toc-ozone-air-pollution" class="nav-link" data-scroll-target="#ozone-air-pollution"><span class="toc-section-number">6.6.3.3</span>  Ozone air pollution</a></li>
-  <li><a href="#multiple-risks-factors" id="toc-multiple-risks-factors" class="nav-link" data-scroll-target="#multiple-risks-factors"><span class="toc-section-number">6.6.3.4</span>  Multiple risks factors</a></li>
+  <li><a href="#joint-ambient-and-household-air-pollution-murray2020global" id="toc-joint-ambient-and-household-air-pollution-murray2020global" class="nav-link" data-scroll-target="#joint-ambient-and-household-air-pollution-murray2020global"><span class="header-section-number">6.6.3.1</span> Joint ambient and household air pollution (<span class="citation" data-cites="murray2020global">Murray et al. (2020)</span>)</a></li>
+  <li><a href="#sec-healthout" id="toc-sec-healthout" class="nav-link" data-scroll-target="#sec-healthout"><span class="header-section-number">6.6.3.2</span> Health outcomes in CPAT</a></li>
+  <li><a href="#ozone-air-pollution" id="toc-ozone-air-pollution" class="nav-link" data-scroll-target="#ozone-air-pollution"><span class="header-section-number">6.6.3.3</span> Ozone air pollution</a></li>
+  <li><a href="#multiple-risks-factors" id="toc-multiple-risks-factors" class="nav-link" data-scroll-target="#multiple-risks-factors"><span class="header-section-number">6.6.3.4</span> Multiple risks factors</a></li>
   </ul></li>
-  <li><a href="#baseline-exposure-to-air-pollution-data" id="toc-baseline-exposure-to-air-pollution-data" class="nav-link" data-scroll-target="#baseline-exposure-to-air-pollution-data"><span class="toc-section-number">6.6.4</span>  Baseline exposure to air pollution data</a>
+  <li><a href="#baseline-exposure-to-air-pollution-data" id="toc-baseline-exposure-to-air-pollution-data" class="nav-link" data-scroll-target="#baseline-exposure-to-air-pollution-data"><span class="header-section-number">6.6.4</span> Baseline exposure to air pollution data</a>
   <ul class="collapse">
-  <li><a href="#sec-ambexp" id="toc-sec-ambexp" class="nav-link" data-scroll-target="#sec-ambexp"><span class="toc-section-number">6.6.4.1</span>  Ambient PM<sub>2.5</sub> Exposure data</a></li>
-  <li><a href="#household-pm2.5-exposure-data" id="toc-household-pm2.5-exposure-data" class="nav-link" data-scroll-target="#household-pm2.5-exposure-data"><span class="toc-section-number">6.6.4.2</span>  Household PM<sub>2.5</sub> Exposure data</a></li>
-  <li><a href="#sec-ozexp" id="toc-sec-ozexp" class="nav-link" data-scroll-target="#sec-ozexp"><span class="toc-section-number">6.6.4.3</span>  Ozone Exposure data</a></li>
+  <li><a href="#sec-ambexp" id="toc-sec-ambexp" class="nav-link" data-scroll-target="#sec-ambexp"><span class="header-section-number">6.6.4.1</span> Ambient PM<sub>2.5</sub> Exposure data</a></li>
+  <li><a href="#household-pm2.5-exposure-data" id="toc-household-pm2.5-exposure-data" class="nav-link" data-scroll-target="#household-pm2.5-exposure-data"><span class="header-section-number">6.6.4.2</span> Household PM<sub>2.5</sub> Exposure data</a></li>
+  <li><a href="#sec-ozexp" id="toc-sec-ozexp" class="nav-link" data-scroll-target="#sec-ozexp"><span class="header-section-number">6.6.4.3</span> Ozone Exposure data</a></li>
   </ul></li>
-  <li><a href="#leakage-to-biomass" id="toc-leakage-to-biomass" class="nav-link" data-scroll-target="#leakage-to-biomass"><span class="toc-section-number">6.6.5</span>  Leakage to biomass</a></li>
-  <li><a href="#other-health-effects-in-cpat" id="toc-other-health-effects-in-cpat" class="nav-link" data-scroll-target="#other-health-effects-in-cpat"><span class="toc-section-number">6.6.6</span>  Other health effects in CPAT</a>
+  <li><a href="#leakage-to-biomass" id="toc-leakage-to-biomass" class="nav-link" data-scroll-target="#leakage-to-biomass"><span class="header-section-number">6.6.5</span> Leakage to biomass</a></li>
+  <li><a href="#other-health-effects-in-cpat" id="toc-other-health-effects-in-cpat" class="nav-link" data-scroll-target="#other-health-effects-in-cpat"><span class="header-section-number">6.6.6</span> Other health effects in CPAT</a>
   <ul class="collapse">
-  <li><a href="#post-neonatal-mortality-woodruff2006fine" id="toc-post-neonatal-mortality-woodruff2006fine" class="nav-link" data-scroll-target="#post-neonatal-mortality-woodruff2006fine"><span class="toc-section-number">6.6.6.1</span>  Post neonatal mortality (<span class="citation" data-cites="woodruff2006fine">Woodruff, Parker, and Schoendorf (2006)</span>)</a></li>
-  <li><a href="#depressive-disorders" id="toc-depressive-disorders" class="nav-link" data-scroll-target="#depressive-disorders"><span class="toc-section-number">6.6.6.2</span>  Depressive disorders</a></li>
+  <li><a href="#post-neonatal-mortality-woodruff2006fine" id="toc-post-neonatal-mortality-woodruff2006fine" class="nav-link" data-scroll-target="#post-neonatal-mortality-woodruff2006fine"><span class="header-section-number">6.6.6.1</span> Post neonatal mortality (<span class="citation" data-cites="woodruff2006fine">Woodruff, Parker, and Schoendorf (2006)</span>)</a></li>
+  <li><a href="#depressive-disorders" id="toc-depressive-disorders" class="nav-link" data-scroll-target="#depressive-disorders"><span class="header-section-number">6.6.6.2</span> Depressive disorders</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#sec-eco_ap" id="toc-sec-eco_ap" class="nav-link" data-scroll-target="#sec-eco_ap"><span class="toc-section-number">6.7</span>  Methods to quantify the economic impacts of air pollution</a>
+  <li><a href="#sec-eco_ap" id="toc-sec-eco_ap" class="nav-link" data-scroll-target="#sec-eco_ap"><span class="header-section-number">6.7</span> Methods to quantify the economic impacts of air pollution</a>
   <ul>
-  <li><a href="#data-sources-used-to-quantify-economic-impacts" id="toc-data-sources-used-to-quantify-economic-impacts" class="nav-link" data-scroll-target="#data-sources-used-to-quantify-economic-impacts"><span class="toc-section-number">6.7.1</span>  Data sources used to quantify economic impacts</a></li>
-  <li><a href="#working-days-lost" id="toc-working-days-lost" class="nav-link" data-scroll-target="#working-days-lost"><span class="toc-section-number">6.7.2</span>  Working days lost</a></li>
-  <li><a href="#sec-marketoutputlosses" id="toc-sec-marketoutputlosses" class="nav-link" data-scroll-target="#sec-marketoutputlosses"><span class="toc-section-number">6.7.3</span>  Market output losses</a>
+  <li><a href="#data-sources-used-to-quantify-economic-impacts" id="toc-data-sources-used-to-quantify-economic-impacts" class="nav-link" data-scroll-target="#data-sources-used-to-quantify-economic-impacts"><span class="header-section-number">6.7.1</span> Data sources used to quantify economic impacts</a></li>
+  <li><a href="#working-days-lost" id="toc-working-days-lost" class="nav-link" data-scroll-target="#working-days-lost"><span class="header-section-number">6.7.2</span> Working days lost</a></li>
+  <li><a href="#sec-marketoutputlosses" id="toc-sec-marketoutputlosses" class="nav-link" data-scroll-target="#sec-marketoutputlosses"><span class="header-section-number">6.7.3</span> Market output losses</a>
   <ul class="collapse">
-  <li><a href="#cpat-operationalization" id="toc-cpat-operationalization" class="nav-link" data-scroll-target="#cpat-operationalization"><span class="toc-section-number">6.7.3.1</span>  CPAT operationalization</a></li>
+  <li><a href="#cpat-operationalization" id="toc-cpat-operationalization" class="nav-link" data-scroll-target="#cpat-operationalization"><span class="header-section-number">6.7.3.1</span> CPAT operationalization</a></li>
   </ul></li>
-  <li><a href="#health-expenditure" id="toc-health-expenditure" class="nav-link" data-scroll-target="#health-expenditure"><span class="toc-section-number">6.7.4</span>  Health expenditure</a></li>
-  <li><a href="#value-of-the-statistical-life" id="toc-value-of-the-statistical-life" class="nav-link" data-scroll-target="#value-of-the-statistical-life"><span class="toc-section-number">6.7.5</span>  Value of the statistical life</a></li>
-  <li><a href="#time-structure-of-averted-deaths" id="toc-time-structure-of-averted-deaths" class="nav-link" data-scroll-target="#time-structure-of-averted-deaths"><span class="toc-section-number">6.7.6</span>  Time Structure of averted deaths</a></li>
-  <li><a href="#travel-time-saved" id="toc-travel-time-saved" class="nav-link" data-scroll-target="#travel-time-saved"><span class="toc-section-number">6.7.7</span>  Travel time saved</a></li>
-  <li><a href="#sec-valuemorbidity" id="toc-sec-valuemorbidity" class="nav-link" data-scroll-target="#sec-valuemorbidity"><span class="toc-section-number">6.7.8</span>  Value of morbidity using years lived with disabilities (YLDs)</a></li>
-  <li><a href="#air-pollution-externalities-per-unit-of-fuel" id="toc-air-pollution-externalities-per-unit-of-fuel" class="nav-link" data-scroll-target="#air-pollution-externalities-per-unit-of-fuel"><span class="toc-section-number">6.7.9</span>  Air pollution externalities per unit of fuel</a></li>
+  <li><a href="#health-expenditure" id="toc-health-expenditure" class="nav-link" data-scroll-target="#health-expenditure"><span class="header-section-number">6.7.4</span> Health expenditure</a></li>
+  <li><a href="#value-of-the-statistical-life" id="toc-value-of-the-statistical-life" class="nav-link" data-scroll-target="#value-of-the-statistical-life"><span class="header-section-number">6.7.5</span> Value of the statistical life</a></li>
+  <li><a href="#time-structure-of-averted-deaths" id="toc-time-structure-of-averted-deaths" class="nav-link" data-scroll-target="#time-structure-of-averted-deaths"><span class="header-section-number">6.7.6</span> Time Structure of averted deaths</a></li>
+  <li><a href="#travel-time-saved" id="toc-travel-time-saved" class="nav-link" data-scroll-target="#travel-time-saved"><span class="header-section-number">6.7.7</span> Travel time saved</a></li>
+  <li><a href="#sec-valuemorbidity" id="toc-sec-valuemorbidity" class="nav-link" data-scroll-target="#sec-valuemorbidity"><span class="header-section-number">6.7.8</span> Value of morbidity using years lived with disabilities (YLDs)</a></li>
+  <li><a href="#air-pollution-externalities-per-unit-of-fuel" id="toc-air-pollution-externalities-per-unit-of-fuel" class="nav-link" data-scroll-target="#air-pollution-externalities-per-unit-of-fuel"><span class="header-section-number">6.7.9</span> Air pollution externalities per unit of fuel</a></li>
   </ul></li>
-  <li><a href="#sec-validation" id="toc-sec-validation" class="nav-link" data-scroll-target="#sec-validation"><span class="toc-section-number">6.8</span>  Validation: comparison with other models</a>
+  <li><a href="#sec-validation" id="toc-sec-validation" class="nav-link" data-scroll-target="#sec-validation"><span class="header-section-number">6.8</span> Validation: comparison with other models</a>
   <ul>
-  <li><a href="#health-impacts-of-pollution" id="toc-health-impacts-of-pollution" class="nav-link" data-scroll-target="#health-impacts-of-pollution"><span class="toc-section-number">6.8.1</span>  Health impacts of pollution</a></li>
-  <li><a href="#emissions" id="toc-emissions" class="nav-link" data-scroll-target="#emissions"><span class="toc-section-number">6.8.2</span>  Emissions</a></li>
-  <li><a href="#concentrations-share-of-fossil-fuels-on-ambient-pm2.5" id="toc-concentrations-share-of-fossil-fuels-on-ambient-pm2.5" class="nav-link" data-scroll-target="#concentrations-share-of-fossil-fuels-on-ambient-pm2.5"><span class="toc-section-number">6.8.3</span>  Concentrations: share of fossil fuels on ambient PM<sub>2.5</sub></a></li>
-  <li><a href="#externalities-from-pollution" id="toc-externalities-from-pollution" class="nav-link" data-scroll-target="#externalities-from-pollution"><span class="toc-section-number">6.8.4</span>  Externalities from pollution</a></li>
+  <li><a href="#health-impacts-of-pollution" id="toc-health-impacts-of-pollution" class="nav-link" data-scroll-target="#health-impacts-of-pollution"><span class="header-section-number">6.8.1</span> Health impacts of pollution</a></li>
+  <li><a href="#emissions" id="toc-emissions" class="nav-link" data-scroll-target="#emissions"><span class="header-section-number">6.8.2</span> Emissions</a></li>
+  <li><a href="#concentrations-share-of-fossil-fuels-on-ambient-pm2.5" id="toc-concentrations-share-of-fossil-fuels-on-ambient-pm2.5" class="nav-link" data-scroll-target="#concentrations-share-of-fossil-fuels-on-ambient-pm2.5"><span class="header-section-number">6.8.3</span> Concentrations: share of fossil fuels on ambient PM<sub>2.5</sub></a></li>
+  <li><a href="#externalities-from-pollution" id="toc-externalities-from-pollution" class="nav-link" data-scroll-target="#externalities-from-pollution"><span class="header-section-number">6.8.4</span> Externalities from pollution</a></li>
   </ul></li>
-  <li><a href="#sec-caveats" id="toc-sec-caveats" class="nav-link" data-scroll-target="#sec-caveats"><span class="toc-section-number">6.9</span>  Caveats</a></li>
-  <li><a href="#appendices" id="toc-appendices" class="nav-link" data-scroll-target="#appendices"><span class="toc-section-number">6.10</span>  Appendices</a>
+  <li><a href="#sec-caveats" id="toc-sec-caveats" class="nav-link" data-scroll-target="#sec-caveats"><span class="header-section-number">6.9</span> Caveats</a></li>
+  <li><a href="#appendices" id="toc-appendices" class="nav-link" data-scroll-target="#appendices"><span class="header-section-number">6.10</span> Appendices</a>
   <ul>
-  <li><a href="#cpat-codes-air-pollution-tab." id="toc-cpat-codes-air-pollution-tab." class="nav-link" data-scroll-target="#cpat-codes-air-pollution-tab."><span class="toc-section-number">6.10.1</span>  CPAT codes, Air Pollution tab.</a></li>
-  <li><a href="#relative-risk-ier-gbd-2019" id="toc-relative-risk-ier-gbd-2019" class="nav-link" data-scroll-target="#relative-risk-ier-gbd-2019"><span class="toc-section-number">6.10.2</span>  Relative Risk IER GBD 2019</a></li>
-  <li><a href="#sec-quanthealtheff" id="toc-sec-quanthealtheff" class="nav-link" data-scroll-target="#sec-quanthealtheff"><span class="toc-section-number">6.10.3</span>  Quantification of health effects in CPAT</a></li>
-  <li><a href="#some-unit-conversions" id="toc-some-unit-conversions" class="nav-link" data-scroll-target="#some-unit-conversions"><span class="toc-section-number">6.10.4</span>  Some unit conversions</a></li>
-  <li><a href="#comments-from-2021-review-and-summary-of-changes" id="toc-comments-from-2021-review-and-summary-of-changes" class="nav-link" data-scroll-target="#comments-from-2021-review-and-summary-of-changes"><span class="toc-section-number">6.10.5</span>  Comments from 2021 review and summary of changes</a></li>
+  <li><a href="#cpat-codes-air-pollution-tab." id="toc-cpat-codes-air-pollution-tab." class="nav-link" data-scroll-target="#cpat-codes-air-pollution-tab."><span class="header-section-number">6.10.1</span> CPAT codes, Air Pollution tab.</a></li>
+  <li><a href="#relative-risk-ier-gbd-2019" id="toc-relative-risk-ier-gbd-2019" class="nav-link" data-scroll-target="#relative-risk-ier-gbd-2019"><span class="header-section-number">6.10.2</span> Relative Risk IER GBD 2019</a></li>
+  <li><a href="#sec-quanthealtheff" id="toc-sec-quanthealtheff" class="nav-link" data-scroll-target="#sec-quanthealtheff"><span class="header-section-number">6.10.3</span> Quantification of health effects in CPAT</a></li>
+  <li><a href="#some-unit-conversions" id="toc-some-unit-conversions" class="nav-link" data-scroll-target="#some-unit-conversions"><span class="header-section-number">6.10.4</span> Some unit conversions</a></li>
+  <li><a href="#comments-from-2021-review-and-summary-of-changes" id="toc-comments-from-2021-review-and-summary-of-changes" class="nav-link" data-scroll-target="#comments-from-2021-review-and-summary-of-changes"><span class="header-section-number">6.10.5</span> Comments from 2021 review and summary of changes</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/wb-mrio/cpat_public/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     </div>
@@ -265,7 +280,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Air pollution module</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Air pollution module</span></h1>
 </div>
 
 
@@ -4607,188 +4622,188 @@ This point was clarified during the previous review
 </table>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-aleluia" class="csl-entry" role="doc-biblioentry">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-aleluia" class="csl-entry" role="listitem">
 Aleluia Reis, Lara. 2020. <span>“Down-Scaling FASST(r) to Country Level.”</span>
 </div>
-<div id="ref-almeida2020ambient" class="csl-entry" role="doc-biblioentry">
+<div id="ref-almeida2020ambient" class="csl-entry" role="listitem">
 Almeida, SM, M Manousakas, E Diapouli, Z Kertesz, L Samek, E Hristova, K Šega, et al. 2020. <span>“Ambient Particulate Matter Source Apportionment Using Receptor Modelling in European and Central Asia Urban Areas.”</span> <em>Environmental Pollution</em> 266: 115199. <a href="https://doi.org/10.1016/J.ENVPOL.2020.115199">https://doi.org/10.1016/J.ENVPOL.2020.115199</a>.
 </div>
-<div id="ref-amann2017costs" class="csl-entry" role="doc-biblioentry">
+<div id="ref-amann2017costs" class="csl-entry" role="listitem">
 Amann, Markus, Mike Holland, Rob Maas, T Vandyck, and B Saveyn. 2017. <span>“Costs, Benefits and Economic Impacts of the EU Clean Air Strategy and Their Implications on Innovation and Competitiveness.”</span> <em>IIASA Report; International Institute for Applied Systems Analysis (IIASA): Laxenburg, Austria</em>, 1–59. <a href="http://gains.iiasa.ac.at.ILO">http://gains.iiasa.ac.at.ILO</a>.
 </div>
-<div id="ref-apte2012global" class="csl-entry" role="doc-biblioentry">
+<div id="ref-apte2012global" class="csl-entry" role="listitem">
 Apte, Joshua S, Emilie Bombrun, Julian D Marshall, and William W Nazaroff. 2012. <span>“Global Intraurban Intake Fractions for Primary Air Pollutants from Vehicles and Other Distributed Sources.”</span> <em>Environmental Science &amp; Technology</em> 46 (6): 3415–23. <a href="https://doi.org/10.1021/es204021h">https://doi.org/10.1021/es204021h</a>.
 </div>
-<div id="ref-world2022global" class="csl-entry" role="doc-biblioentry">
+<div id="ref-world2022global" class="csl-entry" role="listitem">
 Bank, World. 2022. <em>The Global Health Cost of PM2. 5 Air Pollution: A Case for Action Beyond 2021</em>. The World Bank.
 </div>
-<div id="ref-bennett2002defining" class="csl-entry" role="doc-biblioentry">
+<div id="ref-bennett2002defining" class="csl-entry" role="listitem">
 Bennett, Deborah H, Thomas E McKone, John S Evans, William W Nazaroff, Manuele D Margni, Olivier Jolliet, and Kirk R Smith. 2002. <span>“Defining Intake Fraction.”</span> <em>Environmental Science and Technology</em> 36 (9). <a href="http://www.ncbi.nlm.nih.gov/pubmed/12026996">http://www.ncbi.nlm.nih.gov/pubmed/12026996</a>.
 </div>
-<div id="ref-braithwaite2019air" class="csl-entry" role="doc-biblioentry">
+<div id="ref-braithwaite2019air" class="csl-entry" role="listitem">
 Braithwaite, Isobel, Shuo Zhang, James B Kirkbride, David PJ Osborn, and Joseph F Hayes. 2019. <span>“Air Pollution (Particulate Matter) Exposure and Associations with Depression, Anxiety, Bipolar, Psychosis and Suicide Risk: A Systematic Review and Meta-Analysis.”</span> <em>Environmental Health Perspectives</em> 127 (12): 126002. <a href="https://doi.org/10.1289/EHP4595">https://doi.org/10.1289/EHP4595</a>.
 </div>
-<div id="ref-byers2018global" class="csl-entry" role="doc-biblioentry">
+<div id="ref-byers2018global" class="csl-entry" role="listitem">
 Byers, Logan, Johannes Friedrich, Roman Hennig, Aaron Kressig, Xinyue Li, COLIN McCormick, and Laura Malaguzzi Valeri. 2018. <span>“A Global Database of Power Plants.”</span> <em>World Resources Institute</em> 18. <a href="http://globalenergyobservatory.org">http://globalenergyobservatory.org</a>.
 </div>
-<div id="ref-CIESIN1" class="csl-entry" role="doc-biblioentry">
+<div id="ref-CIESIN1" class="csl-entry" role="listitem">
 Center for International Earth Science Information Network - CIESIN - Columbia University. 2018. <span>“Documentation for the Gridded Population of the World, Version 4 (GPWv4), Revision 11 Data Sets.”</span> <em>Palisades, New York: NASA Socioeconomic Data and Applications Center (SEDAC)</em>. <a href="https://doi.org/https://doi.org/10.7927/H45Q4T5F">https://doi.org/https://doi.org/10.7927/H45Q4T5F</a>.
 </div>
-<div id="ref-chafe2014household" class="csl-entry" role="doc-biblioentry">
+<div id="ref-chafe2014household" class="csl-entry" role="listitem">
 Chafe, Zoë A, Michael Brauer, Zbigniew Klimont, Rita Van Dingenen, Sumi Mehta, Shilpa Rao, Keywan Riahi, Frank Dentener, and Kirk R Smith. 2014. <span>“Household Cooking with Solid Fuels Contributes to Ambient PM2. 5 Air Pollution and the Burden of Disease.”</span> <em>Environmental Health Perspectives</em> 122 (12): 1314–20. <a href="https://doi.org/10.1289/ehp.1206340">https://doi.org/10.1289/ehp.1206340</a>.
 </div>
-<div id="ref-cropper2012health" class="csl-entry" role="doc-biblioentry">
+<div id="ref-cropper2012health" class="csl-entry" role="listitem">
 Cropper, Maureen, Shama Gamkhar, Kabir Malik, Alexander Limonov, and Ian Partridge. 2012. <span>“The Health Effects of Coal Electricity Generation in India.”</span> <em>Resources for the Future Discussion Paper</em>, no. 12-25. <a href="https://www.rff.org/publications/working-papers/the-health-effects-of-coal-electricity-generation-in-india/">https://www.rff.org/publications/working-papers/the-health-effects-of-coal-electricity-generation-in-india/</a>.
 </div>
-<div id="ref-iiasa1" class="csl-entry" role="doc-biblioentry">
+<div id="ref-iiasa1" class="csl-entry" role="listitem">
 ECLIPSE V5a Global Emission Fields - Global Emissions. 2015. <span>“IIASA.”</span> <a href="https://iiasa.ac.at/web/home/research/researchPrograms/air/ECLIPSEv5a.html">https://iiasa.ac.at/web/home/research/researchPrograms/air/ECLIPSEv5a.html</a>.
 </div>
-<div id="ref-eea" class="csl-entry" role="doc-biblioentry">
+<div id="ref-eea" class="csl-entry" role="listitem">
 European Environment Agency. 2020. <span>“Emission Database for Global Atmospheric Research (EDGAR).”</span> <a href="http://edgar.jrc.ec.europa.eu/">http://edgar.jrc.ec.europa.eu/</a>.
 </div>
-<div id="ref-acp-14-9977-2014" class="csl-entry" role="doc-biblioentry">
+<div id="ref-acp-14-9977-2014" class="csl-entry" role="listitem">
 Gaita, S. M., J. Boman, M. J. Gatari, J. B. C. Pettersson, and S. Janhäll. 2014. <span>“Source Apportionment and Seasonal Variation of PM<span class="math inline">\(_{2.5}\)</span> in a Sub-Saharan African City: Nairobi, Kenya.”</span> <em>Atmospheric Chemistry and Physics</em> 14 (18): 9977–91. <a href="https://doi.org/10.5194/acp-14-9977-2014">https://doi.org/10.5194/acp-14-9977-2014</a>.
 </div>
-<div id="ref-global2018global" class="csl-entry" role="doc-biblioentry">
+<div id="ref-global2018global" class="csl-entry" role="listitem">
 Global Burden of Disease Collaborative Network. 2018. <span>“Global Burden of Disease Study 2017 (GBD 2017) Results.”</span> <em>Seattle, United States: Institute for Health Metrics and Evaluation (IHME)</em>. <a href="http://ghdx.healthdata.org/record/ihme-data/gbd-2017-life-tables-1950-2017">http://ghdx.healthdata.org/record/ihme-data/gbd-2017-life-tables-1950-2017</a>.
 </div>
-<div id="ref-global2019a" class="csl-entry" role="doc-biblioentry">
+<div id="ref-global2019a" class="csl-entry" role="listitem">
 Global Burden of Disease Health Financing Collaborator Network. 2019a. <span>“Global Expected Health Spending 2017-2050.”</span> <em>Seattle, United States: Institute for Health Metrics and Evaluation (IHME)</em>. <a href="http://ghdx.healthdata.org/record/ihme-data/global-expected-health-spending-2017-2050">http://ghdx.healthdata.org/record/ihme-data/global-expected-health-spending-2017-2050</a>.
 </div>
-<div id="ref-global2019burden" class="csl-entry" role="doc-biblioentry">
+<div id="ref-global2019burden" class="csl-entry" role="listitem">
 ———. 2019b. <span>“Global Health Spending 1995-2016.”</span> <em>Seattle, United States: Institute for Health Metrics and Evaluation (IHME)</em>. <a href="http://ghdx.healthdata.org/record/ihme-data/global-health-spending-1995-2016">http://ghdx.healthdata.org/record/ihme-data/global-health-spending-1995-2016</a>.
 </div>
-<div id="ref-globalenergy" class="csl-entry" role="doc-biblioentry">
+<div id="ref-globalenergy" class="csl-entry" role="listitem">
 Global Energy Observatory, Google, KTH Royal Institute of Technology in Stockholm, Enipedia, World Resources Institute. 2018. <span>“Global Power Plant Database.”</span> <em>Published on Resource Watch and Google Earth Engine</em>. <a href="http://resourcewatch.org/ https://earthengine.google.com/">http://resourcewatch.org/ https://earthengine.google.com/</a>.
 </div>
-<div id="ref-guerriero2019labor" class="csl-entry" role="doc-biblioentry">
+<div id="ref-guerriero2019labor" class="csl-entry" role="listitem">
 Guerriero, Marta. 2019. <em>The Labor Share of Income Around the World: Evidence from a Panel Dataset</em>. Springer. <a href="https://www.adb.org/publications/labor-share-income-around-world-evidence-panel-dataset">https://www.adb.org/publications/labor-share-income-around-world-evidence-panel-dataset</a>.
 </div>
-<div id="ref-holland2014cost" class="csl-entry" role="doc-biblioentry">
+<div id="ref-holland2014cost" class="csl-entry" role="listitem">
 Holland, Michael. 2014. <span>“Cost-Benefit Analysis of Final Policy Scenarios for the EU Clean Air Package.”</span>
 </div>
-<div id="ref-humbert2011intake" class="csl-entry" role="doc-biblioentry">
+<div id="ref-humbert2011intake" class="csl-entry" role="listitem">
 Humbert, Sebastien, Julian D Marshall, Shanna Shaked, Joseph V Spadaro, Yurika Nishioka, Philipp Preiss, Thomas E McKone, Arpad Horvath, and Olivier Jolliet. 2011. <span>“Intake Fraction for Particulate Matter: Recommendations for Life Cycle Impact Assessment.”</span> <em>Environmental Science &amp; Technology</em> 45 (11): 4808–16. <a href="https://pubmed.ncbi.nlm.nih.gov/21563817/">https://pubmed.ncbi.nlm.nih.gov/21563817/</a>.
 </div>
-<div id="ref-iea2" class="csl-entry" role="doc-biblioentry">
+<div id="ref-iea2" class="csl-entry" role="listitem">
 IEA. 2019. <span>“Energy Prices and Taxes for OECD Countries, 4th Quarter 2019, Database Documentation.”</span>
 </div>
-<div id="ref-inness2019cams" class="csl-entry" role="doc-biblioentry">
+<div id="ref-inness2019cams" class="csl-entry" role="listitem">
 Inness, Antje, Melanie Ades, Anna Agustı́-Panareda, Jérôme Barré, Anna Benedictow, Anne-Marlene Blechschmidt, Juan Jose Dominguez, et al. 2019. <span>“The CAMS Reanalysis of Atmospheric Composition.”</span> <em>Atmospheric Chemistry and Physics</em> 19 (6): 3515–56.
 </div>
-<div id="ref-ihme" class="csl-entry" role="doc-biblioentry">
+<div id="ref-ihme" class="csl-entry" role="listitem">
 Institute for Health Metrics and Evaluation (IHME). 2020. <span>“GBD Results Tool.”</span> <a href="http://ghdx.healthdata.org/gbd-results-tool">http://ghdx.healthdata.org/gbd-results-tool</a>.
 </div>
-<div id="ref-irf" class="csl-entry" role="doc-biblioentry">
+<div id="ref-irf" class="csl-entry" role="listitem">
 International Road Federation. 2018. <span>“<span>World Road Statistics</span>.”</span>
 </div>
-<div id="ref-ipcc2014climate" class="csl-entry" role="doc-biblioentry">
+<div id="ref-ipcc2014climate" class="csl-entry" role="listitem">
 IPCC and others. 2014. <span>“Climate Change 2014: Synthesis Report. Contribution of Working Groups i, II and III to the Fifth Assessment Report of the Intergovernmental Panel on Climate Change.”</span> Ipcc Geneva, Switzerland.
 </div>
-<div id="ref-korteland2022health" class="csl-entry" role="doc-biblioentry">
+<div id="ref-korteland2022health" class="csl-entry" role="listitem">
 Korteland, Marisa. 2022. <span>“Health-Related Social Costs of Air Pollution Due to Residential Heating and Cooking in the EU27 And.”</span>
 </div>
-<div id="ref-lamancusa2017spatially" class="csl-entry" role="doc-biblioentry">
+<div id="ref-lamancusa2017spatially" class="csl-entry" role="listitem">
 Lamancusa, Carmen, Fatema Parvez, and Kristina Wagstrom. 2017. <span>“Spatially Resolved Intake Fraction Estimates for Primary and Secondary Particulate Matter in the United States.”</span> <em>Atmospheric Environment</em> 150: 229–37.
 </div>
-<div id="ref-lelieveld2015contribution" class="csl-entry" role="doc-biblioentry">
+<div id="ref-lelieveld2015contribution" class="csl-entry" role="listitem">
 Lelieveld, Jos, John S Evans, Mohammed Fnais, Despina Giannadaki, and Andrea Pozzer. 2015. <span>“The Contribution of Outdoor Air Pollution Sources to Premature Mortality on a Global Scale.”</span> <em>Nature</em> 525 (7569): 367–71.
 </div>
-<div id="ref-murray2020global" class="csl-entry" role="doc-biblioentry">
+<div id="ref-murray2020global" class="csl-entry" role="listitem">
 Murray, Christopher JL, Aleksandr Y Aravkin, Peng Zheng, Cristiana Abbafati, Kaja M Abbas, Mohsen Abbasi-Kangevari, Foad Abd-Allah, et al. 2020. <span>“Global Burden of 87 Risk Factors in 204 Countries and Territories, 1990–2019: A Systematic Analysis for the Global Burden of Disease Study 2019.”</span> <em>The Lancet</em> 396 (10258): 1223–49.
 </div>
-<div id="ref-narain2016methodology" class="csl-entry" role="doc-biblioentry">
+<div id="ref-narain2016methodology" class="csl-entry" role="listitem">
 Narain, Urvashi, and Chris Sall. 2016. <span>“Methodology for Valuing the Health Impacts of Air Pollution.”</span>
 </div>
-<div id="ref-oecd19" class="csl-entry" role="doc-biblioentry">
+<div id="ref-oecd19" class="csl-entry" role="listitem">
 OECD. 2019. <span>“Economic Interactions Between Climate Change and Outdoor Air Pollution.”</span> <a href="http://www.oecd.org/officialdocuments/publicdisplaydocumentpdf/?cote=ENV/EPOC/WPIEEP(2018)3/FINAL&amp;docLanguage=En">http://www.oecd.org/officialdocuments/publicdisplaydocumentpdf/?cote=ENV/EPOC/WPIEEP(2018)3/FINAL&amp;docLanguage=En</a>.
 </div>
-<div id="ref-oecd2021" class="csl-entry" role="doc-biblioentry">
+<div id="ref-oecd2021" class="csl-entry" role="listitem">
 ———. 2021a. <span>“Inflation (CPI) (Indicator).”</span> <a href="https://data.oecd.org/price/inflation-cpi.htm">https://data.oecd.org/price/inflation-cpi.htm</a>.
 </div>
-<div id="ref-oecd21" class="csl-entry" role="doc-biblioentry">
+<div id="ref-oecd21" class="csl-entry" role="listitem">
 ———. 2021b. <span>“Level of GDP Per Capita and Productivity.”</span> <a href="https://stats.oecd.org/Index.aspx?DataSetCode=PDB_LV">https://stats.oecd.org/Index.aspx?DataSetCode=PDB_LV</a>.
 </div>
-<div id="ref-oecd20" class="csl-entry" role="doc-biblioentry">
+<div id="ref-oecd20" class="csl-entry" role="listitem">
 ———. n.d.a. <span>“Health Status: Absence from Work Due to Illness.”</span> <a href="https://stats.oecd.org/index.aspx?queryid=30123">https://stats.oecd.org/index.aspx?queryid=30123</a>.
 </div>
-<div id="ref-oecd12" class="csl-entry" role="doc-biblioentry">
+<div id="ref-oecd12" class="csl-entry" role="listitem">
 ———. n.d.b. <span>“Mortality Risk Valuation in Environment, Health and Transport Policies.”</span>
 </div>
-<div id="ref-oecd16" class="csl-entry" role="doc-biblioentry">
+<div id="ref-oecd16" class="csl-entry" role="listitem">
 ———. n.d.c. <span>“The Economic Consequences of Outdoor Air Pollution.”</span> <a href="https://doi.org/10.1787/9789264257474-en">https://doi.org/10.1787/9789264257474-en</a>.
 </div>
-<div id="ref-ostro1987air" class="csl-entry" role="doc-biblioentry">
+<div id="ref-ostro1987air" class="csl-entry" role="listitem">
 Ostro, Bart D. 1987. <span>“Air Pollution and Morbidity Revisited: A Specification Test.”</span> <em>Journal of Environmental Economics and Management</em> 14 (1): 87–98.
 </div>
-<div id="ref-pandey2021health" class="csl-entry" role="doc-biblioentry">
+<div id="ref-pandey2021health" class="csl-entry" role="listitem">
 Pandey, Anamika, Michael Brauer, Maureen L Cropper, Kalpana Balakrishnan, Prashant Mathur, Sagnik Dey, Burak Turkgulu, et al. 2021. <span>“Health and Economic Impact of Air Pollution in the States of India: The Global Burden of Disease Study 2019.”</span> <em>The Lancet Planetary Health</em> 5 (1): e25–38.
 </div>
-<div id="ref-parry2014getting" class="csl-entry" role="doc-biblioentry">
+<div id="ref-parry2014getting" class="csl-entry" role="listitem">
 Parry, Ian WH, Mr Dirk Heine, Eliza Lis, and Shanjun Li. 2014. <em>Getting Energy Prices Right: From Principle to Practice</em>. International Monetary Fund.
 </div>
-<div id="ref-parvez2017primary" class="csl-entry" role="doc-biblioentry">
+<div id="ref-parvez2017primary" class="csl-entry" role="listitem">
 Parvez, Fatema, Carmen Lamancusa, and Kristina Wagstrom. 2017. <span>“Primary and Secondary Particulate Matter Intake Fraction from Different Height Emission Sources.”</span> <em>Atmospheric Environment</em> 165: 1–11.
 </div>
-<div id="ref-preker2016health" class="csl-entry" role="doc-biblioentry">
+<div id="ref-preker2016health" class="csl-entry" role="listitem">
 Preker, Alexander S, Olusoji O Adeyi, Marisa Gil Lapetra, Diane-Charlotte Simon, and Eric Keuffel. 2016. <span>“Health Care Expenditures Associated with Pollution: Exploratory Methods and Findings.”</span> <em>Annals of Global Health</em> 82 (5): 711–21.
 </div>
-<div id="ref-reid2005millenium" class="csl-entry" role="doc-biblioentry">
+<div id="ref-reid2005millenium" class="csl-entry" role="listitem">
 Reid, Walter, and C Raudsepp-Hearne. 2005. <span>“Millenium Ecosystem Assessment.”</span>
 </div>
-<div id="ref-renna" class="csl-entry" role="doc-biblioentry">
+<div id="ref-renna" class="csl-entry" role="listitem">
 Renna, Francesco Granella, Stefania, and Lara Aleluia Reis. 2021. <span>“CLAQC - Country Level Air Quality Calculator.”</span> <a href="https://datashowb.shinyapps.io/CLAQC/">https://datashowb.shinyapps.io/CLAQC/</a>.
 </div>
-<div id="ref-robinson2019reference" class="csl-entry" role="doc-biblioentry">
+<div id="ref-robinson2019reference" class="csl-entry" role="listitem">
 Robinson, Lisa A, James K Hammitt, Michele Cecchini, Kalipso Chalkidou, Karl Claxton, Maureen Cropper, Patrick Hoang-Vu Eozenou, et al. 2019. <span>“Reference Case Guidelines for Benefit-Cost Analysis in Global Health and Development.”</span>
 </div>
-<div id="ref-robinson2019valuing" class="csl-entry" role="doc-biblioentry">
+<div id="ref-robinson2019valuing" class="csl-entry" role="listitem">
 Robinson, Lisa A, James K Hammitt, and Lucy O’Keeffe. 2019. <span>“Valuing Mortality Risk Reductions in Global Benefit-Cost Analysis.”</span> <em>Journal of Benefit-Cost Analysis</em> 10 (S1): 15–50.
 </div>
-<div id="ref-myhre2014anthropogenic" class="csl-entry" role="doc-biblioentry">
+<div id="ref-myhre2014anthropogenic" class="csl-entry" role="listitem">
 Shindell, F-m Breon, D. 2013. <em>Anthropogenic and Natural Radiative Forcing</em>. Climate Change 2013: The Physical Science Basis.
 </div>
-<div id="ref-turner2016long" class="csl-entry" role="doc-biblioentry">
+<div id="ref-turner2016long" class="csl-entry" role="listitem">
 Turner, Michelle C, Michael Jerrett, C Arden Pope III, Daniel Krewski, Susan M Gapstur, W Ryan Diver, Bernardo S Beckerman, et al. 2016. <span>“Long-Term Ozone Exposure and Mortality in a Large Prospective Study.”</span> <em>American Journal of Respiratory and Critical Care Medicine</em> 193 (10): 1134–42.
 </div>
-<div id="ref-usepa" class="csl-entry" role="doc-biblioentry">
+<div id="ref-usepa" class="csl-entry" role="listitem">
 US EPA. 2013. <span>“Regulatory Impact Analysis for the Final Revisions to the National Ambient Air Quality Standards for Particulate Matter.”</span>
 </div>
-<div id="ref-van2018tm5" class="csl-entry" role="doc-biblioentry">
+<div id="ref-van2018tm5" class="csl-entry" role="listitem">
 Van Dingenen, Rita, Frank Dentener, Monica Crippa, Joana Leitao, Elina Marmer, Shilpa Rao, Efisio Solazzo, and Luana Valentini. 2018. <span>“TM5-FASST: A Global Atmospheric Source–Receptor Model for Rapid Impact Analysis of Emission Changes on Air Quality and Short-Lived Climate Pollutants.”</span> <em>Atmospheric Chemistry and Physics</em> 18 (21): 16173–211. <a href="https://doi.org/10.5194/acp-18-16173-2018">https://doi.org/10.5194/acp-18-16173-2018</a>.
 </div>
-<div id="ref-vohra2021global" class="csl-entry" role="doc-biblioentry">
+<div id="ref-vohra2021global" class="csl-entry" role="listitem">
 Vohra, Karn, Alina Vodonos, Joel Schwartz, Eloise A Marais, Melissa P Sulprizio, and Loretta J Mickley. 2021. <span>“Global Mortality from Outdoor Fine Particle Pollution Generated by Fossil Fuel Combustion: Results from GEOS-Chem.”</span> <em>Environmental Research</em> 195: 110754.
 </div>
-<div id="ref-wagner2020implied" class="csl-entry" role="doc-biblioentry">
+<div id="ref-wagner2020implied" class="csl-entry" role="listitem">
 Wagner, F, J Borken-Kleefeld, G Kiesewetter, Z Klimont, W Schoepp, and M Amann. 2020. <span>“<a href="">Implied Emission Factors in the World Bank’s Carbon Pricing Assessment Tool (CPAT)</a>.”</span>
 </div>
-<div id="ref-wikimedia" class="csl-entry" role="doc-biblioentry">
+<div id="ref-wikimedia" class="csl-entry" role="listitem">
 Wikimedia Commons contributors. 2020. <span>“File:DALY Disability Affected Life Year Infographic.svg.”</span> https://commons.wikimedia.org/wiki/File:DALY_disability_affected_life_year_infographic.svg.
 </div>
-<div id="ref-woodruff2006fine" class="csl-entry" role="doc-biblioentry">
+<div id="ref-woodruff2006fine" class="csl-entry" role="listitem">
 Woodruff, Tracey J, Jennifer D Parker, and Kenneth C Schoendorf. 2006. <span>“Fine Particulate Matter (PM2. 5) Air Pollution and Selected Causes of Postneonatal Infant Mortality in California.”</span> <em>Environmental Health Perspectives</em> 114 (5): 786–90.
 </div>
-<div id="ref-world2019air" class="csl-entry" role="doc-biblioentry">
+<div id="ref-world2019air" class="csl-entry" role="listitem">
 World Bank. 2019a. <span>“Air Pollution Management in North Macedonia.”</span> World Bank.
 </div>
-<div id="ref-world2019pop" class="csl-entry" role="doc-biblioentry">
+<div id="ref-world2019pop" class="csl-entry" role="listitem">
 ———. 2019b. <span>“Population Estimates and Projections.”</span> World Bank. <a href="https://datacatalog.worldbank.org/dataset/population-estimates-and-projections">https://datacatalog.worldbank.org/dataset/population-estimates-and-projections</a>.
 </div>
-<div id="ref-world2020regional" class="csl-entry" role="doc-biblioentry">
+<div id="ref-world2020regional" class="csl-entry" role="listitem">
 ———. 2020. <em>Regional Note on Air Quality Management in the Western Balkans: Bosnia and Herzegovina, Kosovo, and North Macedonia</em>. World Bank.
 </div>
-<div id="ref-who15" class="csl-entry" role="doc-biblioentry">
+<div id="ref-who15" class="csl-entry" role="listitem">
 World Health Organization. 2015. <span>“Database on Source Apportionment Studies for Particulate Matter in the Air (PM10 and PM&lt;sub&gt;2.5&lt;/Sub&gt;).”</span> <a href="https://www.who.int/quantifying\_ehimpacts/global/source\_apport/en/">https://www.who.int/quantifying\_ehimpacts/global/source\_apport/en/</a>.
 </div>
-<div id="ref-world2018exposure" class="csl-entry" role="doc-biblioentry">
+<div id="ref-world2018exposure" class="csl-entry" role="listitem">
 ———. 2018. <span>“Exposure Country Average.”</span> <em>Global Health Observatory Data Repository</em>. <a href="http://apps.who.int/gho/data/node.main.152?lang=en">http://apps.who.int/gho/data/node.main.152?lang=en</a>.
 </div>
-<div id="ref-world2018burden" class="csl-entry" role="doc-biblioentry">
+<div id="ref-world2018burden" class="csl-entry" role="listitem">
 World Health Organization and others. 2018. <span>“Burden of Disease from Ambient Air Pollution for 2016 Description of Method.”</span> <em>WHO: Geneva, Switzerland</em>.
 </div>
-<div id="ref-zhou2006influence" class="csl-entry" role="doc-biblioentry">
+<div id="ref-zhou2006influence" class="csl-entry" role="listitem">
 Zhou, Ying, Jonathan I Levy, John S Evans, and James K Hammitt. 2006. <span>“The Influence of Geographic Location on Population Exposure to Emissions from Power Plants Throughout China.”</span> <em>Environment International</em> 32 (3): 365–73.
 </div>
 </div>
@@ -4863,9 +4878,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -4930,6 +4959,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -4984,7 +5099,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-      <div class="nav-footer-center">WB-IMF Climate Policy Assessment Tool, 2023</div>
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">WB-IMF Climate Policy Assessment Tool, 2023</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
   </div>
 </footer>
 

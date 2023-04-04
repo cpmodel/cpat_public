@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.3.306">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,7 +17,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -61,6 +61,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
@@ -69,11 +70,16 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Road Transport Module</span></h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./07_Road_Transport.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Road Transport Module</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
@@ -81,13 +87,13 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">CPAT Documentation</a> 
         <div class="sidebar-tools-main">
-    <a href="https://github.com/wb-mrio/cpat_public" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
-  <a href="" class="quarto-reader-toggle sidebar-tool" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+    <a href="https://github.com/wb-mrio/cpat_public" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
@@ -95,51 +101,59 @@ ul.task-list li input[type="checkbox"] {
 </div>
     </div>
       </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link"><strong>Cover</strong></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Cover</strong></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./01_User_Guide.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">User Guide and Climate Policies in CPAT</span></a>
+  <a href="./01_User_Guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">User Guide and Climate Policies in CPAT</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02_Summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary of the approach and applications</span></a>
+  <a href="./02_Summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary of the approach and applications</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03_Mitigation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Mitigation overview and methodology</span></a>
+  <a href="./03_Mitigation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Mitigation overview and methodology</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04_Multipliers.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Multipliers</span></a>
+  <a href="./04_Multipliers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Multipliers</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./05_Distribution.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Distribution Module</span></a>
+  <a href="./05_Distribution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Distribution Module</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./06_Air_pollution.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Air pollution module</span></a>
+  <a href="./06_Air_pollution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Air pollution module</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./07_Road_Transport.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Road Transport Module</span></a>
+  <a href="./07_Road_Transport.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Road Transport Module</span></span></a>
   </div>
 </li>
     </ul>
@@ -148,82 +162,83 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title"><strong><em>Chapter Contents</em></strong></h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">7.1</span>  Summary</a></li>
-  <li><a href="#list-of-acronyms" id="toc-list-of-acronyms" class="nav-link" data-scroll-target="#list-of-acronyms"><span class="toc-section-number">7.2</span>  List of acronyms</a></li>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="toc-section-number">7.3</span>  Introduction</a>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">7.1</span> Summary</a></li>
+  <li><a href="#list-of-acronyms" id="toc-list-of-acronyms" class="nav-link" data-scroll-target="#list-of-acronyms"><span class="header-section-number">7.2</span> List of acronyms</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">7.3</span> Introduction</a>
   <ul>
-  <li><a href="#vehicle-kilometers-traveled-vkt" id="toc-vehicle-kilometers-traveled-vkt" class="nav-link" data-scroll-target="#vehicle-kilometers-traveled-vkt"><span class="toc-section-number">7.3.1</span>  Vehicle-kilometers traveled (VKT)</a></li>
-  <li><a href="#congestion" id="toc-congestion" class="nav-link" data-scroll-target="#congestion"><span class="toc-section-number">7.3.2</span>  Congestion</a></li>
-  <li><a href="#road-accident-fatalities" id="toc-road-accident-fatalities" class="nav-link" data-scroll-target="#road-accident-fatalities"><span class="toc-section-number">7.3.3</span>  Road accident fatalities</a></li>
-  <li><a href="#road-damage" id="toc-road-damage" class="nav-link" data-scroll-target="#road-damage"><span class="toc-section-number">7.3.4</span>  Road damage</a></li>
-  <li><a href="#within-country-heterogeneity-by-socio-demographic-characteristics" id="toc-within-country-heterogeneity-by-socio-demographic-characteristics" class="nav-link" data-scroll-target="#within-country-heterogeneity-by-socio-demographic-characteristics"><span class="toc-section-number">7.3.5</span>  Within-country heterogeneity (by socio-demographic characteristics)</a></li>
-  <li><a href="#between-country-heterogeneity" id="toc-between-country-heterogeneity" class="nav-link" data-scroll-target="#between-country-heterogeneity"><span class="toc-section-number">7.3.6</span>  Between-country heterogeneity</a></li>
-  <li><a href="#fuel-prices-vs.-taxes" id="toc-fuel-prices-vs.-taxes" class="nav-link" data-scroll-target="#fuel-prices-vs.-taxes"><span class="toc-section-number">7.3.7</span>  Fuel prices vs.&nbsp;taxes</a></li>
-  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology"><span class="toc-section-number">7.3.8</span>  Methodology</a></li>
+  <li><a href="#vehicle-kilometers-traveled-vkt" id="toc-vehicle-kilometers-traveled-vkt" class="nav-link" data-scroll-target="#vehicle-kilometers-traveled-vkt"><span class="header-section-number">7.3.1</span> Vehicle-kilometers traveled (VKT)</a></li>
+  <li><a href="#congestion" id="toc-congestion" class="nav-link" data-scroll-target="#congestion"><span class="header-section-number">7.3.2</span> Congestion</a></li>
+  <li><a href="#road-accident-fatalities" id="toc-road-accident-fatalities" class="nav-link" data-scroll-target="#road-accident-fatalities"><span class="header-section-number">7.3.3</span> Road accident fatalities</a></li>
+  <li><a href="#road-damage" id="toc-road-damage" class="nav-link" data-scroll-target="#road-damage"><span class="header-section-number">7.3.4</span> Road damage</a></li>
+  <li><a href="#within-country-heterogeneity-by-socio-demographic-characteristics" id="toc-within-country-heterogeneity-by-socio-demographic-characteristics" class="nav-link" data-scroll-target="#within-country-heterogeneity-by-socio-demographic-characteristics"><span class="header-section-number">7.3.5</span> Within-country heterogeneity (by socio-demographic characteristics)</a></li>
+  <li><a href="#between-country-heterogeneity" id="toc-between-country-heterogeneity" class="nav-link" data-scroll-target="#between-country-heterogeneity"><span class="header-section-number">7.3.6</span> Between-country heterogeneity</a></li>
+  <li><a href="#fuel-prices-vs.-taxes" id="toc-fuel-prices-vs.-taxes" class="nav-link" data-scroll-target="#fuel-prices-vs.-taxes"><span class="header-section-number">7.3.7</span> Fuel prices vs.&nbsp;taxes</a></li>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology"><span class="header-section-number">7.3.8</span> Methodology</a></li>
   </ul></li>
-  <li><a href="#data-sources" id="toc-data-sources" class="nav-link" data-scroll-target="#data-sources"><span class="toc-section-number">7.4</span>  Data sources</a>
+  <li><a href="#data-sources" id="toc-data-sources" class="nav-link" data-scroll-target="#data-sources"><span class="header-section-number">7.4</span> Data sources</a>
   <ul>
-  <li><a href="#general" id="toc-general" class="nav-link" data-scroll-target="#general"><span class="toc-section-number">7.4.1</span>  General</a></li>
-  <li><a href="#congestion-1" id="toc-congestion-1" class="nav-link" data-scroll-target="#congestion-1"><span class="toc-section-number">7.4.2</span>  Congestion</a></li>
-  <li><a href="#road-safety" id="toc-road-safety" class="nav-link" data-scroll-target="#road-safety"><span class="toc-section-number">7.4.3</span>  Road safety</a></li>
-  <li><a href="#fuel-prices" id="toc-fuel-prices" class="nav-link" data-scroll-target="#fuel-prices"><span class="toc-section-number">7.4.4</span>  Fuel prices</a></li>
-  <li><a href="#externality-costs" id="toc-externality-costs" class="nav-link" data-scroll-target="#externality-costs"><span class="toc-section-number">7.4.5</span>  Externality costs</a></li>
-  <li><a href="#data-cleaning" id="toc-data-cleaning" class="nav-link" data-scroll-target="#data-cleaning"><span class="toc-section-number">7.4.6</span>  Data cleaning</a></li>
+  <li><a href="#general" id="toc-general" class="nav-link" data-scroll-target="#general"><span class="header-section-number">7.4.1</span> General</a></li>
+  <li><a href="#congestion-1" id="toc-congestion-1" class="nav-link" data-scroll-target="#congestion-1"><span class="header-section-number">7.4.2</span> Congestion</a></li>
+  <li><a href="#road-safety" id="toc-road-safety" class="nav-link" data-scroll-target="#road-safety"><span class="header-section-number">7.4.3</span> Road safety</a></li>
+  <li><a href="#fuel-prices" id="toc-fuel-prices" class="nav-link" data-scroll-target="#fuel-prices"><span class="header-section-number">7.4.4</span> Fuel prices</a></li>
+  <li><a href="#externality-costs" id="toc-externality-costs" class="nav-link" data-scroll-target="#externality-costs"><span class="header-section-number">7.4.5</span> Externality costs</a></li>
+  <li><a href="#data-cleaning" id="toc-data-cleaning" class="nav-link" data-scroll-target="#data-cleaning"><span class="header-section-number">7.4.6</span> Data cleaning</a></li>
   </ul></li>
-  <li><a href="#methods-for-elasticity-estimation" id="toc-methods-for-elasticity-estimation" class="nav-link" data-scroll-target="#methods-for-elasticity-estimation"><span class="toc-section-number">7.5</span>  Methods for elasticity estimation</a>
+  <li><a href="#methods-for-elasticity-estimation" id="toc-methods-for-elasticity-estimation" class="nav-link" data-scroll-target="#methods-for-elasticity-estimation"><span class="header-section-number">7.5</span> Methods for elasticity estimation</a>
   <ul>
-  <li><a href="#estimation-equation" id="toc-estimation-equation" class="nav-link" data-scroll-target="#estimation-equation"><span class="toc-section-number">7.5.1</span>  Estimation equation</a></li>
-  <li><a href="#short-run-and-long-run-estimators" id="toc-short-run-and-long-run-estimators" class="nav-link" data-scroll-target="#short-run-and-long-run-estimators"><span class="toc-section-number">7.5.2</span>  Short-run and long-run estimators</a></li>
-  <li><a href="#covariates" id="toc-covariates" class="nav-link" data-scroll-target="#covariates"><span class="toc-section-number">7.5.3</span>  Covariates</a></li>
-  <li><a href="#country-specific-elasticity-estimates" id="toc-country-specific-elasticity-estimates" class="nav-link" data-scroll-target="#country-specific-elasticity-estimates"><span class="toc-section-number">7.5.4</span>  Country-specific elasticity estimates</a></li>
-  <li><a href="#fuel-prices-or-taxes" id="toc-fuel-prices-or-taxes" class="nav-link" data-scroll-target="#fuel-prices-or-taxes"><span class="toc-section-number">7.5.5</span>  Fuel prices or taxes</a></li>
+  <li><a href="#estimation-equation" id="toc-estimation-equation" class="nav-link" data-scroll-target="#estimation-equation"><span class="header-section-number">7.5.1</span> Estimation equation</a></li>
+  <li><a href="#short-run-and-long-run-estimators" id="toc-short-run-and-long-run-estimators" class="nav-link" data-scroll-target="#short-run-and-long-run-estimators"><span class="header-section-number">7.5.2</span> Short-run and long-run estimators</a></li>
+  <li><a href="#covariates" id="toc-covariates" class="nav-link" data-scroll-target="#covariates"><span class="header-section-number">7.5.3</span> Covariates</a></li>
+  <li><a href="#country-specific-elasticity-estimates" id="toc-country-specific-elasticity-estimates" class="nav-link" data-scroll-target="#country-specific-elasticity-estimates"><span class="header-section-number">7.5.4</span> Country-specific elasticity estimates</a></li>
+  <li><a href="#fuel-prices-or-taxes" id="toc-fuel-prices-or-taxes" class="nav-link" data-scroll-target="#fuel-prices-or-taxes"><span class="header-section-number">7.5.5</span> Fuel prices or taxes</a></li>
   </ul></li>
-  <li><a href="#elasticity-results" id="toc-elasticity-results" class="nav-link" data-scroll-target="#elasticity-results"><span class="toc-section-number">7.6</span>  Elasticity results</a>
+  <li><a href="#elasticity-results" id="toc-elasticity-results" class="nav-link" data-scroll-target="#elasticity-results"><span class="header-section-number">7.6</span> Elasticity results</a>
   <ul>
-  <li><a href="#congestion-2" id="toc-congestion-2" class="nav-link" data-scroll-target="#congestion-2"><span class="toc-section-number">7.6.1</span>  Congestion</a>
+  <li><a href="#congestion-2" id="toc-congestion-2" class="nav-link" data-scroll-target="#congestion-2"><span class="header-section-number">7.6.1</span> Congestion</a>
   <ul class="collapse">
-  <li><a href="#short-run-elasticity" id="toc-short-run-elasticity" class="nav-link" data-scroll-target="#short-run-elasticity"><span class="toc-section-number">7.6.1.1</span>  Short-run elasticity</a></li>
-  <li><a href="#long-run-elasticity" id="toc-long-run-elasticity" class="nav-link" data-scroll-target="#long-run-elasticity"><span class="toc-section-number">7.6.1.2</span>  Long-run elasticity</a></li>
-  <li><a href="#country-specific-elasticities" id="toc-country-specific-elasticities" class="nav-link" data-scroll-target="#country-specific-elasticities"><span class="toc-section-number">7.6.1.3</span>  Country-specific elasticities</a></li>
+  <li><a href="#short-run-elasticity" id="toc-short-run-elasticity" class="nav-link" data-scroll-target="#short-run-elasticity"><span class="header-section-number">7.6.1.1</span> Short-run elasticity</a></li>
+  <li><a href="#long-run-elasticity" id="toc-long-run-elasticity" class="nav-link" data-scroll-target="#long-run-elasticity"><span class="header-section-number">7.6.1.2</span> Long-run elasticity</a></li>
+  <li><a href="#country-specific-elasticities" id="toc-country-specific-elasticities" class="nav-link" data-scroll-target="#country-specific-elasticities"><span class="header-section-number">7.6.1.3</span> Country-specific elasticities</a></li>
   </ul></li>
-  <li><a href="#fatalities-from-road-accidents" id="toc-fatalities-from-road-accidents" class="nav-link" data-scroll-target="#fatalities-from-road-accidents"><span class="toc-section-number">7.6.2</span>  Fatalities from road accidents</a>
+  <li><a href="#fatalities-from-road-accidents" id="toc-fatalities-from-road-accidents" class="nav-link" data-scroll-target="#fatalities-from-road-accidents"><span class="header-section-number">7.6.2</span> Fatalities from road accidents</a>
   <ul class="collapse">
-  <li><a href="#short-run-elasticity-1" id="toc-short-run-elasticity-1" class="nav-link" data-scroll-target="#short-run-elasticity-1"><span class="toc-section-number">7.6.2.1</span>  Short-run elasticity</a></li>
-  <li><a href="#long-run-elasticity-1" id="toc-long-run-elasticity-1" class="nav-link" data-scroll-target="#long-run-elasticity-1"><span class="toc-section-number">7.6.2.2</span>  Long-run elasticity</a></li>
-  <li><a href="#country-specific-elasticities-1" id="toc-country-specific-elasticities-1" class="nav-link" data-scroll-target="#country-specific-elasticities-1"><span class="toc-section-number">7.6.2.3</span>  Country-specific elasticities</a></li>
+  <li><a href="#short-run-elasticity-1" id="toc-short-run-elasticity-1" class="nav-link" data-scroll-target="#short-run-elasticity-1"><span class="header-section-number">7.6.2.1</span> Short-run elasticity</a></li>
+  <li><a href="#long-run-elasticity-1" id="toc-long-run-elasticity-1" class="nav-link" data-scroll-target="#long-run-elasticity-1"><span class="header-section-number">7.6.2.2</span> Long-run elasticity</a></li>
+  <li><a href="#country-specific-elasticities-1" id="toc-country-specific-elasticities-1" class="nav-link" data-scroll-target="#country-specific-elasticities-1"><span class="header-section-number">7.6.2.3</span> Country-specific elasticities</a></li>
   </ul></li>
-  <li><a href="#road-damage-1" id="toc-road-damage-1" class="nav-link" data-scroll-target="#road-damage-1"><span class="toc-section-number">7.6.3</span>  Road damage</a>
+  <li><a href="#road-damage-1" id="toc-road-damage-1" class="nav-link" data-scroll-target="#road-damage-1"><span class="header-section-number">7.6.3</span> Road damage</a>
   <ul class="collapse">
-  <li><a href="#short-run-elasticity-2" id="toc-short-run-elasticity-2" class="nav-link" data-scroll-target="#short-run-elasticity-2"><span class="toc-section-number">7.6.3.1</span>  Short-run elasticity</a></li>
-  <li><a href="#long-run-elasticity-2" id="toc-long-run-elasticity-2" class="nav-link" data-scroll-target="#long-run-elasticity-2"><span class="toc-section-number">7.6.3.2</span>  Long-run elasticity</a></li>
-  <li><a href="#country-specific-elasticities-2" id="toc-country-specific-elasticities-2" class="nav-link" data-scroll-target="#country-specific-elasticities-2"><span class="toc-section-number">7.6.3.3</span>  Country-specific elasticities</a></li>
+  <li><a href="#short-run-elasticity-2" id="toc-short-run-elasticity-2" class="nav-link" data-scroll-target="#short-run-elasticity-2"><span class="header-section-number">7.6.3.1</span> Short-run elasticity</a></li>
+  <li><a href="#long-run-elasticity-2" id="toc-long-run-elasticity-2" class="nav-link" data-scroll-target="#long-run-elasticity-2"><span class="header-section-number">7.6.3.2</span> Long-run elasticity</a></li>
+  <li><a href="#country-specific-elasticities-2" id="toc-country-specific-elasticities-2" class="nav-link" data-scroll-target="#country-specific-elasticities-2"><span class="header-section-number">7.6.3.3</span> Country-specific elasticities</a></li>
   </ul></li>
-  <li><a href="#vehicle-km-travelled-vkt" id="toc-vehicle-km-travelled-vkt" class="nav-link" data-scroll-target="#vehicle-km-travelled-vkt"><span class="toc-section-number">7.6.4</span>  Vehicle-km travelled (VKT)</a>
+  <li><a href="#vehicle-km-travelled-vkt" id="toc-vehicle-km-travelled-vkt" class="nav-link" data-scroll-target="#vehicle-km-travelled-vkt"><span class="header-section-number">7.6.4</span> Vehicle-km travelled (VKT)</a>
   <ul class="collapse">
-  <li><a href="#short-run-elasticity-3" id="toc-short-run-elasticity-3" class="nav-link" data-scroll-target="#short-run-elasticity-3"><span class="toc-section-number">7.6.4.1</span>  Short-run elasticity</a></li>
-  <li><a href="#long-run-elasticity-3" id="toc-long-run-elasticity-3" class="nav-link" data-scroll-target="#long-run-elasticity-3"><span class="toc-section-number">7.6.4.2</span>  Long-run elasticity</a></li>
-  <li><a href="#country-specific-elasticities-3" id="toc-country-specific-elasticities-3" class="nav-link" data-scroll-target="#country-specific-elasticities-3"><span class="toc-section-number">7.6.4.3</span>  Country-specific elasticities</a></li>
+  <li><a href="#short-run-elasticity-3" id="toc-short-run-elasticity-3" class="nav-link" data-scroll-target="#short-run-elasticity-3"><span class="header-section-number">7.6.4.1</span> Short-run elasticity</a></li>
+  <li><a href="#long-run-elasticity-3" id="toc-long-run-elasticity-3" class="nav-link" data-scroll-target="#long-run-elasticity-3"><span class="header-section-number">7.6.4.2</span> Long-run elasticity</a></li>
+  <li><a href="#country-specific-elasticities-3" id="toc-country-specific-elasticities-3" class="nav-link" data-scroll-target="#country-specific-elasticities-3"><span class="header-section-number">7.6.4.3</span> Country-specific elasticities</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#excel-implementation-cpats-road-transport-module" id="toc-excel-implementation-cpats-road-transport-module" class="nav-link" data-scroll-target="#excel-implementation-cpats-road-transport-module"><span class="toc-section-number">7.7</span>  Excel implementation: CPAT’s Road Transport Module</a>
+  <li><a href="#excel-implementation-cpats-road-transport-module" id="toc-excel-implementation-cpats-road-transport-module" class="nav-link" data-scroll-target="#excel-implementation-cpats-road-transport-module"><span class="header-section-number">7.7</span> Excel implementation: CPAT’s Road Transport Module</a>
   <ul>
-  <li><a href="#general-1" id="toc-general-1" class="nav-link" data-scroll-target="#general-1"><span class="toc-section-number">7.7.1</span>  General</a></li>
-  <li><a href="#baseline-forecasts" id="toc-baseline-forecasts" class="nav-link" data-scroll-target="#baseline-forecasts"><span class="toc-section-number">7.7.2</span>  Baseline forecasts</a></li>
-  <li><a href="#policy-forecast" id="toc-policy-forecast" class="nav-link" data-scroll-target="#policy-forecast"><span class="toc-section-number">7.7.3</span>  Policy forecast</a></li>
-  <li><a href="#dashboard-graphics" id="toc-dashboard-graphics" class="nav-link" data-scroll-target="#dashboard-graphics"><span class="toc-section-number">7.7.4</span>  Dashboard graphics</a></li>
-  <li><a href="#externality-cost-per-liter-of-motor-fuel" id="toc-externality-cost-per-liter-of-motor-fuel" class="nav-link" data-scroll-target="#externality-cost-per-liter-of-motor-fuel"><span class="toc-section-number">7.7.5</span>  Externality cost per liter of motor fuel</a></li>
+  <li><a href="#general-1" id="toc-general-1" class="nav-link" data-scroll-target="#general-1"><span class="header-section-number">7.7.1</span> General</a></li>
+  <li><a href="#baseline-forecasts" id="toc-baseline-forecasts" class="nav-link" data-scroll-target="#baseline-forecasts"><span class="header-section-number">7.7.2</span> Baseline forecasts</a></li>
+  <li><a href="#policy-forecast" id="toc-policy-forecast" class="nav-link" data-scroll-target="#policy-forecast"><span class="header-section-number">7.7.3</span> Policy forecast</a></li>
+  <li><a href="#dashboard-graphics" id="toc-dashboard-graphics" class="nav-link" data-scroll-target="#dashboard-graphics"><span class="header-section-number">7.7.4</span> Dashboard graphics</a></li>
+  <li><a href="#externality-cost-per-liter-of-motor-fuel" id="toc-externality-cost-per-liter-of-motor-fuel" class="nav-link" data-scroll-target="#externality-cost-per-liter-of-motor-fuel"><span class="header-section-number">7.7.5</span> Externality cost per liter of motor fuel</a></li>
   </ul></li>
-  <li><a href="#caveats" id="toc-caveats" class="nav-link" data-scroll-target="#caveats"><span class="toc-section-number">7.8</span>  Caveats</a></li>
-  <li><a href="#status-of-upgrades-since-the-last-review-changes-not-implemented-and-remaining-issues" id="toc-status-of-upgrades-since-the-last-review-changes-not-implemented-and-remaining-issues" class="nav-link" data-scroll-target="#status-of-upgrades-since-the-last-review-changes-not-implemented-and-remaining-issues"><span class="toc-section-number">7.9</span>  Status of upgrades since the last review, changes not implemented and remaining issues</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="toc-section-number">7.10</span>  References</a></li>
-  <li><a href="#appendices" id="toc-appendices" class="nav-link" data-scroll-target="#appendices"><span class="toc-section-number">7.11</span>  Appendices</a>
+  <li><a href="#caveats" id="toc-caveats" class="nav-link" data-scroll-target="#caveats"><span class="header-section-number">7.8</span> Caveats</a></li>
+  <li><a href="#status-of-upgrades-since-the-last-review-changes-not-implemented-and-remaining-issues" id="toc-status-of-upgrades-since-the-last-review-changes-not-implemented-and-remaining-issues" class="nav-link" data-scroll-target="#status-of-upgrades-since-the-last-review-changes-not-implemented-and-remaining-issues"><span class="header-section-number">7.9</span> Status of upgrades since the last review, changes not implemented and remaining issues</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">7.10</span> References</a></li>
+  <li><a href="#appendices" id="toc-appendices" class="nav-link" data-scroll-target="#appendices"><span class="header-section-number">7.11</span> Appendices</a>
   <ul>
-  <li><a href="#detailed-variable-list-with-data-sources" id="toc-detailed-variable-list-with-data-sources" class="nav-link" data-scroll-target="#detailed-variable-list-with-data-sources"><span class="toc-section-number">7.11.1</span>  Detailed variable list with data sources</a></li>
-  <li><a href="#countriesyears-covered-by-the-dataset" id="toc-countriesyears-covered-by-the-dataset" class="nav-link" data-scroll-target="#countriesyears-covered-by-the-dataset"><span class="toc-section-number">7.11.2</span>  Countries/years covered by the dataset</a></li>
+  <li><a href="#detailed-variable-list-with-data-sources" id="toc-detailed-variable-list-with-data-sources" class="nav-link" data-scroll-target="#detailed-variable-list-with-data-sources"><span class="header-section-number">7.11.1</span> Detailed variable list with data sources</a></li>
+  <li><a href="#countriesyears-covered-by-the-dataset" id="toc-countriesyears-covered-by-the-dataset" class="nav-link" data-scroll-target="#countriesyears-covered-by-the-dataset"><span class="header-section-number">7.11.2</span> Countries/years covered by the dataset</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/wb-mrio/cpat_public/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     </div>
@@ -232,7 +247,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Road Transport Module</span></h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Road Transport Module</span></h1>
 </div>
 
 
@@ -9476,9 +9491,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -9543,6 +9572,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -9594,7 +9709,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-      <div class="nav-footer-center">WB-IMF Climate Policy Assessment Tool, 2023</div>
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">WB-IMF Climate Policy Assessment Tool, 2023</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
   </div>
 </footer>
 
