@@ -577,9 +577,8 @@ ul.task-list li input[type="checkbox"] {
 <section id="estimation-equation" class="level3" data-number="7.5.1">
 <h3 data-number="7.5.1" class="anchored" data-anchor-id="estimation-equation"><span class="header-section-number">7.5.1</span> Estimation equation</h3>
 <p>We regress the logarithm of the outcome variable onto a constant, the logarithm of fuel prices, a list of covariates and fixed effects. The general form of the estimated regression estimation is</p>
-<p>&nbsp;| | |<br>
-&nbsp;| ——————————————————————————————————————————————————- | — |<br>
-&nbsp;| <span class="math inline">\(\ln\left( Y_{\text{ct}} \right) = \alpha + \beta\ln\left( p_{\text{ct}} \right) + \gamma\ X_{\text{ct}} + \mu_{t} + \mu_{c} + \epsilon_{\text{ct}}\)</span>, | (1) |</p>
+<p>
+<span class="math inline">\(\ln\left( Y_{\text{ct}} \right) = \alpha + \beta\ln\left( p_{\text{ct}} \right) + \gamma\ X_{\text{ct}} + \mu_{t} + \mu_{c} + \epsilon_{\text{ct}}\)</span>, | (1) |</p>
 <p>where <span class="math inline">\(\ln\left( Y_{\text{ct}} \right)\)</span> is the natural logarithm of the outcome in country <span class="math inline">\(c\)</span> in year <span class="math inline">\(t\)</span>, <span class="math inline">\(\ln{(p_{\text{ct}})}\)</span> is the natural logarithm of pump price for gasoline, <span class="math inline">\(X_{\text{ct}}\)</span> is a vector of covariates including income per capita and population density, and <span class="math inline">\(\mu_{c}\)</span> and <span class="math inline">\(\mu_{t}\)</span> are country- and year-specific effects.</p>
 <p>An elasticity measures how much an outcome changes relatively to its initial value (e.g.&nbsp;in percent) when another variable, here the pump price of gasoline, changes (in percent). As we are using the log-log specification, the coefficient estimate <span class="math inline">\(\widehat{\beta}\)</span> in equation (1) is an estimate of the elasticity of the outcome <span class="math inline">\(Y_{\text{ct}}\)</span> with respect to (wrt) fuel prices <span class="math inline">\(p_{\text{ct}}\)</span>.</p>
 </section>
