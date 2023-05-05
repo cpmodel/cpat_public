@@ -129,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./03_Mitigation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Mitigation overview and methodology</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Mitigation module</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -169,7 +169,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#vehicle-kilometers-traveled-vkt" id="toc-vehicle-kilometers-traveled-vkt" class="nav-link" data-scroll-target="#vehicle-kilometers-traveled-vkt"><span class="header-section-number">7.3.1</span> Vehicle-kilometers traveled (VKT)</a></li>
   <li><a href="#congestion" id="toc-congestion" class="nav-link" data-scroll-target="#congestion"><span class="header-section-number">7.3.2</span> Congestion</a></li>
   <li><a href="#road-accident-fatalities" id="toc-road-accident-fatalities" class="nav-link" data-scroll-target="#road-accident-fatalities"><span class="header-section-number">7.3.3</span> Road accident fatalities</a></li>
-  <li><a href="#road-damage" id="toc-road-damage" class="nav-link" data-scroll-target="#road-damage"><span class="header-section-number">7.3.4</span> Road damage</a></li>
+  <li><a href="#sec-roaddam" id="toc-sec-roaddam" class="nav-link" data-scroll-target="#sec-roaddam"><span class="header-section-number">7.3.4</span> Road damage</a></li>
   <li><a href="#within-country-heterogeneity-by-socio-demographic-characteristics" id="toc-within-country-heterogeneity-by-socio-demographic-characteristics" class="nav-link" data-scroll-target="#within-country-heterogeneity-by-socio-demographic-characteristics"><span class="header-section-number">7.3.5</span> Within-country heterogeneity (by socio-demographic characteristics)</a></li>
   <li><a href="#between-country-heterogeneity" id="toc-between-country-heterogeneity" class="nav-link" data-scroll-target="#between-country-heterogeneity"><span class="header-section-number">7.3.6</span> Between-country heterogeneity</a></li>
   <li><a href="#fuel-prices-vs.-taxes" id="toc-fuel-prices-vs.-taxes" class="nav-link" data-scroll-target="#fuel-prices-vs.-taxes"><span class="header-section-number">7.3.7</span> Fuel prices vs.&nbsp;taxes</a></li>
@@ -206,7 +206,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#long-run-elasticity-1" id="toc-long-run-elasticity-1" class="nav-link" data-scroll-target="#long-run-elasticity-1"><span class="header-section-number">7.6.2.2</span> Long-run elasticity</a></li>
   <li><a href="#country-specific-elasticities-1" id="toc-country-specific-elasticities-1" class="nav-link" data-scroll-target="#country-specific-elasticities-1"><span class="header-section-number">7.6.2.3</span> Country-specific elasticities</a></li>
   </ul></li>
-  <li><a href="#road-damage-1" id="toc-road-damage-1" class="nav-link" data-scroll-target="#road-damage-1"><span class="header-section-number">7.6.3</span> Road damage</a>
+  <li><a href="#road-damage" id="toc-road-damage" class="nav-link" data-scroll-target="#road-damage"><span class="header-section-number">7.6.3</span> Road damage</a>
   <ul class="collapse">
   <li><a href="#short-run-elasticity-2" id="toc-short-run-elasticity-2" class="nav-link" data-scroll-target="#short-run-elasticity-2"><span class="header-section-number">7.6.3.1</span> Short-run elasticity</a></li>
   <li><a href="#long-run-elasticity-2" id="toc-long-run-elasticity-2" class="nav-link" data-scroll-target="#long-run-elasticity-2"><span class="header-section-number">7.6.3.2</span> Long-run elasticity</a></li>
@@ -307,21 +307,29 @@ ul.task-list li input[type="checkbox"] {
 <p>Some of these responses take time, so the long-run gasoline price elasticity of road deaths is likely to exceed the short-run elasticity. However, high fuel prices also push consumers to invest into more fuel-efficient vehicles, either buying cars that are more efficient or switching from cars to motorcycles (or other modes). In this case, the literature has extensively discussed the importance of the <em>rebound effect</em>, defined as efficiency induced consumption or, more plainly, the idea “buy a more fuel-efficient car, drive more” (Gillingham, Rapson, et al., 2015). The rebound effect might cause long-run VKT elasticity to be <em>lower</em> than short-run VKT elasticity.</p>
 <p>Table 7‑1 – Literature estimates of the elasticity of VKT wrt fuel prices</p>
 <table class="table">
+<colgroup>
+<col style="width: 55%">
+<col style="width: 2%">
+<col style="width: 9%">
+<col style="width: 3%">
+<col style="width: 28%">
+</colgroup>
 <thead>
 <tr class="header">
 <th><strong>Study</strong></th>
 <th><strong>Country</strong></th>
-<th colspan="2"><strong>Fuel price elasticity of road use</strong></th>
+<th><strong>Fuel price elasticity of road use</strong></th>
 <th><strong>Note</strong></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
-<tr class="header">
-<th></th>
-<th></th>
-<th><strong>Short run</strong></th>
-<th><strong>Long run</strong></th>
-<th></th>
+<tr class="odd">
+<td></td>
+<td></td>
+<td><strong>Short run</strong></td>
+<td><strong>Long run</strong></td>
+<td></td>
 </tr>
 <tr class="even">
 <td><strong>US</strong></td>
@@ -436,7 +444,11 @@ ul.task-list li input[type="checkbox"] {
 <td>VKT elasticity.</td>
 </tr>
 <tr class="even">
-<td colspan="5">Notes: Studies are chronologically ordered. Listed papers are a sample of prior studies. “Short run” and “long run” do not have the same definitions in all studies. Adapted from Burke et al., 2017; Moshiri, 2020.</td>
+<td>Notes: Studies are chronologically ordered. Listed papers are a sample of prior studies. “Short run” and “long run” do not have the same definitions in all studies. Adapted from Burke et al., 2017; Moshiri, 2020.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -470,8 +482,8 @@ ul.task-list li input[type="checkbox"] {
 <p>Other country-specific short-term elasticity estimates include -0.2 to -0.3 for New Zealand (Best &amp; Burke, 2019) and -0.2 for Australia (Burke &amp; Teame, 2018).</p>
 <p>In a dynamic urban model, Avner et al.&nbsp;(2014) examine the impact of carbon taxes on urban mobility and underline the lock-in effect from public transport investments: while the quality of urban transport infrastructure is difficult to capture quantitatively, we include data on satisfaction with public transport in our elasticity estimation to account for this effect.</p>
 </section>
-<section id="road-damage" class="level3" data-number="7.3.4">
-<h3 data-number="7.3.4" class="anchored" data-anchor-id="road-damage"><span class="header-section-number">7.3.4</span> Road damage</h3>
+<section id="sec-roaddam" class="level3" data-number="7.3.4">
+<h3 data-number="7.3.4" class="anchored" data-anchor-id="sec-roaddam"><span class="header-section-number">7.3.4</span> Road damage</h3>
 <p>Road damage depends strongly on road usage (Jacobson &amp; Wågberg, 2005), but not all vehicles affect road damage equally: wear and tear on the pavement is a rapidly rising function of a vehicle’s axle weight (Jacobson &amp; Wågberg, 2005; Murphy &amp; Delucchi, 1997; Parker &amp; Hussain Ph D, 2006; US FHWA, 2000). Estimations suggest that the pavement wear and tear of one average five-axle truck equates to approximately 4,000 cars (National Center for Freight &amp; Infrastructure, 2014). Therefore, nearly all of the vehicle-caused road damage is attributable to heavy-duty vehicles (trucks).</p>
 <p>In most countries around the world,<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> light-duty vehicles (cars) use gasoline and trucks use diesel. Road damage is thus more dependent on diesel price than on gasoline price.</p>
 <p>The externality cost of road transport from pavement wear and tear has been discussed extensively in the economics literature, going back as far as Adam Smith (Lindsey, 2006). There is a consensus that diesel is strongly under-taxed, when comparing tax level to externality cost (I. W. H. Parry, 2008; Santos, 2017).</p>
@@ -565,8 +577,9 @@ ul.task-list li input[type="checkbox"] {
 <section id="estimation-equation" class="level3" data-number="7.5.1">
 <h3 data-number="7.5.1" class="anchored" data-anchor-id="estimation-equation"><span class="header-section-number">7.5.1</span> Estimation equation</h3>
 <p>We regress the logarithm of the outcome variable onto a constant, the logarithm of fuel prices, a list of covariates and fixed effects. The general form of the estimated regression estimation is</p>
-<p>
-<span class="math inline">\(\ln\left( Y_{\text{ct}} \right) = \alpha + \beta\ln\left( p_{\text{ct}} \right) + \gamma\ X_{\text{ct}} + \mu_{t} + \mu_{c} + \epsilon_{\text{ct}}\)</span>,  (1) </p>
+<p>&nbsp;| | |<br>
+&nbsp;| ——————————————————————————————————————————————————- | — |<br>
+&nbsp;| <span class="math inline">\(\ln\left( Y_{\text{ct}} \right) = \alpha + \beta\ln\left( p_{\text{ct}} \right) + \gamma\ X_{\text{ct}} + \mu_{t} + \mu_{c} + \epsilon_{\text{ct}}\)</span>, | (1) |</p>
 <p>where <span class="math inline">\(\ln\left( Y_{\text{ct}} \right)\)</span> is the natural logarithm of the outcome in country <span class="math inline">\(c\)</span> in year <span class="math inline">\(t\)</span>, <span class="math inline">\(\ln{(p_{\text{ct}})}\)</span> is the natural logarithm of pump price for gasoline, <span class="math inline">\(X_{\text{ct}}\)</span> is a vector of covariates including income per capita and population density, and <span class="math inline">\(\mu_{c}\)</span> and <span class="math inline">\(\mu_{t}\)</span> are country- and year-specific effects.</p>
 <p>An elasticity measures how much an outcome changes relatively to its initial value (e.g.&nbsp;in percent) when another variable, here the pump price of gasoline, changes (in percent). As we are using the log-log specification, the coefficient estimate <span class="math inline">\(\widehat{\beta}\)</span> in equation (1) is an estimate of the elasticity of the outcome <span class="math inline">\(Y_{\text{ct}}\)</span> with respect to (wrt) fuel prices <span class="math inline">\(p_{\text{ct}}\)</span>.</p>
 </section>
@@ -574,17 +587,25 @@ ul.task-list li input[type="checkbox"] {
 <h3 data-number="7.5.2" class="anchored" data-anchor-id="short-run-and-long-run-estimators"><span class="header-section-number">7.5.2</span> Short-run and long-run estimators</h3>
 <p>Following (Burke &amp; Nishitateno, 2015), we consider that the within estimator from a static fixed-effects equation represents shorter-run effects, and the between estimator provides estimates of long-run effects (Baltagi, 2008; Baltagi &amp; Griffin, 1984; Pesaran &amp; Smith, 1995; Pirotte, 1999; Stern, 2010).<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></p>
 <p>For simplicity, let us reduce the notation of the previous equation (1) to:</p>
-<p> <span class="math inline">\(y_{\text{ct}} = \alpha + \beta x_{\text{ct}} + \mu_{c} + \epsilon_{\text{ct}}\)</span>, (2) </p>
+<p>&nbsp;| | |<br>
+&nbsp;| ———————————————————————————- | — |<br>
+&nbsp;| <span class="math inline">\(y_{\text{ct}} = \alpha + \beta x_{\text{ct}} + \mu_{c} + \epsilon_{\text{ct}}\)</span>, | (2) |</p>
 <p>where the logarithms have been omitted and all righthand-side variables summarized under the vector <span class="math inline">\(x_{\text{ct}}\)</span>.</p>
 <p>The interpretation for the long and short run is based on the idea that the previous equation (2) may alternatively be formulated:</p>
-<p><span class="math inline">\(y_{\text{ct}} = \alpha + \beta'{\overline{x}}_{c} + \beta''(x_{\text{ct}} - {\overline{x}}_{c}) + \mu_{c} + \epsilon_{\text{ct}}\)</span>, (3)</p>
+<p>&nbsp;| | |<br>
+&nbsp;| ————————————————————————————————————————————- | — |<br>
+&nbsp;| <span class="math inline">\(y_{\text{ct}} = \alpha + \beta'{\overline{x}}_{c} + \beta''(x_{\text{ct}} - {\overline{x}}_{c}) + \mu_{c} + \epsilon_{\text{ct}}\)</span>, | (3) |</p>
 <p>where <span class="math inline">\({\overline{x}}_{c}\)</span> is the average of <span class="math inline">\(x_{\text{ct}}\)</span> over time: <span class="math inline">\({\overline{x}}_{c} = \sum_{t}^{}{x_{\text{ct}}/T_{c}}\)</span>, where <span class="math inline">\(T_{c}\)</span> is the number of years included for country <span class="math inline">\(c\)</span> in the regression.</p>
 <p>In the model described by equation (3), we postulate that changes in the average value of <span class="math inline">\(x_{\text{ct}}\)</span> for an individual country may have a different effect from temporary departures from the average. The model allows a different response to permanent rather than transitory changes. If <span class="math inline">\(\beta' = \beta''\)</span>, then the model in (3) collapses into the previous model in (2).</p>
 <p>Whatever the properties of <span class="math inline">\(\mu_{c}\)</span> and <span class="math inline">\(\epsilon_{\text{ct}}\)</span>, if equation (2) is true, we can take the averages and find that:</p>
-<p><span class="math inline">\({\overline{y}}_{c} = \alpha + \beta'{\overline{x}}_{c} + \mu_{c} + {\overline{\epsilon}}_{c}\)</span>, (4)</p>
+<p>&nbsp;| | |<br>
+&nbsp;| ————————————————————————————————- | — |<br>
+&nbsp;| <span class="math inline">\({\overline{y}}_{c} = \alpha + \beta'{\overline{x}}_{c} + \mu_{c} + {\overline{\epsilon}}_{c}\)</span>, | (4) |</p>
 <p>where <span class="math inline">\({\overline{y}}_{c}\)</span> is the average of <span class="math inline">\(y_{\text{ct}}\)</span> over time: <span class="math inline">\({\overline{y}}_{c} = \sum_{t}^{}{y_{\text{ct}}/T_{c}}\)</span> and <span class="math inline">\({\overline{\epsilon}}_{c}\)</span> is the average of the error term: <span class="math inline">\({\overline{\epsilon}}_{c} = \sum_{t}^{}{\epsilon_{\text{ct}}/T_{c}}\)</span>.</p>
 <p>Subtracting (4) from (3), it must also be true that:</p>
-<p><span class="math inline">\({y_{\text{ct}} - \overline{y}}_{c} = \beta''{(x_{\text{ct}} - \overline{x}}_{c}) + (\epsilon_{\text{ct}} - {\overline{\epsilon}}_{c})\)</span>. (5)</p>
+<p>&nbsp;| | |<br>
+&nbsp;| —————————————————————————————————————————————— | — |<br>
+&nbsp;| <span class="math inline">\({y_{\text{ct}} - \overline{y}}_{c} = \beta''{(x_{\text{ct}} - \overline{x}}_{c}) + (\epsilon_{\text{ct}} - {\overline{\epsilon}}_{c})\)</span>. | (5) |</p>
 <p>These equations are known from panel econometrics textbooks: equation (4) describes the between estimator and equation (5) describes the within estimator, also known as fixed-effects estimator.</p>
 <p>Fixed-effects estimations control for time-invariant characteristics of countries such as the extent of size or mountainous terrain. As illustrated in equation (5), the identifying variation comes from within-country deviations from the country-mean. Given standard assumptions on the error term <span class="math inline">\(\epsilon_{\text{ct}}\)</span> (mean<span class="math inline">\(\ 0\)</span>, uncorrelated with itself, uncorrelated with <span class="math inline">\(x_{\text{ct}}\)</span>, uncorrelated with <span class="math inline">\(\mu_{c}\)</span>, and homoscedastic), the within estimator can be estimated as an OLS on (5) or, equivalently, an OLS on equation (1) including country dummy variables. For this study, this equation is estimated using the Stata command <em>xtreg, fe</em>.</p>
 <p>The between estimator is given by the OLS estimator on equation (4). This specification cancels out time-differences. The between estimates are based on cross-sectional country differences. Individual-invariant regressors such as time dummies cannot be identified. For this project, this equation is estimated using the Stata command <em>xtreg, be</em>.<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a></p>
@@ -597,9 +618,13 @@ ul.task-list li input[type="checkbox"] {
 <h3 data-number="7.5.4" class="anchored" data-anchor-id="country-specific-elasticity-estimates"><span class="header-section-number">7.5.4</span> Country-specific elasticity estimates</h3>
 <p>The effect of fuel prices on our three outcomes of interest is likely to be heterogeneous across different countries. However, there is limited data available for most countries, so that unparametrically country-specific estimations proved not feasible. We discard to option to create <em>ad hoc</em> regional groups and estimate group-specific elasticities, as we want a more data-driven methodology. To strike a balance between accounting for heterogeneity and using available data parsimoniously, we estimate elasticities that are linear expressions of several covariates.</p>
 <p>The estimation includes interaction terms between fuel prices and the additional variables. For example, if elasticity depends on two more variables, the estimation equation is:</p>
-<p><span class="math inline">\(\ln\left( Y_{\text{ct}} \right) = \alpha + \beta_{0}\ln{(p_{\text{ct}})} + \beta_{1}v_{\text{ct}}^{1}\ln{(p_{\text{ct}})} + \beta_{2}v_{\text{ct}}^{2}\ln{(p_{\text{ct}})} + \gamma\ X_{\text{ct}} + \mu_{c} + \ \mu_{t} + \epsilon_{\text{ct}}\)</span>, (6) </p>
+<p>&nbsp;| | |<br>
+&nbsp;| —————————————————————————————————————————————————————————————————————————————————- | — |<br>
+&nbsp;| <span class="math inline">\(\ln\left( Y_{\text{ct}} \right) = \alpha + \beta_{0}\ln{(p_{\text{ct}})} + \beta_{1}v_{\text{ct}}^{1}\ln{(p_{\text{ct}})} + \beta_{2}v_{\text{ct}}^{2}\ln{(p_{\text{ct}})} + \gamma\ X_{\text{ct}} + \mu_{c} + \ \mu_{t} + \epsilon_{\text{ct}}\)</span>, | (6) |</p>
 <p>where the variables are the same as before, and<span class="math inline">\(\ v_{\text{ct}}^{1}\)</span> is the first additional variable influencing elasticity and <span class="math inline">\(v_{\text{ct}}^{2}\)</span> is the second additional variable influencing elasticity. The “country-specific” elasticity estimated is then:</p>
-<p> <span class="math inline">\({\widehat{\beta}}_{c} = {\widehat{\beta}}_{0} + {\widehat{\beta}}_{1}\overline{v_{c}^{1}} + {\widehat{\beta}}_{2}\overline{v_{c}^{2}}\)</span>, (7)</p>
+<p>&nbsp;| | |<br>
+&nbsp;| —————————————————————————————————————————————— | — |<br>
+&nbsp;| <span class="math inline">\({\widehat{\beta}}_{c} = {\widehat{\beta}}_{0} + {\widehat{\beta}}_{1}\overline{v_{c}^{1}} + {\widehat{\beta}}_{2}\overline{v_{c}^{2}}\)</span>, | (7) |</p>
 <p>where <span class="math inline">\(\overline{v_{c}^{1}}\)</span> is the average across recent years<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a> of variable <span class="math inline">\(v_{\text{ct}}^{1}\)</span> for country <span class="math inline">\(c\)</span> (and analogously for variable <span class="math inline">\(\overline{v_{c}^{2}}\)</span>). In practice, we include not two but five additional variables <span class="math inline">\(v_{\text{ct}}^{k}\)</span>, which we omit here for readability.</p>
 <p>We consider 15 candidate variables linked to traffic conditions, demographics and availability of substitutes to private vehicles. The final estimations include only the variables found to be empirically most important.</p>
 <p>The selection of covariates <span class="math inline">\(v_{\text{ct}}^{k}\)</span> included in the expressions of elasticities is data-driven using a lasso regression as implemented in Stata command <em>lasso2</em> (Ahrens et al., 2020). The lasso procedure penalizes additional variables/parameters and thereby encourages simple, sparse models, i.e.&nbsp;models with fewer parameters. The algorithm sequentially includes one variable after the other, in an optimized order. The order in which predictors are entered into the model can be interpreted as an indication of the relative predictive power of each predictor.</p>
@@ -618,7 +643,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Figure 7‑4 shows descriptive evidence of the relationship between urban congestion and gasoline prices: across countries, there is a significant negative correlation in 2018.<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a> Congestion is measured with the TomTom Traffic Index, indicating the additional time spent in congested traffic as compared to free-flowing traffic (in percent, see Section 7.4.2 for more details).</p>
 <p>This simple descriptive evidence omits many variables. In particular, the elasticity of demand of private vehicle trips depends on the availability of (and practicability) alternative means of transport. Moreover the resulting congestion depends on whether these alternative means of transport will also be on the road (e.g.&nbsp;buses) or elsewhere (e.g.&nbsp;trains).</p>
 <p>Figure 7‑4 – Scatter plot and linear regression of urban congestion as a function of gasoline prices in 2020</p>
-<p><img src="./07/media/scatter_congestion.png" class="img-fluid"></p>
+<p><span class="chart"><span class="math inline">\(CHART\)</span></span></p>
 <p>Source: Tomtom, Enerdata, EIU, IEA, own computations.</p>
 <section id="short-run-elasticity" class="level4" data-number="7.6.1.1">
 <h4 data-number="7.6.1.1" class="anchored" data-anchor-id="short-run-elasticity"><span class="header-section-number">7.6.1.1</span> Short-run elasticity</h4>
@@ -626,6 +651,15 @@ ul.task-list li input[type="checkbox"] {
 <p>For simplicity, we only show the regression results for overall congestion, whereas CPAT also contains estimates for weekday congestion and weekday peak time congestion. The results on these three indicators are similar, but the effect on peak congestion is typically slightly stronger.</p>
 <p>Table 7‑2 – Regression results short-run congestion</p>
 <table class="table">
+<colgroup>
+<col style="width: 82%">
+<col style="width: 2%">
+<col style="width: 3%">
+<col style="width: 2%">
+<col style="width: 3%">
+<col style="width: 3%">
+<col style="width: 2%">
+</colgroup>
 <thead>
 <tr class="header">
 <th><strong>Urban congestion</strong></th>
@@ -638,10 +672,14 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </thead>
 <tbody>
-<tr class="header">
-<th></th>
-<th colspan="3"><strong>pooled OLS</strong></th>
-<th colspan="3"><strong>within estimator</strong></th>
+<tr class="odd">
+<td></td>
+<td><strong>pooled OLS</strong></td>
+<td><strong>within estimator</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr class="even">
 <td><strong>Ln of gasoline pump price (2018 PPP-adj USD cents/liter)</strong></td>
@@ -806,7 +844,13 @@ ul.task-list li input[type="checkbox"] {
 <td>52</td>
 </tr>
 <tr class="even">
-<td colspan="7">Robust p-values in parentheses, *** p&lt;0.01, ** p&lt;0.05, * p&lt;0.1. Ln(gasoline) is the natural logarithm of the gasoline pump price (2018 PPP_adjusted USD cents/liter). The parameter marked in green is the default short-run elasticity in CPAT for countries that have not sufficient data for country-specific elasticity estimation. Sample averages are subtracted from the interaction variables prior to interacting with the fuel price.</td>
+<td>Robust p-values in parentheses, *** p&lt;0.01, ** p&lt;0.05, * p&lt;0.1. Ln(gasoline) is the natural logarithm of the gasoline pump price (2018 PPP_adjusted USD cents/liter). The parameter marked in green is the default short-run elasticity in CPAT for countries that have not sufficient data for country-specific elasticity estimation. Sample averages are subtracted from the interaction variables prior to interacting with the fuel price.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -818,6 +862,12 @@ ul.task-list li input[type="checkbox"] {
 <p>Computing the between estimator of equation (1), given by equation (4), we obtain the long-run elasticity.</p>
 <p>Table 7‑3 – Regression results long-run congestion</p>
 <table class="table">
+<colgroup>
+<col style="width: 90%">
+<col style="width: 4%">
+<col style="width: 3%">
+<col style="width: 2%">
+</colgroup>
 <thead>
 <tr class="header">
 <th><strong>Urban congestion</strong></th>
@@ -827,9 +877,11 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </thead>
 <tbody>
-<tr class="header">
-<th></th>
-<th colspan="3"><strong>between estimator</strong></th>
+<tr class="odd">
+<td></td>
+<td><strong>between estimator</strong></td>
+<td></td>
+<td></td>
 </tr>
 <tr class="even">
 <td><strong>Ln of gasoline pump price (2018 PPP-adj USD cents/liter)</strong></td>
@@ -934,7 +986,10 @@ ul.task-list li input[type="checkbox"] {
 <td>52</td>
 </tr>
 <tr class="odd">
-<td colspan="4">Robust p-values in parentheses, *** p&lt;0.01, ** p&lt;0.05, * p&lt;0.1. Ln(gasoline) is the natural logarithm of the gasoline pump price (2018 PPP_adjusted USD cents/liter). The parameter marked in green is the default long-run elasticity in CPAT for countries that have not sufficient data for country-specific elasticity estimation. Sample averages are subtracted from the interaction variables prior to interacting with the fuel price.</td>
+<td>Robust p-values in parentheses, *** p&lt;0.01, ** p&lt;0.05, * p&lt;0.1. Ln(gasoline) is the natural logarithm of the gasoline pump price (2018 PPP_adjusted USD cents/liter). The parameter marked in green is the default long-run elasticity in CPAT for countries that have not sufficient data for country-specific elasticity estimation. Sample averages are subtracted from the interaction variables prior to interacting with the fuel price.</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -949,18 +1004,26 @@ ul.task-list li input[type="checkbox"] {
 <p>Table 7‑4 shows the lists of variables which are selected by the lasso regression algorithm as the five most relevant covariates for fuel price elasticity of congestion. The elasticities depend on characteristics of the vehicle fleet (number of vehicles per capita, share of motorcycles), on characteristics of the road network (density, speed limits), characteristics of transport substitutes (satisfaction with public transport) and on more general features of society (population size, rule of law indicator, urbanization, share of young people, and others).</p>
 <p>Table 7‑4 – Variables selected for country-specific congestion elasticity estimation</p>
 <table class="table">
+<colgroup>
+<col style="width: 56%">
+<col style="width: 13%">
+<col style="width: 15%">
+<col style="width: 15%">
+</colgroup>
 <thead>
 <tr class="header">
-<th colspan="2"><strong>Short run</strong></th>
-<th colspan="2"><strong>Long run</strong></th>
+<th><strong>Short run</strong></th>
+<th><strong>Long run</strong></th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
-<tr class="header">
-<th><strong>wrt price</strong></th>
-<th><strong>wrt tax</strong></th>
-<th><strong>wrt price</strong></th>
-<th><strong>wrt tax</strong></th>
+<tr class="odd">
+<td><strong>wrt price</strong></td>
+<td><strong>wrt tax</strong></td>
+<td><strong>wrt price</strong></td>
+<td><strong>wrt tax</strong></td>
 </tr>
 <tr class="even">
 <td>Ln of number of vehicles per capita</td>
@@ -993,7 +1056,10 @@ ul.task-list li input[type="checkbox"] {
 <td>Road density (in km per km2)</td>
 </tr>
 <tr class="odd">
-<td colspan="4">The covariates used for estimating the country-specific elasticities are chosen by a data-driven machine learning algorithm among a list of 30 candidate variables.</td>
+<td>The covariates used for estimating the country-specific elasticities are chosen by a data-driven machine learning algorithm among a list of 30 candidate variables.</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -1004,20 +1070,29 @@ ul.task-list li input[type="checkbox"] {
 <p>Table 7‑5 summarizes the key characteristics of the distributions shown in Figure 7‑5: mean, median, 5<sup>th</sup> and 95<sup>th</sup> percentiles of the distribution.</p>
 <p>Table 7‑5 – Country-specific congestion elasticities, numerical overview</p>
 <table class="table">
+<colgroup>
+<col style="width: 31%">
+<col style="width: 18%">
+<col style="width: 16%">
+<col style="width: 18%">
+<col style="width: 15%">
+</colgroup>
 <thead>
 <tr class="header">
 <th><strong>Urban congestion</strong></th>
-<th colspan="2"><strong>Short-run</strong></th>
-<th colspan="2"><strong>Long-run</strong></th>
+<th><strong>Short-run</strong></th>
+<th><strong>Long-run</strong></th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
-<tr class="header">
-<th></th>  
-<th><strong>wrt price</strong></th>
-<th><strong>wrt tax</strong></th>
-<th><strong>wrt price</strong></th>
-<th><strong>wrt tax</strong></th>
+<tr class="odd">
+<td></td>
+<td><strong>wrt price</strong></td>
+<td><strong>wrt tax</strong></td>
+<td><strong>wrt price</strong></td>
+<td><strong>wrt tax</strong></td>
 </tr>
 <tr class="even">
 <td><strong>Default elasticity</strong></td>
@@ -1069,13 +1144,22 @@ ul.task-list li input[type="checkbox"] {
 <h3 data-number="7.6.2" class="anchored" data-anchor-id="fatalities-from-road-accidents"><span class="header-section-number">7.6.2</span> Fatalities from road accidents</h3>
 <p>For illustration, Figure 7‑6 shows descriptive evidence of the negative correlation between fuel prices and road accident fatalities. The higher the gasoline price the lower the accident fatality rate per 100,000 inhabitants.</p>
 <p>Figure 7‑6 – Scatter plot and linear regression of country-level road fatalities as a function of gasoline prices in 2019</p>
-<p><img src="./07/media/scatter_accident.png" class="img-fluid"></p>
+<p><span class="chart"><span class="math inline">\(CHART\)</span></span></p>
 <p>Source: WRS, Enerdata, EIU, IEA, own computations.</p>
 <section id="short-run-elasticity-1" class="level4" data-number="7.6.2.1">
 <h4 data-number="7.6.2.1" class="anchored" data-anchor-id="short-run-elasticity-1"><span class="header-section-number">7.6.2.1</span> Short-run elasticity</h4>
 <p>This section shows the results for the short-run estimations of road accident fatalities on fuel prices and a list of covariates, following the general form of equation (1).</p>
 <p>Table 7‑6 – Regression results short-run accident fatalities</p>
 <table class="table">
+<colgroup>
+<col style="width: 82%">
+<col style="width: 2%">
+<col style="width: 3%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+<col style="width: 2%">
+</colgroup>
 <thead>
 <tr class="header">
 <th><strong>Accident fatalities</strong></th>
@@ -1088,10 +1172,14 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </thead>
 <tbody>
-<tr class="header">
-<th></th>
-<th colspan="3"><strong>pooled OLS</strong></th>
-<th colspan="3"><strong>within estimator</strong></th>
+<tr class="odd">
+<td></td>
+<td><strong>pooled OLS</strong></td>
+<td><strong>within estimator</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr class="even">
 <td><strong>Ln of gasoline pump price (2018 PPP-adj USD cents/liter)</strong></td>
@@ -1256,7 +1344,13 @@ ul.task-list li input[type="checkbox"] {
 <td>121</td>
 </tr>
 <tr class="even">
-<td colspan="7">Robust p-values in parentheses, *** p&lt;0.01, ** p&lt;0.05, * p&lt;0.1. Ln(gasoline) is the natural logarithm of the gasoline pump price (2018 PPP_adjusted USD cents/liter). The parameter marked in green is the default short-run elasticity in CPAT for countries that have not sufficient data for country-specific elasticity estimation. Sample averages are subtracted from the interaction variables prior to interacting with the fuel price.</td>
+<td>Robust p-values in parentheses, *** p&lt;0.01, ** p&lt;0.05, * p&lt;0.1. Ln(gasoline) is the natural logarithm of the gasoline pump price (2018 PPP_adjusted USD cents/liter). The parameter marked in green is the default short-run elasticity in CPAT for countries that have not sufficient data for country-specific elasticity estimation. Sample averages are subtracted from the interaction variables prior to interacting with the fuel price.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -1266,6 +1360,12 @@ ul.task-list li input[type="checkbox"] {
 <h4 data-number="7.6.2.2" class="anchored" data-anchor-id="long-run-elasticity-1"><span class="header-section-number">7.6.2.2</span> Long-run elasticity</h4>
 <p>Table 7‑7 – Regression results long-run accident fatalities</p>
 <table class="table">
+<colgroup>
+<col style="width: 90%">
+<col style="width: 4%">
+<col style="width: 3%">
+<col style="width: 1%">
+</colgroup>
 <thead>
 <tr class="header">
 <th><strong>Accident fatalities</strong></th>
@@ -1275,9 +1375,11 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </thead>
 <tbody>
-<tr class="header">
-<th></th>  
-<th colspan="3"><strong>between estimator</strong></th>
+<tr class="odd">
+<td></td>
+<td><strong>between estimator</strong></td>
+<td></td>
+<td></td>
 </tr>
 <tr class="even">
 <td><strong>Ln of gasoline pump price (2018 PPP-adj USD cents/liter)</strong></td>
@@ -1382,7 +1484,10 @@ ul.task-list li input[type="checkbox"] {
 <td>138</td>
 </tr>
 <tr class="odd">
-<td colspan="4">Robust p-values in parentheses, *** p&lt;0.01, ** p&lt;0.05, * p&lt;0.1. Ln(gasoline) is the natural logarithm of the gasoline pump price (2018 PPP_adjusted USD cents/liter). The parameter marked in green is the default long-run elasticity in CPAT for countries that have not sufficient data for country-specific elasticity estimation. Sample averages are subtracted from the interaction variables prior to interacting with the fuel price.</td>
+<td>Robust p-values in parentheses, *** p&lt;0.01, ** p&lt;0.05, * p&lt;0.1. Ln(gasoline) is the natural logarithm of the gasoline pump price (2018 PPP_adjusted USD cents/liter). The parameter marked in green is the default long-run elasticity in CPAT for countries that have not sufficient data for country-specific elasticity estimation. Sample averages are subtracted from the interaction variables prior to interacting with the fuel price.</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -1393,18 +1498,26 @@ ul.task-list li input[type="checkbox"] {
 <p>Table 7‑8 shows the lists of variables which are selected by the lasso regression algorithm as the five most relevant covariates for the elasticity of accident fatalities, chosen by a data-driven algorithm. Again, the elasticities depend on characteristics of the vehicle fleet, on characteristics of the road network and on more general features of society. In particular, motorcyclist are known to be at particularly high risk for accident injury and death. Classical road safety features such as seat-belt wearing rate, alcohol consumption and maximum speed allowed also play a role. More broadly, GDP and infant mortality rate capture the general development situation of the country, as well as the quality of the country’s health system.</p>
 <p>Table 7‑8 – Variables selected for country-specific accident elasticity estimation</p>
 <table class="table">
+<colgroup>
+<col style="width: 45%">
+<col style="width: 12%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
 <thead>
 <tr class="header">
-<th colspan="2"><strong>Short run</strong></th>
-<th colspan="2"><strong>Long run</strong></th>
+<th><strong>Short run</strong></th>
+<th><strong>Long run</strong></th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
-<tr class="header">
-<th><strong>wrt price</strong></th>
-<th><strong>wrt tax</strong></th>
-<th><strong>wrt price</strong></th>
-<th><strong>wrt tax</strong></th>
+<tr class="odd">
+<td><strong>wrt price</strong></td>
+<td><strong>wrt tax</strong></td>
+<td><strong>wrt price</strong></td>
+<td><strong>wrt tax</strong></td>
 </tr>
 <tr class="even">
 <td>Number of vehicles per capita</td>
@@ -1437,7 +1550,10 @@ ul.task-list li input[type="checkbox"] {
 <td>Maximum speed on rural roads (in km/h)</td>
 </tr>
 <tr class="odd">
-<td colspan="4">The covariates used for estimating the country-specific elasticities are chosen by a data-driven machine learning algorithm among a list of 30 candidate variables.</td>
+<td>The covariates used for estimating the country-specific elasticities are chosen by a data-driven machine learning algorithm among a list of 30 candidate variables.</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -1447,20 +1563,29 @@ ul.task-list li input[type="checkbox"] {
 <p>Table 7‑9 summarizes the key characteristics of the distributions shown in Figure 7‑7: mean, median, 5<sup>th</sup> and 95<sup>th</sup> percentiles.</p>
 <p>Table 7‑9 – Country-specific accident elasticities, numerical overview</p>
 <table class="table">
+<colgroup>
+<col style="width: 31%">
+<col style="width: 18%">
+<col style="width: 16%">
+<col style="width: 18%">
+<col style="width: 15%">
+</colgroup>
 <thead>
 <tr class="header">
 <th><strong>Accident fatalities</strong></th>
-<th colspan="2"><strong>Short-run</strong></th>
-<th colspan="2"><strong>Long-run</strong></th>
+<th><strong>Short-run</strong></th>
+<th><strong>Long-run</strong></th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
-<tr class="header">
-<th></th>  
-<th><strong>wrt price</strong></th>
-<th><strong>wrt tax</strong></th>
-<th><strong>wrt price</strong></th>
-<th><strong>wrt tax</strong></th>
+<tr class="odd">
+<td></td>
+<td><strong>wrt price</strong></td>
+<td><strong>wrt tax</strong></td>
+<td><strong>wrt price</strong></td>
+<td><strong>wrt tax</strong></td>
 </tr>
 <tr class="even">
 <td><strong>Default elasticity</strong></td>
@@ -1508,8 +1633,8 @@ ul.task-list li input[type="checkbox"] {
 </table>
 </section>
 </section>
-<section id="road-damage-1" class="level3" data-number="7.6.3">
-<h3 data-number="7.6.3" class="anchored" data-anchor-id="road-damage-1"><span class="header-section-number">7.6.3</span> Road damage</h3>
+<section id="road-damage" class="level3" data-number="7.6.3">
+<h3 data-number="7.6.3" class="anchored" data-anchor-id="road-damage"><span class="header-section-number">7.6.3</span> Road damage</h3>
 <p>Road damage is measured in CPAT with the road infrastructure expenditure for maintenance, as listed in the WRS. The underlying hypothesis is that all road damage is repaired and therefore captured by the road maintenance budget of the government, as opposed to road investment for the expansion of the road network.</p>
 <p>Compared to the other two outcomes previously discussed, road damage presents the particularity to be more dependent on diesel price than on fuel price. Although the differential impact of a carbon tax on fuel and gasoline prices is relatively small, we thus use diesel prices in this section rather than gasoline prices as before.</p>
 <section id="short-run-elasticity-2" class="level4" data-number="7.6.3.1">
@@ -1521,6 +1646,12 @@ ul.task-list li input[type="checkbox"] {
 <p>In the long run, road damage costs react to diesel prices, but the results are not statistically significant as shown on Table 7‑10. In the simple specifications (columns 1 and 2), the elasticity is around -0.3. We use the parameters estimated in the specification including interaction terms (column 3) in order to compute the country-specific elasticities for CPAT presented in the next subsection.</p>
 <p>Table 7‑10 – Regression results long-run road damage costs</p>
 <table class="table">
+<colgroup>
+<col style="width: 90%">
+<col style="width: 4%">
+<col style="width: 2%">
+<col style="width: 2%">
+</colgroup>
 <thead>
 <tr class="header">
 <th><strong>Road damage</strong></th>
@@ -1530,9 +1661,11 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </thead>
 <tbody>
-<tr class="header">
-<th></th>  
-<th colspan="3"><strong>between estimator</strong></th>
+<tr class="odd">
+<td></td>
+<td><strong>between estimator</strong></td>
+<td></td>
+<td></td>
 </tr>
 <tr class="even">
 <td><strong>Lag of ln of diesel pump price (2018 PPP-adj USD cents/liter)</strong></td>
@@ -1637,7 +1770,10 @@ ul.task-list li input[type="checkbox"] {
 <td>103</td>
 </tr>
 <tr class="odd">
-<td colspan="4">Robust p-values in parentheses, *** p&lt;0.01, ** p&lt;0.05, * p&lt;0.1. Ln(diesel) is the natural logarithm of the gasoline pump price (2018 PPP_adjusted USD cents/liter). The parameter marked in green is the default long-run elasticity in CPAT for countries that have not sufficient data for country-specific elasticity estimation. Sample averages are subtracted from the interaction variables prior to interacting with the fuel price.</td>
+<td>Robust p-values in parentheses, *** p&lt;0.01, ** p&lt;0.05, * p&lt;0.1. Ln(diesel) is the natural logarithm of the gasoline pump price (2018 PPP_adjusted USD cents/liter). The parameter marked in green is the default long-run elasticity in CPAT for countries that have not sufficient data for country-specific elasticity estimation. Sample averages are subtracted from the interaction variables prior to interacting with the fuel price.</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -1647,15 +1783,20 @@ ul.task-list li input[type="checkbox"] {
 <p>As shown on Table 7‑11, the long-run road damage elasticities depend on structural features of the country’s transportation system (population density, total road network, urbanization), on the vehicle fleet, particularly larger vehicles, and rule of law. Additionally, weather plays an important role for road damage. In particular, minimum temperatures seem to impact the effect of a carbon tax: with less traffic, the effect of low temperatures (frost) on road damage is reduced.</p>
 <p>Table 7‑11 – Variables selected for country-specific road damage elasticity estimation</p>
 <table class="table">
+<colgroup>
+<col style="width: 76%">
+<col style="width: 23%">
+</colgroup>
 <thead>
 <tr class="header">
-<th colspan="2"><strong>Long run</strong></th>
+<th><strong>Long run</strong></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
-<tr class="header">
-<th><strong>wrt price</strong></th>
-<th><strong>wrt tax</strong></th>
+<tr class="odd">
+<td><strong>wrt price</strong></td>
+<td><strong>wrt tax</strong></td>
 </tr>
 <tr class="even">
 <td>Number of lorries and vans</td>
@@ -1678,7 +1819,8 @@ ul.task-list li input[type="checkbox"] {
 <td>Population density (people per sq. km of land area)</td>
 </tr>
 <tr class="odd">
-<td colspan="2">The covariates used for estimating the country-specific elasticities are chosen by a data-driven machine learning algorithm among a list of 30 candidate variables.</td>
+<td>The covariates used for estimating the country-specific elasticities are chosen by a data-driven machine learning algorithm among a list of 30 candidate variables.</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -1691,14 +1833,15 @@ ul.task-list li input[type="checkbox"] {
 <thead>
 <tr class="header">
 <th><strong>Road damage</strong></th>
-<th colspan="2"><strong>Long-run</strong></th>
+<th><strong>Long-run</strong></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
-<tr class="header">
-<th></th>  
-<th><strong>wrt price</strong></th>
-<th><strong>wrt tax</strong></th>
+<tr class="odd">
+<td></td>
+<td><strong>wrt price</strong></td>
+<td><strong>wrt tax</strong></td>
 </tr>
 <tr class="even">
 <td><strong>Default elasticity</strong></td>
@@ -1742,6 +1885,15 @@ ul.task-list li input[type="checkbox"] {
 <p>The estimated short-run elasticities of VKT wrt fuel price are shown Table 7‑13. The short-run elasticity is estimated at -0.395, which is similar to the more elastic estimates in the literature (Table 7‑1).</p>
 <p>Table 7‑13 – Regression results short-run VKT</p>
 <table class="table">
+<colgroup>
+<col style="width: 83%">
+<col style="width: 2%">
+<col style="width: 3%">
+<col style="width: 2%">
+<col style="width: 3%">
+<col style="width: 3%">
+<col style="width: 2%">
+</colgroup>
 <thead>
 <tr class="header">
 <th><strong>VKT</strong></th>
@@ -1754,10 +1906,14 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </thead>
 <tbody>
-<tr class="header">
-<th></th>  
-<th colspan="3"><strong>pooled OLS</strong></th>
-<th colspan="3"><strong>within estimator</strong></th>
+<tr class="odd">
+<td></td>
+<td><strong>pooled OLS</strong></td>
+<td><strong>within estimator</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr class="even">
 <td><strong>Ln of gasoline pump price (2018 PPP-adj USD cents/liter)</strong></td>
@@ -1922,7 +2078,13 @@ ul.task-list li input[type="checkbox"] {
 <td>0</td>
 </tr>
 <tr class="even">
-<td colspan="7">Robust p-values in parentheses, *** p&lt;0.01, ** p&lt;0.05, * p&lt;0.1. Ln(gasoline) is the natural logarithm of the gasoline pump price (2018 PPP_adjusted USD cents/liter). The parameter marked in green is the default short-run elasticity in CPAT for countries that have not sufficient data for country-specific elasticity estimation. Sample averages are subtracted from the interaction variables prior to interacting with the fuel price.</td>
+<td>Robust p-values in parentheses, *** p&lt;0.01, ** p&lt;0.05, * p&lt;0.1. Ln(gasoline) is the natural logarithm of the gasoline pump price (2018 PPP_adjusted USD cents/liter). The parameter marked in green is the default short-run elasticity in CPAT for countries that have not sufficient data for country-specific elasticity estimation. Sample averages are subtracted from the interaction variables prior to interacting with the fuel price.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -1932,6 +2094,12 @@ ul.task-list li input[type="checkbox"] {
 <p>The long-run estimate for the VKT elasticity is shown in Table 7‑14. With an estimate of 0.228, our result is at the more inelastic side of estimates in the literature (Table 7‑1).</p>
 <p>Table 7‑14 – Regression results long-run VKT</p>
 <table class="table">
+<colgroup>
+<col style="width: 91%">
+<col style="width: 4%">
+<col style="width: 2%">
+<col style="width: 1%">
+</colgroup>
 <thead>
 <tr class="header">
 <th><strong>VKT</strong></th>
@@ -1941,9 +2109,11 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </thead>
 <tbody>
-<tr class="header">
-<th></th>  
-<th colspan="3"><strong>between estimator</strong></th>
+<tr class="odd">
+<td></td>
+<td><strong>between estimator</strong></td>
+<td></td>
+<td></td>
 </tr>
 <tr class="even">
 <td><strong>Ln of gasoline pump price (2018 PPP-adj USD cents/liter)</strong></td>
@@ -2048,7 +2218,10 @@ ul.task-list li input[type="checkbox"] {
 <td>0</td>
 </tr>
 <tr class="odd">
-<td colspan="4">Robust p-values in parentheses, *** p&lt;0.01, ** p&lt;0.05, * p&lt;0.1. Ln(gasoline) is the natural logarithm of the gasoline pump price (2018 PPP_adjusted USD cents/liter). The parameter marked in green is the default long-run elasticity in CPAT for countries that have not sufficient data for country-specific elasticity estimation. Sample averages are subtracted from the interaction variables prior to interacting with the fuel price.</td>
+<td>Robust p-values in parentheses, *** p&lt;0.01, ** p&lt;0.05, * p&lt;0.1. Ln(gasoline) is the natural logarithm of the gasoline pump price (2018 PPP_adjusted USD cents/liter). The parameter marked in green is the default long-run elasticity in CPAT for countries that have not sufficient data for country-specific elasticity estimation. Sample averages are subtracted from the interaction variables prior to interacting with the fuel price.</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -2058,18 +2231,26 @@ ul.task-list li input[type="checkbox"] {
 <p>Similar to the other variables, Table 7‑15 shows the variables selected by the algorithm for estimating the country-specific elasticities. We see that the road network (total length of the network, road density), the fleet (motorcycles, number of vehicles) and more general country characteristics (population size and density, infant mortality rate, GDP) enter into the calculation.</p>
 <p>Table 7‑15 – Variables selected for country-specific VKT elasticity estimation</p>
 <table class="table">
+<colgroup>
+<col style="width: 53%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 12%">
+</colgroup>
 <thead>
 <tr class="header">
-<th colspan="2"><strong>Short run</strong></th>
-<th colspan="2"><strong>Long run</strong></th>
+<th><strong>Short run</strong></th>
+<th><strong>Long run</strong></th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
-<tr class="header">
-<th><strong>wrt price</strong></th>
-<th><strong>wrt tax</strong></th>
-<th><strong>wrt price</strong></th>
-<th><strong>wrt tax</strong></th>
+<tr class="odd">
+<td><strong>wrt price</strong></td>
+<td><strong>wrt tax</strong></td>
+<td><strong>wrt price</strong></td>
+<td><strong>wrt tax</strong></td>
 </tr>
 <tr class="even">
 <td>Ln of number of vehicles per capita</td>
@@ -2102,7 +2283,10 @@ ul.task-list li input[type="checkbox"] {
 <td>Road density (in km per km2)</td>
 </tr>
 <tr class="odd">
-<td colspan="4">The covariates used for estimating the country-specific elasticities are chosen by a data-driven machine learning algorithm among a list of 30 candidate variables.</td>
+<td>The covariates used for estimating the country-specific elasticities are chosen by a data-driven machine learning algorithm among a list of 30 candidate variables.</td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -2111,20 +2295,29 @@ ul.task-list li input[type="checkbox"] {
 <p>The distribution of the resulting country-specific elasticity estimates is described in Figure 7‑9 and Table 7‑16. In the majority of countries, VKT is more elastic in the long-run than in the short-run.</p>
 <p>Table 7‑16 – Country-specific VKT elasticities, numerical overview</p>
 <table class="table">
+<colgroup>
+<col style="width: 31%">
+<col style="width: 18%">
+<col style="width: 16%">
+<col style="width: 18%">
+<col style="width: 15%">
+</colgroup>
 <thead>
 <tr class="header">
 <th><strong>VKT</strong></th>
-<th colspan="2"><strong>Short-run</strong></th>
-<th colspan="2"><strong>Long-run</strong></th>
+<th><strong>Short-run</strong></th>
+<th><strong>Long-run</strong></th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
-<tr class="header">
-<th></th>
-<th><strong>wrt price</strong></th>
-<th><strong>wrt tax</strong></th>
-<th><strong>wrt price</strong></th>
-<th><strong>wrt tax</strong></th>
+<tr class="odd">
+<td></td>
+<td><strong>wrt price</strong></td>
+<td><strong>wrt tax</strong></td>
+<td><strong>wrt price</strong></td>
+<td><strong>wrt tax</strong></td>
 </tr>
 <tr class="even">
 <td><strong>Default elasticity</strong></td>
@@ -2292,89 +2485,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="references" class="level2" data-number="7.10">
 <h2 data-number="7.10" class="anchored" data-anchor-id="references"><span class="header-section-number">7.10</span> References</h2>
-<p>Abrantes, P. and Wardman, M. (2011) &lsquo;Meta-analysis of UK values of travel time: An update&rsquo;, <em>Transportation Research Part A: Policy and Practice</em>. Elsevier Ltd, 45(1), pp. 1&ndash;17.</p>
-<p>Ahangari, H. <em>et al.</em> (2014) &lsquo;Investigation into Impact of Fluctuations in Gasoline Prices and Macroeconomic Conditions on Road Safety in Developed Countries&rsquo;, <em>Transportation Research Record: Journal of the Transportation Research Board</em>. SAGE PublicationsSage CA: Los Angeles, CA, 2465(1), pp. 48&ndash;56.</p>
-<p>Ahrens, A., Hansen, C. B. and Schaffer, M. E. (2020) &lsquo;lassopack: Model selection and prediction with regularized regression in Stata&rsquo;, <em>The Stata Journal</em>. SAGE Publications Sage CA: Los Angeles, CA, 20(1), pp. 176&ndash;235.</p>
-<p>Avner, P., Rentschler, J. and Hallegatte, S. (2014) <em>Carbon price efficiency: Lock-in and path dependence in urban forms and transport infrastructure</em>. 6941. Washington, D.C.: The World Bank.</p>
-<p>Baltagi, B. H. (2008) <em>Econometric analysis of panel data</em>. John Wiley &amp; Sons.</p>
-<p>Baltagi, B. H. and Griffin, J. M. (1984) &lsquo;Short and long run effects in pooled models&rsquo;, <em>International Economic Review</em>. JSTOR, 25(3), pp. 631&ndash;645.</p>
-<p>Barla, P., Gilbert-Gonthier, M. and Kuelah, J.-R. T. (2014) &lsquo;The demand for road diesel in Canada&rsquo;, <em>Energy Economics</em>. Elsevier, 43, pp. 316&ndash;322.</p>
-<p>Bastian, A. and B&ouml;rjesson, M. (2014) &lsquo;It&rsquo;s the Economy, Stupid: Increasing Fuel Price is Enough to Explain Peak Car in Sweden.&rsquo;&rsquo;, <em>Centre for Transport Studies, KTH Royal Institute of Technology working paper</em>, 15, p. 2014.</p>
-<p>Bento, A. M., Hughes, J. E. and Kaffine, D. (2013) &lsquo;Carpooling and driver responses to fuel price changes: Evidence from traffic flows in Los Angeles&rsquo;, <em>Journal of Urban Economics</em>. Elsevier, 77, pp. 41&ndash;56.</p>
-<p>Best, R. and Burke, P. J. (2019) &lsquo;Fuel prices and road accident outcomes in New Zealand&rsquo;, <em>New Zealand Economic Papers</em>. Taylor &amp; Francis, 53(2), pp. 109&ndash;124.</p>
-<p>Burger, N. E. and Kaffine, D. T. (2009) &lsquo;Gas prices, traffic, and freeway speeds in Los Angeles&rsquo;, <em>The Review of Economics and Statistics</em>. MIT Press, 91(3), pp. 652&ndash;657.</p>
-<p>Burke, P. J., Batsuuri, T. and Yudhistira, M. H. (2017) &lsquo;Easing the traffic: The effects of Indonesia&rsquo;s fuel subsidy reforms on toll-road travel&rsquo;, <em>Transportation Research Part A: Policy and Practice</em>. Elsevier, 105, pp. 167&ndash;180.</p>
-<p>Burke, P. J. and Nishitateno, S. (2015) &lsquo;Gasoline prices and road fatalities: international evidence&rsquo;, <em>Economic Inquiry</em>. Wiley Online Library, 53(3), pp. 1437&ndash;1450.</p>
-<p>Burke, P. J. and Teame, A. (2018) &lsquo;Fuel Prices and Road Deaths in Australia&rsquo;, <em>Economic Papers</em>. John Wiley &amp; Sons, Ltd (10.1111), 37(2), pp. 146&ndash;161.</p>
-<p>Chi, G. <em>et al.</em> (2010) &lsquo;Gasoline prices and traffic safety in Mississippi&rsquo;, <em>Journal of Safety Research</em>. Elsevier, 41(6), pp. 493&ndash;500.</p>
-<p>Chi, G., Quddus, M. A., <em>et al.</em> (2013) &lsquo;Gasoline price effects on traffic safety in urban and rural areas: Evidence from Minnesota, 1998&ndash;2007&rsquo;, <em>Safety Science</em>. Elsevier, 59, pp. 154&ndash;162.</p>
-<p>Chi, G., Porter, J. R., <em>et al.</em> (2013) &lsquo;The impact of gasoline price changes on traffic safety: a time geography explanation&rsquo;, <em>Journal of Transport Geography</em>. Elsevier, 28, pp. 1&ndash;11.</p>
-<p>Cohen, L. R. and Roth, K. D. (2017) &lsquo;The Effect of Trucks Dispatch Decisions on Pavement Damage and Other Externalities&rsquo;.</p>
-<p>Cr&ocirc;tte, A., Noland, R. B. and Graham, D. J. (2009) &lsquo;Estimation of road traffic demand elasticities for Mexico City, Mexico&rsquo;, <em>Transportation research record</em>. SAGE Publications Sage CA: Los Angeles, CA, 2134(1), pp. 99&ndash;105.</p>
-<p>Dahl, C. A. (1979) &lsquo;Consumer adjustment to a gasoline tax&rsquo;, <em>The review of economics and statistics</em>. JSTOR, pp. 427&ndash;432.</p>
-<p>Delsaut, M. (2014) &lsquo;The effect of fuel price on demands for road and rail travel: an application to the French case&rsquo;, <em>Transportation Research Procedia</em>. Elsevier, 1(1), pp. 177&ndash;187.</p>
-<p>Ekins, P. (1996) &lsquo;How large a carbon tax is justified by the secondary benefits of CO2 abatement?&rsquo;, <em>Resource and Energy Economics</em>. Elsevier, 18(2), pp. 161&ndash;187.</p>
-<p>Frondel, M., Ritter, N. and Vance, C. (2012) &lsquo;Heterogeneity in the rebound effect: Further evidence for Germany&rsquo;, <em>Energy Economics</em>. Elsevier, 34(2), pp. 461&ndash;467.</p>
-<p>Gayer, T. (2004) &lsquo;The fatality risks of sport-utility vehicles, vans, and pickups relative to cars&rsquo;, <em>Journal of Risk and uncertainty</em>. Springer, 28(2), pp. 103&ndash;133.</p>
-<p>Gerdtham, U.-G. and Ruhm, C. J. (2006) &lsquo;Deaths rise in good economic times: evidence from the OECD&rsquo;, <em>Economics &amp; Human Biology</em>. Elsevier, 4(3), pp. 298&ndash;316.</p>
-<p>Gillingham, K. (2014) &lsquo;Identifying the elasticity of driving: evidence from a gasoline price shock in California&rsquo;, <em>Regional Science and Urban Economics</em>. Elsevier, 47, pp. 13&ndash;24.</p>
-<p>Gillingham, K., Jenn, A. and Azevedo, I. M. L. (2015) &lsquo;Heterogeneity in the response to gasoline prices: Evidence from Pennsylvania and implications for the rebound effect&rsquo;, <em>Energy Economics</em>. Elsevier, 52, pp. S41&ndash;S52.</p>
-<p>Gillingham, K., Rapson, D. and Wagner, G. (2015) &lsquo;The Rebound Effect and Energy Efficiency Policy&rsquo;, <em>Review of Environmental Economics and Policy</em>, 10(1), pp. 68&ndash;88.</p>
-<p>Goodwin, P., Dargay, J. and Hanly, M. (2004) &lsquo;Elasticities of road traffic and fuel consumption with respect to price and income: a review&rsquo;, <em>Transport reviews</em>. Taylor &amp; Francis, 24(3), pp. 275&ndash;292.</p>
-<p>Grabowski, D. C. and Morrisey, M. A. (2004) &lsquo;Gasoline prices and motor vehicle fatalities&rsquo;, <em>Journal of Policy Analysis and Management</em>. Wiley Online Library, 23(3), pp. 575&ndash;593.</p>
-<p>Grabowski, D. C. and Morrisey, M. A. (2006) &lsquo;Do higher gasoline taxes save lives?&rsquo;, <em>Economics Letters</em>. Elsevier, 90(1), pp. 51&ndash;55.</p>
-<p>Gultom, T. H. M. <em>et al.</em> (2017) &lsquo;The road maintenance funding models in Indonesia use earmarked tax&rsquo;, in <em>AIP Conference Proceedings</em>. AIP Publishing LLC, p. 60009.</p>
-<p>Haughton, J. and Sarkar, S. (1996) &lsquo;Gasoline tax as a corrective tax: estimates for the United States, 1970-1991&rsquo;, <em>The Energy Journal</em>. International Association for Energy Economics, 17(2), pp. 103&ndash;126.</p>
-<p>He, J. Z. (2015) &lsquo;Does Diesel Price Matter? Estimate the Elasticities of Trucking Behaviors with Respect to Fuel Prices&rsquo;, in <em>The Dynamic Energy Landscape, 33rd USAEE/IAEE North American Conference, Oct 25-28, 2015</em>. International Association for Energy Economics.</p>
-<p>Huang, C. and Burris, M. W. (2015) &lsquo;The short-run impact of gas prices fluctuations on toll road use&rsquo;, <em>Case studies on transport policy</em>. Elsevier, 3(2), pp. 137&ndash;150.</p>
-<p>Hyatt, E. <em>et al.</em> (2009) &lsquo;The association between price of regular-grade gasoline and injury and mortality rates among occupants involved in motorcycle-and automobile-related motor vehicle collisions&rsquo;, <em>Accident Analysis &amp; Prevention</em>. Elsevier, 41(5), pp. 1075&ndash;1079.</p>
-<p>International Road Federation (2018) <em>World Road Statistics</em>. International Road Federation.</p>
-<p>International Transport Forum (2015) <em>Why Does Road Safety Improve When Economic Times Are Hard? Why Does Road Safety Improve When Economic Times Are Hard?</em> Available at: https://www.itf-oecd.org/sites/default/files/docs/15irtadeconomictimes.pdf (Accessed: 6 June 2019).</p>
-<p>Jacobson, T. and W&aring;gberg, L.-G. (2005) &lsquo;Prediction models for pavement wear and associated costs&rsquo;, in. Winter Cities 2004, VTI.</p>
-<p>Johnson, M. B. (1964) &lsquo;On the economics of road congestion&rsquo;, <em>Econometrica: Journal of the Econometric Society</em>. JSTOR, pp. 137&ndash;150.</p>
-<p>Khoo, H. L., Ong, G. P. and Khoo, W. C. (2012) &lsquo;Short-term impact analysis of fuel price policy change on travel demand in Malaysian cities&rsquo;, <em>Transportation Planning and Technology</em>. Taylor &amp; Francis, 35(7), pp. 715&ndash;736.</p>
-<p>Kwon, Y. and Lee, J. (2014) &lsquo;Asymmetric responses of highway travel demand to changes in fuel price: An explanation via fuel price uncertainty&rsquo;, <em>Transportation Research Part A: Policy and Practice</em>. Elsevier, 63, pp. 56&ndash;66.</p>
-<p>Leard, B. <em>et al.</em> (2015) &lsquo;Fuel costs, economic activity, and the rebound effect for heavy-duty trucks&rsquo;, <em>Resources for the Future Discussion Paper</em>, pp. 14&ndash;43.</p>
-<p>Leigh, J. P. and Wilkinson, J. T. (1991) &lsquo;The effect of gasoline taxes on highway fatalities&rsquo;, <em>Journal of Policy Analysis and Management</em>. JSTOR, 10(3), pp. 474&ndash;481.</p>
-<p>Li, S., Linn, J. and Muehlegger, E. (2014) &lsquo;Gasoline taxes and consumer behavior&rsquo;, <em>American Economic Journal: Economic Policy</em>, 6(4), pp. 302&ndash;342.</p>
-<p>Lindsey, R. (2006) &lsquo;Do economists reach a conclusion?&rsquo;, <em>Econ Journal Watch</em>, 3(2), pp. 292&ndash;379.</p>
-<p>Litman, T. (2012) &lsquo;Pricing for traffic safety: how efficient transport pricing can reduce roadway crash risks&rsquo;, <em>Transportation research record</em>. SAGE Publications Sage CA: Los Angeles, CA, 2318(1), pp. 16&ndash;22.</p>
-<p>Luoma, J. and Sivak, M. (2007) &lsquo;Characteristics and availability of fatal road-crash databases in 20 countries worldwide&rsquo;, <em>Journal of safety research</em>. Elsevier, 38(3), pp. 323&ndash;327.</p>
-<p>Matas, A. and Raymond, J.-L. (2003) &lsquo;Demand elasticity on tolled motorways&rsquo;, <em>Journal of Transportation and Statistics</em>. Bureau of Transportation Statistics, 6(2), pp. 91&ndash;108.</p>
-<p>Molloy, R. and Shan, H. (2013) &lsquo;The effect of gasoline prices on household location&rsquo;, <em>Review of Economics and Statistics</em>. MIT Press, 95(4), pp. 1212&ndash;1221.</p>
-<p>Montour, C. P. (2011) &lsquo;Death and Taxes: The Effect of Gasoline Prices on Traffic Fatalities-An Econometric Analysis Using Fixed-Effects Panel Least Squares Regression&rsquo;, <em>Omicron Delta Epsilon</em>. St. Olaf College Economic Department.</p>
-<p>Morrisey, M. A. and Grabowski, D. C. (2011) &lsquo;Gas prices, beer taxes and GDL programmes: effects on auto fatalities among young adults in the US&rsquo;, <em>Applied Economics</em>. Taylor &amp; Francis, 43(25), pp. 3645&ndash;3654.</p>
-<p>Moshiri, S. (2020) &lsquo;Consumer responses to gasoline price and non-price policies&rsquo;, <em>Energy Policy</em>. Elsevier, 137.</p>
-<p>Murphy, J. and Delucchi, M. (1997) &lsquo;Review of some of the literature on the social cost of motor-vehicle use&rsquo;, <em>The Annualized Social Cost of Motor-Vehicle Use in the United States, based on 1990-1991 Data</em>. UC Davis, UCD-ITS-RR(3).</p>
-<p>National Center for Freight &amp; Infrastructure (2014) <em>Understanding Freight Vehicle Pavement Impacts: How do Passenger Vehicles and Trucks Compare?</em> Available at: https://midamericafreight.org/wp-content/uploads/2018/10/ESALs.pdf.</p>
-<p>Newbery, D. (1988) &lsquo;Road Damage Externalities and Road User Charges&rsquo;, <em>Econometrica</em>, 56(2), pp. 295&ndash;316.</p>
-<p>Odeck, J. and Johansen, K. (2016) &lsquo;Elasticities of fuel and traffic demand and the direct rebound effects: An econometric estimation in the case of Norway&rsquo;, <em>Transportation Research Part A: Policy and Practice</em>. Elsevier, 83, pp. 1&ndash;13.</p>
-<p>Parker, N. A. and Hussain Ph D, S. (2006) &lsquo;Pavement damage and road pricing&rsquo;, in <em>Transportation Research Board 85th Annual Meeting</em>. Washington DC, United States: The National Academies of Sciences, Engineering, and Medicine.</p>
-<p>Parry, I. <em>et al.</em> (2014) <em>Getting Energy Prices Right</em>. International Monetary Fund (IMF).</p>
-<p>Parry, I. W. H. (2008) &lsquo;How should heavy-duty trucks be taxed?&rsquo;, <em>Journal of Urban Economics</em>. Elsevier, 63(2), pp. 651&ndash;668.</p>
-<p>Pesaran, M. H. and Smith, R. (1995) &lsquo;Estimating long-run relationships from dynamic heterogeneous panels&rsquo;, <em>Journal of econometrics</em>. Elsevier, 68(1), pp. 79&ndash;113.</p>
-<p>Pirotte, A. (1999) &lsquo;Convergence of the static estimation toward the long run effects of dynamic panel data models&rsquo;, <em>Economics Letters</em>. Elsevier, 63(2), pp. 151&ndash;158.</p>
-<p>Ramli, A. R. and Graham, D. J. (2014) &lsquo;The demand for road transport diesel fuel in the UK: Empirical evidence from static and dynamic cointegration techniques&rsquo;, <em>Transportation Research Part D: Transport and Environment</em>. Elsevier, 26, pp. 60&ndash;66.</p>
-<p>Sachs, J. <em>et al.</em> (2019) &lsquo;Sustainable development report 2019&rsquo;, <em>Bertelsmann Stiftung and Sustainable Development Solutions Network (SDSN): New York, NY, USA</em>.</p>
-<p>Santos, G. <em>et al.</em> (2010) &lsquo;Part I: Externalities and economic policies in road transport&rsquo;, <em>Research in Transportation Economics</em>. Elsevier Ltd, 28(1), pp. 2&ndash;45.</p>
-<p>Santos, G. (2017) &lsquo;Road fuel taxes in Europe: Do they internalize road transport externalities?&rsquo;, <em>Transport Policy</em>. Elsevier, 53, pp. 120&ndash;134.</p>
-<p>Santos, G. and Catchesides, T. (2005) &lsquo;Distributional consequences of gasoline taxation in the United Kingdom&rsquo;, <em>Transportation Research Record</em>. SAGE Publications Sage CA: Los Angeles, CA, 1924(1), pp. 103&ndash;111.</p>
-<p>Sauerzapf, V., Jones, A. P. and Haynes, R. (2010) &lsquo;The problems in determining international road mortality&rsquo;, <em>Accident Analysis &amp; Prevention</em>. Elsevier, 42(2), pp. 492&ndash;499.</p>
-<p>Sivak, M. (2009) &lsquo;Mechanisms involved in the recent large reductions in US road fatalities&rsquo;, <em>Injury Prevention</em>. BMJ Publishing Group Ltd, 15(3), pp. 205&ndash;206.</p>
-<p>Small, K. A. and Van Dender, K. (2007) &lsquo;Fuel efficiency and motor vehicle travel: the declining rebound effect&rsquo;, <em>The Energy Journal</em>. International Association for Energy Economics, 28(1), pp. 25&ndash;51.</p>
-<p>Stata Press (2017) &lsquo;Stata longitudinal-data/panel-data reference manual: Release 15&rsquo;. Stata Press, 15.</p>
-<p>Stern, D. I. (2010) &lsquo;Between estimates of the emissions-income elasticity&rsquo;, <em>Ecological Economics</em>. Elsevier, 69(11), pp. 2173&ndash;2182.</p>
-<p>Sugiyama, Y. <em>et al.</em> (2008) &lsquo;Traffic jams without bottlenecks&mdash;experimental evidence for the physical mechanism of the formation of a jam&rsquo;, <em>New Journal of Physics</em>. IOP Publishing, 10(3).</p>
-<p>US FHWA (2000) <em>Addendum to the 1997 Federal Highway Cost Allocation Study Final Report</em>, <em>US Federal Highway Administration, Washington, DC</em>.</p>
-<p>Wadud, Z. (2016) &lsquo;Diesel demand in the road freight sector in the UK: Estimates for different vehicle types&rsquo;, <em>Applied Energy</em>. Elsevier, 165, pp. 849&ndash;857.</p>
-<p>Wang, T. and Chen, C. (2014) &lsquo;Impact of fuel price on vehicle miles traveled (VMT): do the poor respond in the same way as the rich?&rsquo;, <em>Transportation</em>. Springer, 41(1), pp. 91&ndash;105.</p>
-<p>West, S. E. (2004) &lsquo;Distributional effects of alternative vehicle pollution control policies&rsquo;, <em>Journal of Public Economics</em>. Elsevier, 88(3&ndash;4), pp. 735&ndash;757.</p>
-<p>White, M. J. (2004) &lsquo;The &ldquo;arms race&rdquo; on American roads: The effect of sport utility vehicles and pickup trucks on traffic safety&rsquo;, <em>The Journal of Law and Economics</em>. The University of Chicago Press, 47(2), pp. 333&ndash;355.</p>
-<p>Wilson, F. A., Stimpson, J. P. and Hilsenrath, P. E. (2009) &lsquo;Gasoline prices and their relationship to rising motorcycle fatalities, 1990&ndash;2007&rsquo;, <em>American Journal of Public Health</em>. American Public Health Association, 99(10), pp. 1753&ndash;1758.</p>
-<p>Winebrake, J. J. <em>et al.</em> (2015) &lsquo;Fuel price elasticities for single-unit truck operations in the United States&rsquo;, <em>Transportation Research Part D: Transport and Environment</em>. Elsevier, 38, pp. 178&ndash;187.</p>
-<p>World Health Organization (2013) <em>Global status report on road safety 2013: supporting a decade of action</em>. World Health Organization. Available at: https://www.who.int/violence_injury_prevention/road_safety_status/2013/en/.</p>
-<p>World Health Organization (2018) <em>Global status report on road safety 2018</em>. World Health Organization. Available at: https://www.who.int/violence_injury_prevention/road_safety_status/2018/en/.</p>
-  </section>
+<p>Abrantes, P. and Wardman, M. (2011) ‘Meta-analysis of UK values of travel time: An update’, <em>Transportation Research Part A: Policy and Practice</em>. Elsevier Ltd, 45(1), pp.&nbsp;1–17.Ahangari, H. <em>et al.</em> (2014) ‘Investigation into Impact of Fluctuations in Gasoline Prices and Macroeconomic Conditions on Road Safety in Developed Countries’, <em>Transportation Research Record: Journal of the Transportation Research Board</em>. SAGE PublicationsSage CA: Los Angeles, CA, 2465(1), pp. 48–56.Ahrens, A., Hansen, C. B. and Schaffer, M. E. (2020) ‘lassopack: Model selection and prediction with regularized regression in Stata’, <em>The Stata Journal</em>. SAGE Publications Sage CA: Los Angeles, CA, 20(1), pp.&nbsp;176–235.Avner, P., Rentschler, J. and Hallegatte, S. (2014) <em>Carbon price efficiency: Lock-in and path dependence in urban forms and transport infrastructure</em>. 6941. Washington, D.C.: The World Bank.Baltagi, B. H. (2008) <em>Econometric analysis of panel data</em>. John Wiley &amp; Sons.Baltagi, B. H. and Griffin, J. M. (1984) ‘Short and long run effects in pooled models’, <em>International Economic Review</em>. JSTOR, 25(3), pp.&nbsp;631–645.Barla, P., Gilbert-Gonthier, M. and Kuelah, J.-R. T. (2014) ‘The demand for road diesel in Canada’, <em>Energy Economics</em>. Elsevier, 43, pp.&nbsp;316–322.Bastian, A. and Börjesson, M. (2014) ‘It’s the Economy, Stupid: Increasing Fuel Price is Enough to Explain Peak Car in Sweden.’’, <em>Centre for Transport Studies, KTH Royal Institute of Technology working paper</em>, 15, p.&nbsp;2014.Bento, A. M., Hughes, J. E. and Kaffine, D. (2013) ‘Carpooling and driver responses to fuel price changes: Evidence from traffic flows in Los Angeles’, <em>Journal of Urban Economics</em>. Elsevier, 77, pp.&nbsp;41–56.Best, R. and Burke, P. J. (2019) ‘Fuel prices and road accident outcomes in New Zealand’, <em>New Zealand Economic Papers</em>. Taylor &amp; Francis, 53(2), pp.&nbsp;109–124.Burger, N. E. and Kaffine, D. T. (2009) ‘Gas prices, traffic, and freeway speeds in Los Angeles’, <em>The Review of Economics and Statistics</em>. MIT Press, 91(3), pp.&nbsp;652–657.Burke, P. J., Batsuuri, T. and Yudhistira, M. H. (2017) ‘Easing the traffic: The effects of Indonesia’s fuel subsidy reforms on toll-road travel’, <em>Transportation Research Part A: Policy and Practice</em>. Elsevier, 105, pp.&nbsp;167–180.Burke, P. J. and Nishitateno, S. (2015) ‘Gasoline prices and road fatalities: international evidence’, <em>Economic Inquiry</em>. Wiley Online Library, 53(3), pp.&nbsp;1437–1450.Burke, P. J. and Teame, A. (2018) ‘Fuel Prices and Road Deaths in Australia’, <em>Economic Papers</em>. John Wiley &amp; Sons, Ltd (10.1111), 37(2), pp. 146–161.Chi, G. <em>et al.</em> (2010) ‘Gasoline prices and traffic safety in Mississippi’, <em>Journal of Safety Research</em>. Elsevier, 41(6), pp. 493–500.Chi, G., Quddus, M. A., <em>et al.</em> (2013) ‘Gasoline price effects on traffic safety in urban and rural areas: Evidence from Minnesota, 1998–2007’, <em>Safety Science</em>. Elsevier, 59, pp.&nbsp;154–162.Chi, G., Porter, J. R., <em>et al.</em> (2013) ‘The impact of gasoline price changes on traffic safety: a time geography explanation’, <em>Journal of Transport Geography</em>. Elsevier, 28, pp.&nbsp;1–11.Cohen, L. R. and Roth, K. D. (2017) ‘The Effect of Trucks Dispatch Decisions on Pavement Damage and Other Externalities’.Crôtte, A., Noland, R. B. and Graham, D. J. (2009) ‘Estimation of road traffic demand elasticities for Mexico City, Mexico’, <em>Transportation research record</em>. SAGE Publications Sage CA: Los Angeles, CA, 2134(1), pp.&nbsp;99–105.Dahl, C. A. (1979) ‘Consumer adjustment to a gasoline tax’, <em>The review of economics and statistics</em>. JSTOR, pp.&nbsp;427–432.Delsaut, M. (2014) ‘The effect of fuel price on demands for road and rail travel: an application to the French case’, <em>Transportation Research Procedia</em>. Elsevier, 1(1), pp.&nbsp;177–187.Ekins, P. (1996) ‘How large a carbon tax is justified by the secondary benefits of CO2 abatement?’, <em>Resource and Energy Economics</em>. Elsevier, 18(2), pp.&nbsp;161–187.Frondel, M., Ritter, N. and Vance, C. (2012) ‘Heterogeneity in the rebound effect: Further evidence for Germany’, <em>Energy Economics</em>. Elsevier, 34(2), pp.&nbsp;461–467.Gayer, T. (2004) ‘The fatality risks of sport-utility vehicles, vans, and pickups relative to cars’, <em>Journal of Risk and uncertainty</em>. Springer, 28(2), pp. 103–133.Gerdtham, U.-G. and Ruhm, C. J. (2006) ‘Deaths rise in good economic times: evidence from the OECD’, <em>Economics &amp; Human Biology</em>. Elsevier, 4(3), pp.&nbsp;298–316.Gillingham, K. (2014) ‘Identifying the elasticity of driving: evidence from a gasoline price shock in California’, <em>Regional Science and Urban Economics</em>. Elsevier, 47, pp. 13–24.Gillingham, K., Jenn, A. and Azevedo, I. M. L. (2015) ‘Heterogeneity in the response to gasoline prices: Evidence from Pennsylvania and implications for the rebound effect’, <em>Energy Economics</em>. Elsevier, 52, pp.&nbsp;S41–S52.Gillingham, K., Rapson, D. and Wagner, G. (2015) ‘The Rebound Effect and Energy Efficiency Policy’, <em>Review of Environmental Economics and Policy</em>, 10(1), pp. 68–88.Goodwin, P., Dargay, J. and Hanly, M. (2004) ‘Elasticities of road traffic and fuel consumption with respect to price and income: a review’, <em>Transport reviews</em>. Taylor &amp; Francis, 24(3), pp. 275–292.Grabowski, D. C. and Morrisey, M. A. (2004) ‘Gasoline prices and motor vehicle fatalities’, <em>Journal of Policy Analysis and Management</em>. Wiley Online Library, 23(3), pp.&nbsp;575–593.Grabowski, D. C. and Morrisey, M. A. (2006) ‘Do higher gasoline taxes save lives?’, <em>Economics Letters</em>. Elsevier, 90(1), pp.&nbsp;51–55.Gultom, T. H. M. <em>et al.</em> (2017) ‘The road maintenance funding models in Indonesia use earmarked tax’, in <em>AIP Conference Proceedings</em>. AIP Publishing LLC, p. 60009.Haughton, J. and Sarkar, S. (1996) ‘Gasoline tax as a corrective tax: estimates for the United States, 1970-1991’, <em>The Energy Journal</em>. International Association for Energy Economics, 17(2), pp.&nbsp;103–126.He, J. Z. (2015) ‘Does Diesel Price Matter? Estimate the Elasticities of Trucking Behaviors with Respect to Fuel Prices’, in <em>The Dynamic Energy Landscape, 33rd USAEE/IAEE North American Conference, Oct 25-28, 2015</em>. International Association for Energy Economics.Huang, C. and Burris, M. W. (2015) ‘The short-run impact of gas prices fluctuations on toll road use’, <em>Case studies on transport policy</em>. Elsevier, 3(2), pp. 137–150.Hyatt, E. <em>et al.</em> (2009) ‘The association between price of regular-grade gasoline and injury and mortality rates among occupants involved in motorcycle-and automobile-related motor vehicle collisions’, <em>Accident Analysis &amp; Prevention</em>. Elsevier, 41(5), pp. 1075–1079.International Road Federation (2018) <em>World Road Statistics</em>. International Road Federation.International Transport Forum (2015) <em>Why Does Road Safety Improve When Economic Times Are Hard? Why Does Road Safety Improve When Economic Times Are Hard?</em> Available at: https://www.itf-oecd.org/sites/default/files/docs/15irtadeconomictimes.pdf (Accessed: 6 June 2019).Jacobson, T. and Wågberg, L.-G. (2005) ‘Prediction models for pavement wear and associated costs’, in. Winter Cities 2004, VTI.Johnson, M. B. (1964) ‘On the economics of road congestion’, <em>Econometrica: Journal of the Econometric Society</em>. JSTOR, pp.&nbsp;137–150.Khoo, H. L., Ong, G. P. and Khoo, W. C. (2012) ‘Short-term impact analysis of fuel price policy change on travel demand in Malaysian cities’, <em>Transportation Planning and Technology</em>. Taylor &amp; Francis, 35(7), pp.&nbsp;715–736.Kwon, Y. and Lee, J. (2014) ‘Asymmetric responses of highway travel demand to changes in fuel price: An explanation via fuel price uncertainty’, <em>Transportation Research Part A: Policy and Practice</em>. Elsevier, 63, pp.&nbsp;56–66.Leard, B. <em>et al.</em> (2015) ‘Fuel costs, economic activity, and the rebound effect for heavy-duty trucks’, <em>Resources for the Future Discussion Paper</em>, pp. 14–43.Leigh, J. P. and Wilkinson, J. T. (1991) ‘The effect of gasoline taxes on highway fatalities’, <em>Journal of Policy Analysis and Management</em>. JSTOR, 10(3), pp.&nbsp;474–481.Li, S., Linn, J. and Muehlegger, E. (2014) ‘Gasoline taxes and consumer behavior’, <em>American Economic Journal: Economic Policy</em>, 6(4), pp.&nbsp;302–342.Lindsey, R. (2006) ‘Do economists reach a conclusion?’, <em>Econ Journal Watch</em>, 3(2), pp. 292–379.Litman, T. (2012) ‘Pricing for traffic safety: how efficient transport pricing can reduce roadway crash risks’, <em>Transportation research record</em>. SAGE Publications Sage CA: Los Angeles, CA, 2318(1), pp.&nbsp;16–22.Luoma, J. and Sivak, M. (2007) ‘Characteristics and availability of fatal road-crash databases in 20 countries worldwide’, <em>Journal of safety research</em>. Elsevier, 38(3), pp.&nbsp;323–327.Matas, A. and Raymond, J.-L. (2003) ‘Demand elasticity on tolled motorways’, <em>Journal of Transportation and Statistics</em>. Bureau of Transportation Statistics, 6(2), pp.&nbsp;91–108.Molloy, R. and Shan, H. (2013) ‘The effect of gasoline prices on household location’, <em>Review of Economics and Statistics</em>. MIT Press, 95(4), pp.&nbsp;1212–1221.Montour, C. P. (2011) ‘Death and Taxes: The Effect of Gasoline Prices on Traffic Fatalities-An Econometric Analysis Using Fixed-Effects Panel Least Squares Regression’, <em>Omicron Delta Epsilon</em>. St.&nbsp;Olaf College Economic Department.Morrisey, M. A. and Grabowski, D. C. (2011) ‘Gas prices, beer taxes and GDL programmes: effects on auto fatalities among young adults in the US’, <em>Applied Economics</em>. Taylor &amp; Francis, 43(25), pp.&nbsp;3645–3654.Moshiri, S. (2020) ‘Consumer responses to gasoline price and non-price policies’, <em>Energy Policy</em>. Elsevier, 137.Murphy, J. and Delucchi, M. (1997) ‘Review of some of the literature on the social cost of motor-vehicle use’, <em>The Annualized Social Cost of Motor-Vehicle Use in the United States, based on 1990-1991 Data</em>. UC Davis, UCD-ITS-RR(3).National Center for Freight &amp; Infrastructure (2014) <em>Understanding Freight Vehicle Pavement Impacts: How do Passenger Vehicles and Trucks Compare?</em> Available at: https://midamericafreight.org/wp-content/uploads/2018/10/ESALs.pdf.Newbery, D. (1988) ‘Road Damage Externalities and Road User Charges’, <em>Econometrica</em>, 56(2), pp.&nbsp;295–316.Odeck, J. and Johansen, K. (2016) ‘Elasticities of fuel and traffic demand and the direct rebound effects: An econometric estimation in the case of Norway’, <em>Transportation Research Part A: Policy and Practice</em>. Elsevier, 83, pp. 1–13.Parker, N. A. and Hussain Ph D, S. (2006) ‘Pavement damage and road pricing’, in <em>Transportation Research Board 85th Annual Meeting</em>. Washington DC, United States: The National Academies of Sciences, Engineering, and Medicine.Parry, I. <em>et al.</em> (2014) <em>Getting Energy Prices Right</em>. International Monetary Fund (IMF).Parry, I. W. H. (2008) ‘How should heavy-duty trucks be taxed?’, <em>Journal of Urban Economics</em>. Elsevier, 63(2), pp.&nbsp;651–668.Pesaran, M. H. and Smith, R. (1995) ‘Estimating long-run relationships from dynamic heterogeneous panels’, <em>Journal of econometrics</em>. Elsevier, 68(1), pp.&nbsp;79–113.Pirotte, A. (1999) ‘Convergence of the static estimation toward the long run effects of dynamic panel data models’, <em>Economics Letters</em>. Elsevier, 63(2), pp.&nbsp;151–158.Ramli, A. R. and Graham, D. J. (2014) ‘The demand for road transport diesel fuel in the UK: Empirical evidence from static and dynamic cointegration techniques’, <em>Transportation Research Part D: Transport and Environment</em>. Elsevier, 26, pp.&nbsp;60–66.Sachs, J. <em>et al.</em> (2019) ‘Sustainable development report 2019’, <em>Bertelsmann Stiftung and Sustainable Development Solutions Network (SDSN): New York, NY, USA</em>.Santos, G. <em>et al.</em> (2010) ‘Part I: Externalities and economic policies in road transport’, <em>Research in Transportation Economics</em>. Elsevier Ltd, 28(1), pp.&nbsp;2–45.Santos, G. (2017) ‘Road fuel taxes in Europe: Do they internalize road transport externalities?’, <em>Transport Policy</em>. Elsevier, 53, pp.&nbsp;120–134.Santos, G. and Catchesides, T. (2005) ‘Distributional consequences of gasoline taxation in the United Kingdom’, <em>Transportation Research Record</em>. SAGE Publications Sage CA: Los Angeles, CA, 1924(1), pp.&nbsp;103–111.Sauerzapf, V., Jones, A. P. and Haynes, R. (2010) ‘The problems in determining international road mortality’, <em>Accident Analysis &amp; Prevention</em>. Elsevier, 42(2), pp. 492–499.Sivak, M. (2009) ‘Mechanisms involved in the recent large reductions in US road fatalities’, <em>Injury Prevention</em>. BMJ Publishing Group Ltd, 15(3), pp.&nbsp;205–206.Small, K. A. and Van Dender, K. (2007) ‘Fuel efficiency and motor vehicle travel: the declining rebound effect’, <em>The Energy Journal</em>. International Association for Energy Economics, 28(1), pp.&nbsp;25–51.Stata Press (2017) ‘Stata longitudinal-data/panel-data reference manual: Release 15’. Stata Press, 15.Stern, D. I. (2010) ‘Between estimates of the emissions-income elasticity’, <em>Ecological Economics</em>. Elsevier, 69(11), pp. 2173–2182.Sugiyama, Y. <em>et al.</em> (2008) ‘Traffic jams without bottlenecks—experimental evidence for the physical mechanism of the formation of a jam’, <em>New Journal of Physics</em>. IOP Publishing, 10(3).US FHWA (2000) <em>Addendum to the 1997 Federal Highway Cost Allocation Study Final Report</em>, <em>US Federal Highway Administration, Washington, DC</em>.Wadud, Z. (2016) ‘Diesel demand in the road freight sector in the UK: Estimates for different vehicle types’, <em>Applied Energy</em>. Elsevier, 165, pp.&nbsp;849–857.Wang, T. and Chen, C. (2014) ‘Impact of fuel price on vehicle miles traveled (VMT): do the poor respond in the same way as the rich?’, <em>Transportation</em>. Springer, 41(1), pp.&nbsp;91–105.West, S. E. (2004) ‘Distributional effects of alternative vehicle pollution control policies’, <em>Journal of Public Economics</em>. Elsevier, 88(3–4), pp. 735–757.White, M. J. (2004) ‘The “arms race” on American roads: The effect of sport utility vehicles and pickup trucks on traffic safety’, <em>The Journal of Law and Economics</em>. The University of Chicago Press, 47(2), pp.&nbsp;333–355.Wilson, F. A., Stimpson, J. P. and Hilsenrath, P. E. (2009) ‘Gasoline prices and their relationship to rising motorcycle fatalities, 1990–2007’, <em>American Journal of Public Health</em>. American Public Health Association, 99(10), pp.&nbsp;1753–1758.Winebrake, J. J. <em>et al.</em> (2015) ‘Fuel price elasticities for single-unit truck operations in the United States’, <em>Transportation Research Part D: Transport and Environment</em>. Elsevier, 38, pp.&nbsp;178–187.World Health Organization (2013) <em>Global status report on road safety 2013: supporting a decade of action</em>. World Health Organization. Available at: https://www.who.int/violence_injury_prevention/road_safety_status/2013/en/.World Health Organization (2018) <em>Global status report on road safety 2018</em>. World Health Organization. Available at: https://www.who.int/violence_injury_prevention/road_safety_status/2018/en/.</p>
+</section>
 <section id="appendices" class="level2" data-number="7.11">
 <h2 data-number="7.11" class="anchored" data-anchor-id="appendices"><span class="header-section-number">7.11</span> Appendices</h2>
 <section id="detailed-variable-list-with-data-sources" class="level3" data-number="7.11.1">

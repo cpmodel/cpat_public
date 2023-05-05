@@ -149,7 +149,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./03_Mitigation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Mitigation overview and methodology</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Mitigation module</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -253,7 +253,7 @@ div.csl-indent {
 
 <!-- VM: 
 - Which table is this referring to? The numbering seems not to correspond to current table numbers 
-- Perhaps tbl-5_5?
+- Perhaps tbl-5_5? YES
 -->
 <p>Four modes of <u>direct and indirect transfer schemes</u> can be simulated, once the user inputs the share of revenues allocated under each scheme type: i) new or existing targeted transfers (for which the user can decide the targeted percentiles, among other features); ii) transfers towards public investment in infrastructure access; and iii) scaling up an existing social protection scheme (following the targeting of the initial scheme)), and iv) reforming countries’ personal income tax (PIT) schemes. The revenue amounts available for redistribution are based on scenario-specific estimates from the Mitigation Module. New or existing targeted transfers are universal among the targeted percentiles, while infrastructure transfers are targeted to those households without initial access to clean water, affordable electricity, clean sanitation, Information and Communication Technologies (ICT), or public transport, based on HBS microdata. Revenue recycling that increases current public spending is proportional to the existing social protection schemes, such as social assistance, insurance, or in-kind benefit schemes. Further to the above, transfer scheme targeting is also available for decile-specific population shares that are below international poverty lines (incomes of 1.9 or 3.2 2011 PPP USD/day) via “poverty-conditional cash transfers”.</p>
 <p>Both negative consumption effects as well as positive compensation scheme effects are expressed as shares of pre-reform consumption and in absolute, per-capita monetary terms on a decile level, separately for the rural, urban, and overall (or national) populations.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> For vertical distribution graphs, the user can further choose between decile mean and median consumption data inputs. Horizontal distribution between the 25<sup>th</sup> and 75<sup>th</sup> percentile of consumption data inputs within each decile is available for consumption effects (both absent as well as net of compensation schemes).</p>
@@ -309,7 +309,7 @@ div.csl-indent {
 
 <!-- VM: 
 - Which table is this referring to? The numbering seems not to correspond to current table numbers
-- It seems to be tbl-5_4
+- It seems to be tbl-5_2
 -->
 <p><span id="eq-5_1"><span class="math display">\[\pi_{j}^{g} = \frac{C_{j}^{g}}{C_{j}} = \frac{C_{j}^{g}}{\sum C_{j}^{g}} \tag{5.1}\]</span></span></p>
 <p>Household budget shares <span class="math inline">\(\pi_{j}^{g}\)</span> are aggregated at the household per-capita consumption decile to arrive at <span class="math inline">\(\pi^{\text{dg}}\)</span>. Household per-capita consumption-based decile generation (as well as any associated percentile statistics) are weighed by the corresponding survey per-capita population weights (<span class="math inline">\(popw\)</span>) to ensure sample representativeness at the national level. Household per-capita consumption (<span class="math inline">\(cons\_ pc)\)</span> for the purposes of decile generation is total household consumption including imputed rent (<span class="math inline">\(tot\_cons\)</span>) divided by household size (<span class="math inline">\(hhsize\)</span>): <span class="math inline">\(cons\_ pc = tot\_cons/hhsize\)</span>. Following the literature, CPAT, thus, proxies lifetime income, or standard of living, with consumption expenditures, as they are widely considered a better proxy for welfare than nominal (e.g., wage) income (<span class="citation" data-cites="deaton1997analysis">Deaton (<a href="#ref-deaton1997analysis" role="doc-biblioref">1997</a>)</span>).</p>
@@ -339,6 +339,7 @@ div.csl-indent {
 <p><span id="eq-5_2"><span class="math display">\[p_{j} = \sum_{\text{fg}}p_{\text{fgj}}  = \frac{\sum_{\text{fg}}{\overline{e_{\text{fg}}}\ *t_{\text{fg}}* C_{\text{gj}}}}{C_{j}} \;\; , f \in g \tag{5.2}\]</span></span></p>
 <!-- VM: 
 - Can we check the reference for equation 5.3? It seems to be missing in the original documentation
+- Equation 4 should be named 3, and references to eq 3 are correct
 -->
 <p>The <strong>tax-induced price changes of fossil fuels</strong> (c.f. <a href="#tbl-5_1">Table&nbsp;<span>5.1</span></a> for a list of fuels), which determine households’ additional expenditures on direct fuel consumption (for f=g, in <span class="quarto-unresolved-ref">?eq-5_3</span>), are a function of fuels’ carbon intensities, <span class="math inline">\(e_{f}\)</span>, measured by emissions factors, and pre-existing price distortions in the Mitigation Module. For each user-defined carbon fiscal scenario, price changes are obtained from the Mitigation Module (see respective Mitigation Module Documentation). As price increases vary for each fuel by sector (due to varying emissions factors and baseline pricing), price changes are estimated for each country, year and fuel-sector pair <span class="math inline">\(t_{\text{fg}}\)</span>, where “sectors” here are power, industry, and residential. Residential sector fuel price changes are used to calculate the direct consumption effects.</p>
 <p>The <strong>tax-induced price changes of goods and services based on the domestic carbon price</strong>, which determine households’ additional expenditures on indirect fuel consumption (for <em>f</em> ∉ <em>g</em>, in <span class="quarto-unresolved-ref">?eq-5_3</span>), follow a standard input-output (IO) approach. Consistent with much of the carbon tax literature, all price increases resulting from the user-defined carbon fiscal reform are expected to be fully passed forward, from producers and suppliers to final consumers. Estimated consumer price increases are, thus, absolute upper bounds.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> Adapted from basic IO analyses (cf. <span class="citation" data-cites="leontief1986input">Leontief (<a href="#ref-leontief1986input" role="doc-biblioref">1986</a>)</span>; <span class="citation" data-cites="minx2009input">Minx et al. (<a href="#ref-minx2009input" role="doc-biblioref">2009</a>)</span>), household energy intensities <span class="math inline">\(\overline{e_{g}}\)</span> result as entries of the vector:</p>
