@@ -219,7 +219,7 @@ div.csl-indent {
   <li><a href="#definitions-of-key-technical-terms" id="toc-definitions-of-key-technical-terms" class="nav-link" data-scroll-target="#definitions-of-key-technical-terms"><span class="header-section-number">6.6.2</span> Definitions of key technical terms</a></li>
   <li><a href="#sec-healthburdenpoll" id="toc-sec-healthburdenpoll" class="nav-link" data-scroll-target="#sec-healthburdenpoll"><span class="header-section-number">6.6.3</span> The health burden of pollution</a>
   <ul class="collapse">
-  <li><a href="#joint-ambient-and-household-air-pollution-murray2020global" id="toc-joint-ambient-and-household-air-pollution-murray2020global" class="nav-link" data-scroll-target="#joint-ambient-and-household-air-pollution-murray2020global"><span class="header-section-number">6.6.3.1</span> Joint ambient and household air pollution (<span class="citation" data-cites="murray2020global">Murray et al. (2020)</span>)</a></li>
+  <li><a href="#joint-ambient-and-household-air-pollution-murray2020global" id="toc-joint-ambient-and-household-air-pollution-murray2020global" class="nav-link" data-scroll-target="#joint-ambient-and-household-air-pollution-murray2020global"><span class="header-section-number">6.6.3.1</span> Joint ambient and household air pollution (<span class="citation" data-cites="murray2020global">Global Burden of Disease Health Financing Collaborator Network (2020)</span>)</a></li>
   <li><a href="#sec-healthout" id="toc-sec-healthout" class="nav-link" data-scroll-target="#sec-healthout"><span class="header-section-number">6.6.3.2</span> Health outcomes in CPAT</a></li>
   <li><a href="#ozone-air-pollution" id="toc-ozone-air-pollution" class="nav-link" data-scroll-target="#ozone-air-pollution"><span class="header-section-number">6.6.3.3</span> Ozone air pollution</a></li>
   <li><a href="#multiple-risks-factors" id="toc-multiple-risks-factors" class="nav-link" data-scroll-target="#multiple-risks-factors"><span class="header-section-number">6.6.3.4</span> Multiple risks factors</a></li>
@@ -306,7 +306,7 @@ div.csl-indent {
 <p>Reduced-form approximations are used to estimate emissions, concentration of pollutants and health effects. We use and adapt the results of more complex models into simplified relationships. For instance, in the case of the relationship between emissions of pollutants and ambient concentrations of PM<sub>2.5</sub> and ozone, CPAT includes the option to use the results from a linear emulator of a complex global chemical transport model. The results of the air pollution module are in line with other more complex models (see <a href="#sec-validation"><span>Section&nbsp;6.8</span></a>), although both CPAT and the models to which we compare to are subject to uncertainty and the results may be sensitive to the assumptions used. We address this issue in CPAT by allowing the user to input local information, if available, and to switch among methodological options (with the best options possibly dependent on the country chosen).</p>
 <!-- PS: 
 - What is the caveat linked to "country level" - I guess this is linked to the lack of local data  -->
-<p>Caveats in the air pollution module include the use of international databases, the country level and annual resolution of the analysis and the uncertainty on estimations. <a href="#sec-caveats"><span>Section&nbsp;6.9</span></a> provides some insights on how the user can tackle these caveats.</p>
+<p>Caveats in the air pollution module include the use of international databases, the country level (instead of sub national) and annual resolution of the analysis and the uncertainty on estimations. <a href="#sec-caveats"><span>Section&nbsp;6.9</span></a> provides some insights on how the user can tackle these caveats.</p>
 </section>
 <section id="list-of-acronyms" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="list-of-acronyms"><span class="header-section-number">6.2</span> List of Acronyms</h2>
@@ -2079,7 +2079,7 @@ Source
 Relative Risk estimates (by cause, age and exposure level)
 </td>
 <td>
-<span class="citation" data-cites="murray2020global">Murray et al. (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span>
+<span class="citation" data-cites="murray2020global">Global Burden of Disease Health Financing Collaborator Network (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span>
 </td>
 </tr>
 <tr class="even">
@@ -2104,7 +2104,7 @@ Mortality and DALYs
 </td>
 <td>
 <p>
-<span class="citation" data-cites="murray2020global">Murray et al. (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span> Mortality and DALYs for:
+<span class="citation" data-cites="murray2020global">Global Burden of Disease Health Financing Collaborator Network (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span> Mortality and DALYs for:
 </p>
 <blockquote class="blockquote">
 <p>
@@ -2136,7 +2136,7 @@ Neonatal diseases: Sudden infant death syndrome, Diarrheal diseases, Lower respi
 Exposure to ambient PM<sub>2.5</sub>
 </td>
 <td>
-WHO Country average exposure (<span class="citation" data-cites="world2018exposure">World Health Organization (<a href="#ref-world2018exposure" role="doc-biblioref">2018</a>)</span>)<a href="#fn17" class="footnote-ref" id="fnref17" role="doc-noteref"><sup>17</sup></a> and <span class="citation" data-cites="murray2020global">Murray et al. (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span> ambient concentrations.
+WHO Country average exposure (<span class="citation" data-cites="world2018exposure">World Health Organization (<a href="#ref-world2018exposure" role="doc-biblioref">2018</a>)</span>)<a href="#fn17" class="footnote-ref" id="fnref17" role="doc-noteref"><sup>17</sup></a> and <span class="citation" data-cites="murray2020global">Global Burden of Disease Health Financing Collaborator Network (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span> ambient concentrations.
 </td>
 </tr>
 <tr class="even">
@@ -2144,7 +2144,7 @@ WHO Country average exposure (<span class="citation" data-cites="world2018exposu
 Exposure to indoors PM<sub>2.5</sub>
 </td>
 <td>
-Data from the <span class="citation" data-cites="murray2020global">Murray et al. (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span> study, provided by Michael Brauer
+Data from the <span class="citation" data-cites="murray2020global">Global Burden of Disease Health Financing Collaborator Network (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span> study, provided by Michael Brauer
 </td>
 </tr>
 <tr class="odd">
@@ -2152,7 +2152,7 @@ Data from the <span class="citation" data-cites="murray2020global">Murray et al.
 Exposure to ozone pollution
 </td>
 <td>
-Data from the <span class="citation" data-cites="murray2020global">Murray et al. (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span> study, provided by Michael Brauer
+Data from the <span class="citation" data-cites="murray2020global">Global Burden of Disease Health Financing Collaborator Network (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span> study, provided by Michael Brauer
 </td>
 </tr>
 </tbody>
@@ -2189,19 +2189,19 @@ Data from the <span class="citation" data-cites="murray2020global">Murray et al.
 <p><em>Source: <span class="citation" data-cites="world2018burden">World Health Organization and others (<a href="#ref-world2018burden" role="doc-biblioref">2018</a>)</span></em></p>
 <p>In CPAT, we implemented a method to assess jointly indoors and outdoors pollution as described in <a href="#sec-ambexp"><span>Section&nbsp;6.6.4.1</span></a>. CPAT also calculates the impacts of ozone pollution, as described in <a href="#sec-ozexp"><span>Section&nbsp;6.6.4.3</span></a>.</p>
 <section id="joint-ambient-and-household-air-pollution-murray2020global" class="level4" data-number="6.6.3.1">
-<h4 data-number="6.6.3.1" class="anchored" data-anchor-id="joint-ambient-and-household-air-pollution-murray2020global"><span class="header-section-number">6.6.3.1</span> Joint ambient and household air pollution (<span class="citation" data-cites="murray2020global">Murray et al. (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span>)</h4>
-<p>In CPAT, we quantify the effects of air pollution following the methodology of the Global Burden of disease study for 2019 (<span class="citation" data-cites="murray2020global">Murray et al. (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span>). The methodology uses and Integrated Exposure Response (IER) approach, basing its estimates in studies for ambient pollution, second-hand smoking and household pollution. This methodology represents and upgrade from the previous version of the study and the main differences with the previous methodology are the following:</p>
+<h4 data-number="6.6.3.1" class="anchored" data-anchor-id="joint-ambient-and-household-air-pollution-murray2020global"><span class="header-section-number">6.6.3.1</span> Joint ambient and household air pollution (<span class="citation" data-cites="murray2020global">Global Burden of Disease Health Financing Collaborator Network (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span>)</h4>
+<p>In CPAT, we quantify the effects of air pollution following the methodology of the Global Burden of disease study for 2019 (<span class="citation" data-cites="murray2020global">Global Burden of Disease Health Financing Collaborator Network (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span>). The methodology uses and Integrated Exposure Response (IER) approach, basing its estimates in studies for ambient pollution, second-hand smoking and household pollution. This methodology represents and upgrade from the previous version of the study and the main differences with the previous methodology are the following:</p>
 <ul>
-<li><p><span class="citation" data-cites="murray2020global">Murray et al. (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span> no longer uses active smoking data in the risk curves. This removes an important source of uncertainty</p></li>
+<li><p><span class="citation" data-cites="murray2020global">Global Burden of Disease Health Financing Collaborator Network (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span> no longer uses active smoking data in the risk curves. This removes an important source of uncertainty</p></li>
 <li><p>New studies in China and other high-exposure settings are now used<a href="#fn20" class="footnote-ref" id="fnref20" role="doc-noteref"><sup>20</sup></a></p></li>
 <li><p>No fixed functional form. Splines generated using MR-BRT (meta-regression boosted regression trees)</p></li>
 </ul>
 <p>The methodology implemented in CPAT assess jointly the effects of ambient and household pollution. This feature is important because it allows the quantification of a possible increase in the use of solid fuels for cooking (leakage effects) and because household pollution is a major health problem in many countries of the world.</p>
-<p>The relative risks used in CPAT from <span class="citation" data-cites="murray2020global">Murray et al. (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span> are presented in <a href="#fig-rrintexp">Figure&nbsp;<span>6.18</span></a>. In the case of ischemic heart disease and stroke, the RR presented is an average across all the age groups, which are defined in buckets of 5 years<a href="#fn21" class="footnote-ref" id="fnref21" role="doc-noteref"><sup>21</sup></a>. In CPAT, we work with the following age groups: neonates, post neonates, under 15, 15 to 64 and 65 years and above. We use the average relative risk withing each group.</p>
+<p>The relative risks used in CPAT from <span class="citation" data-cites="murray2020global">Global Burden of Disease Health Financing Collaborator Network (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span> are presented in <a href="#fig-rrintexp">Figure&nbsp;<span>6.18</span></a>. In the case of ischemic heart disease and stroke, the RR presented is an average across all the age groups, which are defined in buckets of 5 years<a href="#fn21" class="footnote-ref" id="fnref21" role="doc-noteref"><sup>21</sup></a>. In CPAT, we work with the following age groups: neonates, post neonates, under 15, 15 to 64 and 65 years and above. We use the average relative risk withing each group.</p>
 <div id="fig-rrintexp" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./06/media/image17.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;6.18: RR from the Integrated exposure response function, <span class="citation" data-cites="murray2020global">Murray et al. (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span></figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;6.18: RR from the Integrated exposure response function, <span class="citation" data-cites="murray2020global">Global Burden of Disease Health Financing Collaborator Network (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span></figcaption><p></p>
 </figure>
 </div>
 <p>Notice that the relative risk takes as a reference the minimum risk level for PM<sub>2.5</sub>, TMREL, defined as uniform distribution between 2.4 and 5.9 µg/m<sup>3</sup>. In CPAT, we use as the TMREL the average between 2.4 and 5.9, equal to 4.15 µg/m<sup>3</sup> of PM<sub>2.5</sub>. When pollution is below that level, we would obtain cero health effects attributed to pollution.</p>
@@ -2314,11 +2314,11 @@ Data from the <span class="citation" data-cites="murray2020global">Murray et al.
 <p>Where,</p>
 <p><span class="math inline">\(P_{c,s,a,t}\)</span>: Prevalent sequelae for cause <span class="math inline">\(c\)</span>, sex <span class="math inline">\(s\)</span>, age <span class="math inline">\(a\)</span> and year <span class="math inline">\(t\)</span></p>
 <p><span class="math inline">\(\text{DW}_{c,s,a}\)</span>: Disability weight for sequelae for cause <span class="math inline">\(c\)</span>, sex <span class="math inline">\(s\)</span> and age <span class="math inline">\(a\)</span></p>
-<p>CPAT uses incidence at a country level for DALYs, YLL and YLD from <span class="citation" data-cites="murray2020global">Murray et al. (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span>.</p>
+<p>CPAT uses incidence at a country level for DALYs, YLL and YLD from <span class="citation" data-cites="murray2020global">Global Burden of Disease Health Financing Collaborator Network (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span>.</p>
 </section>
 <section id="ozone-air-pollution" class="level4" data-number="6.6.3.3">
 <h4 data-number="6.6.3.3" class="anchored" data-anchor-id="ozone-air-pollution"><span class="header-section-number">6.6.3.3</span> Ozone air pollution</h4>
-<p>For ozone health effects, CPAT follows the methodology applied in <span class="citation" data-cites="murray2020global">Murray et al. (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span>, which is based on <span class="citation" data-cites="turner2016long">Turner et al. (<a href="#ref-turner2016long" role="doc-biblioref">2016</a>)</span>. The health impacts are quantified for chronic obstructive pulmonary disease, with a RR of 1.06 (1.02, 1.10) per 10 ppb of ozone, in the seasonal (six-month period with the highest mean) 8-h daily maximum concentration metric (6mDMA8h). The TMREL for ozone is defined as ~ U (29.1, 35.7).</p>
+<p>For ozone health effects, CPAT follows the methodology applied in <span class="citation" data-cites="murray2020global">Global Burden of Disease Health Financing Collaborator Network (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span>, which is based on <span class="citation" data-cites="turner2016long">Turner et al. (<a href="#ref-turner2016long" role="doc-biblioref">2016</a>)</span>. The health impacts are quantified for chronic obstructive pulmonary disease, with a RR of 1.06 (1.02, 1.10) per 10 ppb of ozone, in the seasonal (six-month period with the highest mean) 8-h daily maximum concentration metric (6mDMA8h). The TMREL for ozone is defined as ~ U (29.1, 35.7).</p>
 <p>The relative risk is represented by expression <a href="#eq-relrisk">Equation&nbsp;<span>6.56</span></a> and PAF is calculated using expression <a href="#eq-pafbis">Equation&nbsp;<span>6.57</span></a>.</p>
 <p><span id="eq-relrisk"><span class="math display">\[RR = e^{\beta*{\mathrm{\Delta}C}_{O3}} \tag{6.56}\]</span></span></p>
 <p><span id="eq-pafbis"><span class="math display">\[PAF = 1 - e^{- \beta*{\mathrm{\Delta}C}_{O3}} \tag{6.57}\]</span></span></p>
@@ -2350,7 +2350,7 @@ Data from the <span class="citation" data-cites="murray2020global">Murray et al.
 </figure>
 </div>
 <p><em>Source: <span class="citation" data-cites="world2018burden">World Health Organization and others (<a href="#ref-world2018burden" role="doc-biblioref">2018</a>)</span></em></p>
-<p>In CPAT, we also use the estimations of ambient PM<sub>2.5</sub> from the <span class="citation" data-cites="murray2020global">Murray et al. (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span> study. We assume the same ratio between urban and rural concentrations levels from <span class="citation" data-cites="world2018exposure">World Health Organization (<a href="#ref-world2018exposure" role="doc-biblioref">2018</a>)</span> and the overall concentrations from <span class="citation" data-cites="murray2020global">Murray et al. (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span>. <a href="#fig-gridmpm">Figure&nbsp;<span>6.22</span></a> presents the gridded values for ambient PM<sub>2.5</sub> in 2019.</p>
+<p>In CPAT, we also use the estimations of ambient PM<sub>2.5</sub> from the <span class="citation" data-cites="murray2020global">Global Burden of Disease Health Financing Collaborator Network (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span> study. We assume the same ratio between urban and rural concentrations levels from <span class="citation" data-cites="world2018exposure">World Health Organization (<a href="#ref-world2018exposure" role="doc-biblioref">2018</a>)</span> and the overall concentrations from <span class="citation" data-cites="murray2020global">Global Burden of Disease Health Financing Collaborator Network (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span>. <a href="#fig-gridmpm">Figure&nbsp;<span>6.22</span></a> presents the gridded values for ambient PM<sub>2.5</sub> in 2019.</p>
 <div id="fig-gridmpm" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./06/media/image21.png" class="img-fluid figure-img"></p>
@@ -2361,7 +2361,7 @@ Data from the <span class="citation" data-cites="murray2020global">Murray et al.
 </section>
 <section id="household-pm2.5-exposure-data" class="level4" data-number="6.6.4.2">
 <h4 data-number="6.6.4.2" class="anchored" data-anchor-id="household-pm2.5-exposure-data"><span class="header-section-number">6.6.4.2</span> Household PM<sub>2.5</sub> Exposure data</h4>
-<p>As we mentioned before, in CPAT we estimate jointly the impacts of ambient and household pollution. To do so, we need to know the share of the population exposed to household pollution and the exposure level to household PM<sub>2.5</sub>. We again draw upon data from the <span class="citation" data-cites="murray2020global">Murray et al. (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span> study.</p>
+<p>As we mentioned before, in CPAT we estimate jointly the impacts of ambient and household pollution. To do so, we need to know the share of the population exposed to household pollution and the exposure level to household PM<sub>2.5</sub>. We again draw upon data from the <span class="citation" data-cites="murray2020global">Global Burden of Disease Health Financing Collaborator Network (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span> study.</p>
 <p>The left panel in <a href="#fig-expoap">Figure&nbsp;<span>6.23</span></a> shows the estimated evolution in the share of the population exposed to household pollution in time, while the right panel presents the exposure level, in addition to the OAP exposure, for the World Bank regions. For the baseline scenario, we assume that the share of the population exposed, and the exposure level will be constant in time, and equal to the estimated value for 2019.</p>
 <div id="fig-expoap" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
@@ -3018,7 +3018,7 @@ Data from the <span class="citation" data-cites="murray2020global">Murray et al.
 </section>
 <section id="air-pollution-externalities-per-unit-of-fuel" class="level3" data-number="6.7.9">
 <h3 data-number="6.7.9" class="anchored" data-anchor-id="air-pollution-externalities-per-unit-of-fuel"><span class="header-section-number">6.7.9</span> Air pollution externalities per unit of fuel</h3>
-<p>The health impacts attributed to air pollution are calculated jointly for ambient and household pollution (see <a href="#sec-healthburdenpoll"><span>Section&nbsp;6.6.3</span></a>), following the methodology from <span class="citation" data-cites="murray2020global">Murray et al. (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span>. Although the health impacts are estimated jointly, we compute an average externally cost per unit of fossil fuel burnt, which affects only ambient pollution.</p>
+<p>The health impacts attributed to air pollution are calculated jointly for ambient and household pollution (see <a href="#sec-healthburdenpoll"><span>Section&nbsp;6.6.3</span></a>), following the methodology from <span class="citation" data-cites="murray2020global">Global Burden of Disease Health Financing Collaborator Network (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span>. Although the health impacts are estimated jointly, we compute an average externally cost per unit of fossil fuel burnt, which affects only ambient pollution.</p>
 <p>After the health impacts have already been quantified, the air pollution externality computation is made as follows:</p>
 <ol type="1">
 <li><p>We compute the average ambient air pollution attributed mortality per µg/m3 of PM<sub>2.5</sub> as total mortality attributed to ambient PM<sub>2.5</sub> in a certain year (referred to as “attributable burden” in previous chapters) divided by the total ambient PM<sub>2.5</sub> that year.</p></li>
@@ -3040,7 +3040,7 @@ Data from the <span class="citation" data-cites="murray2020global">Murray et al.
 <p></p><figcaption class="figure-caption">Figure&nbsp;6.28: CPAT estimation of ambient PM<sub>2.5</sub> air pollution death rates versus GBD2019 estimates</figcaption><p></p>
 </figure>
 </div>
-<p><em>Source: CPAT results and <span class="citation" data-cites="murray2020global">Murray et al. (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span></em></p>
+<p><em>Source: CPAT results and <span class="citation" data-cites="murray2020global">Global Burden of Disease Health Financing Collaborator Network (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span></em></p>
 </section>
 <section id="emissions" class="level3" data-number="6.8.2">
 <h3 data-number="6.8.2" class="anchored" data-anchor-id="emissions"><span class="header-section-number">6.8.2</span> Emissions</h3>
@@ -3511,7 +3511,7 @@ Data from the <span class="citation" data-cites="murray2020global">Murray et al.
 </tbody>
 </table>
 </div>
-<p><em>Source: Own elaboration based on <span class="citation" data-cites="murray2020global">Murray et al. (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span></em></p>
+<p><em>Source: Own elaboration based on <span class="citation" data-cites="murray2020global">Global Burden of Disease Health Financing Collaborator Network (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span></em></p>
 <div id="tbl-heartdiseasestroke" class="anchored">
 <table class="table">
 <caption>Table&nbsp;6.19: IER GBD 2019 for Ischemic heart disease and stroke</caption>
@@ -4243,7 +4243,7 @@ Data from the <span class="citation" data-cites="murray2020global">Murray et al.
 </tbody>
 </table>
 </div>
-<p><em>Source: Own elaboration based on <span class="citation" data-cites="murray2020global">Murray et al. (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span></em></p>
+<p><em>Source: Own elaboration based on <span class="citation" data-cites="murray2020global">Global Burden of Disease Health Financing Collaborator Network (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span></em></p>
 <p>In CPAT, we use the RR values from <a href="#tbl-lungcanceretc">Table&nbsp;<span>6.18</span></a> and <a href="#tbl-heartdiseasestroke">Table&nbsp;<span>6.19</span></a>. Since the tables do not include every possible value for PM<sub>2.5</sub>, we interpolate interpolating between the closest higher and lower values, using <a href="#eq-rractual">Equation&nbsp;<span>6.95</span></a>.</p>
 <p><span id="eq-rractual"><span class="math display">\[\text{RR}_{\text{actual}} = \text{RR}_{\text{high}} - \frac{\text{RR}_{\text{high}} - \text{RR}_{\text{low}}}{\text{PM}_{\text{high}} - \text{PM}_{\text{low}}}*(\text{PM}_{\text{high}} - \text{PM}_{\text{actual}}) \tag{6.95}\]</span></span></p>
 </section>
@@ -4674,6 +4674,9 @@ Global Burden of Disease Health Financing Collaborator Network. 2019a. <span>“
 <div id="ref-global2019burden" class="csl-entry" role="listitem">
 ———. 2019b. <span>“Global Health Spending 1995-2016.”</span> <em>Seattle, United States: Institute for Health Metrics and Evaluation (IHME)</em>. <a href="http://ghdx.healthdata.org/record/ihme-data/global-health-spending-1995-2016">http://ghdx.healthdata.org/record/ihme-data/global-health-spending-1995-2016</a>.
 </div>
+<div id="ref-murray2020global" class="csl-entry" role="listitem">
+———. 2020. <span>“Global Burden of 87 Risk Factors in 204 Countries and Territories, 1990–2019: A Systematic Analysis for the Global Burden of Disease Study 2019.”</span> <em>The Lancet</em> 396 (10258): 1223–49.
+</div>
 <div id="ref-globalenergy" class="csl-entry" role="listitem">
 Global Energy Observatory, Google, KTH Royal Institute of Technology in Stockholm, Enipedia, World Resources Institute. 2018. <span>“Global Power Plant Database.”</span> <em>Published on Resource Watch and Google Earth Engine</em>. <a href="http://resourcewatch.org/ https://earthengine.google.com/">http://resourcewatch.org/ https://earthengine.google.com/</a>.
 </div>
@@ -4709,9 +4712,6 @@ Lamancusa, Carmen, Fatema Parvez, and Kristina Wagstrom. 2017. <span>“Spatiall
 </div>
 <div id="ref-lelieveld2015contribution" class="csl-entry" role="listitem">
 Lelieveld, Jos, John S Evans, Mohammed Fnais, Despina Giannadaki, and Andrea Pozzer. 2015. <span>“The Contribution of Outdoor Air Pollution Sources to Premature Mortality on a Global Scale.”</span> <em>Nature</em> 525 (7569): 367–71.
-</div>
-<div id="ref-murray2020global" class="csl-entry" role="listitem">
-Murray, Christopher JL, Aleksandr Y Aravkin, Peng Zheng, Cristiana Abbafati, Kaja M Abbas, Mohsen Abbasi-Kangevari, Foad Abd-Allah, et al. 2020. <span>“Global Burden of 87 Risk Factors in 204 Countries and Territories, 1990–2019: A Systematic Analysis for the Global Burden of Disease Study 2019.”</span> <em>The Lancet</em> 396 (10258): 1223–49.
 </div>
 <div id="ref-narain2016methodology" class="csl-entry" role="listitem">
 Narain, Urvashi, and Chris Sall. 2016. <span>“Methodology for Valuing the Health Impacts of Air Pollution.”</span>
