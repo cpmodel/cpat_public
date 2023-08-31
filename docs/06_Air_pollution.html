@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.475">
+<meta name="generator" content="quarto-1.3.306">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,14 +17,15 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
 }
-.hanging div.csl-entry {
+.hanging-indent div.csl-entry {
   margin-left:2em;
   text-indent:-2em;
 }
@@ -38,8 +39,7 @@ div.csl-right-inline {
 }
 div.csl-indent {
   margin-left: 2em;
-}
-</style>
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -81,6 +81,7 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
@@ -89,11 +90,16 @@ div.csl-indent {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Air pollution module</span></h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./06_Air_pollution.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Air pollution module</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
@@ -101,13 +107,14 @@ div.csl-indent {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">CPAT Documentation</a> 
-        <div class="sidebar-tools-main">
-    <a href="https://github.com/wb-mrio/cpat_public" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
-  <a href="" class="quarto-reader-toggle sidebar-tool" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/wb-mrio/cpat_public" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="./CPAT-Documentation.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
@@ -115,51 +122,59 @@ div.csl-indent {
 </div>
     </div>
       </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link"><strong>Cover</strong></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Cover</strong></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./01_User_Guide.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">User Guide and Climate Policies in CPAT</span></a>
+  <a href="./01_User_Guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">User Guide and Climate Policies in CPAT</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02_Summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary of the approach and applications</span></a>
+  <a href="./02_Summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary of the approach and applications</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03_Mitigation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Mitigation module</span></a>
+  <a href="./03_Mitigation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Mitigation module</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04_Multipliers.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Multipliers</span></a>
+  <a href="./04_Multipliers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Multipliers</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./05_Distribution.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Distribution Module</span></a>
+  <a href="./05_Distribution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Distribution Module</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./06_Air_pollution.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Air pollution module</span></a>
+  <a href="./06_Air_pollution.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Air pollution module</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./07_Road_Transport.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Road Transport Module</span></a>
+  <a href="./07_Road_Transport.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Road Transport Module</span></span></a>
   </div>
 </li>
     </ul>
@@ -168,95 +183,96 @@ div.csl-indent {
     <h2 id="toc-title"><strong><em>Chapter Contents</em></strong></h2>
    
   <ul>
-  <li><a href="#executive-summary" id="toc-executive-summary" class="nav-link active" data-scroll-target="#executive-summary"><span class="toc-section-number">6.1</span>  Executive summary</a></li>
-  <li><a href="#list-of-acronyms" id="toc-list-of-acronyms" class="nav-link" data-scroll-target="#list-of-acronyms"><span class="toc-section-number">6.2</span>  List of Acronyms</a></li>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="toc-section-number">6.3</span>  Introduction</a></li>
-  <li><a href="#sec-calc_em" id="toc-sec-calc_em" class="nav-link" data-scroll-target="#sec-calc_em"><span class="toc-section-number">6.4</span>  Methods for calculating emissions</a>
+  <li><a href="#executive-summary" id="toc-executive-summary" class="nav-link active" data-scroll-target="#executive-summary"><span class="header-section-number">6.1</span> Executive summary</a></li>
+  <li><a href="#list-of-acronyms" id="toc-list-of-acronyms" class="nav-link" data-scroll-target="#list-of-acronyms"><span class="header-section-number">6.2</span> List of Acronyms</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">6.3</span> Introduction</a></li>
+  <li><a href="#sec-calc_em" id="toc-sec-calc_em" class="nav-link" data-scroll-target="#sec-calc_em"><span class="header-section-number">6.4</span> Methods for calculating emissions</a>
   <ul>
-  <li><a href="#data-sources-for-emissions" id="toc-data-sources-for-emissions" class="nav-link" data-scroll-target="#data-sources-for-emissions"><span class="toc-section-number">6.4.1</span>  Data sources for emissions</a></li>
-  <li><a href="#emission-factors-from-gains" id="toc-emission-factors-from-gains" class="nav-link" data-scroll-target="#emission-factors-from-gains"><span class="toc-section-number">6.4.2</span>  Emission factors from GAINS</a></li>
-  <li><a href="#radiative-forcing-coefficients" id="toc-radiative-forcing-coefficients" class="nav-link" data-scroll-target="#radiative-forcing-coefficients"><span class="toc-section-number">6.4.3</span>  Radiative forcing coefficients</a></li>
+  <li><a href="#data-sources-for-emissions" id="toc-data-sources-for-emissions" class="nav-link" data-scroll-target="#data-sources-for-emissions"><span class="header-section-number">6.4.1</span> Data sources for emissions</a></li>
+  <li><a href="#emission-factors-from-gains" id="toc-emission-factors-from-gains" class="nav-link" data-scroll-target="#emission-factors-from-gains"><span class="header-section-number">6.4.2</span> Emission factors from GAINS</a></li>
+  <li><a href="#radiative-forcing-coefficients" id="toc-radiative-forcing-coefficients" class="nav-link" data-scroll-target="#radiative-forcing-coefficients"><span class="header-section-number">6.4.3</span> Radiative forcing coefficients</a></li>
   </ul></li>
-  <li><a href="#sec-em_ap" id="toc-sec-em_ap" class="nav-link" data-scroll-target="#sec-em_ap"><span class="toc-section-number">6.5</span>  Methods to relate emissions and ambient pollution</a>
+  <li><a href="#sec-em_ap" id="toc-sec-em_ap" class="nav-link" data-scroll-target="#sec-em_ap"><span class="header-section-number">6.5</span> Methods to relate emissions and ambient pollution</a>
   <ul>
-  <li><a href="#data-sources-to-relate-emissions-and-ambient-concentrations" id="toc-data-sources-to-relate-emissions-and-ambient-concentrations" class="nav-link" data-scroll-target="#data-sources-to-relate-emissions-and-ambient-concentrations"><span class="toc-section-number">6.5.1</span>  Data sources to relate emissions and ambient concentrations</a></li>
-  <li><a href="#sec-tmfasst" id="toc-sec-tmfasst" class="nav-link" data-scroll-target="#sec-tmfasst"><span class="toc-section-number">6.5.2</span>  Option 1: TM5-FASST</a>
+  <li><a href="#data-sources-to-relate-emissions-and-ambient-concentrations" id="toc-data-sources-to-relate-emissions-and-ambient-concentrations" class="nav-link" data-scroll-target="#data-sources-to-relate-emissions-and-ambient-concentrations"><span class="header-section-number">6.5.1</span> Data sources to relate emissions and ambient concentrations</a></li>
+  <li><a href="#sec-tmfasst" id="toc-sec-tmfasst" class="nav-link" data-scroll-target="#sec-tmfasst"><span class="header-section-number">6.5.2</span> Option 1: TM5-FASST</a>
   <ul class="collapse">
-  <li><a href="#from-fasst-spreadsheet-to-cpat" id="toc-from-fasst-spreadsheet-to-cpat" class="nav-link" data-scroll-target="#from-fasst-spreadsheet-to-cpat"><span class="toc-section-number">6.5.2.1</span>  From FASST spreadsheet to CPAT</a></li>
+  <li><a href="#from-fasst-spreadsheet-to-cpat" id="toc-from-fasst-spreadsheet-to-cpat" class="nav-link" data-scroll-target="#from-fasst-spreadsheet-to-cpat"><span class="header-section-number">6.5.2.1</span> From FASST spreadsheet to CPAT</a></li>
   </ul></li>
-  <li><a href="#sec-apportinfo" id="toc-sec-apportinfo" class="nav-link" data-scroll-target="#sec-apportinfo"><span class="toc-section-number">6.5.3</span>  Option 2: Source apportionment information</a></li>
-  <li><a href="#option-3-elastic-net-model-and-ols-model" id="toc-option-3-elastic-net-model-and-ols-model" class="nav-link" data-scroll-target="#option-3-elastic-net-model-and-ols-model"><span class="toc-section-number">6.5.4</span>  Option 3: Elastic Net model and OLS model</a>
+  <li><a href="#sec-apportinfo" id="toc-sec-apportinfo" class="nav-link" data-scroll-target="#sec-apportinfo"><span class="header-section-number">6.5.3</span> Option 2: Source apportionment information</a></li>
+  <li><a href="#option-3-elastic-net-model-and-ols-model" id="toc-option-3-elastic-net-model-and-ols-model" class="nav-link" data-scroll-target="#option-3-elastic-net-model-and-ols-model"><span class="header-section-number">6.5.4</span> Option 3: Elastic Net model and OLS model</a>
   <ul class="collapse">
-  <li><a href="#elastic-net-model" id="toc-elastic-net-model" class="nav-link" data-scroll-target="#elastic-net-model"><span class="toc-section-number">6.5.4.1</span>  Elastic net model</a></li>
-  <li><a href="#ols-model" id="toc-ols-model" class="nav-link" data-scroll-target="#ols-model"><span class="toc-section-number">6.5.4.2</span>  OLS model</a></li>
+  <li><a href="#elastic-net-model" id="toc-elastic-net-model" class="nav-link" data-scroll-target="#elastic-net-model"><span class="header-section-number">6.5.4.1</span> Elastic net model</a></li>
+  <li><a href="#ols-model" id="toc-ols-model" class="nav-link" data-scroll-target="#ols-model"><span class="header-section-number">6.5.4.2</span> OLS model</a></li>
   </ul></li>
-  <li><a href="#sec-if" id="toc-sec-if" class="nav-link" data-scroll-target="#sec-if"><span class="toc-section-number">6.5.5</span>  Option 4: Intake fractions</a>
+  <li><a href="#sec-if" id="toc-sec-if" class="nav-link" data-scroll-target="#sec-if"><span class="header-section-number">6.5.5</span> Option 4: Intake fractions</a>
   <ul class="collapse">
-  <li><a href="#intake-fractions-for-ground-level-low-and-high-stack-emission-sources" id="toc-intake-fractions-for-ground-level-low-and-high-stack-emission-sources" class="nav-link" data-scroll-target="#intake-fractions-for-ground-level-low-and-high-stack-emission-sources"><span class="toc-section-number">6.5.5.1</span>  Intake fractions for ground level, low and high stack emission sources</a></li>
-  <li><a href="#intake-fractions-from-power-plants" id="toc-intake-fractions-from-power-plants" class="nav-link" data-scroll-target="#intake-fractions-from-power-plants"><span class="toc-section-number">6.5.5.2</span>  Intake fractions from power plants</a></li>
+  <li><a href="#intake-fractions-for-ground-level-low-and-high-stack-emission-sources" id="toc-intake-fractions-for-ground-level-low-and-high-stack-emission-sources" class="nav-link" data-scroll-target="#intake-fractions-for-ground-level-low-and-high-stack-emission-sources"><span class="header-section-number">6.5.5.1</span> Intake fractions for ground level, low and high stack emission sources</a></li>
+  <li><a href="#intake-fractions-from-power-plants" id="toc-intake-fractions-from-power-plants" class="nav-link" data-scroll-target="#intake-fractions-from-power-plants"><span class="header-section-number">6.5.5.2</span> Intake fractions from power plants</a></li>
   </ul></li>
-  <li><a href="#sec-machlearn" id="toc-sec-machlearn" class="nav-link" data-scroll-target="#sec-machlearn"><span class="toc-section-number">6.5.6</span>  Option 5: Machine learning</a></li>
-  <li><a href="#option-6-average-between-two-methods" id="toc-option-6-average-between-two-methods" class="nav-link" data-scroll-target="#option-6-average-between-two-methods"><span class="toc-section-number">6.5.7</span>  Option 6: Average between two methods</a></li>
-  <li><a href="#modeled-and-total-ambient-pollution" id="toc-modeled-and-total-ambient-pollution" class="nav-link" data-scroll-target="#modeled-and-total-ambient-pollution"><span class="toc-section-number">6.5.8</span>  Modeled and total ambient pollution</a></li>
+  <li><a href="#sec-machlearn" id="toc-sec-machlearn" class="nav-link" data-scroll-target="#sec-machlearn"><span class="header-section-number">6.5.6</span> Option 5: Machine learning</a></li>
+  <li><a href="#option-6-average-between-two-methods" id="toc-option-6-average-between-two-methods" class="nav-link" data-scroll-target="#option-6-average-between-two-methods"><span class="header-section-number">6.5.7</span> Option 6: Average between two methods</a></li>
+  <li><a href="#modeled-and-total-ambient-pollution" id="toc-modeled-and-total-ambient-pollution" class="nav-link" data-scroll-target="#modeled-and-total-ambient-pollution"><span class="header-section-number">6.5.8</span> Modeled and total ambient pollution</a></li>
   </ul></li>
-  <li><a href="#sec-health_ap" id="toc-sec-health_ap" class="nav-link" data-scroll-target="#sec-health_ap"><span class="toc-section-number">6.6</span>  Methods to calculate the health burden of air pollution</a>
+  <li><a href="#sec-health_ap" id="toc-sec-health_ap" class="nav-link" data-scroll-target="#sec-health_ap"><span class="header-section-number">6.6</span> Methods to calculate the health burden of air pollution</a>
   <ul>
-  <li><a href="#data-sources-to-estimate-health-impacts" id="toc-data-sources-to-estimate-health-impacts" class="nav-link" data-scroll-target="#data-sources-to-estimate-health-impacts"><span class="toc-section-number">6.6.1</span>  Data sources to estimate health impacts</a></li>
-  <li><a href="#definitions-of-key-technical-terms" id="toc-definitions-of-key-technical-terms" class="nav-link" data-scroll-target="#definitions-of-key-technical-terms"><span class="toc-section-number">6.6.2</span>  Definitions of key technical terms</a></li>
-  <li><a href="#sec-healthburdenpoll" id="toc-sec-healthburdenpoll" class="nav-link" data-scroll-target="#sec-healthburdenpoll"><span class="toc-section-number">6.6.3</span>  The health burden of pollution</a>
+  <li><a href="#data-sources-to-estimate-health-impacts" id="toc-data-sources-to-estimate-health-impacts" class="nav-link" data-scroll-target="#data-sources-to-estimate-health-impacts"><span class="header-section-number">6.6.1</span> Data sources to estimate health impacts</a></li>
+  <li><a href="#definitions-of-key-technical-terms" id="toc-definitions-of-key-technical-terms" class="nav-link" data-scroll-target="#definitions-of-key-technical-terms"><span class="header-section-number">6.6.2</span> Definitions of key technical terms</a></li>
+  <li><a href="#sec-healthburdenpoll" id="toc-sec-healthburdenpoll" class="nav-link" data-scroll-target="#sec-healthburdenpoll"><span class="header-section-number">6.6.3</span> The health burden of pollution</a>
   <ul class="collapse">
-  <li><a href="#joint-ambient-and-household-air-pollution-murray2020global" id="toc-joint-ambient-and-household-air-pollution-murray2020global" class="nav-link" data-scroll-target="#joint-ambient-and-household-air-pollution-murray2020global"><span class="toc-section-number">6.6.3.1</span>  Joint ambient and household air pollution (<span class="citation" data-cites="murray2020global">Global Burden of Disease Health Financing Collaborator Network (2020)</span>)</a></li>
-  <li><a href="#sec-healthout" id="toc-sec-healthout" class="nav-link" data-scroll-target="#sec-healthout"><span class="toc-section-number">6.6.3.2</span>  Health outcomes in CPAT</a></li>
-  <li><a href="#ozone-air-pollution" id="toc-ozone-air-pollution" class="nav-link" data-scroll-target="#ozone-air-pollution"><span class="toc-section-number">6.6.3.3</span>  Ozone air pollution</a></li>
-  <li><a href="#multiple-risks-factors" id="toc-multiple-risks-factors" class="nav-link" data-scroll-target="#multiple-risks-factors"><span class="toc-section-number">6.6.3.4</span>  Multiple risks factors</a></li>
+  <li><a href="#joint-ambient-and-household-air-pollution-murray2020global" id="toc-joint-ambient-and-household-air-pollution-murray2020global" class="nav-link" data-scroll-target="#joint-ambient-and-household-air-pollution-murray2020global"><span class="header-section-number">6.6.3.1</span> Joint ambient and household air pollution (<span class="citation" data-cites="murray2020global">Global Burden of Disease Health Financing Collaborator Network (2020)</span>)</a></li>
+  <li><a href="#sec-healthout" id="toc-sec-healthout" class="nav-link" data-scroll-target="#sec-healthout"><span class="header-section-number">6.6.3.2</span> Health outcomes in CPAT</a></li>
+  <li><a href="#ozone-air-pollution" id="toc-ozone-air-pollution" class="nav-link" data-scroll-target="#ozone-air-pollution"><span class="header-section-number">6.6.3.3</span> Ozone air pollution</a></li>
+  <li><a href="#multiple-risks-factors" id="toc-multiple-risks-factors" class="nav-link" data-scroll-target="#multiple-risks-factors"><span class="header-section-number">6.6.3.4</span> Multiple risks factors</a></li>
   </ul></li>
-  <li><a href="#baseline-exposure-to-air-pollution-data" id="toc-baseline-exposure-to-air-pollution-data" class="nav-link" data-scroll-target="#baseline-exposure-to-air-pollution-data"><span class="toc-section-number">6.6.4</span>  Baseline exposure to air pollution data</a>
+  <li><a href="#baseline-exposure-to-air-pollution-data" id="toc-baseline-exposure-to-air-pollution-data" class="nav-link" data-scroll-target="#baseline-exposure-to-air-pollution-data"><span class="header-section-number">6.6.4</span> Baseline exposure to air pollution data</a>
   <ul class="collapse">
-  <li><a href="#sec-ambexp" id="toc-sec-ambexp" class="nav-link" data-scroll-target="#sec-ambexp"><span class="toc-section-number">6.6.4.1</span>  Ambient PM<sub>2.5</sub> Exposure data</a></li>
-  <li><a href="#household-pm2.5-exposure-data" id="toc-household-pm2.5-exposure-data" class="nav-link" data-scroll-target="#household-pm2.5-exposure-data"><span class="toc-section-number">6.6.4.2</span>  Household PM<sub>2.5</sub> Exposure data</a></li>
-  <li><a href="#sec-ozexp" id="toc-sec-ozexp" class="nav-link" data-scroll-target="#sec-ozexp"><span class="toc-section-number">6.6.4.3</span>  Ozone Exposure data</a></li>
+  <li><a href="#sec-ambexp" id="toc-sec-ambexp" class="nav-link" data-scroll-target="#sec-ambexp"><span class="header-section-number">6.6.4.1</span> Ambient PM<sub>2.5</sub> Exposure data</a></li>
+  <li><a href="#household-pm2.5-exposure-data" id="toc-household-pm2.5-exposure-data" class="nav-link" data-scroll-target="#household-pm2.5-exposure-data"><span class="header-section-number">6.6.4.2</span> Household PM<sub>2.5</sub> Exposure data</a></li>
+  <li><a href="#sec-ozexp" id="toc-sec-ozexp" class="nav-link" data-scroll-target="#sec-ozexp"><span class="header-section-number">6.6.4.3</span> Ozone Exposure data</a></li>
   </ul></li>
-  <li><a href="#leakage-to-biomass" id="toc-leakage-to-biomass" class="nav-link" data-scroll-target="#leakage-to-biomass"><span class="toc-section-number">6.6.5</span>  Leakage to biomass</a></li>
-  <li><a href="#other-health-effects-in-cpat" id="toc-other-health-effects-in-cpat" class="nav-link" data-scroll-target="#other-health-effects-in-cpat"><span class="toc-section-number">6.6.6</span>  Other health effects in CPAT</a>
+  <li><a href="#leakage-to-biomass" id="toc-leakage-to-biomass" class="nav-link" data-scroll-target="#leakage-to-biomass"><span class="header-section-number">6.6.5</span> Leakage to biomass</a></li>
+  <li><a href="#other-health-effects-in-cpat" id="toc-other-health-effects-in-cpat" class="nav-link" data-scroll-target="#other-health-effects-in-cpat"><span class="header-section-number">6.6.6</span> Other health effects in CPAT</a>
   <ul class="collapse">
-  <li><a href="#post-neonatal-mortality-woodruff2006fine" id="toc-post-neonatal-mortality-woodruff2006fine" class="nav-link" data-scroll-target="#post-neonatal-mortality-woodruff2006fine"><span class="toc-section-number">6.6.6.1</span>  Post neonatal mortality (<span class="citation" data-cites="woodruff2006fine">Woodruff, Parker, and Schoendorf (2006)</span>)</a></li>
-  <li><a href="#depressive-disorders" id="toc-depressive-disorders" class="nav-link" data-scroll-target="#depressive-disorders"><span class="toc-section-number">6.6.6.2</span>  Depressive disorders</a></li>
+  <li><a href="#post-neonatal-mortality-woodruff2006fine" id="toc-post-neonatal-mortality-woodruff2006fine" class="nav-link" data-scroll-target="#post-neonatal-mortality-woodruff2006fine"><span class="header-section-number">6.6.6.1</span> Post neonatal mortality (<span class="citation" data-cites="woodruff2006fine">Woodruff, Parker, and Schoendorf (2006)</span>)</a></li>
+  <li><a href="#depressive-disorders" id="toc-depressive-disorders" class="nav-link" data-scroll-target="#depressive-disorders"><span class="header-section-number">6.6.6.2</span> Depressive disorders</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#sec-eco_ap" id="toc-sec-eco_ap" class="nav-link" data-scroll-target="#sec-eco_ap"><span class="toc-section-number">6.7</span>  Methods to quantify the economic impacts of air pollution</a>
+  <li><a href="#sec-eco_ap" id="toc-sec-eco_ap" class="nav-link" data-scroll-target="#sec-eco_ap"><span class="header-section-number">6.7</span> Methods to quantify the economic impacts of air pollution</a>
   <ul>
-  <li><a href="#data-sources-used-to-quantify-economic-impacts" id="toc-data-sources-used-to-quantify-economic-impacts" class="nav-link" data-scroll-target="#data-sources-used-to-quantify-economic-impacts"><span class="toc-section-number">6.7.1</span>  Data sources used to quantify economic impacts</a></li>
-  <li><a href="#working-days-lost" id="toc-working-days-lost" class="nav-link" data-scroll-target="#working-days-lost"><span class="toc-section-number">6.7.2</span>  Working days lost</a></li>
-  <li><a href="#sec-marketoutputlosses" id="toc-sec-marketoutputlosses" class="nav-link" data-scroll-target="#sec-marketoutputlosses"><span class="toc-section-number">6.7.3</span>  Market output losses</a>
+  <li><a href="#data-sources-used-to-quantify-economic-impacts" id="toc-data-sources-used-to-quantify-economic-impacts" class="nav-link" data-scroll-target="#data-sources-used-to-quantify-economic-impacts"><span class="header-section-number">6.7.1</span> Data sources used to quantify economic impacts</a></li>
+  <li><a href="#working-days-lost" id="toc-working-days-lost" class="nav-link" data-scroll-target="#working-days-lost"><span class="header-section-number">6.7.2</span> Working days lost</a></li>
+  <li><a href="#sec-marketoutputlosses" id="toc-sec-marketoutputlosses" class="nav-link" data-scroll-target="#sec-marketoutputlosses"><span class="header-section-number">6.7.3</span> Market output losses</a>
   <ul class="collapse">
-  <li><a href="#cpat-operationalization" id="toc-cpat-operationalization" class="nav-link" data-scroll-target="#cpat-operationalization"><span class="toc-section-number">6.7.3.1</span>  CPAT operationalization</a></li>
+  <li><a href="#cpat-operationalization" id="toc-cpat-operationalization" class="nav-link" data-scroll-target="#cpat-operationalization"><span class="header-section-number">6.7.3.1</span> CPAT operationalization</a></li>
   </ul></li>
-  <li><a href="#health-expenditure" id="toc-health-expenditure" class="nav-link" data-scroll-target="#health-expenditure"><span class="toc-section-number">6.7.4</span>  Health expenditure</a></li>
-  <li><a href="#value-of-the-statistical-life" id="toc-value-of-the-statistical-life" class="nav-link" data-scroll-target="#value-of-the-statistical-life"><span class="toc-section-number">6.7.5</span>  Value of the statistical life</a></li>
-  <li><a href="#time-structure-of-averted-deaths" id="toc-time-structure-of-averted-deaths" class="nav-link" data-scroll-target="#time-structure-of-averted-deaths"><span class="toc-section-number">6.7.6</span>  Time Structure of averted deaths</a></li>
-  <li><a href="#travel-time-saved" id="toc-travel-time-saved" class="nav-link" data-scroll-target="#travel-time-saved"><span class="toc-section-number">6.7.7</span>  Travel time saved</a></li>
-  <li><a href="#sec-valuemorbidity" id="toc-sec-valuemorbidity" class="nav-link" data-scroll-target="#sec-valuemorbidity"><span class="toc-section-number">6.7.8</span>  Value of morbidity using years lived with disabilities (YLDs)</a></li>
-  <li><a href="#air-pollution-externalities-per-unit-of-fuel" id="toc-air-pollution-externalities-per-unit-of-fuel" class="nav-link" data-scroll-target="#air-pollution-externalities-per-unit-of-fuel"><span class="toc-section-number">6.7.9</span>  Air pollution externalities per unit of fuel</a></li>
+  <li><a href="#health-expenditure" id="toc-health-expenditure" class="nav-link" data-scroll-target="#health-expenditure"><span class="header-section-number">6.7.4</span> Health expenditure</a></li>
+  <li><a href="#value-of-the-statistical-life" id="toc-value-of-the-statistical-life" class="nav-link" data-scroll-target="#value-of-the-statistical-life"><span class="header-section-number">6.7.5</span> Value of the statistical life</a></li>
+  <li><a href="#time-structure-of-averted-deaths" id="toc-time-structure-of-averted-deaths" class="nav-link" data-scroll-target="#time-structure-of-averted-deaths"><span class="header-section-number">6.7.6</span> Time Structure of averted deaths</a></li>
+  <li><a href="#travel-time-saved" id="toc-travel-time-saved" class="nav-link" data-scroll-target="#travel-time-saved"><span class="header-section-number">6.7.7</span> Travel time saved</a></li>
+  <li><a href="#sec-valuemorbidity" id="toc-sec-valuemorbidity" class="nav-link" data-scroll-target="#sec-valuemorbidity"><span class="header-section-number">6.7.8</span> Value of morbidity using years lived with disabilities (YLDs)</a></li>
+  <li><a href="#air-pollution-externalities-per-unit-of-fuel" id="toc-air-pollution-externalities-per-unit-of-fuel" class="nav-link" data-scroll-target="#air-pollution-externalities-per-unit-of-fuel"><span class="header-section-number">6.7.9</span> Air pollution externalities per unit of fuel</a></li>
   </ul></li>
-  <li><a href="#sec-validation" id="toc-sec-validation" class="nav-link" data-scroll-target="#sec-validation"><span class="toc-section-number">6.8</span>  Validation: comparison with other models</a>
+  <li><a href="#sec-validation" id="toc-sec-validation" class="nav-link" data-scroll-target="#sec-validation"><span class="header-section-number">6.8</span> Validation: comparison with other models</a>
   <ul>
-  <li><a href="#health-impacts-of-pollution" id="toc-health-impacts-of-pollution" class="nav-link" data-scroll-target="#health-impacts-of-pollution"><span class="toc-section-number">6.8.1</span>  Health impacts of pollution</a></li>
-  <li><a href="#emissions" id="toc-emissions" class="nav-link" data-scroll-target="#emissions"><span class="toc-section-number">6.8.2</span>  Emissions</a></li>
-  <li><a href="#concentrations-share-of-fossil-fuels-on-ambient-pm2.5" id="toc-concentrations-share-of-fossil-fuels-on-ambient-pm2.5" class="nav-link" data-scroll-target="#concentrations-share-of-fossil-fuels-on-ambient-pm2.5"><span class="toc-section-number">6.8.3</span>  Concentrations: share of fossil fuels on ambient PM<sub>2.5</sub></a></li>
-  <li><a href="#externalities-from-pollution" id="toc-externalities-from-pollution" class="nav-link" data-scroll-target="#externalities-from-pollution"><span class="toc-section-number">6.8.4</span>  Externalities from pollution</a></li>
+  <li><a href="#health-impacts-of-pollution" id="toc-health-impacts-of-pollution" class="nav-link" data-scroll-target="#health-impacts-of-pollution"><span class="header-section-number">6.8.1</span> Health impacts of pollution</a></li>
+  <li><a href="#emissions" id="toc-emissions" class="nav-link" data-scroll-target="#emissions"><span class="header-section-number">6.8.2</span> Emissions</a></li>
+  <li><a href="#concentrations-share-of-fossil-fuels-on-ambient-pm2.5" id="toc-concentrations-share-of-fossil-fuels-on-ambient-pm2.5" class="nav-link" data-scroll-target="#concentrations-share-of-fossil-fuels-on-ambient-pm2.5"><span class="header-section-number">6.8.3</span> Concentrations: share of fossil fuels on ambient PM<sub>2.5</sub></a></li>
+  <li><a href="#externalities-from-pollution" id="toc-externalities-from-pollution" class="nav-link" data-scroll-target="#externalities-from-pollution"><span class="header-section-number">6.8.4</span> Externalities from pollution</a></li>
   </ul></li>
-  <li><a href="#sec-caveats" id="toc-sec-caveats" class="nav-link" data-scroll-target="#sec-caveats"><span class="toc-section-number">6.9</span>  Caveats</a></li>
-  <li><a href="#appendices" id="toc-appendices" class="nav-link" data-scroll-target="#appendices"><span class="toc-section-number">6.10</span>  Appendices</a>
+  <li><a href="#sec-caveats" id="toc-sec-caveats" class="nav-link" data-scroll-target="#sec-caveats"><span class="header-section-number">6.9</span> Caveats</a></li>
+  <li><a href="#appendices" id="toc-appendices" class="nav-link" data-scroll-target="#appendices"><span class="header-section-number">6.10</span> Appendices</a>
   <ul>
-  <li><a href="#cpat-codes-air-pollution-tab." id="toc-cpat-codes-air-pollution-tab." class="nav-link" data-scroll-target="#cpat-codes-air-pollution-tab."><span class="toc-section-number">6.10.1</span>  CPAT codes, Air Pollution tab.</a></li>
-  <li><a href="#relative-risk-ier-gbd-2019" id="toc-relative-risk-ier-gbd-2019" class="nav-link" data-scroll-target="#relative-risk-ier-gbd-2019"><span class="toc-section-number">6.10.2</span>  Relative Risk IER GBD 2019</a></li>
-  <li><a href="#sec-quanthealtheff" id="toc-sec-quanthealtheff" class="nav-link" data-scroll-target="#sec-quanthealtheff"><span class="toc-section-number">6.10.3</span>  Quantification of health effects in CPAT</a></li>
-  <li><a href="#some-unit-conversions" id="toc-some-unit-conversions" class="nav-link" data-scroll-target="#some-unit-conversions"><span class="toc-section-number">6.10.4</span>  Some unit conversions</a></li>
-  <li><a href="#comments-from-2021-review-and-summary-of-changes" id="toc-comments-from-2021-review-and-summary-of-changes" class="nav-link" data-scroll-target="#comments-from-2021-review-and-summary-of-changes"><span class="toc-section-number">6.10.5</span>  Comments from 2021 review and summary of changes</a></li>
+  <li><a href="#cpat-codes-air-pollution-tab." id="toc-cpat-codes-air-pollution-tab." class="nav-link" data-scroll-target="#cpat-codes-air-pollution-tab."><span class="header-section-number">6.10.1</span> CPAT codes, Air Pollution tab.</a></li>
+  <li><a href="#relative-risk-ier-gbd-2019" id="toc-relative-risk-ier-gbd-2019" class="nav-link" data-scroll-target="#relative-risk-ier-gbd-2019"><span class="header-section-number">6.10.2</span> Relative Risk IER GBD 2019</a></li>
+  <li><a href="#sec-quanthealtheff" id="toc-sec-quanthealtheff" class="nav-link" data-scroll-target="#sec-quanthealtheff"><span class="header-section-number">6.10.3</span> Quantification of health effects in CPAT</a></li>
+  <li><a href="#some-unit-conversions" id="toc-some-unit-conversions" class="nav-link" data-scroll-target="#some-unit-conversions"><span class="header-section-number">6.10.4</span> Some unit conversions</a></li>
+  <li><a href="#comments-from-2021-review-and-summary-of-changes" id="toc-comments-from-2021-review-and-summary-of-changes" class="nav-link" data-scroll-target="#comments-from-2021-review-and-summary-of-changes"><span class="header-section-number">6.10.5</span> Comments from 2021 review and summary of changes</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/wb-mrio/cpat_public/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     </div>
@@ -265,7 +281,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Air pollution module</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Air pollution module</span></h1>
 </div>
 
 
@@ -2251,13 +2267,13 @@ Data from the <span class="citation" data-cites="murray2020global">Global Burden
 <p><span id="eq-rroap"><span class="math display">\[\text{RR}_{\text{OAP}} = MRBRT(z = \text{Exp}_{\text{OAP}})/MRBRT(z = TMREL) \tag{6.48}\]</span></span></p>
 <p>For the proportion of the population exposed to HAP, the relative risk is given by <a href="#eq-rrhap">Equation&nbsp;<span>6.49</span></a>.</p>
 <p><span id="eq-rrhap"><span class="math display">\[\text{RR}_{\text{HAP}} = MRBRT(z = \text{Exp}_{\text{OAP}} + \text{Exp}_{\text{HAP}})/\ MRBRT(z = TMREL) \tag{6.49}\]</span></span></p>
-<p>The population level relative risk <span class="math inline">\(RR_{\text{PM}}\)</span> and population attributable fraction, <span class="math inline">\(\text{PA}F_{\text{PM}}\)</span>, are calculated according to <a href="#eq-rrpm">Equation&nbsp;<span>6.50</span></a> and <span class="quarto-unresolved-ref">?eq-pafpm</span>.</p>
+<p>The population level relative risk <span class="math inline">\(RR_{\text{PM}}\)</span> and population attributable fraction, <span class="math inline">\(\text{PA}F_{\text{PM}}\)</span>, are calculated according to <a href="#eq-rrpm">Equation&nbsp;<span>6.50</span></a> and <a href="#eq-pafpm">Equation&nbsp;<span>6.51</span></a>.</p>
 <p><span id="eq-rrpm"><span class="math display">\[RR_{\text{PM}} = RR_{\text{OAP}}*\left( 1 - p_{\text{HAP}} \right) + RR_{\text{HAP}}*p_{\text{HAP}} \tag{6.50}\]</span></span></p>
-<p><span class="math inline">\(\text{PA}F_{\text{PM}} = 1 - 1/RR_{\text{PM}}\)</span>{#eq-pafpm}</p>
-<p>Finally, PAFs are split based on the exposure to OAP and HAP, as presented in <a href="#eq-pafoap">Equation&nbsp;<span>6.51</span></a> and <a href="#eq-pafhap">Equation&nbsp;<span>6.52</span></a>.</p>
-<p><span id="eq-pafoap"><span class="math display">\[\text{PA}F_{\text{OAP}} = \frac{\text{Exp}_{\text{OAP}}}{\text{Exp}_{\text{OAP}} + p_{\text{HAP}}*\text{Exp}_{\text{HAP}}}*\text{PAF}_{\text{PM}} \tag{6.51}\]</span></span></p>
-<p><span id="eq-pafhap"><span class="math display">\[\text{PA}F_{\text{HAP}} = \frac{{p_{\text{HAP}}*Exp}_{\text{HAP}}}{\text{Exp}_{\text{OAP}} + {p_{\text{HAP}}*Exp}_{\text{HAP}}}*\text{PAF}_{\text{PM}} \tag{6.52}\]</span></span></p>
-<p>Notice that under this strategy: <span class="math inline">\(\text{PAF}_{\text{PM}} = \text{PAF}_{\text{HAP}} + \text{PAF}_{\text{OAP}}\)</span>.</p>
+<p><span id="eq-pafpm"><span class="math display">\[{PAF}_{\text{PM}} = 1 - 1/RR_{\text{PM}} \tag{6.51}\]</span></span></p>
+<p>Finally, PAFs are split based on the exposure to OAP and HAP, as presented in <a href="#eq-pafoap">Equation&nbsp;<span>6.52</span></a> and <a href="#eq-pafhap">Equation&nbsp;<span>6.53</span></a>.</p>
+<p><span id="eq-pafoap"><span class="math display">\[\text{PA}F_{\text{OAP}} = \frac{\text{Exp}_{\text{OAP}}}{\text{Exp}_{\text{OAP}} + p_{\text{HAP}}*\text{Exp}_{\text{HAP}}}*\text{PAF}_{\text{PM}} \tag{6.52}\]</span></span></p>
+<p><span id="eq-pafhap"><span class="math display">\[\text{PA}F_{\text{HAP}} = \frac{{p_{\text{HAP}}*Exp}_{\text{HAP}}}{\text{Exp}_{\text{OAP}} + {p_{\text{HAP}}*Exp}_{\text{HAP}}}*\text{PAF}_{\text{PM}} \tag{6.53}\]</span></span></p>
+<p>Notice that under this strategy <span class="math inline">\(\text{PAF}_{\text{PM}} = \text{PAF}_{\text{HAP}} + \text{PAF}_{\text{OAP}}\)</span>.</p>
 <p>Where:</p>
 <p><span class="math inline">\(\text{Exp}_{\text{OAP}}\)</span>: Ambient PM<sub>2.5</sub> exposure level</p>
 <p><span class="math inline">\(\text{Exp}_{\text{HAP}}\)</span>: Excess exposure to PM<sub>2.5</sub> for those who use solid fuel for cooking.</p>
@@ -2289,13 +2305,13 @@ Data from the <span class="citation" data-cites="murray2020global">Global Burden
 </figure>
 </div>
 <p><em>Source: <span class="citation" data-cites="wikimedia">Wikimedia Commons contributors (<a href="#ref-wikimedia" role="doc-biblioref">2020</a>)</span></em></p>
-<p>DALY, for a specific cause <span class="math inline">\(c\)</span>, sex <span class="math inline">\(s\)</span>, age <span class="math inline">\(a\)</span> and year <span class="math inline">\(t\)</span> is defined as indicated in <a href="#eq-daly">Equation&nbsp;<span>6.53</span></a>.</p>
-<p><span id="eq-daly"><span class="math display">\[\text{DALY}_{c,s,a,t} = \text{YLL}_{c,s,\ a,t} + \text{YLD}_{c,s,a,t} \tag{6.53}\]</span></span></p>
-<p>The years of life lost (YLL) are calculated in <a href="#eq-yll">Equation&nbsp;<span>6.54</span></a> as the number of deaths multiplied by a loss function specifying the years lost for deaths as a function of the age at which death occurs.</p>
-<p><span id="eq-yll"><span class="math display">\[\text{YLL}_{c,s,\ a,t} = {\text{Number}\ \text{of}\ \text{deaths}}_{c,s,a,t}*L_{s,a} \tag{6.54}\]</span></span></p>
+<p>DALY, for a specific cause <span class="math inline">\(c\)</span>, sex <span class="math inline">\(s\)</span>, age <span class="math inline">\(a\)</span> and year <span class="math inline">\(t\)</span> is defined as indicated in <a href="#eq-daly">Equation&nbsp;<span>6.54</span></a>.</p>
+<p><span id="eq-daly"><span class="math display">\[\text{DALY}_{c,s,a,t} = \text{YLL}_{c,s,\ a,t} + \text{YLD}_{c,s,a,t} \tag{6.54}\]</span></span></p>
+<p>The years of life lost (YLL) are calculated in <a href="#eq-yll">Equation&nbsp;<span>6.55</span></a> as the number of deaths multiplied by a loss function specifying the years lost for deaths as a function of the age at which death occurs.</p>
+<p><span id="eq-yll"><span class="math display">\[\text{YLL}_{c,s,\ a,t} = {\text{Number}\ \text{of}\ \text{deaths}}_{c,s,a,t}*L_{s,a} \tag{6.55}\]</span></span></p>
 <p>Where <span class="math inline">\(L_{s,a}\)</span> is a standard loss function specifying years of life lost for a death at age <span class="math inline">\(a\)</span> for sex <span class="math inline">\(s\)</span>.</p>
-<p>The years lived with disease (YLD) are measured by the multiplication of the prevalence of the condition<a href="#fn25" class="footnote-ref" id="fnref25" role="doc-noteref"><sup>25</sup></a> and a weight factor that reflects the severity of the condition on a scale from 0 (perfect health) to 1 (death) as expressed in <a href="#eq-yld">Equation&nbsp;<span>6.55</span></a>.</p>
-<p><span id="eq-yld"><span class="math display">\[\text{YLD}_{c,s,a,t} = P_{c,s,a,t}*\text{DW}_{c,s,a} \tag{6.55}\]</span></span></p>
+<p>The years lived with disease (YLD) are measured by the multiplication of the prevalence of the condition<a href="#fn25" class="footnote-ref" id="fnref25" role="doc-noteref"><sup>25</sup></a> and a weight factor that reflects the severity of the condition on a scale from 0 (perfect health) to 1 (death) as expressed in <a href="#eq-yld">Equation&nbsp;<span>6.56</span></a>.</p>
+<p><span id="eq-yld"><span class="math display">\[\text{YLD}_{c,s,a,t} = P_{c,s,a,t}*\text{DW}_{c,s,a} \tag{6.56}\]</span></span></p>
 <p>Where,</p>
 <p><span class="math inline">\(P_{c,s,a,t}\)</span>: Prevalent sequelae for cause <span class="math inline">\(c\)</span>, sex <span class="math inline">\(s\)</span>, age <span class="math inline">\(a\)</span> and year <span class="math inline">\(t\)</span></p>
 <p><span class="math inline">\(\text{DW}_{c,s,a}\)</span>: Disability weight for sequelae for cause <span class="math inline">\(c\)</span>, sex <span class="math inline">\(s\)</span> and age <span class="math inline">\(a\)</span></p>
@@ -2304,22 +2320,22 @@ Data from the <span class="citation" data-cites="murray2020global">Global Burden
 <section id="ozone-air-pollution" class="level4" data-number="6.6.3.3">
 <h4 data-number="6.6.3.3" class="anchored" data-anchor-id="ozone-air-pollution"><span class="header-section-number">6.6.3.3</span> Ozone air pollution</h4>
 <p>For ozone health effects, CPAT follows the methodology applied in <span class="citation" data-cites="murray2020global">Global Burden of Disease Health Financing Collaborator Network (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span>, which is based on <span class="citation" data-cites="turner2016long">Turner et al. (<a href="#ref-turner2016long" role="doc-biblioref">2016</a>)</span>. The health impacts are quantified for chronic obstructive pulmonary disease, with a RR of 1.06 (1.02, 1.10) per 10 ppb of ozone, in the seasonal (six-month period with the highest mean) 8-h daily maximum concentration metric (6mDMA8h). The TMREL for ozone is defined as ~ U (29.1, 35.7).</p>
-<p>The relative risk is represented by expression <a href="#eq-relrisk">Equation&nbsp;<span>6.56</span></a> and PAF is calculated using expression <a href="#eq-pafbis">Equation&nbsp;<span>6.57</span></a>.</p>
-<p><span id="eq-relrisk"><span class="math display">\[RR = e^{\beta*{\mathrm{\Delta}C}_{O3}} \tag{6.56}\]</span></span></p>
-<p><span id="eq-pafbis"><span class="math display">\[PAF = 1 - e^{- \beta*{\mathrm{\Delta}C}_{O3}} \tag{6.57}\]</span></span></p>
+<p>The relative risk is represented by expression <a href="#eq-relrisk">Equation&nbsp;<span>6.57</span></a> and PAF is calculated using expression <a href="#eq-pafbis">Equation&nbsp;<span>6.58</span></a>.</p>
+<p><span id="eq-relrisk"><span class="math display">\[RR = e^{\beta*{\mathrm{\Delta}C}_{O3}} \tag{6.57}\]</span></span></p>
+<p><span id="eq-pafbis"><span class="math display">\[PAF = 1 - e^{- \beta*{\mathrm{\Delta}C}_{O3}} \tag{6.58}\]</span></span></p>
 <p>The change in ozone concentration <span class="math inline">\({\mathrm{\Delta}C}_{O3}\)</span> is obtained using the diagonal source-receptor coefficients from TM5-FASST, adjusted from region level to countries using <a href="#eq-deltae">Equation&nbsp;<span>6.3</span></a>, from <a href="#sec-tmfasst"><span>Section&nbsp;6.5.2</span></a>; or the “machine learning” model for ozone from <a href="#sec-machlearn"><span>Section&nbsp;6.5.6</span></a>.</p>
 <p>Precursors of ozone considered in CPAT are NOx , NMVOC, SO2 and CH4.</p>
 </section>
 <section id="multiple-risks-factors" class="level4" data-number="6.6.3.4">
 <h4 data-number="6.6.3.4" class="anchored" data-anchor-id="multiple-risks-factors"><span class="header-section-number">6.6.3.4</span> Multiple risks factors</h4>
-<p>When multiple risks affect the same outcome, we need to apply a multiplicative aggregation of each individual risk, according to <a href="#eq-pafsum">Equation&nbsp;<span>6.58</span></a>.</p>
-<p><span id="eq-pafsum"><span class="math display">\[\text{PA}F_{1..i} = 1 - \prod_{i = 1}^{n}{(1 - PAF_{i})} \tag{6.58}\]</span></span></p>
+<p>When multiple risks affect the same outcome, we need to apply a multiplicative aggregation of each individual risk, according to <a href="#eq-pafsum">Equation&nbsp;<span>6.59</span></a>.</p>
+<p><span id="eq-pafsum"><span class="math display">\[\text{PA}F_{1..i} = 1 - \prod_{i = 1}^{n}{(1 - PAF_{i})} \tag{6.59}\]</span></span></p>
 <p>Where <span class="math inline">\(i\)</span> corresponds to each individual risk factor.</p>
-<p>In CPAT, COPD is the only health outcome associated to two different risks (O3 and PM<sub>2.5</sub> pollution). <a href="#eq-pafmp">Equation&nbsp;<span>6.59</span></a> presents the “corrected” PAF to consider the two risks factors, when aggregating the individual risks.</p>
-<p><span id="eq-pafmp"><span class="math display">\[\text{PA}F_{MP2.5 - O3 - COPD\ } = 1 - \left( 1 - PAF_{PM2.5} \right)*(1 - PAF_{O3}) \tag{6.59}\]</span></span></p>
+<p>In CPAT, COPD is the only health outcome associated to two different risks (O3 and PM<sub>2.5</sub> pollution). <a href="#eq-pafmp">Equation&nbsp;<span>6.60</span></a> presents the “corrected” PAF to consider the two risks factors, when aggregating the individual risks.</p>
+<p><span id="eq-pafmp"><span class="math display">\[\text{PA}F_{MP2.5 - O3 - COPD\ } = 1 - \left( 1 - PAF_{PM2.5} \right)*(1 - PAF_{O3}) \tag{6.60}\]</span></span></p>
 <p>We apply the correction for multiple risks only when we need to add up the effects of PM<sub>2.5</sub> and O3. In CPAT, this is done only when valuing (using VSL) total averted mortality.</p>
-<p>The correction factor is calculated using <a href="#eq-corr">Equation&nbsp;<span>6.60</span></a>.</p>
-<p><span id="eq-corr"><span class="math display">\[\text{Cor}r_{\text{factor}} = \frac{\text{PA}F_{MP2.5 - O3 - COPD\ }}{\text{PA}F_{PM2.5} + PAF_{O3}} \tag{6.60}\]</span></span></p>
+<p>The correction factor is calculated using <a href="#eq-corr">Equation&nbsp;<span>6.61</span></a>.</p>
+<p><span id="eq-corr"><span class="math display">\[\text{Cor}r_{\text{factor}} = \frac{\text{PA}F_{MP2.5 - O3 - COPD\ }}{\text{PA}F_{PM2.5} + PAF_{O3}} \tag{6.61}\]</span></span></p>
 <p>Adjusted total deaths attributed to PM<sub>2.5</sub> and Ozone are calculated by multiplying the <span class="math inline">\(\text{cor}r_{\text{fact}}\)</span> by the unadjusted O3 and PM<sub>2.5</sub> attributed deaths.</p>
 </section>
 </section>
@@ -2382,26 +2398,26 @@ Data from the <span class="citation" data-cites="murray2020global">Global Burden
 <p>As illustrated in <a href="#fig-impcarbpri">Figure&nbsp;<span>6.25</span></a>, the leakage into informal fuels could increase the proportion of households exposed to HAP, the level of exposure to HAP and OAP. The assumption for OAP is that 100% of indoor emissions are eventually incorporated into ambient air (<span class="citation" data-cites="chafe2014household">Chafe et al. (<a href="#ref-chafe2014household" role="doc-biblioref">2014</a>)</span>). These ambient emissions are converted into ambient pollution using the methodology selected by the user, as described in <a href="#sec-em_ap"><span>Section&nbsp;6.5</span></a>.</p>
 <p>Regarding the indoors effect of solid fuel use, the total leakage is divided in a fraction that increases the proportion of households and a fraction that increases the level of household pollution.</p>
 <p>In CPAT, the defaults assumptions are that 50% of the increase in informal fuels consumption goes to additional household consuming solid fuels and 50% to increased consumption within households that were already using solid fuels.</p>
-<p>In many countries is estimated that 90% of households or more use solid fuels for cooking. To make sure that the final proportion of households that uses solid fuels for cooking, after leakage is considered, is less than 100% (or another maximum value defined by the user), we adjust the fraction of the leakage that goes into the proportion of households. <a href="#eq-prophh">Equation&nbsp;<span>6.61</span></a> corresponds to the final proportion of households that uses solid fuels for cooking before adjustments. <a href="#eq-prophhadj">Equation&nbsp;<span>6.62</span></a> is the adjusted fraction in case the new share of households using solid fuels is higher than the maximum defined. <a href="#eq-prophhif">Equation&nbsp;<span>6.63</span></a> is the final proportion of households using solid fuels for cooking.</p>
-<p><span id="eq-prophh"><span class="math display">\[\text{ProportionHH}_{\text{carbon\ price}} = \text{ProportionHH}_{\text{baseline}}*(1 + Leakage*F_{\text{pro}p_{\text{HH}}}) \tag{6.61}\]</span></span></p>
-<p><span id="eq-prophhadj"><span class="math display">\[{F\_ prop\_ HH}_{\text{adjusted}} = \left( \frac{\text{MaxPropHH}}{\text{ProportionHH}_{\text{baseline}}} - 1 \right)*\frac{1}{\text{Leakage}} \tag{6.62}\]</span></span></p>
+<p>In many countries is estimated that 90% of households or more use solid fuels for cooking. To make sure that the final proportion of households that uses solid fuels for cooking, after leakage is considered, is less than 100% (or another maximum value defined by the user), we adjust the fraction of the leakage that goes into the proportion of households. <a href="#eq-prophh">Equation&nbsp;<span>6.62</span></a> corresponds to the final proportion of households that uses solid fuels for cooking before adjustments. <a href="#eq-prophhadj">Equation&nbsp;<span>6.63</span></a> is the adjusted fraction in case the new share of households using solid fuels is higher than the maximum defined. <a href="#eq-prophhif">Equation&nbsp;<span>6.64</span></a> is the final proportion of households using solid fuels for cooking.</p>
+<p><span id="eq-prophh"><span class="math display">\[\text{ProportionHH}_{\text{carbon\ price}} = \text{ProportionHH}_{\text{baseline}}*(1 + Leakage*F_{\text{pro}p_{\text{HH}}}) \tag{6.62}\]</span></span></p>
+<p><span id="eq-prophhadj"><span class="math display">\[{F\_ prop\_ HH}_{\text{adjusted}} = \left( \frac{\text{MaxPropHH}}{\text{ProportionHH}_{\text{baseline}}} - 1 \right)*\frac{1}{\text{Leakage}} \tag{6.63}\]</span></span></p>
 <p><span id="eq-prophhif"><span class="math display">\[F\_ prop\_ HH = \left\{ \begin{matrix}
 \text{if }\text{ProportionHH}_{\text{carbon price}} &gt; Max\ then{\ F\_ prop\_ HH}_{\text{adjusted}} \\
 \text{else }\text{ProportionHH}_{\text{carbon price}} \\
-\end{matrix} \right.\  \tag{6.63}\]</span></span></p>
+\end{matrix} \right.\  \tag{6.64}\]</span></span></p>
 </section>
 <section id="other-health-effects-in-cpat" class="level3" data-number="6.6.6">
 <h3 data-number="6.6.6" class="anchored" data-anchor-id="other-health-effects-in-cpat"><span class="header-section-number">6.6.6</span> Other health effects in CPAT</h3>
 <section id="post-neonatal-mortality-woodruff2006fine" class="level4" data-number="6.6.6.1">
 <h4 data-number="6.6.6.1" class="anchored" data-anchor-id="post-neonatal-mortality-woodruff2006fine"><span class="header-section-number">6.6.6.1</span> Post neonatal mortality (<span class="citation" data-cites="woodruff2006fine">Woodruff, Parker, and Schoendorf (<a href="#ref-woodruff2006fine" role="doc-biblioref">2006</a>)</span>)</h4>
-<p>In CPAT, it is possible to quantify post neonatal mortality (deaths after the first month and up to 1 year of life) using <span class="citation" data-cites="woodruff2006fine">Woodruff, Parker, and Schoendorf (<a href="#ref-woodruff2006fine" role="doc-biblioref">2006</a>)</span>. This logistic function is presented in <a href="#eq-logfunc">Equation&nbsp;<span>6.64</span></a>, its applied to ambient PM<sub>2.5</sub>, to all-cause mortality and its parameters are <span class="math inline">\(\beta=0.006765865\)</span>, with <span class="math inline">\(\sigma=0.007338828\)</span>.</p>
-<p><span id="eq-logfunc"><span class="math display">\[\left( 1 - \left( \frac{1}{\left( 1 - Incidence \right)*EXP\left( \beta*DeltaQ \right) + Incidence} \right) \right)*Incidence*POP \tag{6.64}\]</span></span></p>
+<p>In CPAT, it is possible to quantify post neonatal mortality (deaths after the first month and up to 1 year of life) using <span class="citation" data-cites="woodruff2006fine">Woodruff, Parker, and Schoendorf (<a href="#ref-woodruff2006fine" role="doc-biblioref">2006</a>)</span>. This logistic function is presented in <a href="#eq-logfunc">Equation&nbsp;<span>6.65</span></a>, its applied to ambient PM<sub>2.5</sub>, to all-cause mortality and its parameters are <span class="math inline">\(\beta=0.006765865\)</span>, with <span class="math inline">\(\sigma=0.007338828\)</span>.</p>
+<p><span id="eq-logfunc"><span class="math display">\[\left( 1 - \left( \frac{1}{\left( 1 - Incidence \right)*EXP\left( \beta*DeltaQ \right) + Incidence} \right) \right)*Incidence*POP \tag{6.65}\]</span></span></p>
 </section>
 <section id="depressive-disorders" class="level4" data-number="6.6.6.2">
 <h4 data-number="6.6.6.2" class="anchored" data-anchor-id="depressive-disorders"><span class="header-section-number">6.6.6.2</span> Depressive disorders</h4>
 <p>Another effect of ambient air pollution included in CPAT is depressive disorders. <span class="citation" data-cites="braithwaite2019air">Braithwaite et al. (<a href="#ref-braithwaite2019air" role="doc-biblioref">2019</a>)</span> develops a metanalysis of studies linking long-term PM exposure and depression. The author develops a log-linear exposure-response function and uses a counterfactual value of 10 µg/m3 for the UK and of 25 µg/m3 for global scenario. In the meta-analysis, the pooled odds ratio for the association between long-term PM<sub>2.5</sub> exposure and depression prevalence obtained was 1.102 per 10 µg/m3 (95% CI: 1.023, 1.189; p=0:011), indicating that higher PM<sub>2.5</sub> exposure is associated with higher odds of depression.</p>
-<p>They treat pooled ORs as equivalent to RRs. The relative risk can be calculated according to <a href="#eq-rrappro">Equation&nbsp;<span>6.65</span></a>.</p>
-<p><span id="eq-rrappro"><span class="math display">\[RR \approx \text{OR}_{10}*\frac{{PM2.5}_{\text{current}} - {PM2.5}_{\text{counterfactual}}}{10} \tag{6.65}\]</span></span></p>
+<p>They treat pooled ORs as equivalent to RRs. The relative risk can be calculated according to <a href="#eq-rrappro">Equation&nbsp;<span>6.66</span></a>.</p>
+<p><span id="eq-rrappro"><span class="math display">\[RR \approx \text{OR}_{10}*\frac{{PM2.5}_{\text{current}} - {PM2.5}_{\text{counterfactual}}}{10} \tag{6.66}\]</span></span></p>
 <p>Where <span class="math inline">\(OR_{10}\)</span> denotes the OR per 10 µg/m3 increment in PM<sub>2.5</sub> exposure.</p>
 <p>In CPAT, the counterfactual level, <span class="math inline">\({PM2.5}_{\text{counterfactual}}\)</span> used is 25 µg/m3.</p>
 </section>
@@ -2500,12 +2516,12 @@ Data from the <span class="citation" data-cites="murray2020global">Global Burden
 <li><p>If no country specific data is available, we use the average value among countries with the same income level.</p></li>
 <li><p>For low-income countries (that are not represented in either database), we use the average from lower middle-income countries.</p></li>
 </ul>
-<p>To calculate the share of work absenteeism due to illness that can be attributed to ambient PM<sub>2.5</sub> pollution, we use the methodology from <span class="citation" data-cites="ostro1987air">Ostro (<a href="#ref-ostro1987air" role="doc-biblioref">1987</a>)</span>. The study developed a log-linear function with <span class="math inline">\(\beta = 0.0046\)</span> and <span class="math inline">\(\sigma_{\beta} = 0.00036\)</span>. The attributable fraction of working days lost due to pollution is calculated using <a href="#eq-pafe">Equation&nbsp;<span>6.66</span></a> and the total number of days lost due to pollution is given by <a href="#eq-totnblost">Equation&nbsp;<span>6.67</span></a>.</p>
-<p><span id="eq-pafe"><span class="math display">\[PAF = 1 - e^{- \beta*\mathrm{\Delta}C} \tag{6.66}\]</span></span></p>
-<p><span id="eq-totnblost"><span class="math display">\[\text{WDL}_{\text{pollution}} = \text{Pop}_{15\ to\ 64}*\text{Per\ person\ WDL}_{\text{baseline}}*(1 - e^{- \beta*C\ baseline}) \tag{6.67}\]</span></span></p>
+<p>To calculate the share of work absenteeism due to illness that can be attributed to ambient PM<sub>2.5</sub> pollution, we use the methodology from <span class="citation" data-cites="ostro1987air">Ostro (<a href="#ref-ostro1987air" role="doc-biblioref">1987</a>)</span>. The study developed a log-linear function with <span class="math inline">\(\beta = 0.0046\)</span> and <span class="math inline">\(\sigma_{\beta} = 0.00036\)</span>. The attributable fraction of working days lost due to pollution is calculated using <a href="#eq-pafe">Equation&nbsp;<span>6.67</span></a> and the total number of days lost due to pollution is given by <a href="#eq-totnblost">Equation&nbsp;<span>6.68</span></a>.</p>
+<p><span id="eq-pafe"><span class="math display">\[PAF = 1 - e^{- \beta*\mathrm{\Delta}C} \tag{6.67}\]</span></span></p>
+<p><span id="eq-totnblost"><span class="math display">\[\text{WDL}_{\text{pollution}} = \text{Pop}_{15\ to\ 64}*\text{Per\ person\ WDL}_{\text{baseline}}*(1 - e^{- \beta*C\ baseline}) \tag{6.68}\]</span></span></p>
 <p>Where <span class="math inline">\(\Delta C\)</span> is the current level of PM<sub>2.5</sub> minus a reference level for PM<sub>2.5</sub>, that is assumed to be 0 in this case.</p>
 <p>To value the days of work lost due to pollution, we use mean monthly earnings of employees, ILOSTAT Labor statistics.</p>
-<p>If no wage is available, the default value used is: <span id="eq-dailywage"><span class="math display">\[Daily\ wage = \frac{GDP*\alpha}{N{^\circ}\ of\ persons\ employed}*\frac{1}{N{^\circ}\ of\ days} \tag{6.68}\]</span></span></p>
+<p>If no wage is available, the default value used is: <span id="eq-dailywage"><span class="math display">\[Daily\ wage = \frac{GDP*\alpha}{N{^\circ}\ of\ persons\ employed}*\frac{1}{N{^\circ}\ of\ days} \tag{6.69}\]</span></span></p>
 <p>Where <span class="math inline">\(N{^\circ}\ of\ days\ = 12*20\)</span>.</p>
 <p>We consider working population from 15 to 64 years old, as in <span class="citation" data-cites="amann2017costs">Amann et al. (<a href="#ref-amann2017costs" role="doc-biblioref">2017</a>)</span>.</p>
 </section>
@@ -2513,8 +2529,8 @@ Data from the <span class="citation" data-cites="murray2020global">Global Burden
 <h3 data-number="6.7.3" class="anchored" data-anchor-id="sec-marketoutputlosses"><span class="header-section-number">6.7.3</span> Market output losses</h3>
 <p>In CPAT, we quantify market output losses using mortality and years lived with disability (YLD) attributed to pollution, following the methodology in <span class="citation" data-cites="pandey2021health">Pandey et al. (<a href="#ref-pandey2021health" role="doc-biblioref">2021</a>)</span>. The methodology followed is presented in the following paragraphs.</p>
 <p><strong><u>Average GDP contribution by worker</u></strong></p>
-<p><a href="#eq-wij">Equation&nbsp;<span>6.69</span></a> presents the expected value of GDP per worker in a given year, that we will use to quantify GDP losses due to pollution.</p>
-<p><span id="eq-wij"><span class="math display">\[W_{\text{ij}} = \left( \frac{L_{\text{ij}}}{N_{\text{ij}}} \right)\left( \frac{\text{αY}_{i}}{L_{i}} \right) \tag{6.69}\]</span></span></p>
+<p><a href="#eq-wij">Equation&nbsp;<span>6.70</span></a> presents the expected value of GDP per worker in a given year, that we will use to quantify GDP losses due to pollution.</p>
+<p><span id="eq-wij"><span class="math display">\[W_{\text{ij}} = \left( \frac{L_{\text{ij}}}{N_{\text{ij}}} \right)\left( \frac{\text{αY}_{i}}{L_{i}} \right) \tag{6.70}\]</span></span></p>
 <p>Where:</p>
 <p><span class="math inline">\(W_{ij}\)</span>: the expected value of GDP per worker for a person of age <span class="math inline">\(j\)</span> in state <span class="math inline">\(i\)</span>.</p>
 <p><span class="math inline">\(\alpha\)</span>: Labor’s share of GDP</p>
@@ -2522,29 +2538,29 @@ Data from the <span class="citation" data-cites="murray2020global">Global Burden
 <p><span class="math inline">\(L_i\)</span>: number of persons who are employed</p>
 <p><span class="math inline">\(N_{\text{ij}}\)</span>: Population of age<span class="math inline">\(\text{\ j}\)</span> in state <span class="math inline">\(i\)</span></p>
 <p>Due to data limitations, in CPAT will compute a value <span class="math inline">\(W\)</span> for every worker above 15+, without differentiating by age or by urban and rural areas.</p>
-<p>For each period (year) <span class="math inline">\(p\)</span>, the expected GDP from labor per person is calculated using <a href="#eq-wpshare">Equation&nbsp;<span>6.70</span></a>.</p>
-<p><span id="eq-wpshare"><span class="math display">\[W_{p} = \left( \frac{L_{p}}{N_{p}} \right)\left( \frac{\text{αY}_{p}}{L_{p}} \right) = \ \frac{\text{αY}_{p}}{N_{p}} \tag{6.70}\]</span></span></p>
+<p>For each period (year) <span class="math inline">\(p\)</span>, the expected GDP from labor per person is calculated using <a href="#eq-wpshare">Equation&nbsp;<span>6.71</span></a>.</p>
+<p><span id="eq-wpshare"><span class="math display">\[W_{p} = \left( \frac{L_{p}}{N_{p}} \right)\left( \frac{\text{αY}_{p}}{L_{p}} \right) = \ \frac{\text{αY}_{p}}{N_{p}} \tag{6.71}\]</span></span></p>
 <p><strong><u>Loss in market and non-market output due to air pollution mortality</u></strong></p>
-<p>Losses in market and non-market output due to air pollution mortality can be estimated according to <a href="#eq-wif17">Equation&nbsp;<span>6.71</span></a>.</p>
-<p><span id="eq-wif17"><span class="math display">\[{W'}_{ij2017} = \left( \frac{L_{\text{ij}}}{N_{\text{ij}}} \right)\left( \frac{\text{αY}_{i}}{L_{i}} \right) + hp\left( 1 - \frac{L_{\text{ij}}}{N_{\text{ij}}} \right)\left( \frac{\text{αY}_{i}}{L_{i}} \right) \tag{6.71}\]</span></span></p>
+<p>Losses in market and non-market output due to air pollution mortality can be estimated according to <a href="#eq-wif17">Equation&nbsp;<span>6.72</span></a>.</p>
+<p><span id="eq-wif17"><span class="math display">\[{W'}_{ij2017} = \left( \frac{L_{\text{ij}}}{N_{\text{ij}}} \right)\left( \frac{\text{αY}_{i}}{L_{i}} \right) + hp\left( 1 - \frac{L_{\text{ij}}}{N_{\text{ij}}} \right)\left( \frac{\text{αY}_{i}}{L_{i}} \right) \tag{6.72}\]</span></span></p>
 <p>Where <span class="math inline">\(hp\)</span> represents household production. In CPAT, due to data limitations, we will only include losses in market output.</p>
-<p>The present value of the forgone output associated to a premature death is calculated according to <a href="#eq-pvij">Equation&nbsp;<span>6.72</span></a>.</p>
-<p><span id="eq-pvij"><span class="math display">\[\text{PV}_{\text{ij}} = \sum_{a = j}^{84}\pi_{ij,t}\left\lbrack \left( \frac{L_{\text{it}}}{N_{\text{it}}} \right)\left( \frac{\text{αY}_{i}}{L_{i}} \right) + hp\left( 1 - \frac{L_{\text{it}}}{N_{\text{it}}} \right)\left( \frac{\text{αY}_{i}}{L_{i}} \right) \right\rbrack\left( \frac{1 + g}{1 + r} \right)^{t - j} \tag{6.72}\]</span></span></p>
+<p>The present value of the forgone output associated to a premature death is calculated according to <a href="#eq-pvij">Equation&nbsp;<span>6.73</span></a>.</p>
+<p><span id="eq-pvij"><span class="math display">\[\text{PV}_{\text{ij}} = \sum_{a = j}^{84}\pi_{ij,t}\left\lbrack \left( \frac{L_{\text{it}}}{N_{\text{it}}} \right)\left( \frac{\text{αY}_{i}}{L_{i}} \right) + hp\left( 1 - \frac{L_{\text{it}}}{N_{\text{it}}} \right)\left( \frac{\text{αY}_{i}}{L_{i}} \right) \right\rbrack\left( \frac{1 + g}{1 + r} \right)^{t - j} \tag{6.73}\]</span></span></p>
 <p>Where:</p>
 <p><span class="math inline">\(\text{PV}_{\text{ij}}\)</span>: present discounted value of lost market and non-market output for a person of age <span class="math inline">\(j\)</span> in state <span class="math inline">\(i\)</span> who dies in a certain year</p>
 <p><span class="math inline">\(g\)</span>: growth rate of GDP per worker</p>
 <p><span class="math inline">\(\Pi_{ij,t}\)</span> is the probability that a person of age <span class="math inline">\(j\)</span> in state <span class="math inline">\(i\)</span> survives to age <span class="math inline">\(t\)</span></p>
 <p><span class="math inline">\(r\)</span>: discount rate</p>
-<p>In CPAT, <span class="math inline">\(W_{ij,t} = W_{p}\)</span> (does not change by age or within countries). We will also consider only deaths up to 64, neglecting work force above 65. These assumptions, together with assuming <span class="math inline">\(\text{hp}=0\)</span>, allow us to rewrite <a href="#eq-pvij">Equation&nbsp;<span>6.72</span></a> as <a href="#eq-pvj">Equation&nbsp;<span>6.73</span></a>.</p>
-<p><span id="eq-pvj"><span class="math display">\[\text{PV}_{j} = W*\sum_{t = j}^{64}\pi_{j,t}*\left( \frac{1 + g}{1 + r} \right)^{t - j} \tag{6.73}\]</span></span></p>
-<p>Rewriting <a href="#eq-pvj">Equation&nbsp;<span>6.73</span></a>, we obtain:</p>
-<p><span id="eq-pvjw"><span class="math display">\[\text{PV}_{j}/W = \sum_{t = j}^{64}\pi_{j,t}*\left( \frac{1 + g}{1 + r} \right)^{t - j} \tag{6.74}\]</span></span></p>
-<p>The total output lost due to air pollution attributed mortality is obtained using <a href="#eq-totoutplost">Equation&nbsp;<span>6.75</span></a>.</p>
-<p><span id="eq-totoutplost"><span class="math display">\[TotalOutputLost = \sum_{j}^{}{\text{PV}_{\text{ij}}D_{\text{ij}}} \tag{6.75}\]</span></span></p>
+<p>In CPAT, <span class="math inline">\(W_{ij,t} = W_{p}\)</span> (does not change by age or within countries). We will also consider only deaths up to 64, neglecting work force above 65. These assumptions, together with assuming <span class="math inline">\(\text{hp}=0\)</span>, allow us to rewrite <a href="#eq-pvij">Equation&nbsp;<span>6.73</span></a> as <a href="#eq-pvj">Equation&nbsp;<span>6.74</span></a>.</p>
+<p><span id="eq-pvj"><span class="math display">\[\text{PV}_{j} = W*\sum_{t = j}^{64}\pi_{j,t}*\left( \frac{1 + g}{1 + r} \right)^{t - j} \tag{6.74}\]</span></span></p>
+<p>Rewriting <a href="#eq-pvj">Equation&nbsp;<span>6.74</span></a>, we obtain:</p>
+<p><span id="eq-pvjw"><span class="math display">\[\text{PV}_{j}/W = \sum_{t = j}^{64}\pi_{j,t}*\left( \frac{1 + g}{1 + r} \right)^{t - j} \tag{6.75}\]</span></span></p>
+<p>The total output lost due to air pollution attributed mortality is obtained using <a href="#eq-totoutplost">Equation&nbsp;<span>6.76</span></a>.</p>
+<p><span id="eq-totoutplost"><span class="math display">\[TotalOutputLost = \sum_{j}^{}{\text{PV}_{\text{ij}}D_{\text{ij}}} \tag{6.76}\]</span></span></p>
 <p>With <span class="math inline">\(D_{\text{ij}}\)</span> the number of deaths attributed to air pollution in state <span class="math inline">\(i\)</span> of age <span class="math inline">\(j\)</span>.</p>
 <p><strong><u>GDP loss due to air pollution morbidity</u></strong></p>
-<p>In CPAT, we estimate the years lived with disability due to pollution (see <a href="#sec-healthout"><span>Section&nbsp;6.6.3.2</span></a>). We value those years, in which people in working age are not able to work, or the output loss associated with morbidity using <a href="#eq-mij">Equation&nbsp;<span>6.76</span></a>.</p>
-<p><span id="eq-mij"><span class="math display">\[M\text{ij}\  = \ \ Wij*\text{YLD}\text{ij} \tag{6.76}\]</span></span></p>
+<p>In CPAT, we estimate the years lived with disability due to pollution (see <a href="#sec-healthout"><span>Section&nbsp;6.6.3.2</span></a>). We value those years, in which people in working age are not able to work, or the output loss associated with morbidity using <a href="#eq-mij">Equation&nbsp;<span>6.77</span></a>.</p>
+<p><span id="eq-mij"><span class="math display">\[M\text{ij}\  = \ \ Wij*\text{YLD}\text{ij} \tag{6.77}\]</span></span></p>
 <p><a href="#tbl-parampdty">Table&nbsp;<span>6.14</span></a> presents the data sources used for the different productivity parameters needed to quantify output losses.</p>
 <div id="tbl-parampdty" class="anchored">
 <table class="table">
@@ -2602,29 +2618,29 @@ Data from the <span class="citation" data-cites="murray2020global">Global Burden
 </div>
 <section id="cpat-operationalization" class="level4" data-number="6.7.3.1">
 <h4 data-number="6.7.3.1" class="anchored" data-anchor-id="cpat-operationalization"><span class="header-section-number">6.7.3.1</span> CPAT operationalization</h4>
-<p>From the GBD Results Tool, we obtained deaths probabilities for five-years buckets. For instance, we know the probability of dying between 25 to 29 years old (<span class="math inline">\(d_{25,29}\)</span>). The probability <span class="math inline">\(d_{25,29}\)</span> is equal to the sum of the probability of dying at 25, at 26, at 27, at 28 and at 29 years old, as shown in <a href="#eq-dprob">Equation&nbsp;<span>6.77</span></a>.</p>
-<p><span id="eq-dprob"><span class="math display">\[d_{25,29} = d_{25} + d_{26} + d_{27} + d_{28} + d_{29} \tag{6.77}\]</span></span></p>
-<p>For simplicity and to keep the file size at a reasonable level, we will assume that the probability of dying at every age contained in each bucket is the same, and equal to the bucket dying probability divided by 5, as presented in <a href="#eq-dsimple">Equation&nbsp;<span>6.78</span></a>.</p>
-<p><span id="eq-dsimple"><span class="math display">\[d_{25} = d_{26} = d_{27} = d_{28} = d_{29} = \frac{d_{25,29}}{5} \tag{6.78}\]</span></span></p>
-<p>The survival probability for each age inside each age-bucket is presented in <a href="#eq-survprob">Equation&nbsp;<span>6.79</span></a>.</p>
-<p><span id="eq-survprob"><span class="math display">\[\pi_{25,29} = \left( 1 - \frac{d_{25,29}}{5} \right) = \pi_{25} = \pi_{26} = \pi_{27} = \pi_{28} = \pi_{29} \tag{6.79}\]</span></span></p>
-<p>To implement <a href="#eq-pvjw">Equation&nbsp;<span>6.74</span></a>, let’s do <span class="math inline">\(\left( \frac{1 + g}{1 + r} \right) = a\)</span>. Then, <a href="#eq-pvjw">Equation&nbsp;<span>6.74</span></a> operationalized for 5 years bucket in CPAT is presented in <a href="#eq-pvw">Equation&nbsp;<span>6.80</span></a>.</p>
-<p><span id="eq-pvw"><span class="math display">\[\frac{\text{PV}_{25 - 29}}{W} = \pi_{25,29}*\sum_{k = 0}^{2}a^{k} + \pi_{25,34}*\sum_{k = 3}^{7}{a^{k} + \ldots + \pi_{25,64}*\sum_{k = 43}^{47}a^{k}} \tag{6.80}\]</span></span></p>
+<p>From the GBD Results Tool, we obtained deaths probabilities for five-years buckets. For instance, we know the probability of dying between 25 to 29 years old (<span class="math inline">\(d_{25,29}\)</span>). The probability <span class="math inline">\(d_{25,29}\)</span> is equal to the sum of the probability of dying at 25, at 26, at 27, at 28 and at 29 years old, as shown in <a href="#eq-dprob">Equation&nbsp;<span>6.78</span></a>.</p>
+<p><span id="eq-dprob"><span class="math display">\[d_{25,29} = d_{25} + d_{26} + d_{27} + d_{28} + d_{29} \tag{6.78}\]</span></span></p>
+<p>For simplicity and to keep the file size at a reasonable level, we will assume that the probability of dying at every age contained in each bucket is the same, and equal to the bucket dying probability divided by 5, as presented in <a href="#eq-dsimple">Equation&nbsp;<span>6.79</span></a>.</p>
+<p><span id="eq-dsimple"><span class="math display">\[d_{25} = d_{26} = d_{27} = d_{28} = d_{29} = \frac{d_{25,29}}{5} \tag{6.79}\]</span></span></p>
+<p>The survival probability for each age inside each age-bucket is presented in <a href="#eq-survprob">Equation&nbsp;<span>6.80</span></a>.</p>
+<p><span id="eq-survprob"><span class="math display">\[\pi_{25,29} = \left( 1 - \frac{d_{25,29}}{5} \right) = \pi_{25} = \pi_{26} = \pi_{27} = \pi_{28} = \pi_{29} \tag{6.80}\]</span></span></p>
+<p>To implement <a href="#eq-pvjw">Equation&nbsp;<span>6.75</span></a>, let’s do <span class="math inline">\(\left( \frac{1 + g}{1 + r} \right) = a\)</span>. Then, <a href="#eq-pvjw">Equation&nbsp;<span>6.75</span></a> operationalized for 5 years bucket in CPAT is presented in <a href="#eq-pvw">Equation&nbsp;<span>6.81</span></a>.</p>
+<p><span id="eq-pvw"><span class="math display">\[\frac{\text{PV}_{25 - 29}}{W} = \pi_{25,29}*\sum_{k = 0}^{2}a^{k} + \pi_{25,34}*\sum_{k = 3}^{7}{a^{k} + \ldots + \pi_{25,64}*\sum_{k = 43}^{47}a^{k}} \tag{6.81}\]</span></span></p>
 <p>Where <span class="math inline">\(k = t - j\)</span></p>
-<p>To solve the sums inside <a href="#eq-pvw">Equation&nbsp;<span>6.80</span></a>, we can apply the following formula:</p>
-<p><span id="eq-sumk"><span class="math display">\[\sum_{k = 0}^{n}{a^{k} = \frac{1 - a^{n + 1}}{1 - a}} \tag{6.81}\]</span></span></p>
-<p><a href="#eq-sumk">Equation&nbsp;<span>6.81</span></a> can be used to solve the sum terms that start in <span class="math inline">\(k≠0\)</span>, as shown in <a href="#eq-sumkm">Equation&nbsp;<span>6.82</span></a>.</p>
-<p><span id="eq-sumkm"><span class="math display">\[\sum_{k = m}^{n}{a^{k} = \sum_{k = 0}^{n}a^{k} - \sum_{k = 0}^{m}a^{k} = \frac{1 - a^{n + 1}}{1 - a} - \frac{1 - a^{m + 1}}{1 - a}} \tag{6.82}\]</span></span></p>
+<p>To solve the sums inside <a href="#eq-pvw">Equation&nbsp;<span>6.81</span></a>, we can apply the following formula:</p>
+<p><span id="eq-sumk"><span class="math display">\[\sum_{k = 0}^{n}{a^{k} = \frac{1 - a^{n + 1}}{1 - a}} \tag{6.82}\]</span></span></p>
+<p><a href="#eq-sumk">Equation&nbsp;<span>6.82</span></a> can be used to solve the sum terms that start in <span class="math inline">\(k≠0\)</span>, as shown in <a href="#eq-sumkm">Equation&nbsp;<span>6.83</span></a>.</p>
+<p><span id="eq-sumkm"><span class="math display">\[\sum_{k = m}^{n}{a^{k} = \sum_{k = 0}^{n}a^{k} - \sum_{k = 0}^{m}a^{k} = \frac{1 - a^{n + 1}}{1 - a} - \frac{1 - a^{m + 1}}{1 - a}} \tag{6.83}\]</span></span></p>
 </section>
 </section>
 <section id="health-expenditure" class="level3" data-number="6.7.4">
 <h3 data-number="6.7.4" class="anchored" data-anchor-id="health-expenditure"><span class="header-section-number">6.7.4</span> Health expenditure</h3>
 <p>In CPAT, we use total expected health expenditure from 2017 to 2050 from the IHME (<span class="citation" data-cites="global2019a">Global Burden of Disease Health Financing Collaborator Network (<a href="#ref-global2019a" role="doc-biblioref">2019a</a>)</span>).</p>
 <p>We follow <span class="citation" data-cites="preker2016health">Preker et al. (<a href="#ref-preker2016health" role="doc-biblioref">2016</a>)</span> to estimate the share of total health expenditure than can be attributed to pollution. The assumption is a constant expenditure per DALY (Disability adjusted life years).</p>
-<p>In CPAT, we calculate the share of the total burden of disease that’s attributed to the 6 main causes related to pollution, using data from the GBD Results Tool (<span class="citation" data-cites="ihme">Institute for Health Metrics and Evaluation (IHME) (<a href="#ref-ihme" role="doc-biblioref">2020</a>)</span>). The share of the burden of disease for disease <span class="math inline">\(d\)</span>, country <span class="math inline">\(c\)</span> and year <span class="math inline">\(t\)</span>, <span class="math inline">\(\% BoD_{d,c,t}\)</span>, is calculated according to <a href="#eq-bod">Equation&nbsp;<span>6.83</span></a>.</p>
-<p><span id="eq-bod"><span class="math display">\[\% BoD_{d,c,t} = \frac{\text{DALY}s_{d,c,t}}{\text{TotalDALY}s_{c,t}} \tag{6.83}\]</span></span></p>
-<p>The total health expenditure attributed to pollution <span class="math inline">\(\text{HEAP}\)</span> can be calculated using <a href="#eq-heap">Equation&nbsp;<span>6.84</span></a>.</p>
-<p><span id="eq-heap"><span class="math display">\[\text{HEAP}_{c,t} = \sum_{d}^{}{\% BoD_{d,c,t}*PAF_{d,t}*THE_{c,t}} \tag{6.84}\]</span></span></p>
+<p>In CPAT, we calculate the share of the total burden of disease that’s attributed to the 6 main causes related to pollution, using data from the GBD Results Tool (<span class="citation" data-cites="ihme">Institute for Health Metrics and Evaluation (IHME) (<a href="#ref-ihme" role="doc-biblioref">2020</a>)</span>). The share of the burden of disease for disease <span class="math inline">\(d\)</span>, country <span class="math inline">\(c\)</span> and year <span class="math inline">\(t\)</span>, <span class="math inline">\(\% BoD_{d,c,t}\)</span>, is calculated according to <a href="#eq-bod">Equation&nbsp;<span>6.84</span></a>.</p>
+<p><span id="eq-bod"><span class="math display">\[\% BoD_{d,c,t} = \frac{\text{DALY}s_{d,c,t}}{\text{TotalDALY}s_{c,t}} \tag{6.84}\]</span></span></p>
+<p>The total health expenditure attributed to pollution <span class="math inline">\(\text{HEAP}\)</span> can be calculated using <a href="#eq-heap">Equation&nbsp;<span>6.85</span></a>.</p>
+<p><span id="eq-heap"><span class="math display">\[\text{HEAP}_{c,t} = \sum_{d}^{}{\% BoD_{d,c,t}*PAF_{d,t}*THE_{c,t}} \tag{6.85}\]</span></span></p>
 <p>Where:</p>
 <p><span class="math inline">\(\text{PAF}_{d,t}\)</span>: population attributable fraction for disease <span class="math inline">\(d\)</span> in year <span class="math inline">\(t\)</span></p>
 <p><span class="math inline">\(\text{THE}_{c,t}\)</span>: Total health expenditure for country <span class="math inline">\(t\)</span> in year <span class="math inline">\(t\)</span></p>
@@ -2634,8 +2650,8 @@ Data from the <span class="citation" data-cites="murray2020global">Global Burden
 <section id="value-of-the-statistical-life" class="level3" data-number="6.7.5">
 <h3 data-number="6.7.5" class="anchored" data-anchor-id="value-of-the-statistical-life"><span class="header-section-number">6.7.5</span> Value of the statistical life</h3>
 <p>In CPAT, we value averted mortality using the value of the statistical life or VSL. It’s important to notice that the VSL does not represent the value of individual lives. Rather, the VSL is a measure of the rate at which individuals are willing to exchange money to reduce small risks of death within a certain period of time. This concept is used in benefit-cost analyses, and we include it in CPAT to assign a monetary value to averted mortality due to a carbon price policy.</p>
-<p>The VSL can be transferred following the methodology from <span class="citation" data-cites="oecd12">OECD (<a href="#ref-oecd12" role="doc-biblioref">2012</a>)</span> and <span class="citation" data-cites="narain2016methodology">Narain and Sall (<a href="#ref-narain2016methodology" role="doc-biblioref">2016</a>)</span>, according to <a href="#eq-vslc">Equation&nbsp;<span>6.85</span></a>.</p>
-<p><span id="eq-vslc"><span class="math display">\[VSL_{c} = VSL_{OECD,2005}*\left( \frac{Y_{c}}{Y_{OECD,2005}} \right)^{b}*\left( 1 + \%\mathrm{\Delta}P + \%\mathrm{\Delta}Y \right)^{b} \tag{6.85}\]</span></span></p>
+<p>The VSL can be transferred following the methodology from <span class="citation" data-cites="oecd12">OECD (<a href="#ref-oecd12" role="doc-biblioref">2012</a>)</span> and <span class="citation" data-cites="narain2016methodology">Narain and Sall (<a href="#ref-narain2016methodology" role="doc-biblioref">2016</a>)</span>, according to <a href="#eq-vslc">Equation&nbsp;<span>6.86</span></a>.</p>
+<p><span id="eq-vslc"><span class="math display">\[VSL_{c} = VSL_{OECD,2005}*\left( \frac{Y_{c}}{Y_{OECD,2005}} \right)^{b}*\left( 1 + \%\mathrm{\Delta}P + \%\mathrm{\Delta}Y \right)^{b} \tag{6.86}\]</span></span></p>
 <p>Where:</p>
 <p><span class="math inline">\(c\)</span>: Country to which VSL in being transferred to.</p>
 <p><span class="math inline">\(\text{VSL}_{OECD,2005}\)</span>: Median VSL in OECD countries in 2005, in 2005 $USD PPP</p>
@@ -2643,12 +2659,12 @@ Data from the <span class="citation" data-cites="murray2020global">Global Burden
 <p><span class="math inline">\(b\)</span>: Income elasticity for VSL in country <span class="math inline">\(c\)</span></p>
 <p><span class="math inline">\(\%\mathrm{\Delta}Y\)</span>: Income growth after 2005</p>
 <p><span class="math inline">\(\%\mathrm{\Delta}P\)</span>: inflation according to consumer price index</p>
-<p>In CPAT, we first transform OECD VSL from 2005 USD PPP to 2011 PPP, using <a href="#eq-vsloecd">Equation&nbsp;<span>6.86</span></a>.</p>
-<p><span id="eq-vsloecd"><span class="math display">\[VSL_{OECD,\ t,2011PPP} = VSL_{OECD,2005}*\left( \frac{Y_{OECD,t}}{Y_{OECD,2005}} \right)^{0.8}*\left( 1 + \%\mathrm{\Delta}P_{2005,2011} \right)^{0.8} \tag{6.86}\]</span></span></p>
-<p>Secondly, we transfer the OECD VSL from 2014 (in 2011 USD PPP) to the destiny country, according to <a href="#eq-vsloecdbis">Equation&nbsp;<span>6.87</span></a>.</p>
-<p><span id="eq-vsloecdbis"><span class="math display">\[VSL_{OECD,\ 2014} = VSL_{OECD,\ 2014}*\left( \frac{Y_{c,2014}}{Y_{OECD,2014}} \right)^{b} \tag{6.87}\]</span></span></p>
-<p>Thirdly, we project VSL in time using projected GDP per capita for country <span class="math inline">\(c\)</span>, according to <a href="#eq-vslct">Equation&nbsp;<span>6.88</span></a>.</p>
-<p><span id="eq-vslct"><span class="math display">\[VSL_{c,\ t} = VSL_{c,2014}*\left( \frac{Y_{c,t}}{Y_{c,\ 2014}} \right)^{b} \tag{6.88}\]</span></span></p>
+<p>In CPAT, we first transform OECD VSL from 2005 USD PPP to 2011 PPP, using <a href="#eq-vsloecd">Equation&nbsp;<span>6.87</span></a>.</p>
+<p><span id="eq-vsloecd"><span class="math display">\[VSL_{OECD,\ t,2011PPP} = VSL_{OECD,2005}*\left( \frac{Y_{OECD,t}}{Y_{OECD,2005}} \right)^{0.8}*\left( 1 + \%\mathrm{\Delta}P_{2005,2011} \right)^{0.8} \tag{6.87}\]</span></span></p>
+<p>Secondly, we transfer the OECD VSL from 2014 (in 2011 USD PPP) to the destiny country, according to <a href="#eq-vsloecdbis">Equation&nbsp;<span>6.88</span></a>.</p>
+<p><span id="eq-vsloecdbis"><span class="math display">\[VSL_{OECD,\ 2014} = VSL_{OECD,\ 2014}*\left( \frac{Y_{c,2014}}{Y_{OECD,2014}} \right)^{b} \tag{6.88}\]</span></span></p>
+<p>Thirdly, we project VSL in time using projected GDP per capita for country <span class="math inline">\(c\)</span>, according to <a href="#eq-vslct">Equation&nbsp;<span>6.89</span></a>.</p>
+<p><span id="eq-vslct"><span class="math display">\[VSL_{c,\ t} = VSL_{c,2014}*\left( \frac{Y_{c,t}}{Y_{c,\ 2014}} \right)^{b} \tag{6.89}\]</span></span></p>
 <p>Finally, we convert the VSL from 2011 dollars to dollars in the “Results Year” (equal to 2019), using the 2019 price deflator for the country of destiny.</p>
 <p>In CPAT, income elasticity is assumed equal to 0.8 for high-income countries and 1.2 for middle and low-income countries. The user can also input manually a different elasticity and a different VSL value in the Advanced tab of CPAT.</p>
 <p><a href="#tbl-assumpvsl">Table&nbsp;<span>6.15</span></a> and <a href="#tbl-cpigdp">Table&nbsp;<span>6.16</span></a> present the values assumed to transfer the VSL from OECD countries.</p>
@@ -2972,17 +2988,17 @@ Data from the <span class="citation" data-cites="murray2020global">Global Burden
 <section id="travel-time-saved" class="level3" data-number="6.7.7">
 <h3 data-number="6.7.7" class="anchored" data-anchor-id="travel-time-saved"><span class="header-section-number">6.7.7</span> Travel time saved</h3>
 <p>Excess travel time is one of the consequences of road congestion. In CPAT, we estimate excess travel time, increased road damage, increased injuries, and additional vehicle operating costs attributable to congestion. The methodology used is described in the document Road Transport documentation. Here we only describe the methodology used to quantify changes in travel time, in time units, with respect to free a flow condition.</p>
-<p>We estimate travel time per vehicle-kilometer in free flow and in congested conditions for 416 cities in 57 countries, using TomTom data (see <a href="#eq-freeflow">Equation&nbsp;<span>6.90</span></a> and <a href="#eq-congvkm">Equation&nbsp;<span>6.89</span></a>). The time domain used is “All Days Full Day”.</p>
-<p>Congestion travel time per vehicle-kilometer, <span class="math inline">\(CongestionTT\)</span>, is calculated using <a href="#eq-congvkm">Equation&nbsp;<span>6.89</span></a>.</p>
-<p><span id="eq-congvkm"><span class="math display">\[\text{CongestionT}T_{2019}\lbrack min/vehkm\rbrack = \frac{\text{AccumulatedTravelTim}e_{2019}\ \lbrack min\rbrack}{\text{TotalVeh}\text{KM}_{2019}\lbrack vehkm\rbrack} \tag{6.89}\]</span></span></p>
+<p>We estimate travel time per vehicle-kilometer in free flow and in congested conditions for 416 cities in 57 countries, using TomTom data (see <a href="#eq-freeflow">Equation&nbsp;<span>6.91</span></a> and <a href="#eq-congvkm">Equation&nbsp;<span>6.90</span></a>). The time domain used is “All Days Full Day”.</p>
+<p>Congestion travel time per vehicle-kilometer, <span class="math inline">\(CongestionTT\)</span>, is calculated using <a href="#eq-congvkm">Equation&nbsp;<span>6.90</span></a>.</p>
+<p><span id="eq-congvkm"><span class="math display">\[\text{CongestionT}T_{2019}\lbrack min/vehkm\rbrack = \frac{\text{AccumulatedTravelTim}e_{2019}\ \lbrack min\rbrack}{\text{TotalVeh}\text{KM}_{2019}\lbrack vehkm\rbrack} \tag{6.90}\]</span></span></p>
 <p><span class="math inline">\(\text{TotalVehicleKM}\)</span> corresponds to the multiplication of the number of vehicles and the average distance traveled and is reported in the TomTom database.</p>
-<p>The travel time per vehicle-kilometer under free flow conditions is calculated using <a href="#eq-freeflow">Equation&nbsp;<span>6.90</span></a>.</p>
-<p><span id="eq-freeflow"><span class="math display">\[FreeFlowTT\lbrack\frac{\min}{\text{vehkm}}\rbrack = \frac{\text{CongestionT}T_{2019}\ \lbrack\frac{\min}{\text{vehkm}}\rbrack}{(1 + \frac{CI_{2019}}{100})} \tag{6.90}\]</span></span></p>
+<p>The travel time per vehicle-kilometer under free flow conditions is calculated using <a href="#eq-freeflow">Equation&nbsp;<span>6.91</span></a>.</p>
+<p><span id="eq-freeflow"><span class="math display">\[FreeFlowTT\lbrack\frac{\min}{\text{vehkm}}\rbrack = \frac{\text{CongestionT}T_{2019}\ \lbrack\frac{\min}{\text{vehkm}}\rbrack}{(1 + \frac{CI_{2019}}{100})} \tag{6.91}\]</span></span></p>
 <p>Where <span class="math inline">\(\text{CI}\)</span> is the average congestion index in 2019.</p>
 <p>We estimate vehicle-kilometers traveled per capita using total vehicle-kilometers from the World Road Statistics data (<span class="citation" data-cites="irf">International Road Federation (<a href="#ref-irf" role="doc-biblioref">2018</a>)</span>) and countries total population (<span class="citation" data-cites="world2019pop">World Bank (<a href="#ref-world2019pop" role="doc-biblioref">2019b</a>)</span>). For those countries not included in the WRS database, we assume the average vehicle-kilometers traveled per capita between the regional mean and the income level mean.</p>
-<p>Using vehicle-kilometers traveled per capita, together with the congestion index <span class="math inline">\(CI\)</span> and the free flow travel time, we can estimate total travel time each year <span class="math inline">\(t\)</span>, in time units, using <a href="#eq-travtime">Equation&nbsp;<span>6.91</span></a>.</p>
-<p><span id="eq-travtime"><span class="math display">\[\text{Travel time}_{t} = \left( 1 + \frac{CI_{t}}{100} \right)*FreeFlowTT\left\lbrack \frac{\min}{\text{vehkm}} \right\rbrack*VehKm\ per\ capita\left\lbrack \frac{\text{vehkm}}{\text{year}} \right\rbrack*UrbanPopulation_{15 + ,t} \tag{6.91}\]</span></span></p>
-<p>In CPAT, there are estimations for the congestion index for each year, under the baseline scenario and a carbon price scenario. Using the <a href="#eq-travtime">Equation&nbsp;<span>6.91</span></a>, we can quantify travel time for each year under each scenario. Time savings attributed to a carbon price are equal travel time in the baseline minus travel time in the carbon price scenario.</p>
+<p>Using vehicle-kilometers traveled per capita, together with the congestion index <span class="math inline">\(CI\)</span> and the free flow travel time, we can estimate total travel time each year <span class="math inline">\(t\)</span>, in time units, using <a href="#eq-travtime">Equation&nbsp;<span>6.92</span></a>.</p>
+<p><span id="eq-travtime"><span class="math display">\[\text{Travel time}_{t} = \left( 1 + \frac{CI_{t}}{100} \right)*FreeFlowTT\left\lbrack \frac{\min}{\text{vehkm}} \right\rbrack*VehKm\ per\ capita\left\lbrack \frac{\text{vehkm}}{\text{year}} \right\rbrack*UrbanPopulation_{15 + ,t} \tag{6.92}\]</span></span></p>
+<p>In CPAT, there are estimations for the congestion index for each year, under the baseline scenario and a carbon price scenario. Using the <a href="#eq-travtime">Equation&nbsp;<span>6.92</span></a>, we can quantify travel time for each year under each scenario. Time savings attributed to a carbon price are equal travel time in the baseline minus travel time in the carbon price scenario.</p>
 <p>We value those time savings following <span class="citation" data-cites="robinson2019reference">Robinson et al. (<a href="#ref-robinson2019reference" role="doc-biblioref">2019</a>)</span>. We value travel time at a rate of 50% the after-tax wage rate. We use gross earnings<a href="#fn35" class="footnote-ref" id="fnref35" role="doc-noteref"><sup>35</sup></a> data from ILO and then we apply a factor to estimate after-tax wages. The factor used for OECD countries is the “average income tax rate as % of gross wage earnings”. For other countries, we use the average factor from OECD countries, equal to 16%. When we value travel time savings, we do so by considering only the population above 15 years old, since younger population does not participate in the labor market.</p>
 <p><strong>Some implied assumptions:</strong> We assume that free flow travel time and vehicle-kilometers traveled per capita are constant in time. Vehicle-kilometers traveled are the same across the population, regardless of age or other considerations. Tomtom’s data is representative of vehicles not using their devices.</p>
 </section>
@@ -2990,15 +3006,15 @@ Data from the <span class="citation" data-cites="murray2020global">Global Burden
 <h3 data-number="6.7.8" class="anchored" data-anchor-id="sec-valuemorbidity"><span class="header-section-number">6.7.8</span> Value of morbidity using years lived with disabilities (YLDs)</h3>
 <p>Another approach to value morbidity in CPAT in based on a method proposed in <span class="citation" data-cites="world2022global">Bank (<a href="#ref-world2022global" role="doc-biblioref">2022</a>)</span>. Under this method, we convert YLDs to ‘annual disease days’ <span class="math inline">\(M\)</span> and we value them using a fraction of a country’s daily wage.</p>
 <p>First, annual disease days are calculated from YLDs, for each country as:</p>
-<p><span id="eq-msum"><span class="math display">\[M = \ \sum_{c = 1}^{n}{YLD_{c}*\frac{365}{DW_{c}}} \tag{6.92}\]</span></span></p>
+<p><span id="eq-msum"><span class="math display">\[M = \ \sum_{c = 1}^{n}{YLD_{c}*\frac{365}{DW_{c}}} \tag{6.93}\]</span></span></p>
 <p>Where:</p>
 <p><span class="math inline">\(YLD_{c}\)</span>: years lost to disease <span class="math inline">\(c\)</span></p>
 <p><span class="math inline">\(DW_{c}\)</span> : Average disability weight of disease <span class="math inline">\(c\)</span> attributed to PM<sub>2.5</sub></p>
-<p>The cost of a day lived with a disease <span class="math inline">\(c\)</span>, <span class="math inline">\(c_{c}\)</span>, is calculated a fraction of the daily wage <span class="math inline">\(w\)</span> (in each country), as presented in <a href="#eq-cc">Equation&nbsp;<span>6.93</span></a>. The term D corresponds is set at 0.4, and is associated to the disability weight of a severe condition, with severely restricted work and leisure activity and a substantial medical cost.</p>
-<p><span id="eq-cc"><span class="math display">\[c_{c} = w*\frac{DW_{c}}{D} \tag{6.93}\]</span></span></p>
+<p>The cost of a day lived with a disease <span class="math inline">\(c\)</span>, <span class="math inline">\(c_{c}\)</span>, is calculated a fraction of the daily wage <span class="math inline">\(w\)</span> (in each country), as presented in <a href="#eq-cc">Equation&nbsp;<span>6.94</span></a>. The term D corresponds is set at 0.4, and is associated to the disability weight of a severe condition, with severely restricted work and leisure activity and a substantial medical cost.</p>
+<p><span id="eq-cc"><span class="math display">\[c_{c} = w*\frac{DW_{c}}{D} \tag{6.94}\]</span></span></p>
 <p>The average daily wage, <span class="math inline">\(w\)</span>, was calculated using the methodology explained in <a href="#sec-marketoutputlosses"><span>Section&nbsp;6.7.3</span></a>.</p>
 <p>Finally, the cost of morbidity is calculated as the multiplication of annual disease days and the cost of each day lived with disease.</p>
-<p><span id="eq-costmorbidity"><span class="math display">\[Cost\ of\ Morbidity = \ \sum_{i = 1}^{n}{c_{c}*M} \tag{6.94}\]</span></span></p>
+<p><span id="eq-costmorbidity"><span class="math display">\[Cost\ of\ Morbidity = \ \sum_{i = 1}^{n}{c_{c}*M} \tag{6.95}\]</span></span></p>
 <p>Using this method to value morbidity attributed to air pollution, we calculate the share of morbidity costs as a share of mortality costs.</p>
 </section>
 <section id="air-pollution-externalities-per-unit-of-fuel" class="level3" data-number="6.7.9">
@@ -4229,25 +4245,25 @@ Data from the <span class="citation" data-cites="murray2020global">Global Burden
 </table>
 </div>
 <p><em>Source: Own elaboration based on <span class="citation" data-cites="murray2020global">Global Burden of Disease Health Financing Collaborator Network (<a href="#ref-murray2020global" role="doc-biblioref">2020</a>)</span></em></p>
-<p>In CPAT, we use the RR values from <a href="#tbl-lungcanceretc">Table&nbsp;<span>6.18</span></a> and <a href="#tbl-heartdiseasestroke">Table&nbsp;<span>6.19</span></a>. Since the tables do not include every possible value for PM<sub>2.5</sub>, we interpolate interpolating between the closest higher and lower values, using <a href="#eq-rractual">Equation&nbsp;<span>6.95</span></a>.</p>
-<p><span id="eq-rractual"><span class="math display">\[\text{RR}_{\text{actual}} = \text{RR}_{\text{high}} - \frac{\text{RR}_{\text{high}} - \text{RR}_{\text{low}}}{\text{PM}_{\text{high}} - \text{PM}_{\text{low}}}*(\text{PM}_{\text{high}} - \text{PM}_{\text{actual}}) \tag{6.95}\]</span></span></p>
+<p>In CPAT, we use the RR values from <a href="#tbl-lungcanceretc">Table&nbsp;<span>6.18</span></a> and <a href="#tbl-heartdiseasestroke">Table&nbsp;<span>6.19</span></a>. Since the tables do not include every possible value for PM<sub>2.5</sub>, we interpolate interpolating between the closest higher and lower values, using <a href="#eq-rractual">Equation&nbsp;<span>6.96</span></a>.</p>
+<p><span id="eq-rractual"><span class="math display">\[\text{RR}_{\text{actual}} = \text{RR}_{\text{high}} - \frac{\text{RR}_{\text{high}} - \text{RR}_{\text{low}}}{\text{PM}_{\text{high}} - \text{PM}_{\text{low}}}*(\text{PM}_{\text{high}} - \text{PM}_{\text{actual}}) \tag{6.96}\]</span></span></p>
 </section>
 <section id="sec-quanthealtheff" class="level3" data-number="6.10.3">
 <h3 data-number="6.10.3" class="anchored" data-anchor-id="sec-quanthealtheff"><span class="header-section-number">6.10.3</span> Quantification of health effects in CPAT</h3>
-<p>The RR associated with exposure to household (and ambient) pollution in the baseline, <span class="math inline">\(\text{RR}_{\text{HAP}}^{0}\)</span>, can be expressed as the baseline mortality rate for those exposed to HAP (and OAP) , <span class="math inline">\(\lambda_{\text{HAP}}^{0}\)</span>, divided by the mortality rate that would be observed in the absence of pollution, <span class="math inline">\(\lambda_{\text{TMREL}}\)</span>. This relationship is presented in <a href="#eq-rrhap0">Equation&nbsp;<span>6.96</span></a>.</p>
-<p><span id="eq-rrhap0"><span class="math display">\[\text{RR}_{\text{HAP}}^{0} = \frac{\lambda_{\text{HAP}}^{0}}{\lambda_{\text{TMREL}}} \tag{6.96}\]</span></span></p>
-<p>In the same way, the RR associated with exposure to ambient pollution in the baseline, <span class="math inline">\(\text{RR}_{\text{OAP}}^{0}\)</span>, can be expressed as the baseline mortality rate for those exposed to OAP, <span class="math inline">\(\lambda_{\text{OAP}}^{0}\)</span>, divided by the mortality rate that would be observed in the absence of pollution, <span class="math inline">\(\lambda_{\text{TMREL}}\)</span>. This relationship is presented in <a href="#eq-rraop0">Equation&nbsp;<span>6.97</span></a>.</p>
-<p><span id="eq-rraop0"><span class="math display">\[\text{RR}_{\text{OAP}}^{0} = \frac{\lambda_{\text{OAP}}^{0}}{\lambda_{\text{TMREL}}} \tag{6.97}\]</span></span></p>
-<p>Baseline mortality <span class="math inline">\(M_{0}\)</span> is observable and can be expressed as presented in <a href="#eq-mpop">Equation&nbsp;<span>6.98</span></a>.</p>
-<p><span id="eq-mpop"><span class="math display">\[M_{0} = Population*p_{H}*\lambda_{\text{HAP}}^{0} + Population*{(1 - p}_{H})*\lambda_{\text{OAP}}^{0} \tag{6.98}\]</span></span></p>
-<p>Using <a href="#eq-rrhap0">Equation&nbsp;<span>6.96</span></a> and <a href="#eq-rraop0">Equation&nbsp;<span>6.97</span></a>, we can rewrite baseline mortality in <a href="#eq-mpop">Equation&nbsp;<span>6.98</span></a> as <a href="#eq-mpop0">Equation&nbsp;<span>6.99</span></a>.</p>
-<p><span id="eq-mpop0"><span class="math display">\[M_{0} = Population*p_{H}*\text{RR}_{\text{HAP}}^{0}*\lambda_{\text{TMREL}} + Population*{(1 - p}_{H})*\text{RR}_{\text{OAP}}^{0}*\lambda_{\text{TMREL}} \tag{6.99}\]</span></span></p>
-<p>Using <a href="#eq-mpop0">Equation&nbsp;<span>6.99</span></a>, we can solve for <span class="math inline">\(\lambda_{\text{TMREL}}\)</span>. The result for <span class="math inline">\(\lambda_{\text{TMREL}},\ \)</span>the mortality rate in the absence of PM<sub>2.5</sub> pollution risk, is presented in <a href="#eq-lambdasolve">Equation&nbsp;<span>6.100</span></a>.</p>
-<p><span id="eq-lambdasolve"><span class="math display">\[\lambda_{\text{TMREL}} = \frac{M_{0}}{\text{Population}}*\left( \frac{1}{p_{H}*\text{RR}_{\text{HAP}}^{0} + {(1 - p}_{H})*\text{RR}_{\text{OAP}}^{0}} \right) \tag{6.100}\]</span></span></p>
-<p>For each age group and condition, there is a <span class="math inline">\(\lambda_{\text{TMREL}}\)</span>, defined in <a href="#eq-lambdasolve">Equation&nbsp;<span>6.100</span></a>. The total changes in mortality are presented in <a href="#eq-deltamm">Equation&nbsp;<span>6.101</span></a>:</p>
+<p>The RR associated with exposure to household (and ambient) pollution in the baseline, <span class="math inline">\(\text{RR}_{\text{HAP}}^{0}\)</span>, can be expressed as the baseline mortality rate for those exposed to HAP (and OAP) , <span class="math inline">\(\lambda_{\text{HAP}}^{0}\)</span>, divided by the mortality rate that would be observed in the absence of pollution, <span class="math inline">\(\lambda_{\text{TMREL}}\)</span>. This relationship is presented in <a href="#eq-rrhap0">Equation&nbsp;<span>6.97</span></a>.</p>
+<p><span id="eq-rrhap0"><span class="math display">\[\text{RR}_{\text{HAP}}^{0} = \frac{\lambda_{\text{HAP}}^{0}}{\lambda_{\text{TMREL}}} \tag{6.97}\]</span></span></p>
+<p>In the same way, the RR associated with exposure to ambient pollution in the baseline, <span class="math inline">\(\text{RR}_{\text{OAP}}^{0}\)</span>, can be expressed as the baseline mortality rate for those exposed to OAP, <span class="math inline">\(\lambda_{\text{OAP}}^{0}\)</span>, divided by the mortality rate that would be observed in the absence of pollution, <span class="math inline">\(\lambda_{\text{TMREL}}\)</span>. This relationship is presented in <a href="#eq-rraop0">Equation&nbsp;<span>6.98</span></a>.</p>
+<p><span id="eq-rraop0"><span class="math display">\[\text{RR}_{\text{OAP}}^{0} = \frac{\lambda_{\text{OAP}}^{0}}{\lambda_{\text{TMREL}}} \tag{6.98}\]</span></span></p>
+<p>Baseline mortality <span class="math inline">\(M_{0}\)</span> is observable and can be expressed as presented in <a href="#eq-mpop">Equation&nbsp;<span>6.99</span></a>.</p>
+<p><span id="eq-mpop"><span class="math display">\[M_{0} = Population*p_{H}*\lambda_{\text{HAP}}^{0} + Population*{(1 - p}_{H})*\lambda_{\text{OAP}}^{0} \tag{6.99}\]</span></span></p>
+<p>Using <a href="#eq-rrhap0">Equation&nbsp;<span>6.97</span></a> and <a href="#eq-rraop0">Equation&nbsp;<span>6.98</span></a>, we can rewrite baseline mortality in <a href="#eq-mpop">Equation&nbsp;<span>6.99</span></a> as <a href="#eq-mpop0">Equation&nbsp;<span>6.100</span></a>.</p>
+<p><span id="eq-mpop0"><span class="math display">\[M_{0} = Population*p_{H}*\text{RR}_{\text{HAP}}^{0}*\lambda_{\text{TMREL}} + Population*{(1 - p}_{H})*\text{RR}_{\text{OAP}}^{0}*\lambda_{\text{TMREL}} \tag{6.100}\]</span></span></p>
+<p>Using <a href="#eq-mpop0">Equation&nbsp;<span>6.100</span></a>, we can solve for <span class="math inline">\(\lambda_{\text{TMREL}}\)</span>. The result for <span class="math inline">\(\lambda_{\text{TMREL}},\ \)</span>the mortality rate in the absence of PM<sub>2.5</sub> pollution risk, is presented in <a href="#eq-lambdasolve">Equation&nbsp;<span>6.101</span></a>.</p>
+<p><span id="eq-lambdasolve"><span class="math display">\[\lambda_{\text{TMREL}} = \frac{M_{0}}{\text{Population}}*\left( \frac{1}{p_{H}*\text{RR}_{\text{HAP}}^{0} + {(1 - p}_{H})*\text{RR}_{\text{OAP}}^{0}} \right) \tag{6.101}\]</span></span></p>
+<p>For each age group and condition, there is a <span class="math inline">\(\lambda_{\text{TMREL}}\)</span>, defined in <a href="#eq-lambdasolve">Equation&nbsp;<span>6.101</span></a>. The total changes in mortality are presented in <a href="#eq-deltamm">Equation&nbsp;<span>6.102</span></a>:</p>
 <p><span id="eq-deltamm"><span class="math display">\[
 \mathrm{\Delta}M = M_{0}*\left\{ 1 - \left( \frac{p_{H}^{1}*\text{RR}_{\text{HAP}}^{1} + {(1 - p}_{H}^{1})*\text{RR}_{\text{OAP}}^{1}}{p_{H}^{0}*\text{RR}_{\text{HAP}}^{0} + {(1 - p}_{H}^{0})*\text{RR}_{\text{OAP}}^{0}} \right) \right\}
-\tag{6.101}\]</span></span></p>
+\tag{6.102}\]</span></span></p>
 <p>Where <span class="math inline">\(\mathrm{\Delta}M = M_{0} - M_{1}\)</span></p>
 <p><span class="math inline">\(\lambda_{\text{TMREL}}\)</span>: Mortality incidence proportion if pollution was a the TMREL level</p>
 <p><span class="math inline">\(M_{0}\)</span>: Baseline mortality</p>
@@ -4290,32 +4306,32 @@ Data from the <span class="citation" data-cites="murray2020global">Global Burden
 <ul>
 <li>Emission factors. The “original” unit from GAINS EF is <span class="math inline">\(kton/PJ\)</span>. Since energy balances in CPAT are expressed in <span class="math inline">\(\text{ktoe}\)</span>, we apply a unit conversion for emission factors, form <span class="math inline">\(kton/PJ\)</span> to <span class="math inline">\(ton/ktoe\)</span></li>
 </ul>
-<p><span id="eq-eftonktoe"><span class="math display">\[\text{EF }\left\lbrack \frac{\text{ton}}{\text{ktoe}} \right\rbrack = EF\ \left\lbrack \frac{\text{kton}}{\text{PJ}} \right\rbrack*\frac{1\ PJ}{10^{6}\text{GJ}}*\frac{10^{3}\text{ton }}{1\ kton}*\frac{41868\ GJ}{1\ ktoe} \tag{6.102}\]</span></span></p>
+<p><span id="eq-eftonktoe"><span class="math display">\[\text{EF }\left\lbrack \frac{\text{ton}}{\text{ktoe}} \right\rbrack = EF\ \left\lbrack \frac{\text{kton}}{\text{PJ}} \right\rbrack*\frac{1\ PJ}{10^{6}\text{GJ}}*\frac{10^{3}\text{ton }}{1\ kton}*\frac{41868\ GJ}{1\ ktoe} \tag{6.103}\]</span></span></p>
 <ul>
 <li>From ktoe to volume of m3:</li>
 </ul>
-<p><span id="eq-convertktoevol"><span class="math display">\[1\ ktoe = 1\ ktoe*\frac{1\ Kcal}{1*10^{- 10}\text{ktoe}}*\frac{1}{\text{CalVal}\left\lbrack \frac{\text{kcal}}{\text{kg}} \right\rbrack}*\frac{1}{\text{Dens}\left\lbrack \frac{\text{ton}}{m3} \right\rbrack}*\frac{1\ ton}{10^{3}\text{kg}} \tag{6.103}\]</span></span></p>
+<p><span id="eq-convertktoevol"><span class="math display">\[1\ ktoe = 1\ ktoe*\frac{1\ Kcal}{1*10^{- 10}\text{ktoe}}*\frac{1}{\text{CalVal}\left\lbrack \frac{\text{kcal}}{\text{kg}} \right\rbrack}*\frac{1}{\text{Dens}\left\lbrack \frac{\text{ton}}{m3} \right\rbrack}*\frac{1\ ton}{10^{3}\text{kg}} \tag{6.104}\]</span></span></p>
 <ul>
 <li>To convert from ktoe to m3, multiply ktoe by the following factor:</li>
 </ul>
-<p><span id="eq-convertktoem3"><span class="math display">\[Conv\_ ktoe\_ to\_ liter = \frac{1}{\text{CalVal}\left\lbrack \frac{\text{kcal}}{\text{kg}} \right\rbrack*Dens\left\lbrack \frac{\text{ton}}{m3} \right\rbrack}*10^{7} \tag{6.104}\]</span></span></p>
+<p><span id="eq-convertktoem3"><span class="math display">\[Conv\_ ktoe\_ to\_ liter = \frac{1}{\text{CalVal}\left\lbrack \frac{\text{kcal}}{\text{kg}} \right\rbrack*Dens\left\lbrack \frac{\text{ton}}{m3} \right\rbrack}*10^{7} \tag{6.105}\]</span></span></p>
 <ul>
 <li>To convert from ktoe to liters, multiply ktoe by the following factor:</li>
 </ul>
-<p><span id="eq-convertktoelit"><span class="math display">\[Conv\_ ktoe\_ to\_ liter = \frac{1}{\text{CalVal}\left\lbrack \frac{\text{kcal}}{\text{kg}} \right\rbrack*Dens\left\lbrack \frac{\text{ton}}{m3} \right\rbrack}*10^{10} \tag{6.105}\]</span></span></p>
+<p><span id="eq-convertktoelit"><span class="math display">\[Conv\_ ktoe\_ to\_ liter = \frac{1}{\text{CalVal}\left\lbrack \frac{\text{kcal}}{\text{kg}} \right\rbrack*Dens\left\lbrack \frac{\text{ton}}{m3} \right\rbrack}*10^{10} \tag{6.106}\]</span></span></p>
 <ul>
 <li><p>1 kcal= 1e-10 ktoe</p></li>
 <li><p>To convert from kton/PJ (emission factors unit) to ton/liter, when calorific value is in PJ/ton:</p></li>
 </ul>
-<p><span id="eq-convertktontonlit"><span class="math display">\[\frac{1\ kton}{\text{PJ}}*\frac{1000\ ton}{1\ kton}*\ \text{CalVal}\left\lbrack \frac{\text{PJ}}{\text{ton}} \right\rbrack*dens\left\lbrack \frac{\text{ton}}{m3} \right\rbrack*\frac{1m3}{1000L} \tag{6.106}\]</span></span></p>
+<p><span id="eq-convertktontonlit"><span class="math display">\[\frac{1\ kton}{\text{PJ}}*\frac{1000\ ton}{1\ kton}*\ \text{CalVal}\left\lbrack \frac{\text{PJ}}{\text{ton}} \right\rbrack*dens\left\lbrack \frac{\text{ton}}{m3} \right\rbrack*\frac{1m3}{1000L} \tag{6.107}\]</span></span></p>
 <ul>
 <li>To convert from kton/PJ (emission factors unit) to ton/liter, when calorific value is in Kcal/kg:</li>
 </ul>
-<p><span id="eq-convertktontonlitbis"><span class="math display">\[\frac{1\ kton}{\text{PJ}}*\frac{1000\ ton}{1\ kton}*\ \text{CalVal}\left\lbrack \frac{\text{Kcal}}{\text{kg}} \right\rbrack*1000\frac{\text{kg}}{\text{ton}}*dens\left\lbrack \frac{\text{ton}}{m3} \right\rbrack*\frac{1m3}{1000L}*\frac{1\ PJ}{2.39*10^{11}\text{Kcal}} \tag{6.107}\]</span></span></p>
+<p><span id="eq-convertktontonlitbis"><span class="math display">\[\frac{1\ kton}{\text{PJ}}*\frac{1000\ ton}{1\ kton}*\ \text{CalVal}\left\lbrack \frac{\text{Kcal}}{\text{kg}} \right\rbrack*1000\frac{\text{kg}}{\text{ton}}*dens\left\lbrack \frac{\text{ton}}{m3} \right\rbrack*\frac{1m3}{1000L}*\frac{1\ PJ}{2.39*10^{11}\text{Kcal}} \tag{6.108}\]</span></span></p>
 <ul>
 <li>To convert from ktoe to liter:</li>
 </ul>
-<p><span id="eq-convertktoetoliter"><span class="math display">\[1\ ktoe*\frac{1}{\text{CalVal}\left\lbrack \frac{\text{Kcal}}{\text{kg}} \right\rbrack}*\frac{1\ Kcal}{1*10^{- 10}\text{ktoe}}*\frac{1}{\text{dens}\left\lbrack \frac{\text{ton}}{m3} \right\rbrack*1000\frac{\text{kg}}{\text{ton}}*\frac{1m3}{1000\ liter}} \tag{6.108}\]</span></span></p>
+<p><span id="eq-convertktoetoliter"><span class="math display">\[1\ ktoe*\frac{1}{\text{CalVal}\left\lbrack \frac{\text{Kcal}}{\text{kg}} \right\rbrack}*\frac{1\ Kcal}{1*10^{- 10}\text{ktoe}}*\frac{1}{\text{dens}\left\lbrack \frac{\text{ton}}{m3} \right\rbrack*1000\frac{\text{kg}}{\text{ton}}*\frac{1m3}{1000\ liter}} \tag{6.109}\]</span></span></p>
 <p>Note: Calorific values and densities are from <span class="citation" data-cites="iea2">IEA (<a href="#ref-iea2" role="doc-biblioref">2019</a>)</span>.</p>
 </section>
 <section id="comments-from-2021-review-and-summary-of-changes" class="level3" data-number="6.10.5">
@@ -4607,188 +4623,188 @@ This point was clarified during the previous review
 </table>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-aleluia" class="csl-entry" role="doc-biblioentry">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-aleluia" class="csl-entry" role="listitem">
 Aleluia Reis, Lara. 2020. <span>“Down-Scaling FASST(r) to Country Level.”</span>
 </div>
-<div id="ref-almeida2020ambient" class="csl-entry" role="doc-biblioentry">
+<div id="ref-almeida2020ambient" class="csl-entry" role="listitem">
 Almeida, SM, M Manousakas, E Diapouli, Z Kertesz, L Samek, E Hristova, K Šega, et al. 2020. <span>“Ambient Particulate Matter Source Apportionment Using Receptor Modelling in European and Central Asia Urban Areas.”</span> <em>Environmental Pollution</em> 266: 115199. <a href="https://doi.org/10.1016/J.ENVPOL.2020.115199">https://doi.org/10.1016/J.ENVPOL.2020.115199</a>.
 </div>
-<div id="ref-amann2017costs" class="csl-entry" role="doc-biblioentry">
+<div id="ref-amann2017costs" class="csl-entry" role="listitem">
 Amann, Markus, Mike Holland, Rob Maas, T Vandyck, and B Saveyn. 2017. <span>“Costs, Benefits and Economic Impacts of the EU Clean Air Strategy and Their Implications on Innovation and Competitiveness.”</span> <em>IIASA Report; International Institute for Applied Systems Analysis (IIASA): Laxenburg, Austria</em>, 1–59. <a href="http://gains.iiasa.ac.at.ILO">http://gains.iiasa.ac.at.ILO</a>.
 </div>
-<div id="ref-apte2012global" class="csl-entry" role="doc-biblioentry">
+<div id="ref-apte2012global" class="csl-entry" role="listitem">
 Apte, Joshua S, Emilie Bombrun, Julian D Marshall, and William W Nazaroff. 2012. <span>“Global Intraurban Intake Fractions for Primary Air Pollutants from Vehicles and Other Distributed Sources.”</span> <em>Environmental Science &amp; Technology</em> 46 (6): 3415–23. <a href="https://doi.org/10.1021/es204021h">https://doi.org/10.1021/es204021h</a>.
 </div>
-<div id="ref-world2022global" class="csl-entry" role="doc-biblioentry">
+<div id="ref-world2022global" class="csl-entry" role="listitem">
 Bank, World. 2022. <em>The Global Health Cost of PM2. 5 Air Pollution: A Case for Action Beyond 2021</em>. The World Bank.
 </div>
-<div id="ref-bennett2002defining" class="csl-entry" role="doc-biblioentry">
+<div id="ref-bennett2002defining" class="csl-entry" role="listitem">
 Bennett, Deborah H, Thomas E McKone, John S Evans, William W Nazaroff, Manuele D Margni, Olivier Jolliet, and Kirk R Smith. 2002. <span>“Defining Intake Fraction.”</span> <em>Environmental Science and Technology</em> 36 (9). <a href="http://www.ncbi.nlm.nih.gov/pubmed/12026996">http://www.ncbi.nlm.nih.gov/pubmed/12026996</a>.
 </div>
-<div id="ref-braithwaite2019air" class="csl-entry" role="doc-biblioentry">
+<div id="ref-braithwaite2019air" class="csl-entry" role="listitem">
 Braithwaite, Isobel, Shuo Zhang, James B Kirkbride, David PJ Osborn, and Joseph F Hayes. 2019. <span>“Air Pollution (Particulate Matter) Exposure and Associations with Depression, Anxiety, Bipolar, Psychosis and Suicide Risk: A Systematic Review and Meta-Analysis.”</span> <em>Environmental Health Perspectives</em> 127 (12): 126002. <a href="https://doi.org/10.1289/EHP4595">https://doi.org/10.1289/EHP4595</a>.
 </div>
-<div id="ref-byers2018global" class="csl-entry" role="doc-biblioentry">
+<div id="ref-byers2018global" class="csl-entry" role="listitem">
 Byers, Logan, Johannes Friedrich, Roman Hennig, Aaron Kressig, Xinyue Li, COLIN McCormick, and Laura Malaguzzi Valeri. 2018. <span>“A Global Database of Power Plants.”</span> <em>World Resources Institute</em> 18. <a href="http://globalenergyobservatory.org">http://globalenergyobservatory.org</a>.
 </div>
-<div id="ref-CIESIN1" class="csl-entry" role="doc-biblioentry">
+<div id="ref-CIESIN1" class="csl-entry" role="listitem">
 Center for International Earth Science Information Network - CIESIN - Columbia University. 2018. <span>“Documentation for the Gridded Population of the World, Version 4 (GPWv4), Revision 11 Data Sets.”</span> <em>Palisades, New York: NASA Socioeconomic Data and Applications Center (SEDAC)</em>. <a href="https://doi.org/https://doi.org/10.7927/H45Q4T5F">https://doi.org/https://doi.org/10.7927/H45Q4T5F</a>.
 </div>
-<div id="ref-chafe2014household" class="csl-entry" role="doc-biblioentry">
+<div id="ref-chafe2014household" class="csl-entry" role="listitem">
 Chafe, Zoë A, Michael Brauer, Zbigniew Klimont, Rita Van Dingenen, Sumi Mehta, Shilpa Rao, Keywan Riahi, Frank Dentener, and Kirk R Smith. 2014. <span>“Household Cooking with Solid Fuels Contributes to Ambient PM2. 5 Air Pollution and the Burden of Disease.”</span> <em>Environmental Health Perspectives</em> 122 (12): 1314–20. <a href="https://doi.org/10.1289/ehp.1206340">https://doi.org/10.1289/ehp.1206340</a>.
 </div>
-<div id="ref-cropper2012health" class="csl-entry" role="doc-biblioentry">
+<div id="ref-cropper2012health" class="csl-entry" role="listitem">
 Cropper, Maureen, Shama Gamkhar, Kabir Malik, Alexander Limonov, and Ian Partridge. 2012. <span>“The Health Effects of Coal Electricity Generation in India.”</span> <em>Resources for the Future Discussion Paper</em>, no. 12-25. <a href="https://www.rff.org/publications/working-papers/the-health-effects-of-coal-electricity-generation-in-india/">https://www.rff.org/publications/working-papers/the-health-effects-of-coal-electricity-generation-in-india/</a>.
 </div>
-<div id="ref-iiasa1" class="csl-entry" role="doc-biblioentry">
+<div id="ref-iiasa1" class="csl-entry" role="listitem">
 ECLIPSE V5a Global Emission Fields - Global Emissions. 2015. <span>“IIASA.”</span> <a href="https://iiasa.ac.at/web/home/research/researchPrograms/air/ECLIPSEv5a.html">https://iiasa.ac.at/web/home/research/researchPrograms/air/ECLIPSEv5a.html</a>.
 </div>
-<div id="ref-eea" class="csl-entry" role="doc-biblioentry">
+<div id="ref-eea" class="csl-entry" role="listitem">
 European Environment Agency. 2020. <span>“Emission Database for Global Atmospheric Research (EDGAR).”</span> <a href="http://edgar.jrc.ec.europa.eu/">http://edgar.jrc.ec.europa.eu/</a>.
 </div>
-<div id="ref-acp-14-9977-2014" class="csl-entry" role="doc-biblioentry">
+<div id="ref-acp-14-9977-2014" class="csl-entry" role="listitem">
 Gaita, S. M., J. Boman, M. J. Gatari, J. B. C. Pettersson, and S. Janhäll. 2014. <span>“Source Apportionment and Seasonal Variation of PM<span class="math inline">\(_{2.5}\)</span> in a Sub-Saharan African City: Nairobi, Kenya.”</span> <em>Atmospheric Chemistry and Physics</em> 14 (18): 9977–91. <a href="https://doi.org/10.5194/acp-14-9977-2014">https://doi.org/10.5194/acp-14-9977-2014</a>.
 </div>
-<div id="ref-global2018global" class="csl-entry" role="doc-biblioentry">
+<div id="ref-global2018global" class="csl-entry" role="listitem">
 Global Burden of Disease Collaborative Network. 2018. <span>“Global Burden of Disease Study 2017 (GBD 2017) Results.”</span> <em>Seattle, United States: Institute for Health Metrics and Evaluation (IHME)</em>. <a href="http://ghdx.healthdata.org/record/ihme-data/gbd-2017-life-tables-1950-2017">http://ghdx.healthdata.org/record/ihme-data/gbd-2017-life-tables-1950-2017</a>.
 </div>
-<div id="ref-global2019a" class="csl-entry" role="doc-biblioentry">
+<div id="ref-global2019a" class="csl-entry" role="listitem">
 Global Burden of Disease Health Financing Collaborator Network. 2019a. <span>“Global Expected Health Spending 2017-2050.”</span> <em>Seattle, United States: Institute for Health Metrics and Evaluation (IHME)</em>. <a href="http://ghdx.healthdata.org/record/ihme-data/global-expected-health-spending-2017-2050">http://ghdx.healthdata.org/record/ihme-data/global-expected-health-spending-2017-2050</a>.
 </div>
-<div id="ref-global2019burden" class="csl-entry" role="doc-biblioentry">
+<div id="ref-global2019burden" class="csl-entry" role="listitem">
 ———. 2019b. <span>“Global Health Spending 1995-2016.”</span> <em>Seattle, United States: Institute for Health Metrics and Evaluation (IHME)</em>. <a href="http://ghdx.healthdata.org/record/ihme-data/global-health-spending-1995-2016">http://ghdx.healthdata.org/record/ihme-data/global-health-spending-1995-2016</a>.
 </div>
-<div id="ref-murray2020global" class="csl-entry" role="doc-biblioentry">
+<div id="ref-murray2020global" class="csl-entry" role="listitem">
 ———. 2020. <span>“Global Burden of 87 Risk Factors in 204 Countries and Territories, 1990–2019: A Systematic Analysis for the Global Burden of Disease Study 2019.”</span> <em>The Lancet</em> 396 (10258): 1223–49.
 </div>
-<div id="ref-globalenergy" class="csl-entry" role="doc-biblioentry">
+<div id="ref-globalenergy" class="csl-entry" role="listitem">
 Global Energy Observatory, Google, KTH Royal Institute of Technology in Stockholm, Enipedia, World Resources Institute. 2018. <span>“Global Power Plant Database.”</span> <em>Published on Resource Watch and Google Earth Engine</em>. <a href="http://resourcewatch.org/ https://earthengine.google.com/">http://resourcewatch.org/ https://earthengine.google.com/</a>.
 </div>
-<div id="ref-guerriero2019labor" class="csl-entry" role="doc-biblioentry">
+<div id="ref-guerriero2019labor" class="csl-entry" role="listitem">
 Guerriero, Marta. 2019. <em>The Labor Share of Income Around the World: Evidence from a Panel Dataset</em>. Springer. <a href="https://www.adb.org/publications/labor-share-income-around-world-evidence-panel-dataset">https://www.adb.org/publications/labor-share-income-around-world-evidence-panel-dataset</a>.
 </div>
-<div id="ref-holland2014cost" class="csl-entry" role="doc-biblioentry">
+<div id="ref-holland2014cost" class="csl-entry" role="listitem">
 Holland, Michael. 2014. <span>“Cost-Benefit Analysis of Final Policy Scenarios for the EU Clean Air Package.”</span>
 </div>
-<div id="ref-humbert2011intake" class="csl-entry" role="doc-biblioentry">
+<div id="ref-humbert2011intake" class="csl-entry" role="listitem">
 Humbert, Sebastien, Julian D Marshall, Shanna Shaked, Joseph V Spadaro, Yurika Nishioka, Philipp Preiss, Thomas E McKone, Arpad Horvath, and Olivier Jolliet. 2011. <span>“Intake Fraction for Particulate Matter: Recommendations for Life Cycle Impact Assessment.”</span> <em>Environmental Science &amp; Technology</em> 45 (11): 4808–16. <a href="https://pubmed.ncbi.nlm.nih.gov/21563817/">https://pubmed.ncbi.nlm.nih.gov/21563817/</a>.
 </div>
-<div id="ref-iea2" class="csl-entry" role="doc-biblioentry">
+<div id="ref-iea2" class="csl-entry" role="listitem">
 IEA. 2019. <span>“Energy Prices and Taxes for OECD Countries, 4th Quarter 2019, Database Documentation.”</span>
 </div>
-<div id="ref-inness2019cams" class="csl-entry" role="doc-biblioentry">
+<div id="ref-inness2019cams" class="csl-entry" role="listitem">
 Inness, Antje, Melanie Ades, Anna Agustı́-Panareda, Jérôme Barré, Anna Benedictow, Anne-Marlene Blechschmidt, Juan Jose Dominguez, et al. 2019. <span>“The CAMS Reanalysis of Atmospheric Composition.”</span> <em>Atmospheric Chemistry and Physics</em> 19 (6): 3515–56.
 </div>
-<div id="ref-ihme" class="csl-entry" role="doc-biblioentry">
+<div id="ref-ihme" class="csl-entry" role="listitem">
 Institute for Health Metrics and Evaluation (IHME). 2020. <span>“GBD Results Tool.”</span> <a href="http://ghdx.healthdata.org/gbd-results-tool">http://ghdx.healthdata.org/gbd-results-tool</a>.
 </div>
-<div id="ref-irf" class="csl-entry" role="doc-biblioentry">
+<div id="ref-irf" class="csl-entry" role="listitem">
 International Road Federation. 2018. <span>“<span>World Road Statistics</span>.”</span>
 </div>
-<div id="ref-ipcc2014climate" class="csl-entry" role="doc-biblioentry">
+<div id="ref-ipcc2014climate" class="csl-entry" role="listitem">
 IPCC and others. 2014. <span>“Climate Change 2014: Synthesis Report. Contribution of Working Groups i, II and III to the Fifth Assessment Report of the Intergovernmental Panel on Climate Change.”</span> Ipcc Geneva, Switzerland.
 </div>
-<div id="ref-korteland2022health" class="csl-entry" role="doc-biblioentry">
+<div id="ref-korteland2022health" class="csl-entry" role="listitem">
 Korteland, Marisa. 2022. <span>“Health-Related Social Costs of Air Pollution Due to Residential Heating and Cooking in the EU27 And.”</span>
 </div>
-<div id="ref-lamancusa2017spatially" class="csl-entry" role="doc-biblioentry">
+<div id="ref-lamancusa2017spatially" class="csl-entry" role="listitem">
 Lamancusa, Carmen, Fatema Parvez, and Kristina Wagstrom. 2017. <span>“Spatially Resolved Intake Fraction Estimates for Primary and Secondary Particulate Matter in the United States.”</span> <em>Atmospheric Environment</em> 150: 229–37.
 </div>
-<div id="ref-lelieveld2015contribution" class="csl-entry" role="doc-biblioentry">
+<div id="ref-lelieveld2015contribution" class="csl-entry" role="listitem">
 Lelieveld, Jos, John S Evans, Mohammed Fnais, Despina Giannadaki, and Andrea Pozzer. 2015. <span>“The Contribution of Outdoor Air Pollution Sources to Premature Mortality on a Global Scale.”</span> <em>Nature</em> 525 (7569): 367–71.
 </div>
-<div id="ref-narain2016methodology" class="csl-entry" role="doc-biblioentry">
+<div id="ref-narain2016methodology" class="csl-entry" role="listitem">
 Narain, Urvashi, and Chris Sall. 2016. <span>“Methodology for Valuing the Health Impacts of Air Pollution.”</span>
 </div>
-<div id="ref-oecd12" class="csl-entry" role="doc-biblioentry">
+<div id="ref-oecd12" class="csl-entry" role="listitem">
 OECD. 2012. <span>“Mortality Risk Valuation in Environment, Health and Transport Policies.”</span> <a href="https://www.oecd-ilibrary.org/environment/mortality-risk-valuation-in-environment-health-and-transport-policies_9789264130807-en">https://www.oecd-ilibrary.org/environment/mortality-risk-valuation-in-environment-health-and-transport-policies_9789264130807-en</a>.
 </div>
-<div id="ref-oecd16" class="csl-entry" role="doc-biblioentry">
+<div id="ref-oecd16" class="csl-entry" role="listitem">
 OECD. 2016. <span>“The Economic Consequences of Outdoor Air Pollution.”</span> <a href="https://doi.org/10.1787/9789264257474-en">https://doi.org/10.1787/9789264257474-en</a>.
 </div>
-<div id="ref-oecd19" class="csl-entry" role="doc-biblioentry">
+<div id="ref-oecd19" class="csl-entry" role="listitem">
 ———. 2019. <span>“Economic Interactions Between Climate Change and Outdoor Air Pollution.”</span> <a href="http://www.oecd.org/officialdocuments/publicdisplaydocumentpdf/?cote=ENV/EPOC/WPIEEP(2018)3/FINAL&amp;docLanguage=En">http://www.oecd.org/officialdocuments/publicdisplaydocumentpdf/?cote=ENV/EPOC/WPIEEP(2018)3/FINAL&amp;docLanguage=En</a>.
 </div>
-<div id="ref-oecd20" class="csl-entry" role="doc-biblioentry">
+<div id="ref-oecd20" class="csl-entry" role="listitem">
 ———. 2020. <span>“Health Status: Absence from Work Due to Illness.”</span> <a href="https://stats.oecd.org/index.aspx?queryid=30123">https://stats.oecd.org/index.aspx?queryid=30123</a>.
 </div>
-<div id="ref-oecd2021" class="csl-entry" role="doc-biblioentry">
+<div id="ref-oecd2021" class="csl-entry" role="listitem">
 ———. 2021a. <span>“Inflation (CPI) (Indicator).”</span> <a href="https://data.oecd.org/price/inflation-cpi.htm">https://data.oecd.org/price/inflation-cpi.htm</a>.
 </div>
-<div id="ref-oecd21" class="csl-entry" role="doc-biblioentry">
+<div id="ref-oecd21" class="csl-entry" role="listitem">
 ———. 2021b. <span>“Level of GDP Per Capita and Productivity.”</span> <a href="https://stats.oecd.org/Index.aspx?DataSetCode=PDB_LV">https://stats.oecd.org/Index.aspx?DataSetCode=PDB_LV</a>.
 </div>
-<div id="ref-ostro1987air" class="csl-entry" role="doc-biblioentry">
+<div id="ref-ostro1987air" class="csl-entry" role="listitem">
 Ostro, Bart D. 1987. <span>“Air Pollution and Morbidity Revisited: A Specification Test.”</span> <em>Journal of Environmental Economics and Management</em> 14 (1): 87–98.
 </div>
-<div id="ref-pandey2021health" class="csl-entry" role="doc-biblioentry">
+<div id="ref-pandey2021health" class="csl-entry" role="listitem">
 Pandey, Anamika, Michael Brauer, Maureen L Cropper, Kalpana Balakrishnan, Prashant Mathur, Sagnik Dey, Burak Turkgulu, et al. 2021. <span>“Health and Economic Impact of Air Pollution in the States of India: The Global Burden of Disease Study 2019.”</span> <em>The Lancet Planetary Health</em> 5 (1): e25–38.
 </div>
-<div id="ref-parry2014getting" class="csl-entry" role="doc-biblioentry">
+<div id="ref-parry2014getting" class="csl-entry" role="listitem">
 Parry, Ian WH, Mr Dirk Heine, Eliza Lis, and Shanjun Li. 2014. <em>Getting Energy Prices Right: From Principle to Practice</em>. International Monetary Fund.
 </div>
-<div id="ref-parvez2017primary" class="csl-entry" role="doc-biblioentry">
+<div id="ref-parvez2017primary" class="csl-entry" role="listitem">
 Parvez, Fatema, Carmen Lamancusa, and Kristina Wagstrom. 2017. <span>“Primary and Secondary Particulate Matter Intake Fraction from Different Height Emission Sources.”</span> <em>Atmospheric Environment</em> 165: 1–11.
 </div>
-<div id="ref-preker2016health" class="csl-entry" role="doc-biblioentry">
+<div id="ref-preker2016health" class="csl-entry" role="listitem">
 Preker, Alexander S, Olusoji O Adeyi, Marisa Gil Lapetra, Diane-Charlotte Simon, and Eric Keuffel. 2016. <span>“Health Care Expenditures Associated with Pollution: Exploratory Methods and Findings.”</span> <em>Annals of Global Health</em> 82 (5): 711–21.
 </div>
-<div id="ref-reid2005millenium" class="csl-entry" role="doc-biblioentry">
+<div id="ref-reid2005millenium" class="csl-entry" role="listitem">
 Reid, Walter, and C Raudsepp-Hearne. 2005. <span>“Millenium Ecosystem Assessment.”</span>
 </div>
-<div id="ref-renna" class="csl-entry" role="doc-biblioentry">
+<div id="ref-renna" class="csl-entry" role="listitem">
 Renna, Francesco Granella, Stefania, and Lara Aleluia Reis. 2021. <span>“CLAQC - Country Level Air Quality Calculator.”</span> <a href="https://datashowb.shinyapps.io/CLAQC/">https://datashowb.shinyapps.io/CLAQC/</a>.
 </div>
-<div id="ref-robinson2019reference" class="csl-entry" role="doc-biblioentry">
+<div id="ref-robinson2019reference" class="csl-entry" role="listitem">
 Robinson, Lisa A, James K Hammitt, Michele Cecchini, Kalipso Chalkidou, Karl Claxton, Maureen Cropper, Patrick Hoang-Vu Eozenou, et al. 2019. <span>“Reference Case Guidelines for Benefit-Cost Analysis in Global Health and Development.”</span>
 </div>
-<div id="ref-robinson2019valuing" class="csl-entry" role="doc-biblioentry">
+<div id="ref-robinson2019valuing" class="csl-entry" role="listitem">
 Robinson, Lisa A, James K Hammitt, and Lucy O’Keeffe. 2019. <span>“Valuing Mortality Risk Reductions in Global Benefit-Cost Analysis.”</span> <em>Journal of Benefit-Cost Analysis</em> 10 (S1): 15–50.
 </div>
-<div id="ref-myhre2014anthropogenic" class="csl-entry" role="doc-biblioentry">
+<div id="ref-myhre2014anthropogenic" class="csl-entry" role="listitem">
 Shindell, F-m Breon, D. 2013. <em>Anthropogenic and Natural Radiative Forcing</em>. Climate Change 2013: The Physical Science Basis.
 </div>
-<div id="ref-turner2016long" class="csl-entry" role="doc-biblioentry">
+<div id="ref-turner2016long" class="csl-entry" role="listitem">
 Turner, Michelle C, Michael Jerrett, C Arden Pope III, Daniel Krewski, Susan M Gapstur, W Ryan Diver, Bernardo S Beckerman, et al. 2016. <span>“Long-Term Ozone Exposure and Mortality in a Large Prospective Study.”</span> <em>American Journal of Respiratory and Critical Care Medicine</em> 193 (10): 1134–42.
 </div>
-<div id="ref-usepa" class="csl-entry" role="doc-biblioentry">
+<div id="ref-usepa" class="csl-entry" role="listitem">
 US EPA. 2013. <span>“Regulatory Impact Analysis for the Final Revisions to the National Ambient Air Quality Standards for Particulate Matter.”</span>
 </div>
-<div id="ref-van2018tm5" class="csl-entry" role="doc-biblioentry">
+<div id="ref-van2018tm5" class="csl-entry" role="listitem">
 Van Dingenen, Rita, Frank Dentener, Monica Crippa, Joana Leitao, Elina Marmer, Shilpa Rao, Efisio Solazzo, and Luana Valentini. 2018. <span>“TM5-FASST: A Global Atmospheric Source–Receptor Model for Rapid Impact Analysis of Emission Changes on Air Quality and Short-Lived Climate Pollutants.”</span> <em>Atmospheric Chemistry and Physics</em> 18 (21): 16173–211. <a href="https://doi.org/10.5194/acp-18-16173-2018">https://doi.org/10.5194/acp-18-16173-2018</a>.
 </div>
-<div id="ref-vohra2021global" class="csl-entry" role="doc-biblioentry">
+<div id="ref-vohra2021global" class="csl-entry" role="listitem">
 Vohra, Karn, Alina Vodonos, Joel Schwartz, Eloise A Marais, Melissa P Sulprizio, and Loretta J Mickley. 2021. <span>“Global Mortality from Outdoor Fine Particle Pollution Generated by Fossil Fuel Combustion: Results from GEOS-Chem.”</span> <em>Environmental Research</em> 195: 110754.
 </div>
-<div id="ref-wagner2020implied" class="csl-entry" role="doc-biblioentry">
+<div id="ref-wagner2020implied" class="csl-entry" role="listitem">
 Wagner, F, J Borken-Kleefeld, G Kiesewetter, Z Klimont, W Schoepp, and M Amann. 2020. <span>“<a href="">Implied Emission Factors in the World Bank’s Carbon Pricing Assessment Tool (CPAT)</a>.”</span>
 </div>
-<div id="ref-wikimedia" class="csl-entry" role="doc-biblioentry">
+<div id="ref-wikimedia" class="csl-entry" role="listitem">
 Wikimedia Commons contributors. 2020. <span>“File:DALY Disability Affected Life Year Infographic.svg.”</span> https://commons.wikimedia.org/wiki/File:DALY_disability_affected_life_year_infographic.svg.
 </div>
-<div id="ref-woodruff2006fine" class="csl-entry" role="doc-biblioentry">
+<div id="ref-woodruff2006fine" class="csl-entry" role="listitem">
 Woodruff, Tracey J, Jennifer D Parker, and Kenneth C Schoendorf. 2006. <span>“Fine Particulate Matter (PM2. 5) Air Pollution and Selected Causes of Postneonatal Infant Mortality in California.”</span> <em>Environmental Health Perspectives</em> 114 (5): 786–90.
 </div>
-<div id="ref-world2019air" class="csl-entry" role="doc-biblioentry">
+<div id="ref-world2019air" class="csl-entry" role="listitem">
 World Bank. 2019a. <span>“Air Pollution Management in North Macedonia.”</span> World Bank.
 </div>
-<div id="ref-world2019pop" class="csl-entry" role="doc-biblioentry">
+<div id="ref-world2019pop" class="csl-entry" role="listitem">
 ———. 2019b. <span>“Population Estimates and Projections.”</span> World Bank. <a href="https://datacatalog.worldbank.org/dataset/population-estimates-and-projections">https://datacatalog.worldbank.org/dataset/population-estimates-and-projections</a>.
 </div>
-<div id="ref-world2020regional" class="csl-entry" role="doc-biblioentry">
+<div id="ref-world2020regional" class="csl-entry" role="listitem">
 ———. 2020. <em>Regional Note on Air Quality Management in the Western Balkans: Bosnia and Herzegovina, Kosovo, and North Macedonia</em>. World Bank.
 </div>
-<div id="ref-who15" class="csl-entry" role="doc-biblioentry">
+<div id="ref-who15" class="csl-entry" role="listitem">
 World Health Organization. 2015. <span>“Database on Source Apportionment Studies for Particulate Matter in the Air (PM10 and PM&lt;sub&gt;2.5&lt;/Sub&gt;).”</span> <a href="https://www.who.int/quantifying\_ehimpacts/global/source\_apport/en/">https://www.who.int/quantifying\_ehimpacts/global/source\_apport/en/</a>.
 </div>
-<div id="ref-world2018exposure" class="csl-entry" role="doc-biblioentry">
+<div id="ref-world2018exposure" class="csl-entry" role="listitem">
 ———. 2018. <span>“Exposure Country Average.”</span> <em>Global Health Observatory Data Repository</em>. <a href="http://apps.who.int/gho/data/node.main.152?lang=en">http://apps.who.int/gho/data/node.main.152?lang=en</a>.
 </div>
-<div id="ref-world2018burden" class="csl-entry" role="doc-biblioentry">
+<div id="ref-world2018burden" class="csl-entry" role="listitem">
 World Health Organization and others. 2018. <span>“Burden of Disease from Ambient Air Pollution for 2016 Description of Method.”</span> <em>WHO: Geneva, Switzerland</em>.
 </div>
-<div id="ref-zhou2006influence" class="csl-entry" role="doc-biblioentry">
+<div id="ref-zhou2006influence" class="csl-entry" role="listitem">
 Zhou, Ying, Jonathan I Levy, John S Evans, and James K Hammitt. 2006. <span>“The Influence of Geographic Location on Population Exposure to Emissions from Power Plants Throughout China.”</span> <em>Environment International</em> 32 (3): 365–73.
 </div>
 </div>
@@ -4863,9 +4879,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -4930,6 +4960,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -4984,7 +5100,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-      <div class="nav-footer-center">WB-IMF Climate Policy Assessment Tool, 2023</div>
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">WB-IMF Climate Policy Assessment Tool, 2023</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
   </div>
 </footer>
 

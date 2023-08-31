@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.475">
+<meta name="generator" content="quarto-1.3.306">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,14 +17,15 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
 }
-.hanging div.csl-entry {
+.hanging-indent div.csl-entry {
   margin-left:2em;
   text-indent:-2em;
 }
@@ -38,8 +39,7 @@ div.csl-right-inline {
 }
 div.csl-indent {
   margin-left: 2em;
-}
-</style>
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -81,6 +81,7 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
@@ -89,11 +90,16 @@ div.csl-indent {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Distribution Module</span></h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./05_Distribution.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Distribution Module</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
@@ -101,13 +107,14 @@ div.csl-indent {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">CPAT Documentation</a> 
-        <div class="sidebar-tools-main">
-    <a href="https://github.com/wb-mrio/cpat_public" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
-  <a href="" class="quarto-reader-toggle sidebar-tool" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/wb-mrio/cpat_public" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="./CPAT-Documentation.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
@@ -115,51 +122,59 @@ div.csl-indent {
 </div>
     </div>
       </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link"><strong>Cover</strong></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Cover</strong></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./01_User_Guide.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">User Guide and Climate Policies in CPAT</span></a>
+  <a href="./01_User_Guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">User Guide and Climate Policies in CPAT</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02_Summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary of the approach and applications</span></a>
+  <a href="./02_Summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary of the approach and applications</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03_Mitigation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Mitigation module</span></a>
+  <a href="./03_Mitigation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Mitigation module</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04_Multipliers.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Multipliers</span></a>
+  <a href="./04_Multipliers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Multipliers</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./05_Distribution.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Distribution Module</span></a>
+  <a href="./05_Distribution.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Distribution Module</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./06_Air_pollution.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Air pollution module</span></a>
+  <a href="./06_Air_pollution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Air pollution module</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./07_Road_Transport.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Road Transport Module</span></a>
+  <a href="./07_Road_Transport.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Road Transport Module</span></span></a>
   </div>
 </li>
     </ul>
@@ -168,45 +183,46 @@ div.csl-indent {
     <h2 id="toc-title"><strong><em>Chapter Contents</em></strong></h2>
    
   <ul>
-  <li><a href="#sec-5_1" id="toc-sec-5_1" class="nav-link active" data-scroll-target="#sec-5_1"><span class="toc-section-number">5.1</span>  Introduction</a>
+  <li><a href="#sec-5_1" id="toc-sec-5_1" class="nav-link active" data-scroll-target="#sec-5_1"><span class="header-section-number">5.1</span> Introduction</a>
   <ul>
-  <li><a href="#sec-5_1_1" id="toc-sec-5_1_1" class="nav-link" data-scroll-target="#sec-5_1_1"><span class="toc-section-number">5.1.1</span>  Summary: Distribution Module Overview</a>
+  <li><a href="#sec-5_1_1" id="toc-sec-5_1_1" class="nav-link" data-scroll-target="#sec-5_1_1"><span class="header-section-number">5.1.1</span> Summary: Distribution Module Overview</a>
   <ul class="collapse">
-  <li><a href="#sec-5_1_1_1" id="toc-sec-5_1_1_1" class="nav-link" data-scroll-target="#sec-5_1_1_1"><span class="toc-section-number">5.1.1.1</span>  Problem definition and approach</a></li>
-  <li><a href="#sec-5_1_1_2" id="toc-sec-5_1_1_2" class="nav-link" data-scroll-target="#sec-5_1_1_2"><span class="toc-section-number">5.1.1.2</span>  Functionalities</a></li>
+  <li><a href="#sec-5_1_1_1" id="toc-sec-5_1_1_1" class="nav-link" data-scroll-target="#sec-5_1_1_1"><span class="header-section-number">5.1.1.1</span> Problem definition and approach</a></li>
+  <li><a href="#sec-5_1_1_2" id="toc-sec-5_1_1_2" class="nav-link" data-scroll-target="#sec-5_1_1_2"><span class="header-section-number">5.1.1.2</span> Functionalities</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#sec-5_2" id="toc-sec-5_2" class="nav-link" data-scroll-target="#sec-5_2"><span class="toc-section-number">5.2</span>  Household budget survey preparation</a>
+  <li><a href="#sec-5_2" id="toc-sec-5_2" class="nav-link" data-scroll-target="#sec-5_2"><span class="header-section-number">5.2</span> Household budget survey preparation</a>
   <ul>
-  <li><a href="#sec-5_2_1" id="toc-sec-5_2_1" class="nav-link" data-scroll-target="#sec-5_2_1"><span class="toc-section-number">5.2.1</span>  Household budget shares</a></li>
-  <li><a href="#sec-5_2_2" id="toc-sec-5_2_2" class="nav-link" data-scroll-target="#sec-5_2_2"><span class="toc-section-number">5.2.2</span>  Household infrastructure access</a></li>
+  <li><a href="#sec-5_2_1" id="toc-sec-5_2_1" class="nav-link" data-scroll-target="#sec-5_2_1"><span class="header-section-number">5.2.1</span> Household budget shares</a></li>
+  <li><a href="#sec-5_2_2" id="toc-sec-5_2_2" class="nav-link" data-scroll-target="#sec-5_2_2"><span class="header-section-number">5.2.2</span> Household infrastructure access</a></li>
   </ul></li>
-  <li><a href="#sec-5_3" id="toc-sec-5_3" class="nav-link" data-scroll-target="#sec-5_3"><span class="toc-section-number">5.3</span>  Microsimulation Method</a>
+  <li><a href="#sec-5_3" id="toc-sec-5_3" class="nav-link" data-scroll-target="#sec-5_3"><span class="header-section-number">5.3</span> Microsimulation Method</a>
   <ul>
-  <li><a href="#sec-5_3_1" id="toc-sec-5_3_1" class="nav-link" data-scroll-target="#sec-5_3_1"><span class="toc-section-number">5.3.1</span>  Tax incidence analysis</a></li>
-  <li><a href="#sec-5_3_2" id="toc-sec-5_3_2" class="nav-link" data-scroll-target="#sec-5_3_2"><span class="toc-section-number">5.3.2</span>  Optional features for tax incidence analysis</a>
+  <li><a href="#sec-5_3_1" id="toc-sec-5_3_1" class="nav-link" data-scroll-target="#sec-5_3_1"><span class="header-section-number">5.3.1</span> Tax incidence analysis</a></li>
+  <li><a href="#sec-5_3_2" id="toc-sec-5_3_2" class="nav-link" data-scroll-target="#sec-5_3_2"><span class="header-section-number">5.3.2</span> Optional features for tax incidence analysis</a>
   <ul class="collapse">
-  <li><a href="#sec-5_3_2_1" id="toc-sec-5_3_2_1" class="nav-link" data-scroll-target="#sec-5_3_2_1"><span class="toc-section-number">5.3.2.1</span>  Mitigation-adjusted tax incidence</a></li>
-  <li><a href="#sec-5_3_2_2" id="toc-sec-5_3_2_2" class="nav-link" data-scroll-target="#sec-5_3_2_2"><span class="toc-section-number">5.3.2.2</span>  Decile-specific price elasticities of demand</a></li>
-  <li><a href="#sec-5_3_2_3" id="toc-sec-5_3_2_3" class="nav-link" data-scroll-target="#sec-5_3_2_3"><span class="toc-section-number">5.3.2.3</span>  Imperfect pass-through</a></li>
-  <li><a href="#sec-5_3_2_4" id="toc-sec-5_3_2_4" class="nav-link" data-scroll-target="#sec-5_3_2_4"><span class="toc-section-number">5.3.2.4</span>  Emissions-based adjustment of sectoral price changes</a></li>
-  <li><a href="#sec-5_3_2_5" id="toc-sec-5_3_2_5" class="nav-link" data-scroll-target="#sec-5_3_2_5"><span class="toc-section-number">5.3.2.5</span>  Cooking-fuel adjusted tax incidence</a></li>
+  <li><a href="#sec-5_3_2_1" id="toc-sec-5_3_2_1" class="nav-link" data-scroll-target="#sec-5_3_2_1"><span class="header-section-number">5.3.2.1</span> Mitigation-adjusted tax incidence</a></li>
+  <li><a href="#sec-5_3_2_2" id="toc-sec-5_3_2_2" class="nav-link" data-scroll-target="#sec-5_3_2_2"><span class="header-section-number">5.3.2.2</span> Decile-specific price elasticities of demand</a></li>
+  <li><a href="#sec-5_3_2_3" id="toc-sec-5_3_2_3" class="nav-link" data-scroll-target="#sec-5_3_2_3"><span class="header-section-number">5.3.2.3</span> Imperfect pass-through</a></li>
+  <li><a href="#sec-5_3_2_4" id="toc-sec-5_3_2_4" class="nav-link" data-scroll-target="#sec-5_3_2_4"><span class="header-section-number">5.3.2.4</span> Emissions-based adjustment of sectoral price changes</a></li>
+  <li><a href="#sec-5_3_2_5" id="toc-sec-5_3_2_5" class="nav-link" data-scroll-target="#sec-5_3_2_5"><span class="header-section-number">5.3.2.5</span> Cooking-fuel adjusted tax incidence</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#sec-5_4" id="toc-sec-5_4" class="nav-link" data-scroll-target="#sec-5_4"><span class="toc-section-number">5.4</span>  Incidence of compensatory transfers</a>
+  <li><a href="#sec-5_4" id="toc-sec-5_4" class="nav-link" data-scroll-target="#sec-5_4"><span class="header-section-number">5.4</span> Incidence of compensatory transfers</a>
   <ul>
-  <li><a href="#sec-5_4_1" id="toc-sec-5_4_1" class="nav-link" data-scroll-target="#sec-5_4_1"><span class="toc-section-number">5.4.1</span>  Targeted and infrastructure-based transfers</a></li>
-  <li><a href="#sec-5_4_2" id="toc-sec-5_4_2" class="nav-link" data-scroll-target="#sec-5_4_2"><span class="toc-section-number">5.4.2</span>  Transfers through existing social protection schemes</a></li>
-  <li><a href="#sec-5_4_3" id="toc-sec-5_4_3" class="nav-link" data-scroll-target="#sec-5_4_3"><span class="toc-section-number">5.4.3</span>  Carbon Price Revenue Recycling via Personal Income Tax Reductions</a>
+  <li><a href="#sec-5_4_1" id="toc-sec-5_4_1" class="nav-link" data-scroll-target="#sec-5_4_1"><span class="header-section-number">5.4.1</span> Targeted and infrastructure-based transfers</a></li>
+  <li><a href="#sec-5_4_2" id="toc-sec-5_4_2" class="nav-link" data-scroll-target="#sec-5_4_2"><span class="header-section-number">5.4.2</span> Transfers through existing social protection schemes</a></li>
+  <li><a href="#sec-5_4_3" id="toc-sec-5_4_3" class="nav-link" data-scroll-target="#sec-5_4_3"><span class="header-section-number">5.4.3</span> Carbon Price Revenue Recycling via Personal Income Tax Reductions</a>
   <ul class="collapse">
-  <li><a href="#sec-5_4_3_1" id="toc-sec-5_4_3_1" class="nav-link" data-scroll-target="#sec-5_4_3_1"><span class="toc-section-number">5.4.3.1</span>  Data Requirements and Setup</a></li>
-  <li><a href="#sec-5_4_3_2" id="toc-sec-5_4_3_2" class="nav-link" data-scroll-target="#sec-5_4_3_2"><span class="toc-section-number">5.4.3.2</span>  Calculations</a></li>
-  <li><a href="#sec-5_4_3_3" id="toc-sec-5_4_3_3" class="nav-link" data-scroll-target="#sec-5_4_3_3"><span class="toc-section-number">5.4.3.3</span>  Assumptions and Caveats</a></li>
+  <li><a href="#sec-5_4_3_1" id="toc-sec-5_4_3_1" class="nav-link" data-scroll-target="#sec-5_4_3_1"><span class="header-section-number">5.4.3.1</span> Data Requirements and Setup</a></li>
+  <li><a href="#sec-5_4_3_2" id="toc-sec-5_4_3_2" class="nav-link" data-scroll-target="#sec-5_4_3_2"><span class="header-section-number">5.4.3.2</span> Calculations</a></li>
+  <li><a href="#sec-5_4_3_3" id="toc-sec-5_4_3_3" class="nav-link" data-scroll-target="#sec-5_4_3_3"><span class="header-section-number">5.4.3.3</span> Assumptions and Caveats</a></li>
   </ul></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/wb-mrio/cpat_public/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     </div>
@@ -215,7 +231,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Distribution Module</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Distribution Module</span></h1>
 </div>
 
 
@@ -315,7 +331,7 @@ div.csl-indent {
 <p>The <strong>tax-induced price changes of fossil fuels</strong> (c.f. <a href="#tbl-5_1">Table&nbsp;<span>5.1</span></a> for a list of fuels), which determine households’ additional expenditures on direct fuel consumption (for f=g, in <a href="#eq-5_3">Equation&nbsp;<span>5.3</span></a>), are a function of fuels’ carbon intensities, <span class="math inline">\(e_{f}\)</span>, measured by emissions factors, and pre-existing price distortions in the Mitigation Module. For each user-defined carbon fiscal scenario, price changes are obtained from the Mitigation Module (see respective Mitigation Module Documentation). As price increases vary for each fuel by sector (due to varying emissions factors and baseline pricing), price changes are estimated for each country, year and fuel-sector pair <span class="math inline">\(t_{\text{fg}}\)</span>, where “sectors” here are power, industry, and residential. Residential sector fuel price changes are used to calculate the direct consumption effects.</p>
 <p>The <strong>tax-induced price changes of goods and services based on the domestic carbon price</strong>, which determine households’ additional expenditures on indirect fuel consumption (for <em>f</em> ∉ <em>g</em>, in <a href="#eq-5_3">Equation&nbsp;<span>5.3</span></a>), follow a standard input-output (IO) approach. Consistent with much of the carbon tax literature, all price increases resulting from the user-defined carbon fiscal reform are expected to be fully passed forward, from producers and suppliers to final consumers. Estimated consumer price increases are, thus, absolute upper bounds.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> Adapted from basic IO analyses (cf. <span class="citation" data-cites="leontief1986input">Leontief (<a href="#ref-leontief1986input" role="doc-biblioref">1986</a>)</span>; <span class="citation" data-cites="minx2009input">Minx et al. (<a href="#ref-minx2009input" role="doc-biblioref">2009</a>)</span>), household energy intensities <span class="math inline">\(\overline{e_{g}}\)</span> result as entries of the vector:</p>
 <p><span id="eq-5_3"><span class="math display">\[e_{g} = f\left( I - A \right)^{- 1}, \; f \notin g \tag{5.3}\]</span></span></p>
-<p>where each fossil fuel sector, <em>f</em> is a vector assigning an energy intensity coefficient to each non-fuel sector. The $( I - A )^{- 1}$matrix, or Leontief inverse (cf.&nbsp;Leontief, 1986), accounts for all upstream inputs that are required to produce one unit of final demand for each sector. <span class="math inline">\(I\)</span> is the identity matrix and <span class="math inline">\(\text{A\ }\)</span>is a normalized matrix of technical coefficients based on inter-sectoral commodity flows.</p>
+<p>where each fossil fuel sector, <em>f</em> is a vector assigning an energy intensity coefficient to each non-fuel sector. The <span class="math inline">\(( I - A )^{- 1}\)</span> matrix, or Leontief inverse (cf.&nbsp;Leontief, 1986), accounts for all upstream inputs that are required to produce one unit of final demand for each sector. <span class="math inline">\(I\)</span> is the identity matrix and <span class="math inline">\(\text{A\ }\)</span>is a normalized matrix of technical coefficients based on inter-sectoral commodity flows.</p>
 <p>For <strong>(IO) data</strong>, we use the Global Trade Analysis Project (GTAP-10), (<span class="citation" data-cites="aguiar2019gtap">Aguiar et al. (<a href="#ref-aguiar2019gtap" role="doc-biblioref">2019</a>)</span>) to compute fossil fuel/energy intensities, and respective price changes for non-fuel sectors. The GTAP-10 database has several advantages. First, it is a consistent global database which harmonizes and scales data for 65 disaggregated sectors (g) and 141 world regions to the year 2014. Such harmonized data improve comparability across country-specific results in CPAT. Important for the estimation of sectoral effects from country-fuel-sector price changes is that GTAP-10 provides a more granular disaggregation of energy sectors than other global IO data with similar regional coverage (e.g., EORA). Yet, while CPAT distinguishes between eight fossil fuel/energy carriers, GTAP-10 includes only five fossil fuel sectors and electricity. Based on the concordance table, for GTAP’s “Petroleum and coke products” (p_c) sector, CPAT calculates the weighted average price change, using the economy-wide fuel use volumes of these products (in ktoe from IEA 2020) as weights.</p>
 <div id="tbl-5_1" class="anchored">
 <table class="table">
@@ -443,7 +459,7 @@ div.csl-indent {
 <section id="sec-5_4_2" class="level3" data-number="5.4.2">
 <h3 data-number="5.4.2" class="anchored" data-anchor-id="sec-5_4_2"><span class="header-section-number">5.4.2</span> Transfers through existing social protection schemes</h3>
 <p>Policy makers may favor extending existing social safety nets for the transfer of carbon tax revenues to households. CPAT, thus, provides the option to proportionally scale up existing social protection schemes, based on the Atlas of Social Protection Indicators of Resilience and Equity (ASPIRE) dataset. For 104 countries, ASPIRE provides quintile-level estimates of per capita transfers received through various benefit schemes, including social assistance measures such as targeted subsidies, in-kind assistance and existing cash transfer programs, labor market protection schemes as well as social insurance (please, refer to the ASPIRE documentation for a full catalog of covered schemes by country<a href="#fn15" class="footnote-ref" id="fnref15" role="doc-noteref"><sup>15</sup></a>).</p>
-<p>As CPAT simulates a proportional scaling of existing schemes, it first determines the proportion $A$by which the protection scheme <em>a</em> can be scaled up. Following <a href="#eq-5_9">Equation&nbsp;<span>5.9</span></a> above, CPAT defines:</p>
+<p>As CPAT simulates a proportional scaling of existing schemes, it first determines the proportion <span class="math inline">\(\mathrm{\Delta}A\)</span> by which the protection scheme <em>a</em> can be scaled up. Following <a href="#eq-5_9">Equation&nbsp;<span>5.9</span></a> above, CPAT defines:</p>
 <p><span id="eq-5_14"><span class="math display">\[{\mathrm{\Delta}A}_{a}^{y} = \frac{P_{M}^{y}}{A_{a}^{y}} \tag{5.14}\]</span></span></p>
 <p>where <span class="math inline">\(A_{a}^{y}\)</span> is the inflation-adjusted total government spending on protection scheme <em>a</em> in the year of interest y. For calculating total government spending, CPAT first multiplies per capita quintile transfer amounts by a fifth of the population pop<sub>y</sub> in the year of interest y, to arrive at total spending by quintile, which is, then, summed up. CPAT arrives at average decile transfers assuming that every two deciles receive the same amount (in per capita terms) as their corresponding quintile (e.g., deciles 1 and 2 receive the per-capita transfer of quintile 1 and so on). The approach described here (in tandem with options 1-4 listed under <a href="#sec-5_4_1"><span>Section&nbsp;5.4.1</span></a> above) also applies when users choose to recycle carbon tax revenues via existing (as opposed to new) targeted transfers.</p>
 </section>
@@ -456,7 +472,7 @@ div.csl-indent {
 <p>Economy-wide PIT paid is, subsequently, calibrated to equal the product of: i) the average PIT-to-GDP ratio<a href="#fn23" class="footnote-ref" id="fnref23" role="doc-noteref"><sup>23</sup></a> during the period 2010-2019<a href="#fn24" class="footnote-ref" id="fnref24" role="doc-noteref"><sup>24</sup></a>; and ii) GDP in the year of interest for the distributional effects analysis, <span class="math inline">\(y\)</span>.</p>
 <p>Analytically:</p>
 <p><span class="math inline">\(L_{\text{dcy}} = \ s_{\text{dc}}*{AVG\_ PIT\_ GDP}_{c}*\text{RGDP}_{\text{cy}}\)</span> and <span class="math inline">\(l_{\text{dcy}} = \ L_{\text{dcy}}/P_{\text{dcy}}\)</span></p>
-<p>where <span class="math inline">\(L_{\text{dcy}}\)</span> and $l_{}$stand for the total and per-capita PIT liabilities of decile <span class="math inline">\(\text{d\ }\)</span>in country <span class="math inline">\(\text{c\ }\)</span>and analysis year <span class="math inline">\(y\)</span>. <span class="math inline">\({AVG\_ PIT\_ GDP}_{2010 - 2019}\)</span> is the 2010-2019 average PIT-to-GDP ratio for country <span class="math inline">\(c\)</span> (assumed to be constant over time), <span class="math inline">\(\text{RGDP}_{\text{cy}}\)</span> is the real GDP in constant 2021 local currency units (LCU) in country <span class="math inline">\(\text{c\ }\)</span>and analysis year <span class="math inline">\(y\)</span> and <span class="math inline">\(P_{\text{dcy}}\)</span> is the total population of decile <span class="math inline">\(\text{d\ }\)</span>in country <span class="math inline">\(\text{c\ }\)</span>and analysis year <span class="math inline">\(y\)</span>. <span class="math inline">\(P_{\text{dcy}}\)</span> is calibrated to national population in country <span class="math inline">\(\text{c\ }\)</span>and analysis year <span class="math inline">\(y\)</span>, based on the country-specific population distributions obtained from household budget surveys (HBSs) as part of the data requirements for the CPAT consumption incidence calculations. Finally, <span class="math inline">\(s_{\text{dcy}}\)</span> is the share of PIT liability of decile <span class="math inline">\(\text{d\ }\)</span>in country <span class="math inline">\(\text{c\ }\)</span>and analysis year <span class="math inline">\(y\)</span>, proxied by data on direct or individual income taxes as described above.</p>
+<p>where <span class="math inline">\(L_{\text{dcy}}\)</span> and <span class="math inline">\(l_{\text{dcy}}\)</span> stand for the total and per-capita PIT liabilities of decile <span class="math inline">\(\text{d\ }\)</span>in country <span class="math inline">\(\text{c\ }\)</span>and analysis year <span class="math inline">\(y\)</span>. <span class="math inline">\({AVG\_ PIT\_ GDP}_{2010 - 2019}\)</span> is the 2010-2019 average PIT-to-GDP ratio for country <span class="math inline">\(c\)</span> (assumed to be constant over time), <span class="math inline">\(\text{RGDP}_{\text{cy}}\)</span> is the real GDP in constant 2021 local currency units (LCU) in country <span class="math inline">\(\text{c\ }\)</span>and analysis year <span class="math inline">\(y\)</span> and <span class="math inline">\(P_{\text{dcy}}\)</span> is the total population of decile <span class="math inline">\(\text{d\ }\)</span>in country <span class="math inline">\(\text{c\ }\)</span>and analysis year <span class="math inline">\(y\)</span>. <span class="math inline">\(P_{\text{dcy}}\)</span> is calibrated to national population in country <span class="math inline">\(\text{c\ }\)</span>and analysis year <span class="math inline">\(y\)</span>, based on the country-specific population distributions obtained from household budget surveys (HBSs) as part of the data requirements for the CPAT consumption incidence calculations. Finally, <span class="math inline">\(s_{\text{dcy}}\)</span> is the share of PIT liability of decile <span class="math inline">\(\text{d\ }\)</span>in country <span class="math inline">\(\text{c\ }\)</span>and analysis year <span class="math inline">\(y\)</span>, proxied by data on direct or individual income taxes as described above.</p>
 <p>The resulting estimates are merged with each country’s, decile-level HBS data for the overall sample<a href="#fn25" class="footnote-ref" id="fnref25" role="doc-noteref"><sup>25</sup></a>, assuming a 1:1 correspondence between the LIS/disposable income and CEQ/market income deciles and the consumption deciles from the various HBSs. In cases, where LIS and CEQ country coverage overlaps<a href="#fn26" class="footnote-ref" id="fnref26" role="doc-noteref"><sup>26</sup></a>, CPAT prioritizes the source which covers the latest available year of data<a href="#fn27" class="footnote-ref" id="fnref27" role="doc-noteref"><sup>27</sup></a>.</p>
 </section>
 <section id="sec-5_4_3_2" class="level4" data-number="5.4.3.2">
@@ -1150,77 +1166,77 @@ American Development Bank (IDB), Washington, DC. DOI: ht t p://dx.doi.org/10.182
 </div>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-IMFCovidSeries" class="csl-entry" role="doc-biblioentry">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-IMFCovidSeries" class="csl-entry" role="listitem">
 Abdallah, David;, Chadi; Coady, and Nghia-Piotr Le. 2020. <span>“The Time Is Right! Reforming Fuel Product Pricing Under Low Oil Prices.”</span> International Monetary Fund.
 </div>
-<div id="ref-aguiar2019gtap" class="csl-entry" role="doc-biblioentry">
+<div id="ref-aguiar2019gtap" class="csl-entry" role="listitem">
 Aguiar, Angel, Maksym Chepeliev, Erwin L Corong, Robert McDougall, and Dominique Van Der Mensbrugghe. 2019. <span>“The GTAP Data Base: Version 10.”</span> <em>Journal of Global Economic Analysis</em> 4 (1): 1–27.
 </div>
-<div id="ref-aung2021energy" class="csl-entry" role="doc-biblioentry">
+<div id="ref-aung2021energy" class="csl-entry" role="listitem">
 Aung, Ther, Robert Bailis, Thabbie Chilongo, Adrian Ghilardi, Charles Jumbe, and Pamela Jagger. 2021. <span>“Energy Access and the Ultra-Poor: Do Unconditional Social Cash Transfers Close the Energy Access Gap in Malawi?”</span> <em>Energy for Sustainable Development</em> 60: 102–12.
 </div>
-<div id="ref-baranzini2017carbon" class="csl-entry" role="doc-biblioentry">
+<div id="ref-baranzini2017carbon" class="csl-entry" role="listitem">
 Baranzini, Andrea, Jeroen CJM Van den Bergh, Stefano Carattini, Richard B Howarth, Emilio Padilla, and Jordi Roca. 2017. <span>“Carbon Pricing in Climate Policy: Seven Reasons, Complementary Instruments, and Political Economy Considerations.”</span> <em>Wiley Interdisciplinary Reviews: Climate Change</em> 8 (4): e462.
 </div>
-<div id="ref-cahyadi2020cumulative" class="csl-entry" role="doc-biblioentry">
+<div id="ref-cahyadi2020cumulative" class="csl-entry" role="listitem">
 Cahyadi, Nur, Rema Hanna, Benjamin A Olken, Rizal Adi Prima, Elan Satriawan, and Ekki Syamsulhakim. 2020. <span>“Cumulative Impacts of Conditional Cash Transfer Programs: Experimental Evidence from Indonesia.”</span> <em>American Economic Journal: Economic Policy</em> 12 (4): 88–110.
 </div>
-<div id="ref-calderon2004effects" class="csl-entry" role="doc-biblioentry">
+<div id="ref-calderon2004effects" class="csl-entry" role="listitem">
 Calderon, Cesar A, and Luis Servén. 2004. <span>“The Effects of Infrastructure Development on Growth and Income Distribution.”</span> <em>Available at SSRN 625277</em>.
 </div>
-<div id="ref-deaton1997analysis" class="csl-entry" role="doc-biblioentry">
+<div id="ref-deaton1997analysis" class="csl-entry" role="listitem">
 Deaton, Angus. 1997. <em>The Analysis of Household Surveys: A Microeconometric Approach to Development Policy</em>. World Bank Publications.
 </div>
-<div id="ref-dorband2019poverty" class="csl-entry" role="doc-biblioentry">
+<div id="ref-dorband2019poverty" class="csl-entry" role="listitem">
 Dorband, Ira Irina, Michael Jakob, Matthias Kalkuhl, and Jan Christoph Steckel. 2019. <span>“Poverty and Distributional Effects of Carbon Pricing in Low-and Middle-Income Countries–a Global Comparative Analysis.”</span> <em>World Development</em> 115: 246–57.
 </div>
-<div id="ref-farrell2017factors" class="csl-entry" role="doc-biblioentry">
+<div id="ref-farrell2017factors" class="csl-entry" role="listitem">
 Farrell, Niall. 2017. <span>“What Factors Drive Inequalities in Carbon Tax Incidence? Decomposing Socioeconomic Inequalities in Carbon Tax Incidence in Ireland.”</span> <em>Ecological Economics</em> 142: 31–45.
 </div>
-<div id="ref-fischer2019horizontal" class="csl-entry" role="doc-biblioentry">
+<div id="ref-fischer2019horizontal" class="csl-entry" role="listitem">
 Fischer, Carolyn, and William A Pizer. 2019. <span>“Horizontal Equity Effects in Energy Regulation.”</span> <em>Journal of the Association of Environmental and Resource Economists</em> 6 (S1): S209–37.
 </div>
-<div id="ref-ganapati2020energy" class="csl-entry" role="doc-biblioentry">
+<div id="ref-ganapati2020energy" class="csl-entry" role="listitem">
 Ganapati, Sharat, Joseph S Shapiro, and Reed Walker. 2020. <span>“Energy Cost Pass-Through in US Manufacturing: Estimates and Implications for Carbon Taxes.”</span> <em>American Economic Journal: Applied Economics</em> 12 (2): 303–42.
 </div>
-<div id="ref-gerber2020income" class="csl-entry" role="doc-biblioentry">
+<div id="ref-gerber2020income" class="csl-entry" role="listitem">
 Gerber, Claudia, Alexander Klemm, Li Liu, and Victor Mylonas. 2020. <span>“Income Tax Progressivity: Trends and Implications.”</span> <em>Oxford Bulletin of Economics and Statistics</em> 82 (2): 365–86.
 </div>
-<div id="ref-hubacek2017poverty" class="csl-entry" role="doc-biblioentry">
+<div id="ref-hubacek2017poverty" class="csl-entry" role="listitem">
 Hubacek, Klaus, Giovanni Baiocchi, Kuishuang Feng, and Anand Patwardhan. 2017. <span>“Poverty Eradication in a Carbon Constrained World.”</span> <em>Nature Communications</em> 8 (1): 912.
 </div>
-<div id="ref-jiang2014distributional" class="csl-entry" role="doc-biblioentry">
+<div id="ref-jiang2014distributional" class="csl-entry" role="listitem">
 Jiang, Zhujun, and Shuai Shao. 2014. <span>“Distributional Effects of a Carbon Tax on Chinese Households: A Case of Shanghai.”</span> <em>Energy Policy</em> 73: 269–77.
 </div>
-<div id="ref-klenert2018making" class="csl-entry" role="doc-biblioentry">
+<div id="ref-klenert2018making" class="csl-entry" role="listitem">
 Klenert, David, Linus Mattauch, Emmanuel Combet, Ottmar Edenhofer, Cameron Hepburn, Ryan Rafaty, and Nicholas Stern. 2018. <span>“Making Carbon Pricing Work for Citizens.”</span> <em>Nature Climate Change</em> 8 (8): 669–77.
 </div>
-<div id="ref-leontief1986input" class="csl-entry" role="doc-biblioentry">
+<div id="ref-leontief1986input" class="csl-entry" role="listitem">
 Leontief, Wassily. 1986. <em>Input-Output Economics</em>. Oxford University Press.
 </div>
-<div id="ref-markandya2016towards" class="csl-entry" role="doc-biblioentry">
+<div id="ref-markandya2016towards" class="csl-entry" role="listitem">
 Markandya, Anil, Iñaki Arto, Mikel González-Eguino, and Maria V Román. 2016. <span>“Towards a Green Energy Economy? Tracking the Employment Effects of Low-Carbon Technologies in the European Union.”</span> <em>Applied Energy</em> 179: 1342–50.
 </div>
-<div id="ref-metcalf2019distributional" class="csl-entry" role="doc-biblioentry">
+<div id="ref-metcalf2019distributional" class="csl-entry" role="listitem">
 Metcalf, Gilbert E. 2019. <span>“The Distributional Impacts of US Energy Policy.”</span> <em>Energy Policy</em> 129: 926–29.
 </div>
-<div id="ref-minx2009input" class="csl-entry" role="doc-biblioentry">
+<div id="ref-minx2009input" class="csl-entry" role="listitem">
 Minx, Jan C, Thomas Wiedmann, Richard Wood, Glen P Peters, Manfred Lenzen, Anne Owen, Kate Scott, et al. 2009. <span>“Input–Output Analysis and Carbon Footprinting: An Overview of Applications.”</span> <em>Economic Systems Research</em> 21 (3): 187–216.
 </div>
-<div id="ref-olivier2018analyzing" class="csl-entry" role="doc-biblioentry">
+<div id="ref-olivier2018analyzing" class="csl-entry" role="listitem">
 Olivier, Anne, and Caterina Ruggeri Laderchi. 2018. <span>“Analyzing the Incidence of Consumer Price Subsidies and the Impact of Reform on Households—Quantitative Analysis: Households.”</span> The World Bank.
 </div>
-<div id="ref-schaffitzel2020can" class="csl-entry" role="doc-biblioentry">
+<div id="ref-schaffitzel2020can" class="csl-entry" role="listitem">
 Schaffitzel, Filip, Michael Jakob, Rafael Soria, Adrien Vogt-Schilb, and Hauke Ward. 2020. <span>“Can Government Transfers Make Energy Subsidy Reform Socially Acceptable? A Case Study on Ecuador.”</span> <em>Energy Policy</em> 137: 111120.
 </div>
-<div id="ref-da2016distributional" class="csl-entry" role="doc-biblioentry">
+<div id="ref-da2016distributional" class="csl-entry" role="listitem">
 Silva Freitas, Lucio Flavio da, Luiz Carlos de Santana Ribeiro, Kênia Barreiro de Souza, and Geoffrey John Dennis Hewings. 2016. <span>“The Distributional Effects of Emissions Taxation in Brazil and Their Implications for Climate Policy.”</span> <em>Energy Economics</em> 59: 37–44.
 </div>
-<div id="ref-vogt2019cash" class="csl-entry" role="doc-biblioentry">
+<div id="ref-vogt2019cash" class="csl-entry" role="listitem">
 Vogt-Schilb, Adrien, Brian Walsh, Kuishuang Feng, Laura Di Capua, Yu Liu, Daniela Zuluaga, Marcos Robles, and Klaus Hubaceck. 2019. <span>“Cash Transfers for Pro-Poor Carbon Taxes in Latin America and the Caribbean.”</span> <em>Nature Sustainability</em> 2 (10): 941–48.
 </div>
-<div id="ref-wier2005co2" class="csl-entry" role="doc-biblioentry">
+<div id="ref-wier2005co2" class="csl-entry" role="listitem">
 Wier, Mette, Katja Birr-Pedersen, Henrik Klinge Jacobsen, and Jacob Klok. 2005. <span>“Are CO2 Taxes Regressive? Evidence from the Danish Experience.”</span> <em>Ecological Economics</em> 52 (2): 239–51.
 </div>
 </div>
@@ -1289,9 +1305,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -1356,6 +1386,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -1410,7 +1526,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-      <div class="nav-footer-center">WB-IMF Climate Policy Assessment Tool, 2023</div>
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">WB-IMF Climate Policy Assessment Tool, 2023</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
   </div>
 </footer>
 

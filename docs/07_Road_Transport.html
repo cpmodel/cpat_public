@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.475">
+<meta name="generator" content="quarto-1.3.306">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,14 +17,15 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
 }
-.hanging div.csl-entry {
+.hanging-indent div.csl-entry {
   margin-left:2em;
   text-indent:-2em;
 }
@@ -38,8 +39,7 @@ div.csl-right-inline {
 }
 div.csl-indent {
   margin-left: 2em;
-}
-</style>
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -80,6 +80,7 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
@@ -88,11 +89,16 @@ div.csl-indent {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Road Transport Module</span></h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./07_Road_Transport.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Road Transport Module</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
@@ -100,13 +106,14 @@ div.csl-indent {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">CPAT Documentation</a> 
-        <div class="sidebar-tools-main">
-    <a href="https://github.com/wb-mrio/cpat_public" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
-  <a href="" class="quarto-reader-toggle sidebar-tool" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/wb-mrio/cpat_public" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="./CPAT-Documentation.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
@@ -114,51 +121,59 @@ div.csl-indent {
 </div>
     </div>
       </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link"><strong>Cover</strong></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Cover</strong></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./01_User_Guide.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">User Guide and Climate Policies in CPAT</span></a>
+  <a href="./01_User_Guide.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">User Guide and Climate Policies in CPAT</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02_Summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary of the approach and applications</span></a>
+  <a href="./02_Summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary of the approach and applications</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03_Mitigation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Mitigation module</span></a>
+  <a href="./03_Mitigation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Mitigation module</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04_Multipliers.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Multipliers</span></a>
+  <a href="./04_Multipliers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Multipliers</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./05_Distribution.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Distribution Module</span></a>
+  <a href="./05_Distribution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Distribution Module</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./06_Air_pollution.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Air pollution module</span></a>
+  <a href="./06_Air_pollution.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Air pollution module</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./07_Road_Transport.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Road Transport Module</span></a>
+  <a href="./07_Road_Transport.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Road Transport Module</span></span></a>
   </div>
 </li>
     </ul>
@@ -167,82 +182,83 @@ div.csl-indent {
     <h2 id="toc-title"><strong><em>Chapter Contents</em></strong></h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">7.1</span>  Summary</a></li>
-  <li><a href="#list-of-acronyms" id="toc-list-of-acronyms" class="nav-link" data-scroll-target="#list-of-acronyms"><span class="toc-section-number">7.2</span>  List of acronyms</a></li>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="toc-section-number">7.3</span>  Introduction</a>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">7.1</span> Summary</a></li>
+  <li><a href="#list-of-acronyms" id="toc-list-of-acronyms" class="nav-link" data-scroll-target="#list-of-acronyms"><span class="header-section-number">7.2</span> List of acronyms</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">7.3</span> Introduction</a>
   <ul>
-  <li><a href="#vehicle-kilometers-traveled-vkt" id="toc-vehicle-kilometers-traveled-vkt" class="nav-link" data-scroll-target="#vehicle-kilometers-traveled-vkt"><span class="toc-section-number">7.3.1</span>  Vehicle-kilometers traveled (VKT)</a></li>
-  <li><a href="#congestion" id="toc-congestion" class="nav-link" data-scroll-target="#congestion"><span class="toc-section-number">7.3.2</span>  Congestion</a></li>
-  <li><a href="#road-accident-fatalities" id="toc-road-accident-fatalities" class="nav-link" data-scroll-target="#road-accident-fatalities"><span class="toc-section-number">7.3.3</span>  Road accident fatalities</a></li>
-  <li><a href="#sec-roaddam" id="toc-sec-roaddam" class="nav-link" data-scroll-target="#sec-roaddam"><span class="toc-section-number">7.3.4</span>  Road damage</a></li>
-  <li><a href="#within-country-heterogeneity-by-socio-demographic-characteristics" id="toc-within-country-heterogeneity-by-socio-demographic-characteristics" class="nav-link" data-scroll-target="#within-country-heterogeneity-by-socio-demographic-characteristics"><span class="toc-section-number">7.3.5</span>  Within-country heterogeneity (by socio-demographic characteristics)</a></li>
-  <li><a href="#between-country-heterogeneity" id="toc-between-country-heterogeneity" class="nav-link" data-scroll-target="#between-country-heterogeneity"><span class="toc-section-number">7.3.6</span>  Between-country heterogeneity</a></li>
-  <li><a href="#fuel-prices-vs.-taxes" id="toc-fuel-prices-vs.-taxes" class="nav-link" data-scroll-target="#fuel-prices-vs.-taxes"><span class="toc-section-number">7.3.7</span>  Fuel prices vs.&nbsp;taxes</a></li>
-  <li><a href="#sec-methodo" id="toc-sec-methodo" class="nav-link" data-scroll-target="#sec-methodo"><span class="toc-section-number">7.3.8</span>  Methodology</a></li>
+  <li><a href="#vehicle-kilometers-traveled-vkt" id="toc-vehicle-kilometers-traveled-vkt" class="nav-link" data-scroll-target="#vehicle-kilometers-traveled-vkt"><span class="header-section-number">7.3.1</span> Vehicle-kilometers traveled (VKT)</a></li>
+  <li><a href="#congestion" id="toc-congestion" class="nav-link" data-scroll-target="#congestion"><span class="header-section-number">7.3.2</span> Congestion</a></li>
+  <li><a href="#road-accident-fatalities" id="toc-road-accident-fatalities" class="nav-link" data-scroll-target="#road-accident-fatalities"><span class="header-section-number">7.3.3</span> Road accident fatalities</a></li>
+  <li><a href="#sec-roaddam" id="toc-sec-roaddam" class="nav-link" data-scroll-target="#sec-roaddam"><span class="header-section-number">7.3.4</span> Road damage</a></li>
+  <li><a href="#within-country-heterogeneity-by-socio-demographic-characteristics" id="toc-within-country-heterogeneity-by-socio-demographic-characteristics" class="nav-link" data-scroll-target="#within-country-heterogeneity-by-socio-demographic-characteristics"><span class="header-section-number">7.3.5</span> Within-country heterogeneity (by socio-demographic characteristics)</a></li>
+  <li><a href="#between-country-heterogeneity" id="toc-between-country-heterogeneity" class="nav-link" data-scroll-target="#between-country-heterogeneity"><span class="header-section-number">7.3.6</span> Between-country heterogeneity</a></li>
+  <li><a href="#fuel-prices-vs.-taxes" id="toc-fuel-prices-vs.-taxes" class="nav-link" data-scroll-target="#fuel-prices-vs.-taxes"><span class="header-section-number">7.3.7</span> Fuel prices vs.&nbsp;taxes</a></li>
+  <li><a href="#sec-methodo" id="toc-sec-methodo" class="nav-link" data-scroll-target="#sec-methodo"><span class="header-section-number">7.3.8</span> Methodology</a></li>
   </ul></li>
-  <li><a href="#data-sources" id="toc-data-sources" class="nav-link" data-scroll-target="#data-sources"><span class="toc-section-number">7.4</span>  Data sources</a>
+  <li><a href="#data-sources" id="toc-data-sources" class="nav-link" data-scroll-target="#data-sources"><span class="header-section-number">7.4</span> Data sources</a>
   <ul>
-  <li><a href="#general" id="toc-general" class="nav-link" data-scroll-target="#general"><span class="toc-section-number">7.4.1</span>  General</a></li>
-  <li><a href="#sec-cong" id="toc-sec-cong" class="nav-link" data-scroll-target="#sec-cong"><span class="toc-section-number">7.4.2</span>  Congestion</a></li>
-  <li><a href="#road-safety" id="toc-road-safety" class="nav-link" data-scroll-target="#road-safety"><span class="toc-section-number">7.4.3</span>  Road safety</a></li>
-  <li><a href="#fuel-prices" id="toc-fuel-prices" class="nav-link" data-scroll-target="#fuel-prices"><span class="toc-section-number">7.4.4</span>  Fuel prices</a></li>
-  <li><a href="#externality-costs" id="toc-externality-costs" class="nav-link" data-scroll-target="#externality-costs"><span class="toc-section-number">7.4.5</span>  Externality costs</a></li>
-  <li><a href="#data-cleaning" id="toc-data-cleaning" class="nav-link" data-scroll-target="#data-cleaning"><span class="toc-section-number">7.4.6</span>  Data cleaning</a></li>
+  <li><a href="#general" id="toc-general" class="nav-link" data-scroll-target="#general"><span class="header-section-number">7.4.1</span> General</a></li>
+  <li><a href="#sec-cong" id="toc-sec-cong" class="nav-link" data-scroll-target="#sec-cong"><span class="header-section-number">7.4.2</span> Congestion</a></li>
+  <li><a href="#road-safety" id="toc-road-safety" class="nav-link" data-scroll-target="#road-safety"><span class="header-section-number">7.4.3</span> Road safety</a></li>
+  <li><a href="#fuel-prices" id="toc-fuel-prices" class="nav-link" data-scroll-target="#fuel-prices"><span class="header-section-number">7.4.4</span> Fuel prices</a></li>
+  <li><a href="#externality-costs" id="toc-externality-costs" class="nav-link" data-scroll-target="#externality-costs"><span class="header-section-number">7.4.5</span> Externality costs</a></li>
+  <li><a href="#data-cleaning" id="toc-data-cleaning" class="nav-link" data-scroll-target="#data-cleaning"><span class="header-section-number">7.4.6</span> Data cleaning</a></li>
   </ul></li>
-  <li><a href="#methods-for-elasticity-estimation" id="toc-methods-for-elasticity-estimation" class="nav-link" data-scroll-target="#methods-for-elasticity-estimation"><span class="toc-section-number">7.5</span>  Methods for elasticity estimation</a>
+  <li><a href="#methods-for-elasticity-estimation" id="toc-methods-for-elasticity-estimation" class="nav-link" data-scroll-target="#methods-for-elasticity-estimation"><span class="header-section-number">7.5</span> Methods for elasticity estimation</a>
   <ul>
-  <li><a href="#estimation-equation" id="toc-estimation-equation" class="nav-link" data-scroll-target="#estimation-equation"><span class="toc-section-number">7.5.1</span>  Estimation equation</a></li>
-  <li><a href="#short-run-and-long-run-estimators" id="toc-short-run-and-long-run-estimators" class="nav-link" data-scroll-target="#short-run-and-long-run-estimators"><span class="toc-section-number">7.5.2</span>  Short-run and long-run estimators</a></li>
-  <li><a href="#covariates" id="toc-covariates" class="nav-link" data-scroll-target="#covariates"><span class="toc-section-number">7.5.3</span>  Covariates</a></li>
-  <li><a href="#country-specific-elasticity-estimates" id="toc-country-specific-elasticity-estimates" class="nav-link" data-scroll-target="#country-specific-elasticity-estimates"><span class="toc-section-number">7.5.4</span>  Country-specific elasticity estimates</a></li>
-  <li><a href="#fuel-prices-or-taxes" id="toc-fuel-prices-or-taxes" class="nav-link" data-scroll-target="#fuel-prices-or-taxes"><span class="toc-section-number">7.5.5</span>  Fuel prices or taxes</a></li>
+  <li><a href="#estimation-equation" id="toc-estimation-equation" class="nav-link" data-scroll-target="#estimation-equation"><span class="header-section-number">7.5.1</span> Estimation equation</a></li>
+  <li><a href="#short-run-and-long-run-estimators" id="toc-short-run-and-long-run-estimators" class="nav-link" data-scroll-target="#short-run-and-long-run-estimators"><span class="header-section-number">7.5.2</span> Short-run and long-run estimators</a></li>
+  <li><a href="#covariates" id="toc-covariates" class="nav-link" data-scroll-target="#covariates"><span class="header-section-number">7.5.3</span> Covariates</a></li>
+  <li><a href="#country-specific-elasticity-estimates" id="toc-country-specific-elasticity-estimates" class="nav-link" data-scroll-target="#country-specific-elasticity-estimates"><span class="header-section-number">7.5.4</span> Country-specific elasticity estimates</a></li>
+  <li><a href="#fuel-prices-or-taxes" id="toc-fuel-prices-or-taxes" class="nav-link" data-scroll-target="#fuel-prices-or-taxes"><span class="header-section-number">7.5.5</span> Fuel prices or taxes</a></li>
   </ul></li>
-  <li><a href="#elasticity-results" id="toc-elasticity-results" class="nav-link" data-scroll-target="#elasticity-results"><span class="toc-section-number">7.6</span>  Elasticity results</a>
+  <li><a href="#elasticity-results" id="toc-elasticity-results" class="nav-link" data-scroll-target="#elasticity-results"><span class="header-section-number">7.6</span> Elasticity results</a>
   <ul>
-  <li><a href="#congestion-1" id="toc-congestion-1" class="nav-link" data-scroll-target="#congestion-1"><span class="toc-section-number">7.6.1</span>  Congestion</a>
+  <li><a href="#congestion-1" id="toc-congestion-1" class="nav-link" data-scroll-target="#congestion-1"><span class="header-section-number">7.6.1</span> Congestion</a>
   <ul class="collapse">
-  <li><a href="#short-run-elasticity" id="toc-short-run-elasticity" class="nav-link" data-scroll-target="#short-run-elasticity"><span class="toc-section-number">7.6.1.1</span>  Short-run elasticity</a></li>
-  <li><a href="#long-run-elasticity" id="toc-long-run-elasticity" class="nav-link" data-scroll-target="#long-run-elasticity"><span class="toc-section-number">7.6.1.2</span>  Long-run elasticity</a></li>
-  <li><a href="#sec-speelas" id="toc-sec-speelas" class="nav-link" data-scroll-target="#sec-speelas"><span class="toc-section-number">7.6.1.3</span>  Country-specific elasticities</a></li>
+  <li><a href="#short-run-elasticity" id="toc-short-run-elasticity" class="nav-link" data-scroll-target="#short-run-elasticity"><span class="header-section-number">7.6.1.1</span> Short-run elasticity</a></li>
+  <li><a href="#long-run-elasticity" id="toc-long-run-elasticity" class="nav-link" data-scroll-target="#long-run-elasticity"><span class="header-section-number">7.6.1.2</span> Long-run elasticity</a></li>
+  <li><a href="#sec-speelas" id="toc-sec-speelas" class="nav-link" data-scroll-target="#sec-speelas"><span class="header-section-number">7.6.1.3</span> Country-specific elasticities</a></li>
   </ul></li>
-  <li><a href="#fatalities-from-road-accidents" id="toc-fatalities-from-road-accidents" class="nav-link" data-scroll-target="#fatalities-from-road-accidents"><span class="toc-section-number">7.6.2</span>  Fatalities from road accidents</a>
+  <li><a href="#fatalities-from-road-accidents" id="toc-fatalities-from-road-accidents" class="nav-link" data-scroll-target="#fatalities-from-road-accidents"><span class="header-section-number">7.6.2</span> Fatalities from road accidents</a>
   <ul class="collapse">
-  <li><a href="#short-run-elasticity-1" id="toc-short-run-elasticity-1" class="nav-link" data-scroll-target="#short-run-elasticity-1"><span class="toc-section-number">7.6.2.1</span>  Short-run elasticity</a></li>
-  <li><a href="#long-run-elasticity-1" id="toc-long-run-elasticity-1" class="nav-link" data-scroll-target="#long-run-elasticity-1"><span class="toc-section-number">7.6.2.2</span>  Long-run elasticity</a></li>
-  <li><a href="#sec-speelas2" id="toc-sec-speelas2" class="nav-link" data-scroll-target="#sec-speelas2"><span class="toc-section-number">7.6.2.3</span>  Country-specific elasticities</a></li>
+  <li><a href="#short-run-elasticity-1" id="toc-short-run-elasticity-1" class="nav-link" data-scroll-target="#short-run-elasticity-1"><span class="header-section-number">7.6.2.1</span> Short-run elasticity</a></li>
+  <li><a href="#long-run-elasticity-1" id="toc-long-run-elasticity-1" class="nav-link" data-scroll-target="#long-run-elasticity-1"><span class="header-section-number">7.6.2.2</span> Long-run elasticity</a></li>
+  <li><a href="#sec-speelas2" id="toc-sec-speelas2" class="nav-link" data-scroll-target="#sec-speelas2"><span class="header-section-number">7.6.2.3</span> Country-specific elasticities</a></li>
   </ul></li>
-  <li><a href="#road-damage" id="toc-road-damage" class="nav-link" data-scroll-target="#road-damage"><span class="toc-section-number">7.6.3</span>  Road damage</a>
+  <li><a href="#road-damage" id="toc-road-damage" class="nav-link" data-scroll-target="#road-damage"><span class="header-section-number">7.6.3</span> Road damage</a>
   <ul class="collapse">
-  <li><a href="#short-run-elasticity-2" id="toc-short-run-elasticity-2" class="nav-link" data-scroll-target="#short-run-elasticity-2"><span class="toc-section-number">7.6.3.1</span>  Short-run elasticity</a></li>
-  <li><a href="#long-run-elasticity-2" id="toc-long-run-elasticity-2" class="nav-link" data-scroll-target="#long-run-elasticity-2"><span class="toc-section-number">7.6.3.2</span>  Long-run elasticity</a></li>
-  <li><a href="#country-specific-elasticities" id="toc-country-specific-elasticities" class="nav-link" data-scroll-target="#country-specific-elasticities"><span class="toc-section-number">7.6.3.3</span>  Country-specific elasticities</a></li>
+  <li><a href="#short-run-elasticity-2" id="toc-short-run-elasticity-2" class="nav-link" data-scroll-target="#short-run-elasticity-2"><span class="header-section-number">7.6.3.1</span> Short-run elasticity</a></li>
+  <li><a href="#long-run-elasticity-2" id="toc-long-run-elasticity-2" class="nav-link" data-scroll-target="#long-run-elasticity-2"><span class="header-section-number">7.6.3.2</span> Long-run elasticity</a></li>
+  <li><a href="#country-specific-elasticities" id="toc-country-specific-elasticities" class="nav-link" data-scroll-target="#country-specific-elasticities"><span class="header-section-number">7.6.3.3</span> Country-specific elasticities</a></li>
   </ul></li>
-  <li><a href="#vehicle-km-travelled-vkt" id="toc-vehicle-km-travelled-vkt" class="nav-link" data-scroll-target="#vehicle-km-travelled-vkt"><span class="toc-section-number">7.6.4</span>  Vehicle-km travelled (VKT)</a>
+  <li><a href="#vehicle-km-travelled-vkt" id="toc-vehicle-km-travelled-vkt" class="nav-link" data-scroll-target="#vehicle-km-travelled-vkt"><span class="header-section-number">7.6.4</span> Vehicle-km travelled (VKT)</a>
   <ul class="collapse">
-  <li><a href="#short-run-elasticity-3" id="toc-short-run-elasticity-3" class="nav-link" data-scroll-target="#short-run-elasticity-3"><span class="toc-section-number">7.6.4.1</span>  Short-run elasticity</a></li>
-  <li><a href="#long-run-elasticity-3" id="toc-long-run-elasticity-3" class="nav-link" data-scroll-target="#long-run-elasticity-3"><span class="toc-section-number">7.6.4.2</span>  Long-run elasticity</a></li>
-  <li><a href="#country-specific-elasticities-1" id="toc-country-specific-elasticities-1" class="nav-link" data-scroll-target="#country-specific-elasticities-1"><span class="toc-section-number">7.6.4.3</span>  Country-specific elasticities</a></li>
+  <li><a href="#short-run-elasticity-3" id="toc-short-run-elasticity-3" class="nav-link" data-scroll-target="#short-run-elasticity-3"><span class="header-section-number">7.6.4.1</span> Short-run elasticity</a></li>
+  <li><a href="#long-run-elasticity-3" id="toc-long-run-elasticity-3" class="nav-link" data-scroll-target="#long-run-elasticity-3"><span class="header-section-number">7.6.4.2</span> Long-run elasticity</a></li>
+  <li><a href="#country-specific-elasticities-1" id="toc-country-specific-elasticities-1" class="nav-link" data-scroll-target="#country-specific-elasticities-1"><span class="header-section-number">7.6.4.3</span> Country-specific elasticities</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#excel-implementation-cpats-road-transport-module" id="toc-excel-implementation-cpats-road-transport-module" class="nav-link" data-scroll-target="#excel-implementation-cpats-road-transport-module"><span class="toc-section-number">7.7</span>  Excel implementation: CPAT’s Road Transport Module</a>
+  <li><a href="#excel-implementation-cpats-road-transport-module" id="toc-excel-implementation-cpats-road-transport-module" class="nav-link" data-scroll-target="#excel-implementation-cpats-road-transport-module"><span class="header-section-number">7.7</span> Excel implementation: CPAT’s Road Transport Module</a>
   <ul>
-  <li><a href="#general-1" id="toc-general-1" class="nav-link" data-scroll-target="#general-1"><span class="toc-section-number">7.7.1</span>  General</a></li>
-  <li><a href="#baseline-forecasts" id="toc-baseline-forecasts" class="nav-link" data-scroll-target="#baseline-forecasts"><span class="toc-section-number">7.7.2</span>  Baseline forecasts</a></li>
-  <li><a href="#policy-forecast" id="toc-policy-forecast" class="nav-link" data-scroll-target="#policy-forecast"><span class="toc-section-number">7.7.3</span>  Policy forecast</a></li>
-  <li><a href="#dashboard-graphics" id="toc-dashboard-graphics" class="nav-link" data-scroll-target="#dashboard-graphics"><span class="toc-section-number">7.7.4</span>  Dashboard graphics</a></li>
-  <li><a href="#sec-extcost" id="toc-sec-extcost" class="nav-link" data-scroll-target="#sec-extcost"><span class="toc-section-number">7.7.5</span>  Externality cost per liter of motor fuel</a></li>
+  <li><a href="#general-1" id="toc-general-1" class="nav-link" data-scroll-target="#general-1"><span class="header-section-number">7.7.1</span> General</a></li>
+  <li><a href="#baseline-forecasts" id="toc-baseline-forecasts" class="nav-link" data-scroll-target="#baseline-forecasts"><span class="header-section-number">7.7.2</span> Baseline forecasts</a></li>
+  <li><a href="#policy-forecast" id="toc-policy-forecast" class="nav-link" data-scroll-target="#policy-forecast"><span class="header-section-number">7.7.3</span> Policy forecast</a></li>
+  <li><a href="#dashboard-graphics" id="toc-dashboard-graphics" class="nav-link" data-scroll-target="#dashboard-graphics"><span class="header-section-number">7.7.4</span> Dashboard graphics</a></li>
+  <li><a href="#sec-extcost" id="toc-sec-extcost" class="nav-link" data-scroll-target="#sec-extcost"><span class="header-section-number">7.7.5</span> Externality cost per liter of motor fuel</a></li>
   </ul></li>
-  <li><a href="#caveats" id="toc-caveats" class="nav-link" data-scroll-target="#caveats"><span class="toc-section-number">7.8</span>  Caveats</a></li>
-  <li><a href="#status-of-upgrades-since-the-last-review-changes-not-implemented-and-remaining-issues" id="toc-status-of-upgrades-since-the-last-review-changes-not-implemented-and-remaining-issues" class="nav-link" data-scroll-target="#status-of-upgrades-since-the-last-review-changes-not-implemented-and-remaining-issues"><span class="toc-section-number">7.9</span>  Status of upgrades since the last review, changes not implemented and remaining issues</a></li>
-  <li><a href="#appendices" id="toc-appendices" class="nav-link" data-scroll-target="#appendices"><span class="toc-section-number">7.10</span>  Appendices</a>
+  <li><a href="#caveats" id="toc-caveats" class="nav-link" data-scroll-target="#caveats"><span class="header-section-number">7.8</span> Caveats</a></li>
+  <li><a href="#status-of-upgrades-since-the-last-review-changes-not-implemented-and-remaining-issues" id="toc-status-of-upgrades-since-the-last-review-changes-not-implemented-and-remaining-issues" class="nav-link" data-scroll-target="#status-of-upgrades-since-the-last-review-changes-not-implemented-and-remaining-issues"><span class="header-section-number">7.9</span> Status of upgrades since the last review, changes not implemented and remaining issues</a></li>
+  <li><a href="#appendices" id="toc-appendices" class="nav-link" data-scroll-target="#appendices"><span class="header-section-number">7.10</span> Appendices</a>
   <ul>
-  <li><a href="#sec-appvar" id="toc-sec-appvar" class="nav-link" data-scroll-target="#sec-appvar"><span class="toc-section-number">7.10.1</span>  Detailed variable list with data sources</a></li>
-  <li><a href="#countriesyears-covered-by-the-dataset" id="toc-countriesyears-covered-by-the-dataset" class="nav-link" data-scroll-target="#countriesyears-covered-by-the-dataset"><span class="toc-section-number">7.10.2</span>  Countries/years covered by the dataset</a></li>
+  <li><a href="#sec-appvar" id="toc-sec-appvar" class="nav-link" data-scroll-target="#sec-appvar"><span class="header-section-number">7.10.1</span> Detailed variable list with data sources</a></li>
+  <li><a href="#countriesyears-covered-by-the-dataset" id="toc-countriesyears-covered-by-the-dataset" class="nav-link" data-scroll-target="#countriesyears-covered-by-the-dataset"><span class="header-section-number">7.10.2</span> Countries/years covered by the dataset</a></li>
   </ul></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="toc-section-number">8</span>  References</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">8</span> References</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/wb-mrio/cpat_public/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     </div>
@@ -251,7 +267,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Road Transport Module</span></h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Road Transport Module</span></h1>
 </div>
 
 
@@ -9521,251 +9537,251 @@ div.csl-indent {
 <h1 data-number="8"><span class="header-section-number">8</span> References</h1>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-abrantes2011meta" class="csl-entry" role="doc-biblioentry">
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-abrantes2011meta" class="csl-entry" role="listitem">
 Abrantes, Pedro AL, and Mark R Wardman. 2011. <span>“Meta-Analysis of UK Values of Travel Time: An Update.”</span> <em>Transportation Research Part A: Policy and Practice</em> 45 (1): 1–17.
 </div>
-<div id="ref-ahangari2014investigation" class="csl-entry" role="doc-biblioentry">
+<div id="ref-ahangari2014investigation" class="csl-entry" role="listitem">
 Ahangari, Hamed, Jason Outlaw, Carol Atkinson-Palombo, and Norman W Garrick. 2014. <span>“Investigation into Impact of Fluctuations in Gasoline Prices and Macroeconomic Conditions on Road Safety in Developed Countries.”</span> <em>Transportation Research Record</em> 2465 (1): 48–56.
 </div>
-<div id="ref-ahrens2020lassopack" class="csl-entry" role="doc-biblioentry">
+<div id="ref-ahrens2020lassopack" class="csl-entry" role="listitem">
 Ahrens, Achim, Christian B Hansen, and Mark E Schaffer. 2020. <span>“Lassopack: Model Selection and Prediction with Regularized Regression in Stata.”</span> <em>The Stata Journal</em> 20 (1): 176–235.
 </div>
-<div id="ref-avner2014carbon" class="csl-entry" role="doc-biblioentry">
+<div id="ref-avner2014carbon" class="csl-entry" role="listitem">
 Avner, Paolo, Jun E Rentschler, and Stephane Hallegatte. 2014. <span>“Carbon Price Efficiency: Lock-in and Path Dependence in Urban Forms and Transport Infrastructure.”</span> <em>World Bank Policy Research Working Paper</em>, no. 6941.
 </div>
-<div id="ref-baltagi2008econometric" class="csl-entry" role="doc-biblioentry">
+<div id="ref-baltagi2008econometric" class="csl-entry" role="listitem">
 Baltagi, Badi Hani, and Badi H Baltagi. 2008. <em>Econometric Analysis of Panel Data</em>. Vol. 4. Springer.
 </div>
-<div id="ref-baltagi1984short" class="csl-entry" role="doc-biblioentry">
+<div id="ref-baltagi1984short" class="csl-entry" role="listitem">
 Baltagi, Badi H, and James M Griffin. 1984. <span>“Short and Long Run Effects in Pooled Models.”</span> <em>International Economic Review</em>, 631–45.
 </div>
-<div id="ref-barla2014demand" class="csl-entry" role="doc-biblioentry">
+<div id="ref-barla2014demand" class="csl-entry" role="listitem">
 Barla, Philippe, Mathieu Gilbert-Gonthier, and Jean-René Tagne Kuelah. 2014. <span>“The Demand for Road Diesel in Canada.”</span> <em>Energy Economics</em> 43: 316–22.
 </div>
-<div id="ref-bastian2014s" class="csl-entry" role="doc-biblioentry">
+<div id="ref-bastian2014s" class="csl-entry" role="listitem">
 Bastian, Anne, and Maria Borjesson. 2014. <em>It’s the Economy, Stupid: Increasing Fuel Price Is Enough to Explain Peak Car in Sweden</em>. Centre for Transport Studies.
 </div>
-<div id="ref-bento2013carpooling" class="csl-entry" role="doc-biblioentry">
+<div id="ref-bento2013carpooling" class="csl-entry" role="listitem">
 Bento, Antonio M, Jonathan E Hughes, and Daniel Kaffine. 2013. <span>“Carpooling and Driver Responses to Fuel Price Changes: Evidence from Traffic Flows in Los Angeles.”</span> <em>Journal of Urban Economics</em> 77: 41–56.
 </div>
-<div id="ref-best2019fuel" class="csl-entry" role="doc-biblioentry">
+<div id="ref-best2019fuel" class="csl-entry" role="listitem">
 Best, Rohan, and Paul J Burke. 2019. <span>“Fuel Prices and Road Accident Outcomes in New Zealand.”</span> <em>New Zealand Economic Papers</em> 53 (2): 109–24.
 </div>
-<div id="ref-burger2009gas" class="csl-entry" role="doc-biblioentry">
+<div id="ref-burger2009gas" class="csl-entry" role="listitem">
 Burger, Nicholas E, and Daniel T Kaffine. 2009. <span>“Gas Prices, Traffic, and Freeway Speeds in Los Angeles.”</span> <em>The Review of Economics and Statistics</em> 91 (3): 652–57.
 </div>
-<div id="ref-burke2017easing" class="csl-entry" role="doc-biblioentry">
+<div id="ref-burke2017easing" class="csl-entry" role="listitem">
 Burke, Paul J, Tsendsuren Batsuuri, and Muhammad Halley Yudhistira. 2017. <span>“Easing the Traffic: The Effects of Indonesia’s Fuel Subsidy Reforms on Toll-Road Travel.”</span> <em>Transportation Research Part A: Policy and Practice</em> 105: 167–80.
 </div>
-<div id="ref-burke2015gasoline" class="csl-entry" role="doc-biblioentry">
+<div id="ref-burke2015gasoline" class="csl-entry" role="listitem">
 Burke, Paul J, and Shuhei Nishitateno. 2015. <span>“Gasoline Prices and Road Fatalities: International Evidence.”</span> <em>Economic Inquiry</em> 53 (3): 1437–50.
 </div>
-<div id="ref-burke2018fuel" class="csl-entry" role="doc-biblioentry">
+<div id="ref-burke2018fuel" class="csl-entry" role="listitem">
 Burke, Paul J, and Ataklti Teame. 2018. <span>“Fuel Prices and Road Deaths in Australia.”</span> <em>Economic Papers: A Journal of Applied Economics and Policy</em> 37 (2): 146–61.
 </div>
-<div id="ref-chi2010gasoline" class="csl-entry" role="doc-biblioentry">
+<div id="ref-chi2010gasoline" class="csl-entry" role="listitem">
 Chi, Guangqing, Arthur G Cosby, Mohammed A Quddus, Paul A Gilbert, and David Levinson. 2010. <span>“Gasoline Prices and Traffic Safety in Mississippi.”</span> <em>Journal of Safety Research</em> 41 (6): 493–500.
 </div>
-<div id="ref-chi2013impact" class="csl-entry" role="doc-biblioentry">
+<div id="ref-chi2013impact" class="csl-entry" role="listitem">
 Chi, Guangqing, Jeremy R Porter, Arthur G Cosby, and David Levinson. 2013. <span>“The Impact of Gasoline Price Changes on Traffic Safety: A Time Geography Explanation.”</span> <em>Journal of Transport Geography</em> 28: 1–11.
 </div>
-<div id="ref-chi2013gasoline" class="csl-entry" role="doc-biblioentry">
+<div id="ref-chi2013gasoline" class="csl-entry" role="listitem">
 Chi, Guangqing, Mohammed A Quddus, Arthur Huang, and David Levinson. 2013. <span>“Gasoline Price Effects on Traffic Safety in Urban and Rural Areas: Evidence from Minnesota, 1998–2007.”</span> <em>Safety Science</em> 59: 154–62.
 </div>
-<div id="ref-cohen2017effect" class="csl-entry" role="doc-biblioentry">
+<div id="ref-cohen2017effect" class="csl-entry" role="listitem">
 Cohen, Linda R, and Kevin D Roth. 2017. <span>“The Effect of Trucks Dispatch Decisions on Pavement Damage and Other Externalities.”</span>
 </div>
-<div id="ref-crotte2009estimation" class="csl-entry" role="doc-biblioentry">
+<div id="ref-crotte2009estimation" class="csl-entry" role="listitem">
 Crôtte, Amado, Robert B Noland, and Daniel J Graham. 2009. <span>“Estimation of Road Traffic Demand Elasticities for Mexico City, Mexico.”</span> <em>Transportation Research Record</em> 2134 (1): 99–105.
 </div>
-<div id="ref-dahl1979consumer" class="csl-entry" role="doc-biblioentry">
+<div id="ref-dahl1979consumer" class="csl-entry" role="listitem">
 Dahl, Carol A. 1979. <span>“Consumer Adjustment to a Gasoline Tax.”</span> <em>The Review of Economics and Statistics</em>, 427–32.
 </div>
-<div id="ref-delsaut2014effect" class="csl-entry" role="doc-biblioentry">
+<div id="ref-delsaut2014effect" class="csl-entry" role="listitem">
 Delsaut, Marianne. 2014. <span>“The Effect of Fuel Price on Demands for Road and Rail Travel: An Application to the French Case.”</span> <em>Transportation Research Procedia</em> 1 (1): 177–87.
 </div>
-<div id="ref-ekins1996large" class="csl-entry" role="doc-biblioentry">
+<div id="ref-ekins1996large" class="csl-entry" role="listitem">
 Ekins, Paul. 1996. <span>“How Large a Carbon Tax Is Justified by the Secondary Benefits of CO2 Abatement?”</span> <em>Resource and Energy Economics</em> 18 (2): 161–87.
 </div>
-<div id="ref-fhwa2000addendum" class="csl-entry" role="doc-biblioentry">
+<div id="ref-fhwa2000addendum" class="csl-entry" role="listitem">
 FHWA, US. 2000. <span>“Addendum to the 1997 Federal Highway Cost Allocation Study Final Report.”</span> <em>US Federal Highway Administration, Washington, DC</em>.
 </div>
-<div id="ref-dounderstanding" class="csl-entry" role="doc-biblioentry">
+<div id="ref-dounderstanding" class="csl-entry" role="listitem">
 Freight &amp; Infrastructure, National Center for. 2014. <span>“Understanding Freight Vehicle Pavement Impacts: How Do Passenger Vehicles and Trucks Compare?”</span> <a href="https://midamericafreight.org/wp-content/uploads/2018/10/ESALs.pdf">https://midamericafreight.org/wp-content/uploads/2018/10/ESALs.pdf</a>.
 </div>
-<div id="ref-frondel2012heterogeneity" class="csl-entry" role="doc-biblioentry">
+<div id="ref-frondel2012heterogeneity" class="csl-entry" role="listitem">
 Frondel, Manuel, Nolan Ritter, and Colin Vance. 2012. <span>“Heterogeneity in the Rebound Effect: Further Evidence for Germany.”</span> <em>Energy Economics</em> 34 (2): 461–67.
 </div>
-<div id="ref-gayer2004fatality" class="csl-entry" role="doc-biblioentry">
+<div id="ref-gayer2004fatality" class="csl-entry" role="listitem">
 Gayer, Ted. 2004. <span>“The Fatality Risks of Sport-Utility Vehicles, Vans, and Pickups Relative to Cars.”</span> <em>Journal of Risk and Uncertainty</em> 28: 103–33.
 </div>
-<div id="ref-gerdtham2006deaths" class="csl-entry" role="doc-biblioentry">
+<div id="ref-gerdtham2006deaths" class="csl-entry" role="listitem">
 Gerdtham, Ulf-G, and Christopher J Ruhm. 2006. <span>“Deaths Rise in Good Economic Times: Evidence from the OECD.”</span> <em>Economics &amp; Human Biology</em> 4 (3): 298–316.
 </div>
-<div id="ref-gillingham2014identifying" class="csl-entry" role="doc-biblioentry">
+<div id="ref-gillingham2014identifying" class="csl-entry" role="listitem">
 Gillingham, Kenneth. 2014. <span>“Identifying the Elasticity of Driving: Evidence from a Gasoline Price Shock in California.”</span> <em>Regional Science and Urban Economics</em> 47: 13–24.
 </div>
-<div id="ref-gillingham2015heterogeneity" class="csl-entry" role="doc-biblioentry">
+<div id="ref-gillingham2015heterogeneity" class="csl-entry" role="listitem">
 Gillingham, Kenneth, Alan Jenn, and Inês ML Azevedo. 2015. <span>“Heterogeneity in the Response to Gasoline Prices: Evidence from Pennsylvania and Implications for the Rebound Effect.”</span> <em>Energy Economics</em> 52: S41–52.
 </div>
-<div id="ref-gillingham2016rebound" class="csl-entry" role="doc-biblioentry">
+<div id="ref-gillingham2016rebound" class="csl-entry" role="listitem">
 Gillingham, Kenneth, David Rapson, and Gernot Wagner. 2016. <span>“The Rebound Effect and Energy Efficiency Policy.”</span> <em>Review of Environmental Economics and Policy</em>.
 </div>
-<div id="ref-goodwin2004elasticities" class="csl-entry" role="doc-biblioentry">
+<div id="ref-goodwin2004elasticities" class="csl-entry" role="listitem">
 Goodwin, Phil, Joyce Dargay, and Mark Hanly. 2004. <span>“Elasticities of Road Traffic and Fuel Consumption with Respect to Price and Income: A Review.”</span> <em>Transport Reviews</em> 24 (3): 275–92.
 </div>
-<div id="ref-grabowski2004gasoline" class="csl-entry" role="doc-biblioentry">
+<div id="ref-grabowski2004gasoline" class="csl-entry" role="listitem">
 Grabowski, David C, and Michael A Morrisey. 2004. <span>“Gasoline Prices and Motor Vehicle Fatalities.”</span> <em>Journal of Policy Analysis and Management</em> 23 (3): 575–93.
 </div>
-<div id="ref-grabowski2006higher" class="csl-entry" role="doc-biblioentry">
+<div id="ref-grabowski2006higher" class="csl-entry" role="listitem">
 ———. 2006. <span>“Do Higher Gasoline Taxes Save Lives?”</span> <em>Economics Letters</em> 90 (1): 51–55.
 </div>
-<div id="ref-gultom2017road" class="csl-entry" role="doc-biblioentry">
+<div id="ref-gultom2017road" class="csl-entry" role="listitem">
 Gultom, Tiopan Henry M, Ofyar Z Tamin, Ade Sjafruddin, and Pradono Pradono. 2017. <span>“The Road Maintenance Funding Models in Indonesia Use Earmarked Tax.”</span> In <em>AIP Conference Proceedings</em>. Vol. 1903. 1. AIP Publishing.
 </div>
-<div id="ref-haughton1996gasoline" class="csl-entry" role="doc-biblioentry">
+<div id="ref-haughton1996gasoline" class="csl-entry" role="listitem">
 Haughton, Jonathan, and Soumodip Sarkar. 1996. <span>“Gasoline Tax as a Corrective Tax: Estimates for the United States, 1970-1991.”</span> <em>The Energy Journal</em> 17 (2).
 </div>
-<div id="ref-he2015does" class="csl-entry" role="doc-biblioentry">
+<div id="ref-he2015does" class="csl-entry" role="listitem">
 He, Jen. 2015. <span>“Does Diesel Price Matter? Estimate the Elasticities of Trucking Behaviors with Respect to Fuel Prices.”</span> In <em>The Dynamic Energy Landscape, 33rd USAEE/IAEE North American Conference, Oct 25-28, 2015</em>. International Association for Energy Economics.
 </div>
-<div id="ref-huang2015short" class="csl-entry" role="doc-biblioentry">
+<div id="ref-huang2015short" class="csl-entry" role="listitem">
 Huang, Chao, and Mark W Burris. 2015. <span>“The Short-Run Impact of Gas Prices Fluctuations on Toll Road Use.”</span> <em>Case Studies on Transport Policy</em> 3 (2): 137–50.
 </div>
-<div id="ref-hyatt2009association" class="csl-entry" role="doc-biblioentry">
+<div id="ref-hyatt2009association" class="csl-entry" role="listitem">
 Hyatt, Eddie, Russell Griffin, Loring W Rue III, and Gerald McGwin Jr. 2009. <span>“The Association Between Price of Regular-Grade Gasoline and Injury and Mortality Rates Among Occupants Involved in Motorcycle-and Automobile-Related Motor Vehicle Collisions.”</span> <em>Accident Analysis &amp; Prevention</em> 41 (5): 1075–79.
 </div>
-<div id="ref-IRF" class="csl-entry" role="doc-biblioentry">
+<div id="ref-IRF" class="csl-entry" role="listitem">
 International Road Federation. 2018. <span>“World Road Statistics.”</span> In. International Road Federation.
 </div>
-<div id="ref-IRF2" class="csl-entry" role="doc-biblioentry">
+<div id="ref-IRF2" class="csl-entry" role="listitem">
 International Transport Forum. 2015. <span>“Why Does Road Safety Improve When Economic Times Are Hard?”</span> <a href="https://www.itf-oecd.org/sites/default/files/docs/15irtadeconomictimes.pdf">https://www.itf-oecd.org/sites/default/files/docs/15irtadeconomictimes.pdf</a>.
 </div>
-<div id="ref-jacobson2005prediction" class="csl-entry" role="doc-biblioentry">
+<div id="ref-jacobson2005prediction" class="csl-entry" role="listitem">
 Jacobson, Torbjörn, and Lars-Göran Wågberg. 2005. <em>Prediction Models for Pavement Wear and Associated Costs</em>. VTI., VTI s<span>ä</span>rtryck 366A.
 </div>
-<div id="ref-johnson1964economics" class="csl-entry" role="doc-biblioentry">
+<div id="ref-johnson1964economics" class="csl-entry" role="listitem">
 Johnson, M Bruce. 1964. <span>“On the Economics of Road Congestion.”</span> <em>Econometrica: Journal of the Econometric Society</em>, 137–50.
 </div>
-<div id="ref-khoo2012short" class="csl-entry" role="doc-biblioentry">
+<div id="ref-khoo2012short" class="csl-entry" role="listitem">
 Khoo, Hooi Ling, Ghim Ping Ong, and Wooi Chen Khoo. 2012. <span>“Short-Term Impact Analysis of Fuel Price Policy Change on Travel Demand in Malaysian Cities.”</span> <em>Transportation Planning and Technology</em> 35 (7): 715–36.
 </div>
-<div id="ref-kwon2014asymmetric" class="csl-entry" role="doc-biblioentry">
+<div id="ref-kwon2014asymmetric" class="csl-entry" role="listitem">
 Kwon, Yongjae, and Jaimin Lee. 2014. <span>“Asymmetric Responses of Highway Travel Demand to Changes in Fuel Price: An Explanation via Fuel Price Uncertainty.”</span> <em>Transportation Research Part A: Policy and Practice</em> 63: 56–66.
 </div>
-<div id="ref-leard2015fuel" class="csl-entry" role="doc-biblioentry">
+<div id="ref-leard2015fuel" class="csl-entry" role="listitem">
 Leard, Benjamin, Joshua Linn, Virginia McConnell, and William Raich. 2015. <span>“Fuel Costs, Economic Activity, and the Rebound Effect for Heavy-Duty Trucks.”</span> <em>Resources for the Future Discussion Paper</em>, 14–43.
 </div>
-<div id="ref-leigh1991effect" class="csl-entry" role="doc-biblioentry">
+<div id="ref-leigh1991effect" class="csl-entry" role="listitem">
 Leigh, J Paul, and James T Wilkinson. 1991. <span>“The Effect of Gasoline Taxes on Highway Fatalities.”</span> <em>Journal of Policy Analysis and Management</em> 10 (3): 474–81.
 </div>
-<div id="ref-li2014gasoline" class="csl-entry" role="doc-biblioentry">
+<div id="ref-li2014gasoline" class="csl-entry" role="listitem">
 Li, Shanjun, Joshua Linn, and Erich Muehlegger. 2014. <span>“Gasoline Taxes and Consumer Behavior.”</span> <em>American Economic Journal: Economic Policy</em> 6 (4): 302–42.
 </div>
-<div id="ref-lindsey2006economists" class="csl-entry" role="doc-biblioentry">
+<div id="ref-lindsey2006economists" class="csl-entry" role="listitem">
 Lindsey, Robin. 2006. <span>“Do Economists Reach a Conclusion?”</span> <em>Econ Journal Watch</em> 3 (2): 292–379.
 </div>
-<div id="ref-litman2012pricing" class="csl-entry" role="doc-biblioentry">
+<div id="ref-litman2012pricing" class="csl-entry" role="listitem">
 Litman, Todd. 2012. <span>“Pricing for Traffic Safety: How Efficient Transport Pricing Can Reduce Roadway Crash Risks.”</span> <em>Transportation Research Record</em> 2318 (1): 16–22.
 </div>
-<div id="ref-luoma2007characteristics" class="csl-entry" role="doc-biblioentry">
+<div id="ref-luoma2007characteristics" class="csl-entry" role="listitem">
 Luoma, Juha, and Michael Sivak. 2007. <span>“Characteristics and Availability of Fatal Road-Crash Databases in 20 Countries Worldwide.”</span> <em>Journal of Safety Research</em> 38 (3): 323–27.
 </div>
-<div id="ref-molloy2013effect" class="csl-entry" role="doc-biblioentry">
+<div id="ref-molloy2013effect" class="csl-entry" role="listitem">
 Molloy, Raven, and Hui Shan. 2013. <span>“The Effect of Gasoline Prices on Household Location.”</span> <em>Review of Economics and Statistics</em> 95 (4): 1212–21.
 </div>
-<div id="ref-montour2011death" class="csl-entry" role="doc-biblioentry">
+<div id="ref-montour2011death" class="csl-entry" role="listitem">
 Montour, Cameron P. 2011. <span>“Death and Taxes: The Effect of Gasoline Prices on Traffic Fatalities.”</span> <em>St. Olaf College Economics Department’s Omicron Delta Epsilon Journal of Economic Research</em> 1 (3): 2011.
 </div>
-<div id="ref-morrisey2011gas" class="csl-entry" role="doc-biblioentry">
+<div id="ref-morrisey2011gas" class="csl-entry" role="listitem">
 Morrisey, Michael A, and David C Grabowski. 2011. <span>“Gas Prices, Beer Taxes and GDL Programmes: Effects on Auto Fatalities Among Young Adults in the US.”</span> <em>Applied Economics</em> 43 (25): 3645–54.
 </div>
-<div id="ref-moshiri2020consumer" class="csl-entry" role="doc-biblioentry">
+<div id="ref-moshiri2020consumer" class="csl-entry" role="listitem">
 Moshiri, Saeed. 2020. <span>“Consumer Responses to Gasoline Price and Non-Price Policies.”</span> <em>Energy Policy</em> 137: 111078.
 </div>
-<div id="ref-murphy1997review" class="csl-entry" role="doc-biblioentry">
+<div id="ref-murphy1997review" class="csl-entry" role="listitem">
 Murphy, James, and Mark Delucchi. 1997. <span>“Review of Some of the Literature on the Social Cost of Motor-Vehicle Use.”</span>
 </div>
-<div id="ref-newbery1988road" class="csl-entry" role="doc-biblioentry">
+<div id="ref-newbery1988road" class="csl-entry" role="listitem">
 Newbery, David M. 1988. <span>“Road Damage Externalities and Road User Charges.”</span> <em>Econometrica: Journal of the Econometric Society</em>, 295–316.
 </div>
-<div id="ref-odeck2016elasticities" class="csl-entry" role="doc-biblioentry">
+<div id="ref-odeck2016elasticities" class="csl-entry" role="listitem">
 Odeck, James, and Kjell Johansen. 2016. <span>“Elasticities of Fuel and Traffic Demand and the Direct Rebound Effects: An Econometric Estimation in the Case of Norway.”</span> <em>Transportation Research Part A: Policy and Practice</em> 83: 1–13.
 </div>
-<div id="ref-oecd12" class="csl-entry" role="doc-biblioentry">
+<div id="ref-oecd12" class="csl-entry" role="listitem">
 OECD. 2012. <span>“Mortality Risk Valuation in Environment, Health and Transport Policies.”</span> <a href="https://www.oecd-ilibrary.org/environment/mortality-risk-valuation-in-environment-health-and-transport-policies_9789264130807-en">https://www.oecd-ilibrary.org/environment/mortality-risk-valuation-in-environment-health-and-transport-policies_9789264130807-en</a>.
 </div>
-<div id="ref-parker2006pavement" class="csl-entry" role="doc-biblioentry">
+<div id="ref-parker2006pavement" class="csl-entry" role="listitem">
 Parker, Neville A, and Sajjad Hussain Ph D. 2006. <span>“Pavement Damage and Road Pricing.”</span>
 </div>
-<div id="ref-parry2008should" class="csl-entry" role="doc-biblioentry">
+<div id="ref-parry2008should" class="csl-entry" role="listitem">
 Parry, Ian WH. 2008. <span>“How Should Heavy-Duty Trucks Be Taxed?”</span> <em>Journal of Urban Economics</em> 63 (2): 651–68.
 </div>
-<div id="ref-parry2014getting" class="csl-entry" role="doc-biblioentry">
+<div id="ref-parry2014getting" class="csl-entry" role="listitem">
 Parry, Ian WH, Mr Dirk Heine, Eliza Lis, and Shanjun Li. 2014. <em>Getting Energy Prices Right: From Principle to Practice</em>. International Monetary Fund.
 </div>
-<div id="ref-pesaran1995estimating" class="csl-entry" role="doc-biblioentry">
+<div id="ref-pesaran1995estimating" class="csl-entry" role="listitem">
 Pesaran, M Hashem, and Ron Smith. 1995. <span>“Estimating Long-Run Relationships from Dynamic Heterogeneous Panels.”</span> <em>Journal of Econometrics</em> 68 (1): 79–113.
 </div>
-<div id="ref-pirotte1999convergence" class="csl-entry" role="doc-biblioentry">
+<div id="ref-pirotte1999convergence" class="csl-entry" role="listitem">
 Pirotte, Alain. 1999. <span>“Convergence of the Static Estimation Toward the Long Run Effects of Dynamic Panel Data Models.”</span> <em>Economics Letters</em> 63 (2): 151–58.
 </div>
-<div id="ref-ramli2014demand" class="csl-entry" role="doc-biblioentry">
+<div id="ref-ramli2014demand" class="csl-entry" role="listitem">
 Ramli, Ahmad Razi, and Daniel J Graham. 2014. <span>“The Demand for Road Transport Diesel Fuel in the UK: Empirical Evidence from Static and Dynamic Cointegration Techniques.”</span> <em>Transportation Research Part D: Transport and Environment</em> 26: 60–66.
 </div>
-<div id="ref-raymond2003demand" class="csl-entry" role="doc-biblioentry">
+<div id="ref-raymond2003demand" class="csl-entry" role="listitem">
 RAYMOND, JOSÉ LUIS. 2003. <span>“Demand Elasticity on Tolled Motorways MATAS.”</span> <em>Journal of Transportation and Statistics</em> 6 (2-3): 91.
 </div>
-<div id="ref-Sachs2019" class="csl-entry" role="doc-biblioentry">
+<div id="ref-Sachs2019" class="csl-entry" role="listitem">
 Sachs, Jeffrey D., Guillaume Lafortune, Grayson Fuller, and Eamon Drumm. 2019. <span>“Sustainable Development Report 2019.”</span> <em>Bertelsmann Stiftung and Sustainable Development Solutions Network (SDSN): New York, NY, USA.</em> <a href="http://www.sdgindex.org/assets/files/2017/2017-SDG-Index-and-Dashboards-Report--full.pdf">http://www.sdgindex.org/assets/files/2017/2017-SDG-Index-and-Dashboards-Report--full.pdf</a>.
 </div>
-<div id="ref-santos2017road" class="csl-entry" role="doc-biblioentry">
+<div id="ref-santos2017road" class="csl-entry" role="listitem">
 Santos, Georgina. 2017. <span>“Road Fuel Taxes in Europe: Do They Internalize Road Transport Externalities?”</span> <em>Transport Policy</em> 53: 120–34.
 </div>
-<div id="ref-santos2010part" class="csl-entry" role="doc-biblioentry">
+<div id="ref-santos2010part" class="csl-entry" role="listitem">
 Santos, Georgina, Hannah Behrendt, Laura Maconi, Tara Shirvani, and Alexander Teytelboym. 2010. <span>“Part i: Externalities and Economic Policies in Road Transport.”</span> <em>Research in Transportation Economics</em> 28 (1): 2–45.
 </div>
-<div id="ref-santos2005distributional" class="csl-entry" role="doc-biblioentry">
+<div id="ref-santos2005distributional" class="csl-entry" role="listitem">
 Santos, Georgina, and Tom Catchesides. 2005. <span>“Distributional Consequences of Gasoline Taxation in the United Kingdom.”</span> <em>Transportation Research Record</em> 1924 (1): 103–11.
 </div>
-<div id="ref-sauerzapf2010problems" class="csl-entry" role="doc-biblioentry">
+<div id="ref-sauerzapf2010problems" class="csl-entry" role="listitem">
 Sauerzapf, V, AP Jones, and R Haynes. 2010. <span>“The Problems in Determining International Road Mortality.”</span> <em>Accident Analysis &amp; Prevention</em> 42 (2): 492–99.
 </div>
-<div id="ref-sivak2009mechanisms" class="csl-entry" role="doc-biblioentry">
+<div id="ref-sivak2009mechanisms" class="csl-entry" role="listitem">
 Sivak, Michael. 2009. <span>“Mechanisms Involved in the Recent Large Reductions in US Road Fatalities.”</span> <em>Injury Prevention</em> 15 (3): 205–6.
 </div>
-<div id="ref-small2007fuel" class="csl-entry" role="doc-biblioentry">
+<div id="ref-small2007fuel" class="csl-entry" role="listitem">
 Small, Kenneth A, and Kurt Van Dender. 2007. <span>“Fuel Efficiency and Motor Vehicle Travel: The Declining Rebound Effect.”</span> <em>The Energy Journal</em> 28 (1).
 </div>
-<div id="ref-stern2010between" class="csl-entry" role="doc-biblioentry">
+<div id="ref-stern2010between" class="csl-entry" role="listitem">
 Stern, David I. 2010. <span>“Between Estimates of the Emissions-Income Elasticity.”</span> <em>Ecological Economics</em> 69 (11): 2173–82.
 </div>
-<div id="ref-sugiyama2008traffic" class="csl-entry" role="doc-biblioentry">
+<div id="ref-sugiyama2008traffic" class="csl-entry" role="listitem">
 Sugiyama, Yuki, Minoru Fukui, Macoto Kikuchi, Katsuya Hasebe, Akihiro Nakayama, Katsuhiro Nishinari, Shin-ichi Tadaki, and Satoshi Yukawa. 2008. <span>“Traffic Jams Without Bottlenecks—Experimental Evidence for the Physical Mechanism of the Formation of a Jam.”</span> <em>New Journal of Physics</em> 10 (3): 033001.
 </div>
-<div id="ref-wadud2016diesel" class="csl-entry" role="doc-biblioentry">
+<div id="ref-wadud2016diesel" class="csl-entry" role="listitem">
 Wadud, Zia. 2016. <span>“Diesel Demand in the Road Freight Sector in the UK: Estimates for Different Vehicle Types.”</span> <em>Applied Energy</em> 165: 849–57.
 </div>
-<div id="ref-wang2014impact" class="csl-entry" role="doc-biblioentry">
+<div id="ref-wang2014impact" class="csl-entry" role="listitem">
 Wang, Tingting, and Cynthia Chen. 2014. <span>“Impact of Fuel Price on Vehicle Miles Traveled (VMT): Do the Poor Respond in the Same Way as the Rich?”</span> <em>Transportation</em> 41: 91–105.
 </div>
-<div id="ref-west2017distributional" class="csl-entry" role="doc-biblioentry">
+<div id="ref-west2017distributional" class="csl-entry" role="listitem">
 West, Sarah E. 2017. <span>“Distributional Effects of Alternative Vehicle Pollution Control Policies.”</span> In <em>Distributional Effects of Environmental and Energy Policy</em>, 93–115. Routledge.
 </div>
-<div id="ref-white2004arms" class="csl-entry" role="doc-biblioentry">
+<div id="ref-white2004arms" class="csl-entry" role="listitem">
 White, Michelle J. 2004. <span>“The <span>‘Arms Race’</span> on American Roads: The Effect of Sport Utility Vehicles and Pickup Trucks on Traffic Safety.”</span> <em>The Journal of Law and Economics</em> 47 (2): 333–55.
 </div>
-<div id="ref-wilson2009gasoline" class="csl-entry" role="doc-biblioentry">
+<div id="ref-wilson2009gasoline" class="csl-entry" role="listitem">
 Wilson, Fernando A, Jim P Stimpson, and Peter E Hilsenrath. 2009. <span>“Gasoline Prices and Their Relationship to Rising Motorcycle Fatalities, 1990–2007.”</span> <em>American Journal of Public Health</em> 99 (10): 1753–58.
 </div>
-<div id="ref-WINEBRAKE2015178" class="csl-entry" role="doc-biblioentry">
+<div id="ref-WINEBRAKE2015178" class="csl-entry" role="listitem">
 Winebrake, James J., Erin H. Green, Bryan Comer, Chi Li, Sarah Froman, and Michael Shelby. 2015. <span>“Fuel Price Elasticities for Single-Unit Truck Operations in the United States.”</span> <em>Transportation Research Part D: Transport and Environment</em> 38: 178–87. https://doi.org/<a href="https://doi.org/10.1016/j.trd.2015.05.003">https://doi.org/10.1016/j.trd.2015.05.003</a>.
 </div>
-<div id="ref-world2018global" class="csl-entry" role="doc-biblioentry">
+<div id="ref-world2018global" class="csl-entry" role="listitem">
 World Health Organization. 2018. <span>“Global Status Report on Road Safety 2018.”</span> World Health Organization.
 </div>
-<div id="ref-world2013global" class="csl-entry" role="doc-biblioentry">
+<div id="ref-world2013global" class="csl-entry" role="listitem">
 World Health Organization and others. 2013. <span>“Global Status Report on Road Safety 2013: Supporting a Decade of Action: Summary.”</span> World Health Organization.
 </div>
 </div>
@@ -9819,9 +9835,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -9886,6 +9916,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -9937,7 +10053,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-      <div class="nav-footer-center">WB-IMF Climate Policy Assessment Tool, 2023</div>
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">WB-IMF Climate Policy Assessment Tool, 2023</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
   </div>
 </footer>
 
