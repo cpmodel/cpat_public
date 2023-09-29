@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.306">
+<meta name="generator" content="quarto-1.2.475">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,15 +17,14 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
-/* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
 }
-.hanging-indent div.csl-entry {
+.hanging div.csl-entry {
   margin-left:2em;
   text-indent:-2em;
 }
@@ -39,7 +38,8 @@ div.csl-right-inline {
 }
 div.csl-indent {
   margin-left: 2em;
-}</style>
+}
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -81,7 +81,6 @@ div.csl-indent {
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
@@ -90,16 +89,11 @@ div.csl-indent {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./03_Mitigation.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Mitigation module</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Mitigation module</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
       </button>
     </div>
   </nav>
@@ -107,14 +101,14 @@ div.csl-indent {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">CPAT Documentation</a> 
         <div class="sidebar-tools-main tools-wide">
-    <a href="https://github.com/wb-mrio/cpat_public" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-    <a href="./CPAT-Documentation.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
-  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+    <a href="https://github.com/wb-mrio/cpat_public" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+    <a href="./CPAT-Documentation.pdf" title="Download PDF" class="sidebar-tool px-1"><i class="bi bi-file-pdf"></i></a>
+  <a href="" class="quarto-reader-toggle sidebar-tool" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
   <div class="quarto-reader-toggle-btn">
   <i class="bi"></i>
   </div>
@@ -122,59 +116,51 @@ div.csl-indent {
 </div>
     </div>
       </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
+      <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-        </div>
+      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><strong>Cover</strong></span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><strong>Cover</strong></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./01_User_Guide.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">User Guide and Climate Policies in CPAT</span></span></a>
+  <a href="./01_User_Guide.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">User Guide and Climate Policies in CPAT</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02_Summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary of the approach and applications</span></span></a>
+  <a href="./02_Summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary of the approach and applications</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03_Mitigation.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Mitigation module</span></span></a>
+  <a href="./03_Mitigation.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Mitigation module</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04_Multipliers.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Multipliers</span></span></a>
+  <a href="./04_Multipliers.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Multipliers</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./05_Distribution.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Distribution Module</span></span></a>
+  <a href="./05_Distribution.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Distribution Module</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./06_Air_pollution.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Air pollution module</span></span></a>
+  <a href="./06_Air_pollution.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Air pollution module</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./07_Road_Transport.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Road Transport Module</span></span></a>
+  <a href="./07_Road_Transport.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Road Transport Module</span></a>
   </div>
 </li>
     </ul>
@@ -183,242 +169,241 @@ div.csl-indent {
     <h2 id="toc-title"><strong><em>Chapter Contents</em></strong></h2>
    
   <ul>
-  <li><a href="#sec-ExecSummary" id="toc-sec-ExecSummary" class="nav-link active" data-scroll-target="#sec-ExecSummary"><span class="header-section-number">3.1</span> Executive Summary and Reviewer Guide</a>
+  <li><a href="#sec-ExecSummary" id="toc-sec-ExecSummary" class="nav-link active" data-scroll-target="#sec-ExecSummary"><span class="toc-section-number">3.1</span>  Executive Summary and Reviewer Guide</a>
   <ul>
-  <li><a href="#sec-ExecSummIntro" id="toc-sec-ExecSummIntro" class="nav-link" data-scroll-target="#sec-ExecSummIntro"><span class="header-section-number">3.1.1</span> Introduction</a></li>
-  <li><a href="#sec-ExecSummMethodology" id="toc-sec-ExecSummMethodology" class="nav-link" data-scroll-target="#sec-ExecSummMethodology"><span class="header-section-number">3.1.2</span> Summary of Methodology</a></li>
-  <li><a href="#sec-ExecSummNicheUseCases" id="toc-sec-ExecSummNicheUseCases" class="nav-link" data-scroll-target="#sec-ExecSummNicheUseCases"><span class="header-section-number">3.1.3</span> Niche &amp; Use cases for CPAT</a></li>
-  <li><a href="#sec-ExecSummPolicyChoices" id="toc-sec-ExecSummPolicyChoices" class="nav-link" data-scroll-target="#sec-ExecSummPolicyChoices"><span class="header-section-number">3.1.4</span> Critical Policy and Modelling Choices</a></li>
-  <li><a href="#sec-ExecSummDataChoices" id="toc-sec-ExecSummDataChoices" class="nav-link" data-scroll-target="#sec-ExecSummDataChoices"><span class="header-section-number">3.1.5</span> Data choices in CPAT</a>
+  <li><a href="#sec-ExecSummIntro" id="toc-sec-ExecSummIntro" class="nav-link" data-scroll-target="#sec-ExecSummIntro"><span class="toc-section-number">3.1.1</span>  Introduction</a></li>
+  <li><a href="#sec-ExecSummMethodology" id="toc-sec-ExecSummMethodology" class="nav-link" data-scroll-target="#sec-ExecSummMethodology"><span class="toc-section-number">3.1.2</span>  Summary of Methodology</a></li>
+  <li><a href="#sec-ExecSummNicheUseCases" id="toc-sec-ExecSummNicheUseCases" class="nav-link" data-scroll-target="#sec-ExecSummNicheUseCases"><span class="toc-section-number">3.1.3</span>  Niche &amp; Use cases for CPAT</a></li>
+  <li><a href="#sec-ExecSummPolicyChoices" id="toc-sec-ExecSummPolicyChoices" class="nav-link" data-scroll-target="#sec-ExecSummPolicyChoices"><span class="toc-section-number">3.1.4</span>  Critical Policy and Modelling Choices</a></li>
+  <li><a href="#sec-ExecSummDataChoices" id="toc-sec-ExecSummDataChoices" class="nav-link" data-scroll-target="#sec-ExecSummDataChoices"><span class="toc-section-number">3.1.5</span>  Data choices in CPAT</a>
   <ul class="collapse">
-  <li><a href="#sec-ExecSummKeyData" id="toc-sec-ExecSummKeyData" class="nav-link" data-scroll-target="#sec-ExecSummKeyData"><span class="header-section-number">3.1.5.1</span> Key data used</a></li>
-  <li><a href="#sec-ExecSummKeyParams" id="toc-sec-ExecSummKeyParams" class="nav-link" data-scroll-target="#sec-ExecSummKeyParams"><span class="header-section-number">3.1.5.2</span> Key parameters and choices</a></li>
-  <li><a href="#sec-ExecSummCalibrations" id="toc-sec-ExecSummCalibrations" class="nav-link" data-scroll-target="#sec-ExecSummCalibrations"><span class="header-section-number">3.1.5.3</span> Key calibration exercises</a></li>
+  <li><a href="#sec-ExecSummKeyData" id="toc-sec-ExecSummKeyData" class="nav-link" data-scroll-target="#sec-ExecSummKeyData"><span class="toc-section-number">3.1.5.1</span>  Key data used</a></li>
+  <li><a href="#sec-ExecSummKeyParams" id="toc-sec-ExecSummKeyParams" class="nav-link" data-scroll-target="#sec-ExecSummKeyParams"><span class="toc-section-number">3.1.5.2</span>  Key parameters and choices</a></li>
+  <li><a href="#sec-ExecSummCalibrations" id="toc-sec-ExecSummCalibrations" class="nav-link" data-scroll-target="#sec-ExecSummCalibrations"><span class="toc-section-number">3.1.5.3</span>  Key calibration exercises</a></li>
   </ul></li>
-  <li><a href="#sec-ExecSummTestingAndValidation" id="toc-sec-ExecSummTestingAndValidation" class="nav-link" data-scroll-target="#sec-ExecSummTestingAndValidation"><span class="header-section-number">3.1.6</span> Testing and validation summary</a></li>
-  <li><a href="#sec-ExecSummUpgrades" id="toc-sec-ExecSummUpgrades" class="nav-link" data-scroll-target="#sec-ExecSummUpgrades"><span class="header-section-number">3.1.7</span> Status of upgrades since the last review</a></li>
-  <li><a href="#sec-ExecSummCaveats" id="toc-sec-ExecSummCaveats" class="nav-link" data-scroll-target="#sec-ExecSummCaveats"><span class="header-section-number">3.1.8</span> Caveats</a>
+  <li><a href="#sec-ExecSummTestingAndValidation" id="toc-sec-ExecSummTestingAndValidation" class="nav-link" data-scroll-target="#sec-ExecSummTestingAndValidation"><span class="toc-section-number">3.1.6</span>  Testing and validation summary</a></li>
+  <li><a href="#sec-ExecSummUpgrades" id="toc-sec-ExecSummUpgrades" class="nav-link" data-scroll-target="#sec-ExecSummUpgrades"><span class="toc-section-number">3.1.7</span>  Status of upgrades since the last review</a></li>
+  <li><a href="#sec-ExecSummCaveats" id="toc-sec-ExecSummCaveats" class="nav-link" data-scroll-target="#sec-ExecSummCaveats"><span class="toc-section-number">3.1.8</span>  Caveats</a>
   <ul class="collapse">
-  <li><a href="#sec-ExecSummCaveatsPolicyMod" id="toc-sec-ExecSummCaveatsPolicyMod" class="nav-link" data-scroll-target="#sec-ExecSummCaveatsPolicyMod"><span class="header-section-number">3.1.8.1</span> Policy modeling</a></li>
-  <li><a href="#sec-ExecSummCaveatsPrices" id="toc-sec-ExecSummCaveatsPrices" class="nav-link" data-scroll-target="#sec-ExecSummCaveatsPrices"><span class="header-section-number">3.1.8.2</span> Prices</a></li>
-  <li><a href="#sec-ExecSummCaveatsEmissions" id="toc-sec-ExecSummCaveatsEmissions" class="nav-link" data-scroll-target="#sec-ExecSummCaveatsEmissions"><span class="header-section-number">3.1.8.3</span> Emissions</a></li>
-  <li><a href="#sec-ExecSummCaveatsEnergyUse" id="toc-sec-ExecSummCaveatsEnergyUse" class="nav-link" data-scroll-target="#sec-ExecSummCaveatsEnergyUse"><span class="header-section-number">3.1.8.4</span> Energy use (all energy sectors)</a></li>
-  <li><a href="#sec-ExecSummCaveatsPowerSector" id="toc-sec-ExecSummCaveatsPowerSector" class="nav-link" data-scroll-target="#sec-ExecSummCaveatsPowerSector"><span class="header-section-number">3.1.8.5</span> Power sector</a></li>
-  <li><a href="#sec-ExecSummCaveatsDesirableUpgrades" id="toc-sec-ExecSummCaveatsDesirableUpgrades" class="nav-link" data-scroll-target="#sec-ExecSummCaveatsDesirableUpgrades"><span class="header-section-number">3.1.8.6</span> Desirable upgrades, known issues, and useful analyses not completed: General</a></li>
-  <li><a href="#sec-ExecSummCaveatsPowerSectorModels" id="toc-sec-ExecSummCaveatsPowerSectorModels" class="nav-link" data-scroll-target="#sec-ExecSummCaveatsPowerSectorModels"><span class="header-section-number">3.1.8.7</span> Power Sector Models</a></li>
-  <li><a href="#sec-ExecSummKnownBugs" id="toc-sec-ExecSummKnownBugs" class="nav-link" data-scroll-target="#sec-ExecSummKnownBugs"><span class="header-section-number">3.1.8.8</span> Remaining Known Bugs or Issues</a></li>
+  <li><a href="#sec-ExecSummCaveatsPolicyMod" id="toc-sec-ExecSummCaveatsPolicyMod" class="nav-link" data-scroll-target="#sec-ExecSummCaveatsPolicyMod"><span class="toc-section-number">3.1.8.1</span>  Policy modeling</a></li>
+  <li><a href="#sec-ExecSummCaveatsPrices" id="toc-sec-ExecSummCaveatsPrices" class="nav-link" data-scroll-target="#sec-ExecSummCaveatsPrices"><span class="toc-section-number">3.1.8.2</span>  Prices</a></li>
+  <li><a href="#sec-ExecSummCaveatsEmissions" id="toc-sec-ExecSummCaveatsEmissions" class="nav-link" data-scroll-target="#sec-ExecSummCaveatsEmissions"><span class="toc-section-number">3.1.8.3</span>  Emissions</a></li>
+  <li><a href="#sec-ExecSummCaveatsEnergyUse" id="toc-sec-ExecSummCaveatsEnergyUse" class="nav-link" data-scroll-target="#sec-ExecSummCaveatsEnergyUse"><span class="toc-section-number">3.1.8.4</span>  Energy use (all energy sectors)</a></li>
+  <li><a href="#sec-ExecSummCaveatsPowerSector" id="toc-sec-ExecSummCaveatsPowerSector" class="nav-link" data-scroll-target="#sec-ExecSummCaveatsPowerSector"><span class="toc-section-number">3.1.8.5</span>  Power sector</a></li>
+  <li><a href="#sec-ExecSummCaveatsDesirableUpgrades" id="toc-sec-ExecSummCaveatsDesirableUpgrades" class="nav-link" data-scroll-target="#sec-ExecSummCaveatsDesirableUpgrades"><span class="toc-section-number">3.1.8.6</span>  Desirable upgrades, known issues, and useful analyses not completed: General</a></li>
+  <li><a href="#sec-ExecSummCaveatsPowerSectorModels" id="toc-sec-ExecSummCaveatsPowerSectorModels" class="nav-link" data-scroll-target="#sec-ExecSummCaveatsPowerSectorModels"><span class="toc-section-number">3.1.8.7</span>  Power Sector Models</a></li>
+  <li><a href="#sec-ExecSummKnownBugs" id="toc-sec-ExecSummKnownBugs" class="nav-link" data-scroll-target="#sec-ExecSummKnownBugs"><span class="toc-section-number">3.1.8.8</span>  Remaining Known Bugs or Issues</a></li>
   </ul></li>
-  <li><a href="#sec-ExecSummNotation" id="toc-sec-ExecSummNotation" class="nav-link" data-scroll-target="#sec-ExecSummNotation"><span class="header-section-number">3.1.9</span> Notation and Acronyms</a>
+  <li><a href="#sec-ExecSummNotation" id="toc-sec-ExecSummNotation" class="nav-link" data-scroll-target="#sec-ExecSummNotation"><span class="toc-section-number">3.1.9</span>  Notation and Acronyms</a>
   <ul class="collapse">
-  <li><a href="#sec-ExecSummDimensions" id="toc-sec-ExecSummDimensions" class="nav-link" data-scroll-target="#sec-ExecSummDimensions"><span class="header-section-number">3.1.9.1</span> Dimensions</a></li>
-  <li><a href="#sec-ExecSummInstitutions" id="toc-sec-ExecSummInstitutions" class="nav-link" data-scroll-target="#sec-ExecSummInstitutions"><span class="header-section-number">3.1.9.2</span> Institutions</a></li>
-  <li><a href="#sec-ExecSummAbbreviations" id="toc-sec-ExecSummAbbreviations" class="nav-link" data-scroll-target="#sec-ExecSummAbbreviations"><span class="header-section-number">3.1.9.3</span> Abbreviations</a></li>
-  <li><a href="#sec-ExecSummFuels" id="toc-sec-ExecSummFuels" class="nav-link" data-scroll-target="#sec-ExecSummFuels"><span class="header-section-number">3.1.9.4</span> Fuels</a></li>
-  <li><a href="#sec-ExecSummUnits" id="toc-sec-ExecSummUnits" class="nav-link" data-scroll-target="#sec-ExecSummUnits"><span class="header-section-number">3.1.9.5</span> Units</a></li>
+  <li><a href="#sec-ExecSummDimensions" id="toc-sec-ExecSummDimensions" class="nav-link" data-scroll-target="#sec-ExecSummDimensions"><span class="toc-section-number">3.1.9.1</span>  Dimensions</a></li>
+  <li><a href="#sec-ExecSummInstitutions" id="toc-sec-ExecSummInstitutions" class="nav-link" data-scroll-target="#sec-ExecSummInstitutions"><span class="toc-section-number">3.1.9.2</span>  Institutions</a></li>
+  <li><a href="#sec-ExecSummAbbreviations" id="toc-sec-ExecSummAbbreviations" class="nav-link" data-scroll-target="#sec-ExecSummAbbreviations"><span class="toc-section-number">3.1.9.3</span>  Abbreviations</a></li>
+  <li><a href="#sec-ExecSummFuels" id="toc-sec-ExecSummFuels" class="nav-link" data-scroll-target="#sec-ExecSummFuels"><span class="toc-section-number">3.1.9.4</span>  Fuels</a></li>
+  <li><a href="#sec-ExecSummUnits" id="toc-sec-ExecSummUnits" class="nav-link" data-scroll-target="#sec-ExecSummUnits"><span class="toc-section-number">3.1.9.5</span>  Units</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#sec-PricesAndTaxes" id="toc-sec-PricesAndTaxes" class="nav-link" data-scroll-target="#sec-PricesAndTaxes"><span class="header-section-number">3.2</span> Fuel prices, taxes, and subsidies</a>
+  <li><a href="#sec-PricesAndTaxes" id="toc-sec-PricesAndTaxes" class="nav-link" data-scroll-target="#sec-PricesAndTaxes"><span class="toc-section-number">3.2</span>  Fuel prices, taxes, and subsidies</a>
   <ul>
-  <li><a href="#sec-PricesOVerview" id="toc-sec-PricesOVerview" class="nav-link" data-scroll-target="#sec-PricesOVerview"><span class="header-section-number">3.2.1</span> Overview</a></li>
-  <li><a href="#sec-PricesNotation" id="toc-sec-PricesNotation" class="nav-link" data-scroll-target="#sec-PricesNotation"><span class="header-section-number">3.2.2</span> Notation</a></li>
-  <li><a href="#sec-PricesBaseYears" id="toc-sec-PricesBaseYears" class="nav-link" data-scroll-target="#sec-PricesBaseYears"><span class="header-section-number">3.2.3</span> Base years: Sources of information</a></li>
-  <li><a href="#sec-PricesForecastedYears" id="toc-sec-PricesForecastedYears" class="nav-link" data-scroll-target="#sec-PricesForecastedYears"><span class="header-section-number">3.2.4</span> Forecasted years: Construction of data on prices and taxes</a></li>
-  <li><a href="#sec-PricesAggregation" id="toc-sec-PricesAggregation" class="nav-link" data-scroll-target="#sec-PricesAggregation"><span class="header-section-number">3.2.5</span> Price aggregation</a></li>
+  <li><a href="#sec-PricesOVerview" id="toc-sec-PricesOVerview" class="nav-link" data-scroll-target="#sec-PricesOVerview"><span class="toc-section-number">3.2.1</span>  Overview</a></li>
+  <li><a href="#sec-PricesNotation" id="toc-sec-PricesNotation" class="nav-link" data-scroll-target="#sec-PricesNotation"><span class="toc-section-number">3.2.2</span>  Notation</a></li>
+  <li><a href="#sec-PricesBaseYears" id="toc-sec-PricesBaseYears" class="nav-link" data-scroll-target="#sec-PricesBaseYears"><span class="toc-section-number">3.2.3</span>  Base years: Sources of information</a></li>
+  <li><a href="#sec-PricesForecastedYears" id="toc-sec-PricesForecastedYears" class="nav-link" data-scroll-target="#sec-PricesForecastedYears"><span class="toc-section-number">3.2.4</span>  Forecasted years: Construction of data on prices and taxes</a></li>
+  <li><a href="#sec-PricesAggregation" id="toc-sec-PricesAggregation" class="nav-link" data-scroll-target="#sec-PricesAggregation"><span class="toc-section-number">3.2.5</span>  Price aggregation</a></li>
   </ul></li>
-  <li><a href="#sec-FuelConsumption" id="toc-sec-FuelConsumption" class="nav-link" data-scroll-target="#sec-FuelConsumption"><span class="header-section-number">3.3</span> Fuel Consumption</a>
+  <li><a href="#sec-FuelConsumption" id="toc-sec-FuelConsumption" class="nav-link" data-scroll-target="#sec-FuelConsumption"><span class="toc-section-number">3.3</span>  Fuel Consumption</a>
   <ul>
-  <li><a href="#sec-FuelConsuOverview" id="toc-sec-FuelConsuOverview" class="nav-link" data-scroll-target="#sec-FuelConsuOverview"><span class="header-section-number">3.3.1</span> Overview</a></li>
-  <li><a href="#sec-3_3_2" id="toc-sec-3_3_2" class="nav-link" data-scroll-target="#sec-3_3_2"><span class="header-section-number">3.3.2</span> Notation</a></li>
-  <li><a href="#sec-FuelConsumptionDynamics" id="toc-sec-FuelConsumptionDynamics" class="nav-link" data-scroll-target="#sec-FuelConsumptionDynamics"><span class="header-section-number">3.3.3</span> Fuel Consumption Dynamics</a></li>
-  <li><a href="#specific-cases" id="toc-specific-cases" class="nav-link" data-scroll-target="#specific-cases"><span class="header-section-number">3.3.4</span> Specific cases</a>
+  <li><a href="#sec-FuelConsuOverview" id="toc-sec-FuelConsuOverview" class="nav-link" data-scroll-target="#sec-FuelConsuOverview"><span class="toc-section-number">3.3.1</span>  Overview</a></li>
+  <li><a href="#sec-3_3_2" id="toc-sec-3_3_2" class="nav-link" data-scroll-target="#sec-3_3_2"><span class="toc-section-number">3.3.2</span>  Notation</a></li>
+  <li><a href="#sec-FuelConsumptionDynamics" id="toc-sec-FuelConsumptionDynamics" class="nav-link" data-scroll-target="#sec-FuelConsumptionDynamics"><span class="toc-section-number">3.3.3</span>  Fuel Consumption Dynamics</a></li>
+  <li><a href="#specific-cases" id="toc-specific-cases" class="nav-link" data-scroll-target="#specific-cases"><span class="toc-section-number">3.3.4</span>  Specific cases</a>
   <ul class="collapse">
-  <li><a href="#biofuels-and-jet-fuel" id="toc-biofuels-and-jet-fuel" class="nav-link" data-scroll-target="#biofuels-and-jet-fuel"><span class="header-section-number">3.3.4.1</span> Biofuels and jet fuel</a></li>
-  <li><a href="#self-generated-renewables" id="toc-self-generated-renewables" class="nav-link" data-scroll-target="#self-generated-renewables"><span class="header-section-number">3.3.4.2</span> Self-generated renewables</a></li>
-  <li><a href="#biomass-substitution-in-the-residential-sector" id="toc-biomass-substitution-in-the-residential-sector" class="nav-link" data-scroll-target="#biomass-substitution-in-the-residential-sector"><span class="header-section-number">3.3.4.3</span> Biomass substitution in the residential sector</a></li>
-  <li><a href="#sec-CalibrationCovid" id="toc-sec-CalibrationCovid" class="nav-link" data-scroll-target="#sec-CalibrationCovid"><span class="header-section-number">3.3.4.4</span> Calibration of overall energy use through Covid adjustment in 2020 and 2021</a></li>
-  <li><a href="#fuel-transformation" id="toc-fuel-transformation" class="nav-link" data-scroll-target="#fuel-transformation"><span class="header-section-number">3.3.4.5</span> Fuel transformation</a></li>
-  <li><a href="#other-energy-use" id="toc-other-energy-use" class="nav-link" data-scroll-target="#other-energy-use"><span class="header-section-number">3.3.4.6</span> Other energy use</a></li>
+  <li><a href="#biofuels-and-jet-fuel" id="toc-biofuels-and-jet-fuel" class="nav-link" data-scroll-target="#biofuels-and-jet-fuel"><span class="toc-section-number">3.3.4.1</span>  Biofuels and jet fuel</a></li>
+  <li><a href="#self-generated-renewables" id="toc-self-generated-renewables" class="nav-link" data-scroll-target="#self-generated-renewables"><span class="toc-section-number">3.3.4.2</span>  Self-generated renewables</a></li>
+  <li><a href="#biomass-substitution-in-the-residential-sector" id="toc-biomass-substitution-in-the-residential-sector" class="nav-link" data-scroll-target="#biomass-substitution-in-the-residential-sector"><span class="toc-section-number">3.3.4.3</span>  Biomass substitution in the residential sector</a></li>
+  <li><a href="#sec-CalibrationCovid" id="toc-sec-CalibrationCovid" class="nav-link" data-scroll-target="#sec-CalibrationCovid"><span class="toc-section-number">3.3.4.4</span>  Calibration of overall energy use through Covid adjustment in 2020 and 2021</a></li>
+  <li><a href="#fuel-transformation" id="toc-fuel-transformation" class="nav-link" data-scroll-target="#fuel-transformation"><span class="toc-section-number">3.3.4.5</span>  Fuel transformation</a></li>
+  <li><a href="#other-energy-use" id="toc-other-energy-use" class="nav-link" data-scroll-target="#other-energy-use"><span class="toc-section-number">3.3.4.6</span>  Other energy use</a></li>
   </ul></li>
-  <li><a href="#income-and-price-elasticities-of-demand" id="toc-income-and-price-elasticities-of-demand" class="nav-link" data-scroll-target="#income-and-price-elasticities-of-demand"><span class="header-section-number">3.3.5</span> Income and Price Elasticities of Demand</a>
+  <li><a href="#income-and-price-elasticities-of-demand" id="toc-income-and-price-elasticities-of-demand" class="nav-link" data-scroll-target="#income-and-price-elasticities-of-demand"><span class="toc-section-number">3.3.5</span>  Income and Price Elasticities of Demand</a>
   <ul class="collapse">
-  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview"><span class="header-section-number">3.3.5.1</span> Overview</a></li>
-  <li><a href="#income-elasticities" id="toc-income-elasticities" class="nav-link" data-scroll-target="#income-elasticities"><span class="header-section-number">3.3.5.2</span> Income elasticities</a></li>
-  <li><a href="#price-elasticities" id="toc-price-elasticities" class="nav-link" data-scroll-target="#price-elasticities"><span class="header-section-number">3.3.5.3</span> Price elasticities</a></li>
-  <li><a href="#rebound-effect" id="toc-rebound-effect" class="nav-link" data-scroll-target="#rebound-effect"><span class="header-section-number">3.3.5.4</span> Rebound effect</a></li>
-  <li><a href="#cross-price-elasticities" id="toc-cross-price-elasticities" class="nav-link" data-scroll-target="#cross-price-elasticities"><span class="header-section-number">3.3.5.5</span> Cross-price elasticities</a></li>
-  <li><a href="#rates-of-technological-change-and-exogenous-rebound-effects" id="toc-rates-of-technological-change-and-exogenous-rebound-effects" class="nav-link" data-scroll-target="#rates-of-technological-change-and-exogenous-rebound-effects"><span class="header-section-number">3.3.5.6</span> Rates of technological change and exogenous rebound effects</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">3.3.5.7</span> References</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview"><span class="toc-section-number">3.3.5.1</span>  Overview</a></li>
+  <li><a href="#income-elasticities" id="toc-income-elasticities" class="nav-link" data-scroll-target="#income-elasticities"><span class="toc-section-number">3.3.5.2</span>  Income elasticities</a></li>
+  <li><a href="#price-elasticities" id="toc-price-elasticities" class="nav-link" data-scroll-target="#price-elasticities"><span class="toc-section-number">3.3.5.3</span>  Price elasticities</a></li>
+  <li><a href="#rebound-effect" id="toc-rebound-effect" class="nav-link" data-scroll-target="#rebound-effect"><span class="toc-section-number">3.3.5.4</span>  Rebound effect</a></li>
+  <li><a href="#cross-price-elasticities" id="toc-cross-price-elasticities" class="nav-link" data-scroll-target="#cross-price-elasticities"><span class="toc-section-number">3.3.5.5</span>  Cross-price elasticities</a></li>
+  <li><a href="#rates-of-technological-change-and-exogenous-rebound-effects" id="toc-rates-of-technological-change-and-exogenous-rebound-effects" class="nav-link" data-scroll-target="#rates-of-technological-change-and-exogenous-rebound-effects"><span class="toc-section-number">3.3.5.6</span>  Rates of technological change and exogenous rebound effects</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="toc-section-number">3.3.5.7</span>  References</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#power-sector-models" id="toc-power-sector-models" class="nav-link" data-scroll-target="#power-sector-models"><span class="header-section-number">3.4</span> Power sector models</a>
+  <li><a href="#power-sector-models" id="toc-power-sector-models" class="nav-link" data-scroll-target="#power-sector-models"><span class="toc-section-number">3.4</span>  Power sector models</a>
   <ul>
-  <li><a href="#sec-PowerPrices" id="toc-sec-PowerPrices" class="nav-link" data-scroll-target="#sec-PowerPrices"><span class="header-section-number">3.4.1</span> Power prices and generation costs</a>
+  <li><a href="#sec-PowerPrices" id="toc-sec-PowerPrices" class="nav-link" data-scroll-target="#sec-PowerPrices"><span class="toc-section-number">3.4.1</span>  Power prices and generation costs</a>
   <ul class="collapse">
-  <li><a href="#overview-1" id="toc-overview-1" class="nav-link" data-scroll-target="#overview-1"><span class="header-section-number">3.4.1.1</span> Overview</a></li>
-  <li><a href="#sec-Notation" id="toc-sec-Notation" class="nav-link" data-scroll-target="#sec-Notation"><span class="header-section-number">3.4.1.2</span> Notation</a></li>
-  <li><a href="#power-generation-cost-and-price-concepts" id="toc-power-generation-cost-and-price-concepts" class="nav-link" data-scroll-target="#power-generation-cost-and-price-concepts"><span class="header-section-number">3.4.1.3</span> Power generation cost and price concepts</a></li>
-  <li><a href="#concept-1-current-variable-costs" id="toc-concept-1-current-variable-costs" class="nav-link" data-scroll-target="#concept-1-current-variable-costs"><span class="header-section-number">3.4.1.4</span> Concept 1: Current variable costs</a></li>
-  <li><a href="#concept-2-levelized-costs-of-generation-forward-looking" id="toc-concept-2-levelized-costs-of-generation-forward-looking" class="nav-link" data-scroll-target="#concept-2-levelized-costs-of-generation-forward-looking"><span class="header-section-number">3.4.1.5</span> Concept 2: Levelized costs of generation (Forward-looking)</a></li>
-  <li><a href="#concept-3-cost-recovery-estimated-total-cost-of-generation" id="toc-concept-3-cost-recovery-estimated-total-cost-of-generation" class="nav-link" data-scroll-target="#concept-3-cost-recovery-estimated-total-cost-of-generation"><span class="header-section-number">3.4.1.6</span> Concept 3: Cost-recovery estimated total cost of generation</a></li>
-  <li><a href="#concept-4-end-user-prices" id="toc-concept-4-end-user-prices" class="nav-link" data-scroll-target="#concept-4-end-user-prices"><span class="header-section-number">3.4.1.7</span> Concept 4: End-user prices</a></li>
+  <li><a href="#overview-1" id="toc-overview-1" class="nav-link" data-scroll-target="#overview-1"><span class="toc-section-number">3.4.1.1</span>  Overview</a></li>
+  <li><a href="#sec-Notation" id="toc-sec-Notation" class="nav-link" data-scroll-target="#sec-Notation"><span class="toc-section-number">3.4.1.2</span>  Notation</a></li>
+  <li><a href="#power-generation-cost-and-price-concepts" id="toc-power-generation-cost-and-price-concepts" class="nav-link" data-scroll-target="#power-generation-cost-and-price-concepts"><span class="toc-section-number">3.4.1.3</span>  Power generation cost and price concepts</a></li>
+  <li><a href="#concept-1-current-variable-costs" id="toc-concept-1-current-variable-costs" class="nav-link" data-scroll-target="#concept-1-current-variable-costs"><span class="toc-section-number">3.4.1.4</span>  Concept 1: Current variable costs</a></li>
+  <li><a href="#concept-2-levelized-costs-of-generation-forward-looking" id="toc-concept-2-levelized-costs-of-generation-forward-looking" class="nav-link" data-scroll-target="#concept-2-levelized-costs-of-generation-forward-looking"><span class="toc-section-number">3.4.1.5</span>  Concept 2: Levelized costs of generation (Forward-looking)</a></li>
+  <li><a href="#concept-3-cost-recovery-estimated-total-cost-of-generation" id="toc-concept-3-cost-recovery-estimated-total-cost-of-generation" class="nav-link" data-scroll-target="#concept-3-cost-recovery-estimated-total-cost-of-generation"><span class="toc-section-number">3.4.1.6</span>  Concept 3: Cost-recovery estimated total cost of generation</a></li>
+  <li><a href="#concept-4-end-user-prices" id="toc-concept-4-end-user-prices" class="nav-link" data-scroll-target="#concept-4-end-user-prices"><span class="toc-section-number">3.4.1.7</span>  Concept 4: End-user prices</a></li>
   </ul></li>
-  <li><a href="#sec-EngineerModel" id="toc-sec-EngineerModel" class="nav-link" data-scroll-target="#sec-EngineerModel"><span class="header-section-number">3.4.2</span> Techno-economic (‘engineer’) power model</a>
+  <li><a href="#sec-EngineerModel" id="toc-sec-EngineerModel" class="nav-link" data-scroll-target="#sec-EngineerModel"><span class="toc-section-number">3.4.2</span>  Techno-economic (‘engineer’) power model</a>
   <ul class="collapse">
-  <li><a href="#overview-2" id="toc-overview-2" class="nav-link" data-scroll-target="#overview-2"><span class="header-section-number">3.4.2.1</span> Overview</a></li>
-  <li><a href="#notation" id="toc-notation" class="nav-link" data-scroll-target="#notation"><span class="header-section-number">3.4.2.2</span> Notation</a></li>
-  <li><a href="#power-demand" id="toc-power-demand" class="nav-link" data-scroll-target="#power-demand"><span class="header-section-number">3.4.2.3</span> Power demand</a></li>
-  <li><a href="#sec-PowerSupply" id="toc-sec-PowerSupply" class="nav-link" data-scroll-target="#sec-PowerSupply"><span class="header-section-number">3.4.2.4</span> Power supply</a></li>
-  <li><a href="#sec-StorageDecision" id="toc-sec-StorageDecision" class="nav-link" data-scroll-target="#sec-StorageDecision"><span class="header-section-number">3.4.2.5</span> Storage decision</a></li>
+  <li><a href="#overview-2" id="toc-overview-2" class="nav-link" data-scroll-target="#overview-2"><span class="toc-section-number">3.4.2.1</span>  Overview</a></li>
+  <li><a href="#notation" id="toc-notation" class="nav-link" data-scroll-target="#notation"><span class="toc-section-number">3.4.2.2</span>  Notation</a></li>
+  <li><a href="#power-demand" id="toc-power-demand" class="nav-link" data-scroll-target="#power-demand"><span class="toc-section-number">3.4.2.3</span>  Power demand</a></li>
+  <li><a href="#sec-PowerSupply" id="toc-sec-PowerSupply" class="nav-link" data-scroll-target="#sec-PowerSupply"><span class="toc-section-number">3.4.2.4</span>  Power supply</a></li>
+  <li><a href="#sec-StorageDecision" id="toc-sec-StorageDecision" class="nav-link" data-scroll-target="#sec-StorageDecision"><span class="toc-section-number">3.4.2.5</span>  Storage decision</a></li>
   </ul></li>
-  <li><a href="#sec-ElasticityModel" id="toc-sec-ElasticityModel" class="nav-link" data-scroll-target="#sec-ElasticityModel"><span class="header-section-number">3.4.3</span> Elasticity model</a>
+  <li><a href="#sec-ElasticityModel" id="toc-sec-ElasticityModel" class="nav-link" data-scroll-target="#sec-ElasticityModel"><span class="toc-section-number">3.4.3</span>  Elasticity model</a>
   <ul class="collapse">
-  <li><a href="#overview-3" id="toc-overview-3" class="nav-link" data-scroll-target="#overview-3"><span class="header-section-number">3.4.3.1</span> Overview</a></li>
-  <li><a href="#notation-1" id="toc-notation-1" class="nav-link" data-scroll-target="#notation-1"><span class="header-section-number">3.4.3.2</span> Notation</a></li>
-  <li><a href="#generation-costs" id="toc-generation-costs" class="nav-link" data-scroll-target="#generation-costs"><span class="header-section-number">3.4.3.3</span> Generation costs</a></li>
-  <li><a href="#total-power-demand" id="toc-total-power-demand" class="nav-link" data-scroll-target="#total-power-demand"><span class="header-section-number">3.4.3.4</span> Total power demand</a></li>
-  <li><a href="#total-power-supply" id="toc-total-power-supply" class="nav-link" data-scroll-target="#total-power-supply"><span class="header-section-number">3.4.3.5</span> Total power supply</a></li>
+  <li><a href="#overview-3" id="toc-overview-3" class="nav-link" data-scroll-target="#overview-3"><span class="toc-section-number">3.4.3.1</span>  Overview</a></li>
+  <li><a href="#notation-1" id="toc-notation-1" class="nav-link" data-scroll-target="#notation-1"><span class="toc-section-number">3.4.3.2</span>  Notation</a></li>
+  <li><a href="#generation-costs" id="toc-generation-costs" class="nav-link" data-scroll-target="#generation-costs"><span class="toc-section-number">3.4.3.3</span>  Generation costs</a></li>
+  <li><a href="#total-power-demand" id="toc-total-power-demand" class="nav-link" data-scroll-target="#total-power-demand"><span class="toc-section-number">3.4.3.4</span>  Total power demand</a></li>
+  <li><a href="#total-power-supply" id="toc-total-power-supply" class="nav-link" data-scroll-target="#total-power-supply"><span class="toc-section-number">3.4.3.5</span>  Total power supply</a></li>
   </ul></li>
-  <li><a href="#sec-PowerDataSources" id="toc-sec-PowerDataSources" class="nav-link" data-scroll-target="#sec-PowerDataSources"><span class="header-section-number">3.4.4</span> Power data sources and parameter choices</a>
+  <li><a href="#sec-PowerDataSources" id="toc-sec-PowerDataSources" class="nav-link" data-scroll-target="#sec-PowerDataSources"><span class="toc-section-number">3.4.4</span>  Power data sources and parameter choices</a>
   <ul class="collapse">
-  <li><a href="#overview-4" id="toc-overview-4" class="nav-link" data-scroll-target="#overview-4"><span class="header-section-number">3.4.4.1</span> Overview</a></li>
-  <li><a href="#description-and-definition-of-the-variables" id="toc-description-and-definition-of-the-variables" class="nav-link" data-scroll-target="#description-and-definition-of-the-variables"><span class="header-section-number">3.4.4.2</span> Description and definition of the variables</a></li>
-  <li><a href="#consistency-across-data-sources" id="toc-consistency-across-data-sources" class="nav-link" data-scroll-target="#consistency-across-data-sources"><span class="header-section-number">3.4.4.3</span> Consistency across data sources</a></li>
-  <li><a href="#sec-PowerCharacteristics" id="toc-sec-PowerCharacteristics" class="nav-link" data-scroll-target="#sec-PowerCharacteristics"><span class="header-section-number">3.4.4.4</span> Estimation of the power sector characteristics</a></li>
-  <li><a href="#references-1" id="toc-references-1" class="nav-link" data-scroll-target="#references-1"><span class="header-section-number">3.4.4.5</span> References</a></li>
+  <li><a href="#overview-4" id="toc-overview-4" class="nav-link" data-scroll-target="#overview-4"><span class="toc-section-number">3.4.4.1</span>  Overview</a></li>
+  <li><a href="#description-and-definition-of-the-variables" id="toc-description-and-definition-of-the-variables" class="nav-link" data-scroll-target="#description-and-definition-of-the-variables"><span class="toc-section-number">3.4.4.2</span>  Description and definition of the variables</a></li>
+  <li><a href="#consistency-across-data-sources" id="toc-consistency-across-data-sources" class="nav-link" data-scroll-target="#consistency-across-data-sources"><span class="toc-section-number">3.4.4.3</span>  Consistency across data sources</a></li>
+  <li><a href="#sec-PowerCharacteristics" id="toc-sec-PowerCharacteristics" class="nav-link" data-scroll-target="#sec-PowerCharacteristics"><span class="toc-section-number">3.4.4.4</span>  Estimation of the power sector characteristics</a></li>
+  <li><a href="#references-1" id="toc-references-1" class="nav-link" data-scroll-target="#references-1"><span class="toc-section-number">3.4.4.5</span>  References</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#emissions" id="toc-emissions" class="nav-link" data-scroll-target="#emissions"><span class="header-section-number">3.5</span> Emissions</a>
+  <li><a href="#emissions" id="toc-emissions" class="nav-link" data-scroll-target="#emissions"><span class="toc-section-number">3.5</span>  Emissions</a>
   <ul>
-  <li><a href="#overview-5" id="toc-overview-5" class="nav-link" data-scroll-target="#overview-5"><span class="header-section-number">3.5.1</span> Overview</a></li>
-  <li><a href="#notation-2" id="toc-notation-2" class="nav-link" data-scroll-target="#notation-2"><span class="header-section-number">3.5.2</span> Notation</a></li>
-  <li><a href="#emission-factors" id="toc-emission-factors" class="nav-link" data-scroll-target="#emission-factors"><span class="header-section-number">3.5.3</span> Emission factors</a></li>
-  <li><a href="#energy-related-emissions" id="toc-energy-related-emissions" class="nav-link" data-scroll-target="#energy-related-emissions"><span class="header-section-number">3.5.4</span> Energy-related emissions</a>
+  <li><a href="#overview-5" id="toc-overview-5" class="nav-link" data-scroll-target="#overview-5"><span class="toc-section-number">3.5.1</span>  Overview</a></li>
+  <li><a href="#notation-2" id="toc-notation-2" class="nav-link" data-scroll-target="#notation-2"><span class="toc-section-number">3.5.2</span>  Notation</a></li>
+  <li><a href="#emission-factors" id="toc-emission-factors" class="nav-link" data-scroll-target="#emission-factors"><span class="toc-section-number">3.5.3</span>  Emission factors</a></li>
+  <li><a href="#energy-related-emissions" id="toc-energy-related-emissions" class="nav-link" data-scroll-target="#energy-related-emissions"><span class="toc-section-number">3.5.4</span>  Energy-related emissions</a>
   <ul class="collapse">
-  <li><a href="#carbon-dioxide-co_2" id="toc-carbon-dioxide-co_2" class="nav-link" data-scroll-target="#carbon-dioxide-co_2"><span class="header-section-number">3.5.4.1</span> Carbon dioxide (<span class="math inline">\(CO_{2}\)</span>)</a></li>
-  <li><a href="#methane-ch_4" id="toc-methane-ch_4" class="nav-link" data-scroll-target="#methane-ch_4"><span class="header-section-number">3.5.4.2</span> Methane (<span class="math inline">\(CH_{4}\)</span>)</a></li>
-  <li><a href="#nitrous-oxide-n_2o-and-flourinated-gases-f-gases" id="toc-nitrous-oxide-n_2o-and-flourinated-gases-f-gases" class="nav-link" data-scroll-target="#nitrous-oxide-n_2o-and-flourinated-gases-f-gases"><span class="header-section-number">3.5.4.3</span> Nitrous oxide (<span class="math inline">\(N_{2}O\)</span>) and Flourinated gases (F-gases)</a></li>
+  <li><a href="#carbon-dioxide-co_2" id="toc-carbon-dioxide-co_2" class="nav-link" data-scroll-target="#carbon-dioxide-co_2"><span class="toc-section-number">3.5.4.1</span>  Carbon dioxide (<span class="math inline">\(CO_{2}\)</span>)</a></li>
+  <li><a href="#methane-ch_4" id="toc-methane-ch_4" class="nav-link" data-scroll-target="#methane-ch_4"><span class="toc-section-number">3.5.4.2</span>  Methane (<span class="math inline">\(CH_{4}\)</span>)</a></li>
+  <li><a href="#nitrous-oxide-n_2o-and-flourinated-gases-f-gases" id="toc-nitrous-oxide-n_2o-and-flourinated-gases-f-gases" class="nav-link" data-scroll-target="#nitrous-oxide-n_2o-and-flourinated-gases-f-gases"><span class="toc-section-number">3.5.4.3</span>  Nitrous oxide (<span class="math inline">\(N_{2}O\)</span>) and Flourinated gases (F-gases)</a></li>
   </ul></li>
-  <li><a href="#non-energy-related-emissions" id="toc-non-energy-related-emissions" class="nav-link" data-scroll-target="#non-energy-related-emissions"><span class="header-section-number">3.5.5</span> Non-energy related emissions</a>
+  <li><a href="#non-energy-related-emissions" id="toc-non-energy-related-emissions" class="nav-link" data-scroll-target="#non-energy-related-emissions"><span class="toc-section-number">3.5.5</span>  Non-energy related emissions</a>
   <ul class="collapse">
-  <li><a href="#industrial-processes-and-product-use" id="toc-industrial-processes-and-product-use" class="nav-link" data-scroll-target="#industrial-processes-and-product-use"><span class="header-section-number">3.5.5.1</span> Industrial processes and product use</a></li>
-  <li><a href="#agriculture" id="toc-agriculture" class="nav-link" data-scroll-target="#agriculture"><span class="header-section-number">3.5.5.2</span> Agriculture</a></li>
-  <li><a href="#land-use-land-use-change-and-forestry" id="toc-land-use-land-use-change-and-forestry" class="nav-link" data-scroll-target="#land-use-land-use-change-and-forestry"><span class="header-section-number">3.5.5.3</span> Land use, land-use change and forestry</a></li>
+  <li><a href="#industrial-processes-and-product-use" id="toc-industrial-processes-and-product-use" class="nav-link" data-scroll-target="#industrial-processes-and-product-use"><span class="toc-section-number">3.5.5.1</span>  Industrial processes and product use</a></li>
+  <li><a href="#agriculture" id="toc-agriculture" class="nav-link" data-scroll-target="#agriculture"><span class="toc-section-number">3.5.5.2</span>  Agriculture</a></li>
+  <li><a href="#land-use-land-use-change-and-forestry" id="toc-land-use-land-use-change-and-forestry" class="nav-link" data-scroll-target="#land-use-land-use-change-and-forestry"><span class="toc-section-number">3.5.5.3</span>  Land use, land-use change and forestry</a></li>
   </ul></li>
-  <li><a href="#national-determined-contributions" id="toc-national-determined-contributions" class="nav-link" data-scroll-target="#national-determined-contributions"><span class="header-section-number">3.5.6</span> National Determined Contributions</a>
+  <li><a href="#national-determined-contributions" id="toc-national-determined-contributions" class="nav-link" data-scroll-target="#national-determined-contributions"><span class="toc-section-number">3.5.6</span>  National Determined Contributions</a>
   <ul class="collapse">
-  <li><a href="#types-of-ndcs" id="toc-types-of-ndcs" class="nav-link" data-scroll-target="#types-of-ndcs"><span class="header-section-number">3.5.6.1</span> Types of NDCs</a></li>
-  <li><a href="#harmonization-of-ndcs-country-cases" id="toc-harmonization-of-ndcs-country-cases" class="nav-link" data-scroll-target="#harmonization-of-ndcs-country-cases"><span class="header-section-number">3.5.6.2</span> Harmonization of NDCs: Country cases</a></li>
+  <li><a href="#types-of-ndcs" id="toc-types-of-ndcs" class="nav-link" data-scroll-target="#types-of-ndcs"><span class="toc-section-number">3.5.6.1</span>  Types of NDCs</a></li>
+  <li><a href="#harmonization-of-ndcs-country-cases" id="toc-harmonization-of-ndcs-country-cases" class="nav-link" data-scroll-target="#harmonization-of-ndcs-country-cases"><span class="toc-section-number">3.5.6.2</span>  Harmonization of NDCs: Country cases</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#fiscal-revenues" id="toc-fiscal-revenues" class="nav-link" data-scroll-target="#fiscal-revenues"><span class="header-section-number">3.6</span> Fiscal revenues</a>
+  <li><a href="#fiscal-revenues" id="toc-fiscal-revenues" class="nav-link" data-scroll-target="#fiscal-revenues"><span class="toc-section-number">3.6</span>  Fiscal revenues</a>
   <ul>
-  <li><a href="#overview-6" id="toc-overview-6" class="nav-link" data-scroll-target="#overview-6"><span class="header-section-number">3.6.1</span> Overview</a></li>
-  <li><a href="#notation-3" id="toc-notation-3" class="nav-link" data-scroll-target="#notation-3"><span class="header-section-number">3.6.2</span> Notation</a></li>
-  <li><a href="#total-revenues-raised-by-policy" id="toc-total-revenues-raised-by-policy" class="nav-link" data-scroll-target="#total-revenues-raised-by-policy"><span class="header-section-number">3.6.3</span> Total revenues raised by policy</a></li>
-  <li><a href="#additional-information" id="toc-additional-information" class="nav-link" data-scroll-target="#additional-information"><span class="header-section-number">3.6.4</span> Additional information</a>
+  <li><a href="#overview-6" id="toc-overview-6" class="nav-link" data-scroll-target="#overview-6"><span class="toc-section-number">3.6.1</span>  Overview</a></li>
+  <li><a href="#notation-3" id="toc-notation-3" class="nav-link" data-scroll-target="#notation-3"><span class="toc-section-number">3.6.2</span>  Notation</a></li>
+  <li><a href="#total-revenues-raised-by-policy" id="toc-total-revenues-raised-by-policy" class="nav-link" data-scroll-target="#total-revenues-raised-by-policy"><span class="toc-section-number">3.6.3</span>  Total revenues raised by policy</a></li>
+  <li><a href="#additional-information" id="toc-additional-information" class="nav-link" data-scroll-target="#additional-information"><span class="toc-section-number">3.6.4</span>  Additional information</a>
   <ul class="collapse">
-  <li><a href="#revenueslosses-from-price-controls" id="toc-revenueslosses-from-price-controls" class="nav-link" data-scroll-target="#revenueslosses-from-price-controls"><span class="header-section-number">3.6.4.1</span> Revenues/losses from price controls</a></li>
-  <li><a href="#total-fuel-expenditures" id="toc-total-fuel-expenditures" class="nav-link" data-scroll-target="#total-fuel-expenditures"><span class="header-section-number">3.6.4.2</span> Total fuel expenditures</a></li>
+  <li><a href="#revenueslosses-from-price-controls" id="toc-revenueslosses-from-price-controls" class="nav-link" data-scroll-target="#revenueslosses-from-price-controls"><span class="toc-section-number">3.6.4.1</span>  Revenues/losses from price controls</a></li>
+  <li><a href="#total-fuel-expenditures" id="toc-total-fuel-expenditures" class="nav-link" data-scroll-target="#total-fuel-expenditures"><span class="toc-section-number">3.6.4.2</span>  Total fuel expenditures</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#monetized-social-costs-and-benefits" id="toc-monetized-social-costs-and-benefits" class="nav-link" data-scroll-target="#monetized-social-costs-and-benefits"><span class="header-section-number">3.7</span> Monetized social costs and benefits</a>
+  <li><a href="#monetized-social-costs-and-benefits" id="toc-monetized-social-costs-and-benefits" class="nav-link" data-scroll-target="#monetized-social-costs-and-benefits"><span class="toc-section-number">3.7</span>  Monetized social costs and benefits</a>
   <ul>
-  <li><a href="#overview-7" id="toc-overview-7" class="nav-link" data-scroll-target="#overview-7"><span class="header-section-number">3.7.1</span> Overview</a>
+  <li><a href="#overview-7" id="toc-overview-7" class="nav-link" data-scroll-target="#overview-7"><span class="toc-section-number">3.7.1</span>  Overview</a>
   <ul class="collapse">
-  <li><a href="#efficiency-costs-without-a-prior-tax" id="toc-efficiency-costs-without-a-prior-tax" class="nav-link" data-scroll-target="#efficiency-costs-without-a-prior-tax"><span class="header-section-number">3.7.1.1</span> Efficiency costs without a prior tax</a></li>
-  <li><a href="#efficiency-cost-in-the-presence-of-a-prior-tax" id="toc-efficiency-cost-in-the-presence-of-a-prior-tax" class="nav-link" data-scroll-target="#efficiency-cost-in-the-presence-of-a-prior-tax"><span class="header-section-number">3.7.1.2</span> Efficiency cost in the presence of a prior tax</a></li>
-  <li><a href="#efficiency-costs-in-cpat" id="toc-efficiency-costs-in-cpat" class="nav-link" data-scroll-target="#efficiency-costs-in-cpat"><span class="header-section-number">3.7.1.3</span> Efficiency costs in CPAT</a></li>
-  <li><a href="#co-benefits" id="toc-co-benefits" class="nav-link" data-scroll-target="#co-benefits"><span class="header-section-number">3.7.1.4</span> Co-benefits</a></li>
+  <li><a href="#efficiency-costs-without-a-prior-tax" id="toc-efficiency-costs-without-a-prior-tax" class="nav-link" data-scroll-target="#efficiency-costs-without-a-prior-tax"><span class="toc-section-number">3.7.1.1</span>  Efficiency costs without a prior tax</a></li>
+  <li><a href="#efficiency-cost-in-the-presence-of-a-prior-tax" id="toc-efficiency-cost-in-the-presence-of-a-prior-tax" class="nav-link" data-scroll-target="#efficiency-cost-in-the-presence-of-a-prior-tax"><span class="toc-section-number">3.7.1.2</span>  Efficiency cost in the presence of a prior tax</a></li>
+  <li><a href="#efficiency-costs-in-cpat" id="toc-efficiency-costs-in-cpat" class="nav-link" data-scroll-target="#efficiency-costs-in-cpat"><span class="toc-section-number">3.7.1.3</span>  Efficiency costs in CPAT</a></li>
+  <li><a href="#co-benefits" id="toc-co-benefits" class="nav-link" data-scroll-target="#co-benefits"><span class="toc-section-number">3.7.1.4</span>  Co-benefits</a></li>
   </ul></li>
-  <li><a href="#energy-externalities-costs" id="toc-energy-externalities-costs" class="nav-link" data-scroll-target="#energy-externalities-costs"><span class="header-section-number">3.7.2</span> Energy externalities costs</a></li>
-  <li><a href="#monetized-welfare-benefits" id="toc-monetized-welfare-benefits" class="nav-link" data-scroll-target="#monetized-welfare-benefits"><span class="header-section-number">3.7.3</span> Monetized welfare benefits</a></li>
+  <li><a href="#energy-externalities-costs" id="toc-energy-externalities-costs" class="nav-link" data-scroll-target="#energy-externalities-costs"><span class="toc-section-number">3.7.2</span>  Energy externalities costs</a></li>
+  <li><a href="#monetized-welfare-benefits" id="toc-monetized-welfare-benefits" class="nav-link" data-scroll-target="#monetized-welfare-benefits"><span class="toc-section-number">3.7.3</span>  Monetized welfare benefits</a></li>
   </ul></li>
-  <li><a href="#validation" id="toc-validation" class="nav-link" data-scroll-target="#validation"><span class="header-section-number">3.8</span> Validation</a>
+  <li><a href="#validation" id="toc-validation" class="nav-link" data-scroll-target="#validation"><span class="toc-section-number">3.8</span>  Validation</a>
   <ul>
-  <li><a href="#overview-8" id="toc-overview-8" class="nav-link" data-scroll-target="#overview-8"><span class="header-section-number">3.8.1</span> Overview</a></li>
-  <li><a href="#panel-estimation-of-energy-demand" id="toc-panel-estimation-of-energy-demand" class="nav-link" data-scroll-target="#panel-estimation-of-energy-demand"><span class="header-section-number">3.8.2</span> Panel estimation of energy demand</a>
+  <li><a href="#overview-8" id="toc-overview-8" class="nav-link" data-scroll-target="#overview-8"><span class="toc-section-number">3.8.1</span>  Overview</a></li>
+  <li><a href="#panel-estimation-of-energy-demand" id="toc-panel-estimation-of-energy-demand" class="nav-link" data-scroll-target="#panel-estimation-of-energy-demand"><span class="toc-section-number">3.8.2</span>  Panel estimation of energy demand</a>
   <ul class="collapse">
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">3.8.2.1</span> Introduction</a></li>
-  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology"><span class="header-section-number">3.8.2.2</span> Methodology</a></li>
-  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results"><span class="header-section-number">3.8.2.3</span> Results</a></li>
-  <li><a href="#conclusions-and-areas-for-improvement" id="toc-conclusions-and-areas-for-improvement" class="nav-link" data-scroll-target="#conclusions-and-areas-for-improvement"><span class="header-section-number">3.8.2.4</span> Conclusions and areas for improvement</a></li>
-  <li><a href="#references-2" id="toc-references-2" class="nav-link" data-scroll-target="#references-2"><span class="header-section-number">3.8.2.5</span> References</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="toc-section-number">3.8.2.1</span>  Introduction</a></li>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology"><span class="toc-section-number">3.8.2.2</span>  Methodology</a></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results"><span class="toc-section-number">3.8.2.3</span>  Results</a></li>
+  <li><a href="#conclusions-and-areas-for-improvement" id="toc-conclusions-and-areas-for-improvement" class="nav-link" data-scroll-target="#conclusions-and-areas-for-improvement"><span class="toc-section-number">3.8.2.4</span>  Conclusions and areas for improvement</a></li>
+  <li><a href="#references-2" id="toc-references-2" class="nav-link" data-scroll-target="#references-2"><span class="toc-section-number">3.8.2.5</span>  References</a></li>
   </ul></li>
-  <li><a href="#model-comparisons" id="toc-model-comparisons" class="nav-link" data-scroll-target="#model-comparisons"><span class="header-section-number">3.8.3</span> Model comparisons</a>
+  <li><a href="#model-comparisons" id="toc-model-comparisons" class="nav-link" data-scroll-target="#model-comparisons"><span class="toc-section-number">3.8.3</span>  Model comparisons</a>
   <ul class="collapse">
-  <li><a href="#baseline-validation" id="toc-baseline-validation" class="nav-link" data-scroll-target="#baseline-validation"><span class="header-section-number">3.8.3.1</span> Baseline validation</a></li>
-  <li><a href="#carbon-price-sensitivity" id="toc-carbon-price-sensitivity" class="nav-link" data-scroll-target="#carbon-price-sensitivity"><span class="header-section-number">3.8.3.2</span> Carbon Price Sensitivity</a></li>
-  <li><a href="#comparison-with-enerdatas-long-term-enerbase-scenario" id="toc-comparison-with-enerdatas-long-term-enerbase-scenario" class="nav-link" data-scroll-target="#comparison-with-enerdatas-long-term-enerbase-scenario"><span class="header-section-number">3.8.3.3</span> Comparison with Enerdata’s long-term Enerbase scenario</a></li>
-  <li><a href="#power-sector-comparison-vs.-epm" id="toc-power-sector-comparison-vs.-epm" class="nav-link" data-scroll-target="#power-sector-comparison-vs.-epm"><span class="header-section-number">3.8.3.4</span> Power sector comparison vs.&nbsp;EPM</a></li>
+  <li><a href="#baseline-validation" id="toc-baseline-validation" class="nav-link" data-scroll-target="#baseline-validation"><span class="toc-section-number">3.8.3.1</span>  Baseline validation</a></li>
+  <li><a href="#carbon-price-sensitivity" id="toc-carbon-price-sensitivity" class="nav-link" data-scroll-target="#carbon-price-sensitivity"><span class="toc-section-number">3.8.3.2</span>  Carbon Price Sensitivity</a></li>
+  <li><a href="#comparison-with-enerdatas-long-term-enerbase-scenario" id="toc-comparison-with-enerdatas-long-term-enerbase-scenario" class="nav-link" data-scroll-target="#comparison-with-enerdatas-long-term-enerbase-scenario"><span class="toc-section-number">3.8.3.3</span>  Comparison with Enerdata’s long-term Enerbase scenario</a></li>
+  <li><a href="#power-sector-comparison-vs.-epm" id="toc-power-sector-comparison-vs.-epm" class="nav-link" data-scroll-target="#power-sector-comparison-vs.-epm"><span class="toc-section-number">3.8.3.4</span>  Power sector comparison vs.&nbsp;EPM</a></li>
   </ul></li>
-  <li><a href="#ex-post-studies" id="toc-ex-post-studies" class="nav-link" data-scroll-target="#ex-post-studies"><span class="header-section-number">3.8.4</span> Ex-post studies</a>
+  <li><a href="#ex-post-studies" id="toc-ex-post-studies" class="nav-link" data-scroll-target="#ex-post-studies"><span class="toc-section-number">3.8.4</span>  Ex-post studies</a>
   <ul class="collapse">
-  <li><a href="#how-effective-is-the-carbon-pricing-really-a-literature-review" id="toc-how-effective-is-the-carbon-pricing-really-a-literature-review" class="nav-link" data-scroll-target="#how-effective-is-the-carbon-pricing-really-a-literature-review"><span class="header-section-number">3.8.4.1</span> How effective is the carbon pricing, really? A literature review</a></li>
-  <li><a href="#how-does-cpat-compare-to-the-literature" id="toc-how-does-cpat-compare-to-the-literature" class="nav-link" data-scroll-target="#how-does-cpat-compare-to-the-literature"><span class="header-section-number">3.8.4.2</span> How does CPAT compare to the literature?</a></li>
-  <li><a href="#sec-RefExPostStudies" id="toc-sec-RefExPostStudies" class="nav-link" data-scroll-target="#sec-RefExPostStudies"><span class="header-section-number">3.8.4.3</span> References</a></li>
+  <li><a href="#how-effective-is-the-carbon-pricing-really-a-literature-review" id="toc-how-effective-is-the-carbon-pricing-really-a-literature-review" class="nav-link" data-scroll-target="#how-effective-is-the-carbon-pricing-really-a-literature-review"><span class="toc-section-number">3.8.4.1</span>  How effective is the carbon pricing, really? A literature review</a></li>
+  <li><a href="#how-does-cpat-compare-to-the-literature" id="toc-how-does-cpat-compare-to-the-literature" class="nav-link" data-scroll-target="#how-does-cpat-compare-to-the-literature"><span class="toc-section-number">3.8.4.2</span>  How does CPAT compare to the literature?</a></li>
+  <li><a href="#sec-RefExPostStudies" id="toc-sec-RefExPostStudies" class="nav-link" data-scroll-target="#sec-RefExPostStudies"><span class="toc-section-number">3.8.4.3</span>  References</a></li>
   </ul></li>
-  <li><a href="#hindcasting" id="toc-hindcasting" class="nav-link" data-scroll-target="#hindcasting"><span class="header-section-number">3.8.5</span> Hindcasting</a>
+  <li><a href="#hindcasting" id="toc-hindcasting" class="nav-link" data-scroll-target="#hindcasting"><span class="toc-section-number">3.8.5</span>  Hindcasting</a>
   <ul class="collapse">
-  <li><a href="#objectives-1" id="toc-objectives-1" class="nav-link" data-scroll-target="#objectives-1"><span class="header-section-number">3.8.5.1</span> Objectives</a></li>
-  <li><a href="#methodology-2" id="toc-methodology-2" class="nav-link" data-scroll-target="#methodology-2"><span class="header-section-number">3.8.5.2</span> Methodology</a></li>
-  <li><a href="#comparing-projected-emissions-across-selected-countries" id="toc-comparing-projected-emissions-across-selected-countries" class="nav-link" data-scroll-target="#comparing-projected-emissions-across-selected-countries"><span class="header-section-number">3.8.5.3</span> Comparing projected emissions across selected countries</a></li>
-  <li><a href="#a-potential-source-of-discrepancies-in-model-price-forecasts" id="toc-a-potential-source-of-discrepancies-in-model-price-forecasts" class="nav-link" data-scroll-target="#a-potential-source-of-discrepancies-in-model-price-forecasts"><span class="header-section-number">3.8.5.4</span> A potential source of discrepancies: In-model price forecasts</a></li>
-  <li><a href="#conclusions-and-additional-analysis-needed" id="toc-conclusions-and-additional-analysis-needed" class="nav-link" data-scroll-target="#conclusions-and-additional-analysis-needed"><span class="header-section-number">3.8.5.5</span> Conclusions and additional analysis needed</a></li>
+  <li><a href="#objectives-1" id="toc-objectives-1" class="nav-link" data-scroll-target="#objectives-1"><span class="toc-section-number">3.8.5.1</span>  Objectives</a></li>
+  <li><a href="#methodology-2" id="toc-methodology-2" class="nav-link" data-scroll-target="#methodology-2"><span class="toc-section-number">3.8.5.2</span>  Methodology</a></li>
+  <li><a href="#comparing-projected-emissions-across-selected-countries" id="toc-comparing-projected-emissions-across-selected-countries" class="nav-link" data-scroll-target="#comparing-projected-emissions-across-selected-countries"><span class="toc-section-number">3.8.5.3</span>  Comparing projected emissions across selected countries</a></li>
+  <li><a href="#a-potential-source-of-discrepancies-in-model-price-forecasts" id="toc-a-potential-source-of-discrepancies-in-model-price-forecasts" class="nav-link" data-scroll-target="#a-potential-source-of-discrepancies-in-model-price-forecasts"><span class="toc-section-number">3.8.5.4</span>  A potential source of discrepancies: In-model price forecasts</a></li>
+  <li><a href="#conclusions-and-additional-analysis-needed" id="toc-conclusions-and-additional-analysis-needed" class="nav-link" data-scroll-target="#conclusions-and-additional-analysis-needed"><span class="toc-section-number">3.8.5.5</span>  Conclusions and additional analysis needed</a></li>
   </ul></li>
-  <li><a href="#parameter-sensitivity-analysis" id="toc-parameter-sensitivity-analysis" class="nav-link" data-scroll-target="#parameter-sensitivity-analysis"><span class="header-section-number">3.8.6</span> Parameter Sensitivity Analysis</a>
+  <li><a href="#parameter-sensitivity-analysis" id="toc-parameter-sensitivity-analysis" class="nav-link" data-scroll-target="#parameter-sensitivity-analysis"><span class="toc-section-number">3.8.6</span>  Parameter Sensitivity Analysis</a>
   <ul class="collapse">
-  <li><a href="#objectives-2" id="toc-objectives-2" class="nav-link" data-scroll-target="#objectives-2"><span class="header-section-number">3.8.6.1</span> Objectives</a></li>
-  <li><a href="#methodology-3" id="toc-methodology-3" class="nav-link" data-scroll-target="#methodology-3"><span class="header-section-number">3.8.6.2</span> Methodology</a></li>
-  <li><a href="#results-1" id="toc-results-1" class="nav-link" data-scroll-target="#results-1"><span class="header-section-number">3.8.6.3</span> Results</a></li>
+  <li><a href="#objectives-2" id="toc-objectives-2" class="nav-link" data-scroll-target="#objectives-2"><span class="toc-section-number">3.8.6.1</span>  Objectives</a></li>
+  <li><a href="#methodology-3" id="toc-methodology-3" class="nav-link" data-scroll-target="#methodology-3"><span class="toc-section-number">3.8.6.2</span>  Methodology</a></li>
+  <li><a href="#results-1" id="toc-results-1" class="nav-link" data-scroll-target="#results-1"><span class="toc-section-number">3.8.6.3</span>  Results</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#appendices" id="toc-appendices" class="nav-link" data-scroll-target="#appendices"><span class="header-section-number">3.9</span> Appendices</a>
+  <li><a href="#appendices" id="toc-appendices" class="nav-link" data-scroll-target="#appendices"><span class="toc-section-number">3.9</span>  Appendices</a>
   <ul>
-  <li><a href="#appendix-a---macro-data-of-cpat-sources-and-codes" id="toc-appendix-a---macro-data-of-cpat-sources-and-codes" class="nav-link" data-scroll-target="#appendix-a---macro-data-of-cpat-sources-and-codes"><span class="header-section-number">3.9.1</span> Appendix A - Macro data of CPAT: Sources and codes</a></li>
-  <li><a href="#appendix-b---energy-balances" id="toc-appendix-b---energy-balances" class="nav-link" data-scroll-target="#appendix-b---energy-balances"><span class="header-section-number">3.9.2</span> Appendix B - Energy balances</a>
+  <li><a href="#appendix-a---macro-data-of-cpat-sources-and-codes" id="toc-appendix-a---macro-data-of-cpat-sources-and-codes" class="nav-link" data-scroll-target="#appendix-a---macro-data-of-cpat-sources-and-codes"><span class="toc-section-number">3.9.1</span>  Appendix A - Macro data of CPAT: Sources and codes</a></li>
+  <li><a href="#appendix-b---energy-balances" id="toc-appendix-b---energy-balances" class="nav-link" data-scroll-target="#appendix-b---energy-balances"><span class="toc-section-number">3.9.2</span>  Appendix B - Energy balances</a>
   <ul class="collapse">
-  <li><a href="#cpat-fuels" id="toc-cpat-fuels" class="nav-link" data-scroll-target="#cpat-fuels"><span class="header-section-number">3.9.2.1</span> CPAT fuels</a></li>
-  <li><a href="#cpat-energy-sectors" id="toc-cpat-energy-sectors" class="nav-link" data-scroll-target="#cpat-energy-sectors"><span class="header-section-number">3.9.2.2</span> CPAT energy sectors</a></li>
-  <li><a href="#cpat-fuels-and-sectors-overlap" id="toc-cpat-fuels-and-sectors-overlap" class="nav-link" data-scroll-target="#cpat-fuels-and-sectors-overlap"><span class="header-section-number">3.9.2.3</span> CPAT fuels and sectors overlap</a></li>
-  <li><a href="#energy-consumption-ec-construction-for-cpat" id="toc-energy-consumption-ec-construction-for-cpat" class="nav-link" data-scroll-target="#energy-consumption-ec-construction-for-cpat"><span class="header-section-number">3.9.2.4</span> Energy Consumption (EC) construction for CPAT</a></li>
+  <li><a href="#cpat-fuels" id="toc-cpat-fuels" class="nav-link" data-scroll-target="#cpat-fuels"><span class="toc-section-number">3.9.2.1</span>  CPAT fuels</a></li>
+  <li><a href="#cpat-energy-sectors" id="toc-cpat-energy-sectors" class="nav-link" data-scroll-target="#cpat-energy-sectors"><span class="toc-section-number">3.9.2.2</span>  CPAT energy sectors</a></li>
+  <li><a href="#cpat-fuels-and-sectors-overlap" id="toc-cpat-fuels-and-sectors-overlap" class="nav-link" data-scroll-target="#cpat-fuels-and-sectors-overlap"><span class="toc-section-number">3.9.2.3</span>  CPAT fuels and sectors overlap</a></li>
+  <li><a href="#energy-consumption-ec-construction-for-cpat" id="toc-energy-consumption-ec-construction-for-cpat" class="nav-link" data-scroll-target="#energy-consumption-ec-construction-for-cpat"><span class="toc-section-number">3.9.2.4</span>  Energy Consumption (EC) construction for CPAT</a></li>
   </ul></li>
-  <li><a href="#sec-Appendix_C_Prices" id="toc-sec-Appendix_C_Prices" class="nav-link" data-scroll-target="#sec-Appendix_C_Prices"><span class="header-section-number">3.9.3</span> Appendix C - Prices And Taxes Methodology</a>
+  <li><a href="#sec-Appendix_C_Prices" id="toc-sec-Appendix_C_Prices" class="nav-link" data-scroll-target="#sec-Appendix_C_Prices"><span class="toc-section-number">3.9.3</span>  Appendix C - Prices And Taxes Methodology</a>
   <ul class="collapse">
-  <li><a href="#user-options-affecting-prices-in-cpat" id="toc-user-options-affecting-prices-in-cpat" class="nav-link" data-scroll-target="#user-options-affecting-prices-in-cpat"><span class="header-section-number">3.9.3.1</span> User options affecting prices in CPAT</a></li>
-  <li><a href="#price-components" id="toc-price-components" class="nav-link" data-scroll-target="#price-components"><span class="header-section-number">3.9.3.2</span> Price components</a></li>
-  <li><a href="#forecasted-prices-after-2021" id="toc-forecasted-prices-after-2021" class="nav-link" data-scroll-target="#forecasted-prices-after-2021"><span class="header-section-number">3.9.3.3</span> Forecasted prices (after 2021)</a></li>
-  <li><a href="#power-generation-costs" id="toc-power-generation-costs" class="nav-link" data-scroll-target="#power-generation-costs"><span class="header-section-number">3.9.3.4</span> Power generation costs</a></li>
-  <li><a href="#new-price-target-goal-seek" id="toc-new-price-target-goal-seek" class="nav-link" data-scroll-target="#new-price-target-goal-seek"><span class="header-section-number">3.9.3.5</span> New price target: Goal seek</a></li>
+  <li><a href="#user-options-affecting-prices-in-cpat" id="toc-user-options-affecting-prices-in-cpat" class="nav-link" data-scroll-target="#user-options-affecting-prices-in-cpat"><span class="toc-section-number">3.9.3.1</span>  User options affecting prices in CPAT</a></li>
+  <li><a href="#price-components" id="toc-price-components" class="nav-link" data-scroll-target="#price-components"><span class="toc-section-number">3.9.3.2</span>  Price components</a></li>
+  <li><a href="#forecasted-prices-after-2021" id="toc-forecasted-prices-after-2021" class="nav-link" data-scroll-target="#forecasted-prices-after-2021"><span class="toc-section-number">3.9.3.3</span>  Forecasted prices (after 2021)</a></li>
+  <li><a href="#power-generation-costs" id="toc-power-generation-costs" class="nav-link" data-scroll-target="#power-generation-costs"><span class="toc-section-number">3.9.3.4</span>  Power generation costs</a></li>
+  <li><a href="#new-price-target-goal-seek" id="toc-new-price-target-goal-seek" class="nav-link" data-scroll-target="#new-price-target-goal-seek"><span class="toc-section-number">3.9.3.5</span>  New price target: Goal seek</a></li>
   </ul></li>
-  <li><a href="#sec-AppendixD" id="toc-sec-AppendixD" class="nav-link" data-scroll-target="#sec-AppendixD"><span class="header-section-number">3.9.4</span> Appendix D - Examples of NDCs calculations</a>
+  <li><a href="#sec-AppendixD" id="toc-sec-AppendixD" class="nav-link" data-scroll-target="#sec-AppendixD"><span class="toc-section-number">3.9.4</span>  Appendix D - Examples of NDCs calculations</a>
   <ul class="collapse">
-  <li><a href="#example-1-paraguay-bau-ndc" id="toc-example-1-paraguay-bau-ndc" class="nav-link" data-scroll-target="#example-1-paraguay-bau-ndc"><span class="header-section-number">3.9.4.1</span> Example 1: Paraguay (BaU NDC)</a></li>
-  <li><a href="#example-2-colombia-fixed-ndc" id="toc-example-2-colombia-fixed-ndc" class="nav-link" data-scroll-target="#example-2-colombia-fixed-ndc"><span class="header-section-number">3.9.4.2</span> Example 2: Colombia (fixed NDC)</a></li>
-  <li><a href="#example-3-australia-historical-ndc" id="toc-example-3-australia-historical-ndc" class="nav-link" data-scroll-target="#example-3-australia-historical-ndc"><span class="header-section-number">3.9.4.3</span> Example 3: Australia (historical NDC)</a></li>
-  <li><a href="#example-4-uruguay-intensity-ndc" id="toc-example-4-uruguay-intensity-ndc" class="nav-link" data-scroll-target="#example-4-uruguay-intensity-ndc"><span class="header-section-number">3.9.4.4</span> Example 4: Uruguay (intensity NDC)</a></li>
+  <li><a href="#example-1-paraguay-bau-ndc" id="toc-example-1-paraguay-bau-ndc" class="nav-link" data-scroll-target="#example-1-paraguay-bau-ndc"><span class="toc-section-number">3.9.4.1</span>  Example 1: Paraguay (BaU NDC)</a></li>
+  <li><a href="#example-2-colombia-fixed-ndc" id="toc-example-2-colombia-fixed-ndc" class="nav-link" data-scroll-target="#example-2-colombia-fixed-ndc"><span class="toc-section-number">3.9.4.2</span>  Example 2: Colombia (fixed NDC)</a></li>
+  <li><a href="#example-3-australia-historical-ndc" id="toc-example-3-australia-historical-ndc" class="nav-link" data-scroll-target="#example-3-australia-historical-ndc"><span class="toc-section-number">3.9.4.3</span>  Example 3: Australia (historical NDC)</a></li>
+  <li><a href="#example-4-uruguay-intensity-ndc" id="toc-example-4-uruguay-intensity-ndc" class="nav-link" data-scroll-target="#example-4-uruguay-intensity-ndc"><span class="toc-section-number">3.9.4.4</span>  Example 4: Uruguay (intensity NDC)</a></li>
   </ul></li>
-  <li><a href="#appendix-e-defaults-and-parameter-options-in-the-mitigation-module" id="toc-appendix-e-defaults-and-parameter-options-in-the-mitigation-module" class="nav-link" data-scroll-target="#appendix-e-defaults-and-parameter-options-in-the-mitigation-module"><span class="header-section-number">3.9.5</span> Appendix E – Defaults and parameter options in the mitigation module</a></li>
-  <li><a href="#appendix-f---notation-in-cpat" id="toc-appendix-f---notation-in-cpat" class="nav-link" data-scroll-target="#appendix-f---notation-in-cpat"><span class="header-section-number">3.9.6</span> Appendix F - Notation in CPAT</a>
+  <li><a href="#appendix-e-defaults-and-parameter-options-in-the-mitigation-module" id="toc-appendix-e-defaults-and-parameter-options-in-the-mitigation-module" class="nav-link" data-scroll-target="#appendix-e-defaults-and-parameter-options-in-the-mitigation-module"><span class="toc-section-number">3.9.5</span>  Appendix E – Defaults and parameter options in the mitigation module</a></li>
+  <li><a href="#appendix-f---notation-in-cpat" id="toc-appendix-f---notation-in-cpat" class="nav-link" data-scroll-target="#appendix-f---notation-in-cpat"><span class="toc-section-number">3.9.6</span>  Appendix F - Notation in CPAT</a>
   <ul class="collapse">
-  <li><a href="#sectors" id="toc-sectors" class="nav-link" data-scroll-target="#sectors"><span class="header-section-number">3.9.6.1</span> Sectors</a></li>
-  <li><a href="#fuel-types" id="toc-fuel-types" class="nav-link" data-scroll-target="#fuel-types"><span class="header-section-number">3.9.6.2</span> Fuel types</a></li>
-  <li><a href="#scenarios" id="toc-scenarios" class="nav-link" data-scroll-target="#scenarios"><span class="header-section-number">3.9.6.3</span> Scenarios</a></li>
-  <li><a href="#sub-models" id="toc-sub-models" class="nav-link" data-scroll-target="#sub-models"><span class="header-section-number">3.9.6.4</span> Sub-models</a></li>
-  <li><a href="#pollutants" id="toc-pollutants" class="nav-link" data-scroll-target="#pollutants"><span class="header-section-number">3.9.6.5</span> Pollutants</a></li>
-  <li><a href="#unit-codes" id="toc-unit-codes" class="nav-link" data-scroll-target="#unit-codes"><span class="header-section-number">3.9.6.6</span> Unit codes</a></li>
+  <li><a href="#sectors" id="toc-sectors" class="nav-link" data-scroll-target="#sectors"><span class="toc-section-number">3.9.6.1</span>  Sectors</a></li>
+  <li><a href="#fuel-types" id="toc-fuel-types" class="nav-link" data-scroll-target="#fuel-types"><span class="toc-section-number">3.9.6.2</span>  Fuel types</a></li>
+  <li><a href="#scenarios" id="toc-scenarios" class="nav-link" data-scroll-target="#scenarios"><span class="toc-section-number">3.9.6.3</span>  Scenarios</a></li>
+  <li><a href="#sub-models" id="toc-sub-models" class="nav-link" data-scroll-target="#sub-models"><span class="toc-section-number">3.9.6.4</span>  Sub-models</a></li>
+  <li><a href="#pollutants" id="toc-pollutants" class="nav-link" data-scroll-target="#pollutants"><span class="toc-section-number">3.9.6.5</span>  Pollutants</a></li>
+  <li><a href="#unit-codes" id="toc-unit-codes" class="nav-link" data-scroll-target="#unit-codes"><span class="toc-section-number">3.9.6.6</span>  Unit codes</a></li>
   </ul></li>
-  <li><a href="#appendix-g---data-sources" id="toc-appendix-g---data-sources" class="nav-link" data-scroll-target="#appendix-g---data-sources"><span class="header-section-number">3.9.7</span> Appendix G - Data sources</a></li>
-  <li><a href="#sec-ApprendixH" id="toc-sec-ApprendixH" class="nav-link" data-scroll-target="#sec-ApprendixH"><span class="header-section-number">3.9.8</span> Appendix H – Validation with the EPM model</a>
+  <li><a href="#appendix-g---data-sources" id="toc-appendix-g---data-sources" class="nav-link" data-scroll-target="#appendix-g---data-sources"><span class="toc-section-number">3.9.7</span>  Appendix G - Data sources</a></li>
+  <li><a href="#sec-ApprendixH" id="toc-sec-ApprendixH" class="nav-link" data-scroll-target="#sec-ApprendixH"><span class="toc-section-number">3.9.8</span>  Appendix H – Validation with the EPM model</a>
   <ul class="collapse">
-  <li><a href="#electricity-demand-comparison-1" id="toc-electricity-demand-comparison-1" class="nav-link" data-scroll-target="#electricity-demand-comparison-1"><span class="header-section-number">3.9.8.1</span> Electricity Demand Comparison</a></li>
-  <li><a href="#electricity-generation-by-fuel-type-1" id="toc-electricity-generation-by-fuel-type-1" class="nav-link" data-scroll-target="#electricity-generation-by-fuel-type-1"><span class="header-section-number">3.9.8.2</span> Electricity Generation By Fuel Type</a></li>
-  <li><a href="#new-investments-by-fuel-type-1" id="toc-new-investments-by-fuel-type-1" class="nav-link" data-scroll-target="#new-investments-by-fuel-type-1"><span class="header-section-number">3.9.8.3</span> New Investments By Fuel Type</a></li>
+  <li><a href="#electricity-demand-comparison-1" id="toc-electricity-demand-comparison-1" class="nav-link" data-scroll-target="#electricity-demand-comparison-1"><span class="toc-section-number">3.9.8.1</span>  Electricity Demand Comparison</a></li>
+  <li><a href="#electricity-generation-by-fuel-type-1" id="toc-electricity-generation-by-fuel-type-1" class="nav-link" data-scroll-target="#electricity-generation-by-fuel-type-1"><span class="toc-section-number">3.9.8.2</span>  Electricity Generation By Fuel Type</a></li>
+  <li><a href="#new-investments-by-fuel-type-1" id="toc-new-investments-by-fuel-type-1" class="nav-link" data-scroll-target="#new-investments-by-fuel-type-1"><span class="toc-section-number">3.9.8.3</span>  New Investments By Fuel Type</a></li>
   </ul></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/wb-mrio/cpat_public/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     </div>
@@ -427,7 +412,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Mitigation module</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Mitigation module</span></h1>
 </div>
 
 
@@ -445,8 +430,8 @@ div.csl-indent {
 <p>The Mitigation Module<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <table class="table">
 <colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
+<col style="width: 52%">
+<col style="width: 47%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1269,9 +1254,9 @@ div.csl-indent {
 <p>The table below presents the notations used in the section and the name of the variables to which they correspond. Note that the units are reported as input into CPAT, but further conversions are made to ensure that they match our calculations.</p>
 <table class="table">
 <colgroup>
-<col style="width: 24%">
-<col style="width: 39%">
-<col style="width: 35%">
+<col style="width: 21%">
+<col style="width: 40%">
+<col style="width: 37%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1977,8 +1962,8 @@ div.csl-indent {
 <table class="table">
 <colgroup>
 <col style="width: 27%">
-<col style="width: 57%">
-<col style="width: 14%">
+<col style="width: 56%">
+<col style="width: 15%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -2807,8 +2792,8 @@ iv^{\text{tot}} = \text{iv}_{\text{ocft}}^{\text{new}} + \ iv_{\text{ocft}}^{\te
 <table class="table">
 <colgroup>
 <col style="width: 21%">
-<col style="width: 69%">
-<col style="width: 8%">
+<col style="width: 68%">
+<col style="width: 9%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -3406,62 +3391,104 @@ cf_{\text{cf}} = \frac{g_{\text{cf},t_{0}}}{\text{ca}p_{\text{cf},t_{0}}}
 <p>This section describes how GHG emissions estimation and emissions are accounted for in CPAT and how they are projected in each sector.</p>
 <section id="overview-5" class="level3" data-number="3.5.1">
 <h3 data-number="3.5.1" class="anchored" data-anchor-id="overview-5"><span class="header-section-number">3.5.1</span> Overview</h3>
-<p>In CPAT, emissions are projected in two ways: i) energy-related emissions are based on a model, that is estimations of energy consumption (see <a href="#sec-FuelConsumption"><span>Section&nbsp;3.3</span></a>) in the different sectors are converted into GHG emissions by the means of an emission factor; and ii) non-energy related emissions are forecasted based on particular assumptions. The table below summarizes the approach taken to forecast emissions forward.</p>
+<p>In CPAT, emissions are projected in two ways: i) energy-related emissions are based on a model, that is estimations of energy consumption (see <a href="#sec-FuelConsumption"><span>Section&nbsp;3.3</span></a>) in the different sectors are converted into GHG emissions by the means of an emission factor; and ii) non-energy related emissions are forecasted based on particular assumptions. Greenhouse gases (GHGs) emissions are presented following the UNFCCC Inventory category, and scaled to the inventory’s base year. The table below summarizes the approach taken to forecast emissions forward.</p>
+<p><em>For energy related emissions:</em></p>
 <table class="table">
 <colgroup>
-<col style="width: 6%">
-<col style="width: 93%">
+<col style="width: 11%">
+<col style="width: 88%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Pollutant</strong></td>
+<td><strong>Assumptions to forecast emissions</strong></td>
+</tr>
+<tr class="even">
+<td>Carbon dioxide (<span class="math inline">\(CO_{2}\)</span>)</td>
+<td>Corresponding emissions are calculated by multiplying energy consumption by emissions factors. The model starts from observed value for emissions.</td>
+</tr>
+<tr class="odd">
+<td>Methane (<span class="math inline">\(CH_{4}\)</span>)</td>
+<td>We multiply a calibration factor (equal to the ratio of the 2019 energy-related methane emissions and the 2019 Global Warming Potential (GWP100) for methane emissions) by the GWP100 for methane emissions of the associated year.</td>
+</tr>
+<tr class="even">
+<td>Nitrous oxide (<span class="math inline">\(N_{2}O\)</span>)</td>
+<td>Total energy-related nitrous oxide emissions are scaled to carbon dioxide emissions.</td>
+</tr>
+<tr class="odd">
+<td>Fluorinated gases (F-gases)</td>
+<td>F-gases emissions are historically equal to zero and are thus assumed to be equal to zero in the future.</td>
+</tr>
+</tbody>
+</table>
+<p><em>For non-energy related emissions:</em></p>
+<table class="table">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 9%">
+<col style="width: 82%">
 </colgroup>
 <thead>
 <tr class="header">
-<th><strong>Emission type</strong></th>
-<th><strong>Assumptions to forecast emissions</strong></th>
+<th>Emission type</th>
+<th>Pollutant</th>
+<th>Assumptions to forecast emissions <em>(in the case of forecasts based on a growth effect, GDP or population, we use specific sectorial elasticities)</em></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><em>Energy-related sectors and F-gases</em></td>
-<td>Corresponding emissions are calculated by multiplying energy consumption by emissions factors. Total energy-related emissions are augmented by energy distribution losses and methane energy-related emissions. Emissions are scaled to UNFCCC inventory emissions, meaning they are multiplied by a factor such that base-year emissions are equal in the model and the inventory. This allows the model to start from observed value for emissions. These emissions are historically equal to zero and are thus assumed to be equal to zero.</td>
-</tr>
-<tr class="even">
-<td><em>Non-energy related sectors</em></td>
-<td></td>
-</tr>
-<tr class="odd">
 <td>Industrial emissions</td>
-<td>The growth rate is based on changes in energy-related industrial emissions.</td>
+<td><span class="math inline">\(CO_{2}\)</span>, <span class="math inline">\(CH_{4}\)</span>, <span class="math inline">\(N_{2}O\)</span>, F-gases</td>
+<td>The growth rate is based on changes in energy-related industrial <span class="math inline">\(CO_{2}\)</span> emissions.</td>
 </tr>
 <tr class="even">
 <td>Agricultural emissions</td>
-<td>Non-energy agriculture emissions are forecasted based on the GDP and population growths (and a proxy for additional mitigation efforts – if selected by the user).</td>
+<td><span class="math inline">\(CO_{2}\)</span>, <span class="math inline">\(N_{2}O\)</span>, F-gases</td>
+<td>Non-energy agriculture emissions are forecasted based on the GDP and population growths (and a proxy for additional mitigation efforts – if selected by the user). There is however a specific treatment for <span class="math inline">\(CH_{4}\)</span> agricultural emissions.</td>
 </tr>
 <tr class="odd">
-<td>LULUCF and F-gases</td>
-<td>Forecasted non-energy emissions for LULUCF are driven by a sink activity growth and the ratio of the growth in emissions for the carbon tax scenario to the increase in emissions for the baseline scenario. Net sources and net sinks are treated differently (see below)</td>
+<td>Agricultural emissions</td>
+<td><span class="math inline">\(CH_{4}\)</span></td>
+<td><span class="math inline">\(CH_{4}\)</span> agricultural emissions are calculated by multiplying the agricultural production with the after abatement methane emission factor. Agricultural production is obtained by accounting for the GDP and population growth’s effect on the previous year’s production, and the associated change in oil producer prices caused by the methane fee. We then multiply this emission value with the Global Warming Potential of methane for non-fossil fuel emissions of the associated year.</td>
 </tr>
 <tr class="even">
-<td>Waste and other</td>
-<td>For waste and other emissions, forecasted estimates are determined by population growth.</td>
+<td>Land Use, Land-use Change and Forestry (LULUCF)</td>
+<td><span class="math inline">\(CO_{2}\)</span>, <span class="math inline">\(N_{2}O\)</span></td>
+<td>Forecasted non-energy <span class="math inline">\(CO_{2}\)</span> and <span class="math inline">\(N_{2}O\)</span> emissions for LULUCF are driven by a sink activity growth and the ratio of the growth in emissions for the carbon tax scenario to the increase in emissions for the baseline scenario (also called ‘additional mitigation effort’). However in the case of <span class="math inline">\(N_{2}O\)</span> emissions, we also take into account the population growth effect.</td>
+</tr>
+<tr class="odd">
+<td>Land Use, Land-use Change and Forestry (LULUCF)</td>
+<td><span class="math inline">\(CH_{4}\)</span>, F-gases</td>
+<td>Forcasted non-energy <span class="math inline">\(CH_{4}\)</span> and F-gases emissions for LULUCF are driven the growth in emissions for the carbon tax scenario to the increase in emissions for the baseline scenario (also called ‘additional mitigation effort’). However in the case of F-gases emissions, we also take into account the population growth effect.</td>
+</tr>
+<tr class="even">
+<td>Waste and Other</td>
+<td><span class="math inline">\(CO_{2}\)</span>, <span class="math inline">\(N_{2}O\)</span>, F-gases, <span class="math inline">\(CH_{4}\)</span>for Other only</td>
+<td>For waste and other emissions, forecasted estimates are determined by the population growth effect and the additional mitigation effort. Those factors multiply the previous year’s emissions value.</td>
+</tr>
+<tr class="odd">
+<td>Waste</td>
+<td><span class="math inline">\(CH_{4}\)</span></td>
+<td><span class="math inline">\(CH_{4}\)</span> waste emissions are calculated by multiplying the waste production with the after abatement methane emission factor. Waste production is obtained by accounting for the GDP and population growth’s effect on the previous year’s production, and the associated change in oil producer prices caused by the methane fee. We then multiply this emission value with the Global Warming Potential of methane for non-fossil fuel emissions of the associated year.</td>
 </tr>
 </tbody>
 </table>
 <p>Emissions have <strong>two dimensions</strong>:</p>
 <ul>
-<li><strong>Pollutants</strong>: Carbon dioxide (<span class="math inline">\(CO_{2}\)</span>), Methane (<span class="math inline">\(CH_{4}\)</span>), Nitrous oxide (<span class="math inline">\(N_{2}O\)</span>) and Fluorinated gases (F-gases). GHG emissions include those in the UNFCCC inventories (<span class="math inline">\(CO_{2}\)</span>, <span class="math inline">\(CH_{4}\)</span>, <span class="math inline">\(N_{2}O\)</span> and Fluorinated Gases (or F-gases), including PFCs, HFCs SF<sub>6,</sub> and NF<sub>3</sub>). Note that the mitigation also presents short-lived air pollutants (PM<sub>2.5</sub>, NOx, SO<sub>2</sub>, CO<sub>2</sub>, NMVOC, BC, OC, CH<sub>4</sub> and CO); the methodology for these is covered in the air pollution module documentation.</li>
-<li></li>
-<li><strong>Sectors</strong>: Energy-related sectors (i.e., Transport, Power, Industry, Building, and Other energy use), as well as non-energy-related sectors (i.e., Agriculture, Industrial Process, LULUCF, Waste and Other). It is important to note that some parts of the sectors accounted for in the non-energy sectors are also reflected in energy-related sectors. For instance, Agriculture also appears under the ‘Building’ sector, under ‘Food and Forestry’ sub-sector (for more information, see Appendix B).</li>
+<li><p><strong>Pollutants</strong>: Carbon dioxide (<span class="math inline">\(CO_{2}\)</span>), Methane (<span class="math inline">\(CH_{4}\)</span>), Nitrous oxide (<span class="math inline">\(N_{2}O\)</span>) and Fluorinated gases (F-gases). GHG emissions include those in the UNFCCC inventories (<span class="math inline">\(CO_{2}\)</span>, <span class="math inline">\(CH_{4}\)</span>, <span class="math inline">\(N_{2}O\)</span> and Fluorinated Gases (or F-gases), including PFCs, HFCs SF<sub>6,</sub> and NF<sub>3</sub>). Note that the mitigation also presents short-lived air pollutants (PM<sub>2.5</sub>, NOx, SO<sub>2</sub>, CO<sub>2</sub>, NMVOC, BC, OC, CH<sub>4</sub> and CO); the methodology for these is covered in the air pollution module documentation.</p></li>
+<li><p><strong>Sectors</strong>: Energy-related sectors (i.e., Transport, Power, Industry, Building, and Other energy use), as well as non-energy-related sectors (i.e., Agriculture, Industrial Process, LULUCF, Waste and Other). It is important to note that some parts of the sectors accounted for in the non-energy sectors are also reflected in energy-related sectors. For instance, Agriculture also appears under the ‘Building’ sector, under ‘Food and Forestry’ sub-sector (for more information, see Appendix B).</p></li>
 </ul>
 <p>CPAT considers territorial rather than consumption-based emissions. This means that, for example, if some natural gas is imported but subject to leaks upstream in extraction before it arrives at the country concerned, these methane emissions are not counted in the emissions of a natural gas power station. However, an extracting country will include those leaks. Similarly, the emissions from imported goods are not included, whereas those associated with exported goods are included.</p>
-<p>In what follows, we first define the role of emission factors and their sources. Second, we present the approach adopted for energy-related <span class="math inline">\(_{}\)</span> and non- <span class="math inline">\(_{}\)</span> by fuel and sector. Third, we describe the estimation of emissions in non-energy sectors. We use the index <span class="math inline">\(p\)</span> to refer to the type of GHG (<span class="math inline">\(CO_{2}\)</span>, <span class="math inline">\(CH_{4}\)</span>, <span class="math inline">\(N_{2}O\)</span> and F-gases). The variable <span class="math inline">\(em_{\text{ocupt}}\)</span> denotes the estimation of emissions under scenario <span class="math inline">\(o\)</span>, country <span class="math inline">\(c\)</span>, UNFCC sector <span class="math inline">\(u\)</span> , and for pollutant <span class="math inline">\(p\)</span> and at year <span class="math inline">\(t\)</span>. Total GHG emissions are the sum of both energy and non-energy related emissions: <span class="math inline">\(em_{\text{oc},\text{GHG},t} = em_{\text{ocER},\text{GHG},t} + em_{\text{ocNER},\text{GHG},t}\)</span>. Finally, the section explains how NDCs are accounted for in CPAT.</p>
+<p>In what follows, we first define the role of emission factors and their sources. Second, we present the approach adopted for energy-related<span class="math inline">\(_{}\)</span> emissions by fuel and sector. Third, we describe the estimation of non-energy-related emissions in non-energy sectors. We use the index <span class="math inline">\(p\)</span> to refer to the type of GHG (<span class="math inline">\(CO_{2}\)</span>, <span class="math inline">\(CH_{4}\)</span>, <span class="math inline">\(N_{2}O\)</span> and F-gases). The variable <span class="math inline">\(em_{\text{ocupt}}\)</span> denotes the estimation of emissions under scenario <span class="math inline">\(o\)</span>, country <span class="math inline">\(c\)</span>, UNFCC sector <span class="math inline">\(u\)</span> , and for pollutant <span class="math inline">\(p\)</span> and at year <span class="math inline">\(t\)</span>. Total GHG emissions are the sum of both energy and non-energy related emissions: <span class="math inline">\(em_{\text{oc},\text{GHG},t} = em_{\text{ocER},\text{GHG},t} + em_{\text{ocNER},\text{GHG},t}\)</span>. Finally, the section explains how NDCs are accounted for in CPAT.</p>
 </section>
 <section id="notation-2" class="level3" data-number="3.5.2">
 <h3 data-number="3.5.2" class="anchored" data-anchor-id="notation-2"><span class="header-section-number">3.5.2</span> Notation</h3>
 <p>The table below presents the notations used in the section and the name of the variables to which they correspond. Note that the units are reported as they were input into CPAT, but further conversions are made to ensure that they match our calculations.</p>
 <table class="table">
 <colgroup>
-<col style="width: 23%">
-<col style="width: 39%">
-<col style="width: 36%">
+<col style="width: 20%">
+<col style="width: 47%">
+<col style="width: 31%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -3500,6 +3527,16 @@ cf_{\text{cf}} = \frac{g_{\text{cf},t_{0}}}{\text{ca}p_{\text{cf},t_{0}}}
 <td><span class="math inline">\(\text{gwp}\)</span></td>
 <td>Global warming potential from methane emissions</td>
 <td><span class="math inline">\(\text{tC}O_{2}\)</span>/ktoe</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(red\)</span></td>
+<td>Percentage of reduction of methane emission factor, due do abatement</td>
+<td>%</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(mf\)</span></td>
+<td>Methane fee</td>
+<td>$/<span class="math inline">\(tCH_{4}\)</span></td>
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(Y_{\text{grow}}\)</span></td>
@@ -3588,28 +3625,36 @@ cf_{\text{cf}} = \frac{g_{\text{cf},t_{0}}}{\text{ca}p_{\text{cf},t_{0}}}
 <section id="carbon-dioxide-co_2" class="level4" data-number="3.5.4.1">
 <h4 data-number="3.5.4.1" class="anchored" data-anchor-id="carbon-dioxide-co_2"><span class="header-section-number">3.5.4.1</span> Carbon dioxide (<span class="math inline">\(CO_{2}\)</span>)</h4>
 <p>Energy-related <span class="math inline">\(CO_{2}\)</span> emissions are calculated by multiplying energy consumption by emissions factors. Emissions are multiplied by <span class="math inline">\(10^{- 6}\)</span> as the emission factor <span class="math inline">\(\text{ef}\)</span> is given in tCO2e/ktoe and the fossil fuel consumption <span class="math inline">\(F\)</span> is given in ktoe, to obtain emissions in mtCO2e. We neglect this unit transformation in the description below.</p>
-<p>In 2019, these <span class="math inline">\(CO_{2}\)</span> energy-related emissions are scaled to UNFCCC inventory emissions, meaning they are multiplied by a factor such that base-year emissions are equal in the model and the inventory. In other words, the model is adjusting <span class="math inline">\(_{}\)</span> and <span class="math inline">\(_{}\)</span> emissions to match the model and inventory. This scaling factor is close to 1 for <span class="math inline">\(CO_{2}\)</span>. This scaling applies only to the aggregate emissions and not to the price effect. It only applies to the core modelled emissions of energy related <span class="math inline">\(CO_{2}\)</span> and not to any other gas or any other UNFCCC sector.</p>
-<p>After 2019, these emissions are thus calculated, for each fuel <span class="math inline">\(f\)</span> and for a year <span class="math inline">\(t\)</span>, as the multiplication of the fossil fuel’s consumption for year <span class="math inline">\(t\)</span> by the sector’s associated to emission factor:</p>
+<p>In 2019, these <span class="math inline">\(CO_{2}\)</span> energy-related emissions are scaled to UNFCCC inventory emissions such that base-year emissions are equal in the model and the inventory. After 2019, these emissions are thus calculated, for each fuel <span class="math inline">\(f\)</span> and for a year <span class="math inline">\(t\)</span>, as the multiplication of the fossil fuel’s consumption for year <span class="math inline">\(t\)</span> by the sector’s associated to emission factor:</p>
 <p><span class="math inline">\(em_{\text{ocEsfpt}} = F_{\text{ocEsft}}*ef_{\text{cEsfp}}\)</span></p>
 <p>where <span class="math inline">\(o\)</span> represents scenario, <span class="math inline">\(s\)</span>, sector, <span class="math inline">\(f\)</span>, fuel type, <span class="math inline">\(p\)</span>, GHG (e.g., <span class="math inline">\(CO_{2}\)</span>) and <span class="math inline">\(t\)</span> the year.</p>
 <p><span class="math inline">\(CO_{2}\)</span> emissions are determined across all fuels and across all sectors (and grouping sectors). Total energy emissions are determined as the sum across sectors and fuels (for energy related emissions u=E)</p>
 <p><span class="math inline">\(em_{\text{ocpt}} = \sum_{s}^{}{\sum_{f}^{}e}m_{\text{ocsfpt}}\)</span></p>
-<p>Furthermore, total energy-related <span class="math inline">\(CO_{2}\)</span> <strong>and</strong> <span class="math inline">\(CH_{4}\)</span> emissions are augmented by energy distribution losses. In particular, <strong>Total energy-related</strong> <span class="math inline">\(\mathbf{C}\mathbf{O}_{\mathbf{2}}\)</span> <strong>emissions</strong> include energy distribution losses, that is the sum of combustion emissions and the fugitive and venting <span class="math inline">\(CO_{2}\)</span> emissions. The latter are mostly from natural gas pipes plus coal mines. These are a part of energy-related <span class="math inline">\(CO_{2}\)</span> emissions but they are not combustion.</p>
-<!-- end list -->
-<p>CPAT also covers the other parts of the UNFCCC inventories (i.e., GHGs other than <span class="math inline">\(CO_{2}\)</span> and methane, and other categories than energy-related GHGs). For these emissions, the UNFCCC inventories are scaled by various growth rates, detailed in the next section.</p>
+<p>CPAT also covers the other parts of the UNFCCC inventories (i.e., GHGs other than <span class="math inline">\(CO_{2}\)</span>, and other categories than energy-related GHGs). Methane emissions have a specific treatment for the most part. In the case of energy-related emissions, we treat methane emissions intensities for fossil-fuel production. They are inputed to the UNFCCC inventories emissions calculations. This is detailed in the next section.</p>
 </section>
 <section id="methane-ch_4" class="level4" data-number="3.5.4.2">
 <h4 data-number="3.5.4.2" class="anchored" data-anchor-id="methane-ch_4"><span class="header-section-number">3.5.4.2</span> Methane (<span class="math inline">\(CH_{4}\)</span>)</h4>
-<p>Energy-related methane emissions calculations are based on fossil fuel production. Oil and natural gas are first grouped together, then we consider downstream fossil fuel and biomass. We finally multiply the fossil fuel production with the associated emission factor, per year. This gives us the energy-related methane emissions.</p>
+<p>Energy-related methane emissions calculations are based on the same logic as for <span class="math inline">\(CO_{2}\)</span> emissions, except for fossil fuel production emissions. Therefore we will only focus here on fossil fuel production. Oil and natural gas are first grouped together, then we consider downstream fossil fuel and biomass. We finally multiply the fossil fuel production with the associated emission factor, per year. This gives us the energy-related methane emissions.</p>
 <ul>
 <li><strong>Methane emission intensities for fossil-fuel production</strong></li>
 </ul>
 <p>The initial step involves the calculation of emissions intensity by determining baseline emission factors for each unit of energy produced or extracted. In the policy scenario, these emission factors undergo modification based on the application of a methane fee. Abatement cost curves specific to methane are utilized, employing a functional form represented by a power function structure where a coefficient A is multiplied by the methane fee, subsequently raised to the power of coefficient B. This approach results in a reduction of the emission factors by a certain percentage relative to the baseline level.</p>
-<p>Regarding the oil and gas sector, an assumption is made that a portion of methane emissions is mitigated through flaring, which facilitates the conversion of methane to CO2. The calibration of this reduction quantity is based on an EPA dataset.</p>
+<p>The emissions are calculated through:</p>
+<p><span class="math display">\[
+em_{oc,oil/nga/coa,CH_{4},t} = prod_{oc,oil/nga/coa,t} * ef_{c,oil/nga/coa,CH_{4},After Abatment, t}
+\]</span></p>
+<p>with <span class="math inline">\(prod_{oc,oil/nga/coa,t}\)</span> being the production of crude oil or natural gas or coal at time <span class="math inline">\(t\)</span>, in ktoe.</p>
 <ul>
 <li><strong>Change in fossil-fuel production/demand</strong></li>
 </ul>
 <p>We use the assumptions on the global demand for oil, natural gas and coal that come from the IEA, and we then assume that the country level change and production just follows the global trend. If there’s some path pass through, then the global trend is adjusted downwards for reduced demand.</p>
+<p>Focusing more on that production calculation, we take the percentage change of producer prices for oil/natural gas/coal due to the methane fee (if defined by the user) at time <span class="math inline">\(t\)</span>, then the ratio of the global demand of oil/natural gas/coal at time <span class="math inline">\(t\)</span> by the same demand a <span class="math inline">\(t-1\)</span> (we take and average between oil and gas, and treat coal seperatly), and we finally multiply all of those factors by the production value at <span class="math inline">\(t-1\)</span>. If there is a pass-through of carbon price/methane fee to the consumers, this is also taken into account.</p>
+<p>The methane emission factor After Abatement for a specific fuel is equal to the methane emission factor for that fuel on which we apply a percentage of reduction.</p>
+<p>Specifically, this percentage of reduction <span class="math inline">\(red\)</span> is obtained based on the value of the methane fee <span class="math inline">\(mf\)</span>, and a power function structure such as:</p>
+<p><span class="math display">\[
+red_{ocf, CH_{4}, t} = A * mf_{t}^{B}
+\]</span>where A and B are the inputs for the abatment curve.</p>
+<p>Regarding the oil and gas sector, an assumption is made that a portion of methane emissions is mitigated through flaring, which facilitates the conversion of methane to CO2. The calibration of this reduction quantity is based on an EPA dataset.</p>
 </section>
 <section id="nitrous-oxide-n_2o-and-flourinated-gases-f-gases" class="level4" data-number="3.5.4.3">
 <h4 data-number="3.5.4.3" class="anchored" data-anchor-id="nitrous-oxide-n_2o-and-flourinated-gases-f-gases"><span class="header-section-number">3.5.4.3</span> Nitrous oxide (<span class="math inline">\(N_{2}O\)</span>) and Flourinated gases (F-gases)</h4>
@@ -3638,7 +3683,7 @@ em_{oc,N_{2}O,t} = em_{oc,N_{2}O,\left( t - 1 \right)}*\frac{em_{\text{oc},CO_{2
 <h4 data-number="3.5.5.1" class="anchored" data-anchor-id="industrial-processes-and-product-use"><span class="header-section-number">3.5.5.1</span> Industrial processes and product use</h4>
 <p>In the industrial processes and product use sector, the growth rate is based on changes in energy-related industrial <span class="math inline">\(CO_{2}\)</span> emissions.</p>
 <p>In what follows, the index <span class="math inline">\(u = I\)</span>, standing for Industrial Processes and Product Use.</p>
-<p>Non-energy-related industrial <span class="math inline">\(CO_{2}\)</span> emissions are forecasted based on an industrial <span class="math inline">\(CO_{2}\)</span> emissions rate (<span class="math inline">\(\text{Δe}m_{ocP,CO_{2},t + 1}\)</span>). Therefore:</p>
+<p>Non-energy-related industrial <span class="math inline">\(CO_{2}\)</span> emissions are forecasted based on an industrial energy-related <span class="math inline">\(CO_{2}\)</span> emissions rate (<span class="math inline">\(\text{Δe}m_{ocP,CO_{2},t + 1}\)</span>). Therefore:</p>
 <p><span class="math display">\[
 \Delta em_{ocI,CO_{2},t + 1} =
 \begin{cases}
@@ -3660,7 +3705,7 @@ em_{oc,N_{2}O,t} = em_{oc,N_{2}O,\left( t - 1 \right)}*\frac{em_{\text{oc},CO_{2
 <p><span class="math display">\[
 em_{\text{ocApt}} = \frac{em_{\text{ocAp},t - 1}}{\text{am}e_{A,t - 1}}(1 + Y_{\text{growth}})^{\epsilon_{Y}}*\left( 1 + lp_{\text{grow}} \right)^{\epsilon_{\text{lp}}}*\text{am}e_{\text{At}}
 \]</span></p>
-<p>In the case of non-energy agriculture methane emissions, we can have a change in the agriculture and waste production if there is a pass-through of the methane fee.</p>
+<p>In the case of non-energy agriculture methane emissions, we can have a change in the agriculture and waste production if there is a pass-through of the methane fee. Unlike the oil/natural gas/coal production function explained in the energy-related methane emissions section, the production function for agriculture takes into account the effect of poppulation and GDP growth. We also consider the percentage change of oil producer prices caused by the methane fee. Then, the agricultural sector has its own inputs for the abatement curve in order to obtain the associated emission factor.</p>
 </section>
 <section id="land-use-land-use-change-and-forestry" class="level4" data-number="3.5.5.3">
 <h4 data-number="3.5.5.3" class="anchored" data-anchor-id="land-use-land-use-change-and-forestry"><span class="header-section-number">3.5.5.3</span> Land use, land-use change and forestry</h4>
@@ -3783,9 +3828,9 @@ rev_{ocfgt}=F_{ocfgt}*\varphi_{cgft}*ncp_{ocfgt}
 <h3 data-number="3.6.2" class="anchored" data-anchor-id="notation-3"><span class="header-section-number">3.6.2</span> Notation</h3>
 <table class="table">
 <colgroup>
-<col style="width: 14%">
-<col style="width: 31%">
-<col style="width: 53%">
+<col style="width: 9%">
+<col style="width: 32%">
+<col style="width: 57%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -3914,9 +3959,11 @@ revVAT_{ft} = (F_{ocft} - F_{oc,oen,ft}) * vat_{cft}
 <ul>
 <li><strong>Losses from producer-side subsidies</strong>. Producer-side subsidies represent a loss and are thus subtracted from total fiscal revenues. They do not affect the calculation of prices in CPAT and thus revenues unless they are phased out, if they exist. Note that implicitly the underlined that we are using has already been adjusted for producer-side subsidies, in particular in the case of coal. Producer-side subsidies, <span class="math inline">\(cstPs_{ocft}\)</span>, are defined as the product between the per-unit subsidies<a href="#fn34" class="footnote-ref" id="fnref34" role="doc-noteref"><sup>34</sup></a>, <span class="math inline">\(pusF_{ocft}\)</span>, and the subsidized demand, <span class="math inline">\(subDem_{ocft}\)</span>:</li>
 </ul>
+<!-- -->
 <ul>
 <li><strong>Losses from producer-side subsidies</strong>. Producer-side subsidies represent a loss and are thus subtracted from total fiscal revenues. They do not affect the calculation of prices in CPAT and thus revenues unless they are phased out, if they exist. Producer-side subsidies, <span class="math inline">\(cstPs_{ocft}\)</span>, are defined as the product between the per-unit subsidies<a href="#fn35" class="footnote-ref" id="fnref35" role="doc-noteref"><sup>35</sup></a>, <span class="math inline">\(pusF_{ocft}\)</span>, and the subsidized demand, <span class="math inline">\(subDem_{ocft}\)</span>:</li>
 </ul>
+<!-- -->
 <ul>
 <li><strong>Losses from producer-side subsidies</strong>. Producer-side subsidies represent a loss and are thus subtracted from total fiscal revenues. They do not affect the calculation of prices in CPAT and thus revenues unless they are phased out, if they exist. Note that implicitly the underlined that we are using has already been adjusted for producer-side subsidies, in particular in the case of coal. Producer-side subsidies, <span class="math inline">\(cstPs_{ocft}\)</span>, are defined as the product between the per-unit subsidies<a href="#fn36" class="footnote-ref" id="fnref36" role="doc-noteref"><sup>36</sup></a>, <span class="math inline">\(pusF_{ocft}\)</span>, and the subsidized demand, <span class="math inline">\(subDem_{ocft}\)</span>:</li>
 </ul>
@@ -4005,7 +4052,7 @@ ctr_{ocft} = (F_{ocft} - F_{oc,oen,ft}) * (pth_{ocft}-1) * (pInt_{ocft} - pInt_{
 <p>These costs are displayed by fuel (i.e.&nbsp;coal, natural gas, electricity and liquid fuel, gasoline, diesel, LPG and kerosene) and sectors grouping (except for liquid fuels) and broken down by various components:</p>
 <ol type="1">
 <li><p><strong>Supply costs</strong> as defined in the Prices section of CPAT.</p></li>
-<li><p><strong>Air pollution costs</strong>. These costs are associated mortality and morbidity attributed to air pollution. Averted mortality is valued using a Value of the Statistical Life (with the method selected by the user) and morbidity, measured as years lived with disabilities, is valued using a fraction of wages. See <a href="06_Air_pollution.html#sec-eco_ap"><span>Section&nbsp;6.7</span></a> of the Air Pollution modulefor methodological details.</p></li>
+<li><p><strong>Air pollution costs</strong>. These costs are associated mortality and morbidity attributed to air pollution. Averted mortality is valued using a Value of the Statistical Life (with the method selected by the user) and morbidity, measured as years lived with disabilities, is valued using a fraction of wages. See <span class="quarto-unresolved-ref">?sec-eco_ap</span> of the Air Pollution modulefor methodological details.</p></li>
 <li><p><strong>Road accident costs</strong> and <strong>Congestion costs</strong><a href="#fn37" class="footnote-ref" id="fnref37" role="doc-noteref"><sup>37</sup></a>. The main road transport co-benefits of a carbon tax are a reduction in road accidents (from a reduction in driving, changes in the vehicle fleet, less aggressive driving, etc.) and a reduction in congestion (from a reduction in driving, an increase in car sharing, changes in the vehicle fleet, changes in transport timing decisions, etc.). Externality costs are estimated based on the baseline and policy forecast (i.e.&nbsp;adjusted for the fuel price change using a country-specific elasticity) accidents/congestion. The monetary value of accidents (multiplying fatalities by value of statistical life) and congestion (multiplying time lost in traffic times value of travel time) is then computed. Finally, the change in value of accident/congestion is divided by the change in motor fuel consumption.</p></li>
 <li><p><strong>Global warming costs</strong> are by default defined at the global level. These costs are estimated based on the damage per ton CO2 (in real USD$ 2021) and the level of CO2 emissions under both scenarios. Note that several social cost of carbon can be selected:</p>
 <ul>
@@ -4032,7 +4079,7 @@ ctr_{ocft} = (F_{ocft} - F_{oc,oen,ft}) * (pth_{ocft}-1) * (pInt_{ocft} - pInt_{
 <p>CPAT provides an assessment of climate co-benefits associated with carbon pricing and fossil fuel price reform. Welfare benefits induced after the introduction of the carbon tax include the monetized following items (in real USD$ 2021), which are estimated based on the description of the costs described in the above section:</p>
 <ol type="1">
 <li><strong>Averted climate damages (national)</strong> is defined as the difference between the total national global warming costs in the baseline and the policy scenario.</li>
-<li><strong>Averted air pollution mortality/morbidity</strong> is taken from the Air Pollution module. The air pollution welfare gains are calculated from reduced mortality and morbidity attributed to improvements in air pollution. Averted mortality is valued using a Value of the Statistical Life (with the method selected by the user) and morbidity is valued as a fraction of wages. See <a href="06_Air_pollution.html#sec-eco_ap"><span>Section&nbsp;6.7</span></a> of the Air Pollution module for methodological details. <!-- can we cross reference among chapters? --></li>
+<li><strong>Averted air pollution mortality/morbidity</strong> is taken from the Air Pollution module. The air pollution welfare gains are calculated from reduced mortality and morbidity attributed to improvements in air pollution. Averted mortality is valued using a Value of the Statistical Life (with the method selected by the user) and morbidity is valued as a fraction of wages. See <span class="quarto-unresolved-ref">?sec-eco_ap</span> of the Air Pollution module for methodological details. <!-- can we cross reference among chapters? --></li>
 <li><strong>Averted road accidents</strong> are taken from the transport module and represent the change in the number of road accidents induced by the implementation of the policy selected by the user, which thus corresponds to externality benefits.</li>
 <li><strong>Reduced congestion</strong> is taken from the transport module. In the same vein, external benefits from reduced congestion results from the change in traffic induced by the implementation of the policy selected by the user.</li>
 <li><strong>Efficiency costs</strong> are defined as the deadweight costs resulting from the carbon tax (i.e.&nbsp;the average of existing and new carbon tax introduced) and the change in fuel consumption for each fuel considered, including electricity.</li>
@@ -4094,7 +4141,7 @@ ctr_{ocft} = (F_{ocft} - F_{oc,oen,ft}) * (pth_{ocft}-1) * (pInt_{ocft} - pInt_{
 <li><p><strong>Frequency of data and timespan</strong>. In the estimation we used annual data ranging between 2000 and 2018, i.e.&nbsp;the dataset currently incorporated in CPAT. This is a panel dataset in which information for a set of fuels consumed in a set of sectors (and their driving variables) is observed across time and countries (here taken as the unit dimension of the panel).</p></li>
 <li><p><strong>Driving factors</strong>. Consumption of a fuel in a specific sector is assumed to be a function of fuel price (in that sector) and of the overall level of economic activity (as measured by the GDP), with both variables expressed in real terms.</p></li>
 <li><p><strong>Static functional form</strong>. The whole impact of a change in a driving variable, say, price, unfolds within the year covered by that observation. This means that last year’s prices have no impact on this year’s and future consumption.</p></li>
-<li><p><strong>Sectorial disaggregation</strong>. Results are reported based on the disaggregation underlying the current set of elasticities in CPAT (industrial, service, residential and transport) but data are available for a number of industrial subsectors and transport modes (as shown in Appendix B - Energy balances, <a href="#fig-SectorsCPAT">Figure&nbsp;<span>3.68</span></a>) which are used in the estimation. This implies that we are able to produce estimates for the elasticities of a fuel consumed in any industrial subsector, so that the range of these estimates for the industrial sector as a whole is indicated as with a boxplot in <a href="#fig-compaarisonElasticities">Figure&nbsp;<span>3.39</span></a> and <a href="#fig-ComparisonIncomeElast">Figure&nbsp;<span>3.40</span></a>.</p></li>
+<li><p><strong>Sectorial disaggregation</strong>. Results are reported based on the disaggregation underlying the current set of elasticities in CPAT (industrial, service, residential and transport) but data are available for a number of industrial subsectors and transport modes (as shown in Appendix B - Energy balances, <a href="#fig-SectorsCPAT">Figure&nbsp;<span>3.69</span></a>) which are used in the estimation. This implies that we are able to produce estimates for the elasticities of a fuel consumed in any industrial subsector, so that the range of these estimates for the industrial sector as a whole is indicated as with a boxplot in <a href="#fig-compaarisonElasticities">Figure&nbsp;<span>3.39</span></a> and <a href="#fig-ComparisonIncomeElast">Figure&nbsp;<span>3.40</span></a>.</p></li>
 <li><p><strong>Fuel disaggregation</strong>. Results are reported based on the fuels underlying the current set of elasticities in CPAT (coal, electricity, natural gas, other oil products, biomass, diesel and gasoline). In the case of other oil products, we are able to rely on two fuels in the estimation: kerosene and lpg.</p></li>
 </ul>
 <p>We estimated the fuel demand below for each combination of sector and fuel for which estimation was deemed relevant and feasible:</p>
@@ -4410,7 +4457,12 @@ ctr_{ocft} = (F_{ocft} - F_{oc,oen,ft}) * (pth_{ocft}-1) * (pInt_{ocft} - pInt_{
 </figure>
 </div>
 <blockquote class="blockquote">
-<img src="./03/media/image67.png" id="fig-ElectricityDemand_ii" class="img-fluid" alt="Electricity demand in Angola, Cote d’Ivoire, Ghana, Jordan, Morocco, Mozambique, Nigeria and Zambia">
+<div id="fig-ElectricityDemand_ii" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="./03/media/image67.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.60: Electricity demand in Angola, Cote d’Ivoire, Ghana, Jordan, Morocco, Mozambique, Nigeria and Zambia</figcaption><p></p>
+</figure>
+</div>
 </blockquote>
 </section>
 <section id="electricity-generation-by-fuel-type" class="level5" data-number="3.8.3.4.7">
@@ -4418,13 +4470,13 @@ ctr_{ocft} = (F_{ocft} - F_{oc,oen,ft}) * (pth_{ocft}-1) * (pInt_{ocft} - pInt_{
 <div id="fig-ElecGen_i" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/image68.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.60: Electricity Generation By Fuel Type in Egypt, Iraq, South Africa, Turkey, Vietnam</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.61: Electricity Generation By Fuel Type in Egypt, Iraq, South Africa, Turkey, Vietnam</figcaption><p></p>
 </figure>
 </div>
 <div id="fig-ElecGen_ii" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/image69.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.61: Electricity Generation By Fuel Type in Ghana, Jordan, Morocco, Mozambique, Nigeria, Ukraine, Zambia</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.62: Electricity Generation By Fuel Type in Ghana, Jordan, Morocco, Mozambique, Nigeria, Ukraine, Zambia</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -4433,13 +4485,13 @@ ctr_{ocft} = (F_{ocft} - F_{oc,oen,ft}) * (pth_{ocft}-1) * (pInt_{ocft} - pInt_{
 <div id="fig-NewInv_i" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/image70.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.62: New Investments By Fuel Type Egypt, South Africa, Turkey and Vietnam</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.63: New Investments By Fuel Type Egypt, South Africa, Turkey and Vietnam</figcaption><p></p>
 </figure>
 </div>
 <div id="fig-NewInv_ii" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/image71.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.63: New Investments By Fuel Type in Iraq, Morocco, Mozambique, and Ukraine</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.64: New Investments By Fuel Type in Iraq, Morocco, Mozambique, and Ukraine</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -4449,7 +4501,7 @@ ctr_{ocft} = (F_{ocft} - F_{oc,oen,ft}) * (pth_{ocft}-1) * (pInt_{ocft} - pInt_{
 <h3 data-number="3.8.4" class="anchored" data-anchor-id="ex-post-studies"><span class="header-section-number">3.8.4</span> Ex-post studies</h3>
 <section id="how-effective-is-the-carbon-pricing-really-a-literature-review" class="level4" data-number="3.8.4.1">
 <h4 data-number="3.8.4.1" class="anchored" data-anchor-id="how-effective-is-the-carbon-pricing-really-a-literature-review"><span class="header-section-number">3.8.4.1</span> How effective is the carbon pricing, really? A literature review</h4>
-<p>Despite voluminous literature on the carbon tax, few empirical works have investigated the effectiveness of a carbon tax and ETS in reducing emissions. <a href="#fig-CPlitReview">Figure&nbsp;<span>3.64</span></a> provides a first attempt to compare the estimates according to three different methods employed in the literature, that is counterfactual scenario and the estimation of semi-elasticity. It is worth noting that this comparison might be imperfect as under a counterfactual scenario some estimates have been annualized based on the policy implementation window, similarly to <span class="citation" data-cites="Green_2021">Green (<a href="#ref-Green_2021" role="doc-biblioref">2021</a>)</span>. Moreover, <a href="#fig-CPlitReview">Figure&nbsp;<span>3.64</span></a> reports both short- and long-term estimates.</p>
+<p>Despite voluminous literature on the carbon tax, few empirical works have investigated the effectiveness of a carbon tax and ETS in reducing emissions. <a href="#fig-CPlitReview">Figure&nbsp;<span>3.65</span></a> provides a first attempt to compare the estimates according to three different methods employed in the literature, that is counterfactual scenario and the estimation of semi-elasticity. It is worth noting that this comparison might be imperfect as under a counterfactual scenario some estimates have been annualized based on the policy implementation window, similarly to <span class="citation" data-cites="Green_2021">Green (<a href="#ref-Green_2021" role="doc-biblioref">2021</a>)</span>. Moreover, <a href="#fig-CPlitReview">Figure&nbsp;<span>3.65</span></a> reports both short- and long-term estimates.</p>
 <p>Two main key findings stand out from ex-post quantitative assessments of carbon pricing policies since 1990.</p>
 <p>First, experience with carbon pricing and hence the empirical evidence is primarily from developed and emerging economies. In particular, studies assessing the effectiveness of a carbon tax focus on OECD countries or Northern European countries, which implemented a carbon tax earlier and for which time series data are available. Only few recent studies evaluate ex-post estimates of the effects of carbon tax on CO2 emissions across the world. At the national level, particular emphasis is placed on British Columbia, Sweden and the United-Kingdom. With respect to the assessment of the ETS, the focus is, not surprisingly, on the EU, China, Germany and the United States.</p>
 <p>Second, the estimates for overall emission reductions from carbon pricing are minimal to modest, falling in the range of 0 – 2 percent per annum, with significant variations across sectors, but also across countries (<span class="citation" data-cites="Green_2021">Green (<a href="#ref-Green_2021" role="doc-biblioref">2021</a>)</span>).</p>
@@ -4464,7 +4516,7 @@ ctr_{ocft} = (F_{ocft} - F_{oc,oen,ft}) * (pth_{ocft}-1) * (pInt_{ocft} - pInt_{
 <div id="fig-CPlitReview" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/image72.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.64: Effects of carbon pricing instruments on average annual emission reductions: A literature review</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.65: Effects of carbon pricing instruments on average annual emission reductions: A literature review</figcaption><p></p>
 </figure>
 </div>
 <!-- Figure 3‑40: Effects of carbon pricing instruments on average annual emission reductions: A literature review. -->
@@ -4526,7 +4578,7 @@ ctr_{ocft} = (F_{ocft} - F_{oc,oen,ft}) * (pth_{ocft}-1) * (pInt_{ocft} - pInt_{
 <ol start="5" type="1">
 <li>Finally, CPAT holds the advantage to compare C02 emission changes <strong>across sectors (i.e.&nbsp;industry, power, residential and transport)</strong>.</li>
 </ol>
-<p>The table below (<a href="#tbl-stltelast">Table&nbsp;<span>3.1</span></a>) presents the results. Long-term semi-elasticities are greater than short-term ones, indicating that changes that are not possible in a short period of time are more realistic over a longer time period. When looking into the range of CPAT’s estimates across all sectors, results are comparable with those of the literature (see <a href="#fig-CPlitReview">Figure&nbsp;<span>3.64</span></a> above). At the sector level, the power sector records the highest decrease on the long run, which is consistent with <span class="citation" data-cites="Rafatya2020">Rafatya, Dolphin, and Pretis (<a href="#ref-Rafatya2020" role="doc-biblioref">2020</a>)</span> <a href="#fn39" class="footnote-ref" id="fnref39" role="doc-noteref"><sup>39</sup></a>.</p>
+<p>The table below (<a href="#tbl-stltelast">Table&nbsp;<span>3.1</span></a>) presents the results. Long-term semi-elasticities are greater than short-term ones, indicating that changes that are not possible in a short period of time are more realistic over a longer time period. When looking into the range of CPAT’s estimates across all sectors, results are comparable with those of the literature (see <a href="#fig-CPlitReview">Figure&nbsp;<span>3.65</span></a> above). At the sector level, the power sector records the highest decrease on the long run, which is consistent with <span class="citation" data-cites="Rafatya2020">Rafatya, Dolphin, and Pretis (<a href="#ref-Rafatya2020" role="doc-biblioref">2020</a>)</span> <a href="#fn39" class="footnote-ref" id="fnref39" role="doc-noteref"><sup>39</sup></a>.</p>
 <div id="tbl-stltelast" class="anchored">
 <table class="table">
 <caption>Table&nbsp;3.1: Short- and long-term semi-elasticities of CO2 emission in CPAT</caption>
@@ -4680,7 +4732,7 @@ ctr_{ocft} = (F_{ocft} - F_{oc,oen,ft}) * (pth_{ocft}-1) * (pInt_{ocft} - pInt_{
 <div id="fig-GHGExclLULUCF" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/image73.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.65: Total GHG (mt.CO2e) excluding LULUCF</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.66: Total GHG (mt.CO2e) excluding LULUCF</figcaption><p></p>
 </figure>
 </div>
 <!-- Figure 3‑41: Total GHG (mt.CO2e) excluding LULUCF -->
@@ -4691,7 +4743,7 @@ ctr_{ocft} = (F_{ocft} - F_{oc,oen,ft}) * (pth_{ocft}-1) * (pInt_{ocft} - pInt_{
 <caption>Table&nbsp;3.2: RMSE and Normalized RMSE, selected Countries</caption>
 <colgroup>
 <col style="width: 40%">
-<col style="width: 22%">
+<col style="width: 23%">
 <col style="width: 33%">
 </colgroup>
 <thead>
@@ -4784,7 +4836,7 @@ ctr_{ocft} = (F_{ocft} - F_{oc,oen,ft}) * (pth_{ocft}-1) * (pInt_{ocft} - pInt_{
 <div id="fig-TotEnCO2em" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/image74.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.66: Total energy-related CO2 emissions (mt.CO2e)</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.67: Total energy-related CO2 emissions (mt.CO2e)</figcaption><p></p>
 </figure>
 </div>
 <!-- Figure 3‑42: Total energy-related CO2 emissions (mt.CO2e) -->
@@ -4795,7 +4847,7 @@ ctr_{ocft} = (F_{ocft} - F_{oc,oen,ft}) * (pth_{ocft}-1) * (pInt_{ocft} - pInt_{
 <caption>Table&nbsp;3.3: RMSE and Normalized RMSE, selected Countries</caption>
 <colgroup>
 <col style="width: 40%">
-<col style="width: 22%">
+<col style="width: 23%">
 <col style="width: 33%">
 </colgroup>
 <thead>
@@ -4904,7 +4956,7 @@ ctr_{ocft} = (F_{ocft} - F_{oc,oen,ft}) * (pth_{ocft}-1) * (pInt_{ocft} - pInt_{
 <caption>RMSE and Normalized RMSE, selected Countries.</caption>
 <colgroup>
 <col style="width: 40%">
-<col style="width: 22%">
+<col style="width: 23%">
 <col style="width: 33%">
 </colgroup>
 <thead>
@@ -6163,7 +6215,7 @@ ctr_{ocft} = (F_{ocft} - F_{oc,oen,ft}) * (pth_{ocft}-1) * (pInt_{ocft} - pInt_{
 <div id="fig-MitModuleOverview" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/image78.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.67: Mitigation module overview</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.68: Mitigation module overview</figcaption><p></p>
 </figure>
 </div>
 <!-- Figure 3‑46: Mitigation module overview -->
@@ -6788,7 +6840,7 @@ ctr_{ocft} = (F_{ocft} - F_{oc,oen,ft}) * (pth_{ocft}-1) * (pInt_{ocft} - pInt_{
 <div id="fig-SectorsCPAT" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/image79.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.68: Sectors disaggregation in CPAT</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.69: Sectors disaggregation in CPAT</figcaption><p></p>
 </figure>
 </div>
 <!-- Figure 3‑47: Sectors disaggregation in CPAT -->
@@ -6855,7 +6907,7 @@ ctr_{ocft} = (F_{ocft} - F_{oc,oen,ft}) * (pth_{ocft}-1) * (pInt_{ocft} - pInt_{
 <div id="fig-MitModulePricesTax" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/image84.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.69: Mitigation module scheme: prices and taxes</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.70: Mitigation module scheme: prices and taxes</figcaption><p></p>
 </figure>
 </div>
 <!-- Figure 3‑52: Mitigation module scheme: prices and taxes -->
@@ -6871,29 +6923,29 @@ ctr_{ocft} = (F_{ocft} - F_{oc,oen,ft}) * (pth_{ocft}-1) * (pInt_{ocft} - pInt_{
 <!-- Paulina: I commented the line above, because it does not really fit in this section. -->
 <section id="user-options-affecting-prices-in-cpat" class="level4" data-number="3.9.3.1">
 <h4 data-number="3.9.3.1" class="anchored" data-anchor-id="user-options-affecting-prices-in-cpat"><span class="header-section-number">3.9.3.1</span> User options affecting prices in CPAT</h4>
-<p>This section lists the user’s choices and briefly explains how these choices will affect further calculations. For more details, please refer to specific parts of this document.See <a href="#fig-PricesDash">Figure&nbsp;<span>3.70</span></a> for a snapshot of the parameters affecting prices in CPAT.</p>
+<p>This section lists the user’s choices and briefly explains how these choices will affect further calculations. For more details, please refer to specific parts of this document.See <a href="#fig-PricesDash">Figure&nbsp;<span>3.71</span></a> for a snapshot of the parameters affecting prices in CPAT.</p>
 <div id="fig-PricesDash" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/image85.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.70: Dashboard parameters affecting prices</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.71: Dashboard parameters affecting prices</figcaption><p></p>
 </figure>
 </div>
 <!-- Figure 3‑53: Dashboard -->
 <section id="policy-coverage-and-exemptions" class="level5" data-number="3.9.3.1.1">
 <h5 data-number="3.9.3.1.1" class="anchored" data-anchor-id="policy-coverage-and-exemptions"><span class="header-section-number">3.9.3.1.1</span> Policy coverage and exemptions</h5>
-<p>The user can choose what fuels and sectors to tax on the Dashboard (see <a href="#fig-PolicyCoverageDash">Figure&nbsp;<span>3.71</span></a>). The fuels and sectors not selected would be exempted from the policy.</p>
+<p>The user can choose what fuels and sectors to tax on the Dashboard (see <a href="#fig-PolicyCoverageDash">Figure&nbsp;<span>3.72</span></a>). The fuels and sectors not selected would be exempted from the policy.</p>
 <div id="fig-PolicyCoverageDash" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/image86.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.71: Dashboard: Policy coverage</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.72: Dashboard: Policy coverage</figcaption><p></p>
 </figure>
 </div>
 <!-- Figure 3‑54: Dashboard: Policy coverage -->
-<p>Additionally, the user decides whether to phase out exemptions or not and the period to phase out exemptions (see <a href="#fig-DashboardExemptions">Figure&nbsp;<span>3.72</span></a>).</p>
+<p>Additionally, the user decides whether to phase out exemptions or not and the period to phase out exemptions (see <a href="#fig-DashboardExemptions">Figure&nbsp;<span>3.73</span></a>).</p>
 <div id="fig-DashboardExemptions" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/image87.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.72: Dashboard: Exemptions</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.73: Dashboard: Exemptions</figcaption><p></p>
 </figure>
 </div>
 <!-- Figure 3‑55: Dashboard: Exemptions -->
@@ -6905,7 +6957,7 @@ ctr_{ocft} = (F_{ocft} - F_{oc,oen,ft}) * (pth_{ocft}-1) * (pInt_{ocft} - pInt_{
 <div id="fig-SourcesKeyInputs" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/image88.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.73: Dashboard: Sources for key inputs</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.74: Dashboard: Sources for key inputs</figcaption><p></p>
 </figure>
 </div>
 <!-- Figure 3‑56: Dashboard: Sources for key inputs -->
@@ -6913,7 +6965,7 @@ ctr_{ocft} = (F_{ocft} - F_{oc,oen,ft}) * (pth_{ocft}-1) * (pInt_{ocft} - pInt_{
 <div id="fig-ManualInputsDash" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/image89.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.74: Manual inputs</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.75: Manual inputs</figcaption><p></p>
 </figure>
 </div>
 <!-- Figure 3‑57: Manual inputs -->
@@ -6924,7 +6976,7 @@ ctr_{ocft} = (F_{ocft} - F_{oc,oen,ft}) * (pth_{ocft}-1) * (pInt_{ocft} - pInt_{
 <div id="fig-PolicyOptionsDash" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/image90.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.75: Dashboard: Policy Options</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.76: Dashboard: Policy Options</figcaption><p></p>
 </figure>
 </div>
 <!-- Figure 3‑58: Dashboard: Policy Options -->
@@ -6932,7 +6984,7 @@ ctr_{ocft} = (F_{ocft} - F_{oc,oen,ft}) * (pth_{ocft}-1) * (pInt_{ocft} - pInt_{
 <div id="fig-AdvancedPolicyOptionsDash" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/image91.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.76: Dashboard: Advanced Policy Options</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.77: Dashboard: Advanced Policy Options</figcaption><p></p>
 </figure>
 </div>
 <!-- Figure 3‑59: Dashboard: Advanced Policy Options -->
@@ -6948,7 +7000,7 @@ ctr_{ocft} = (F_{ocft} - F_{oc,oen,ft}) * (pth_{ocft}-1) * (pInt_{ocft} - pInt_{
 <div id="fig-ManualPolicyOptionsDash" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/image92.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.77: Manual inputs: Manual Policy Options</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.78: Manual inputs: Manual Policy Options</figcaption><p></p>
 </figure>
 </div>
 <!-- Figure 3‑60: Manual inputs: Manual Policy Options -->
@@ -6956,7 +7008,7 @@ ctr_{ocft} = (F_{ocft} - F_{oc,oen,ft}) * (pth_{ocft}-1) * (pInt_{ocft} - pInt_{
 <div id="fig-ExistingTaxRem" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/image93.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.78: Dashboard: Existing tax removal</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.79: Dashboard: Existing tax removal</figcaption><p></p>
 </figure>
 </div>
 <!-- Figure 3‑61: Dashboard: Existing tax removal -->
@@ -6972,7 +7024,7 @@ ctr_{ocft} = (F_{ocft} - F_{oc,oen,ft}) * (pth_{ocft}-1) * (pInt_{ocft} - pInt_{
 <div id="fig-VATReformDash" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/image94.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.79: Dashboard: VAT Reform</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.80: Dashboard: VAT Reform</figcaption><p></p>
 </figure>
 </div>
 <!-- Figure 3‑62: Dashboard: VAT Reform -->
@@ -6980,7 +7032,7 @@ ctr_{ocft} = (F_{ocft} - F_{oc,oen,ft}) * (pth_{ocft}-1) * (pInt_{ocft} - pInt_{
 <div id="fig-AdjustingVATsector" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/image95.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.80: Dashboard: Adjusting VAT per sector</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.81: Dashboard: Adjusting VAT per sector</figcaption><p></p>
 </figure>
 </div>
 <!-- Figure 3‑63: Dashboard: Adjusting VAT per sector -->
@@ -6991,7 +7043,7 @@ ctr_{ocft} = (F_{ocft} - F_{oc,oen,ft}) * (pth_{ocft}-1) * (pInt_{ocft} - pInt_{
 <div id="fig-FFSReformDash" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/image96.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.81: Dashboard: Fossil Fuel Subsidies Reform</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.82: Dashboard: Fossil Fuel Subsidies Reform</figcaption><p></p>
 </figure>
 </div>
 <!-- Figure 3‑64: Dashboard: Fossil Fuel Subsidies Reform -->
@@ -6999,7 +7051,7 @@ ctr_{ocft} = (F_{ocft} - F_{oc,oen,ft}) * (pth_{ocft}-1) * (pInt_{ocft} - pInt_{
 <div id="fig-FFSRefAdvanced" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/FFSR Dashboard.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.82: Dashboard: Fossil Fuel Subsidies Reform (Advanced Mitigation Options)</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.83: Dashboard: Fossil Fuel Subsidies Reform (Advanced Mitigation Options)</figcaption><p></p>
 </figure>
 </div>
 <!-- Figure 3‑65: Dashboard: Fossil Fuel Subsidies Reform (Advanced Options) -->
@@ -7010,7 +7062,7 @@ ctr_{ocft} = (F_{ocft} - F_{oc,oen,ft}) * (pth_{ocft}-1) * (pInt_{ocft} - pInt_{
 <div id="fig-PriceLibDash" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/image98.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.83: Dashboard: Price liberalization (Advanced Mitigation Options)</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.84: Dashboard: Price liberalization (Advanced Mitigation Options)</figcaption><p></p>
 </figure>
 </div>
 <!-- Figure 3‑66: Dashboard: Price liberalization (Advanced Options) -->
@@ -7021,11 +7073,11 @@ ctr_{ocft} = (F_{ocft} - F_{oc,oen,ft}) * (pth_{ocft}-1) * (pInt_{ocft} - pInt_{
 <h4 data-number="3.9.3.2" class="anchored" data-anchor-id="price-components"><span class="header-section-number">3.9.3.2</span> Price components</h4>
 <section id="assumed-pricing-mechanism" class="level5" data-number="3.9.3.2.1">
 <h5 data-number="3.9.3.2.1" class="anchored" data-anchor-id="assumed-pricing-mechanism"><span class="header-section-number">3.9.3.2.1</span> Assumed pricing mechanism</h5>
-<p><a href="#fig-PriceMainComp">Figure&nbsp;<span>3.84</span></a> below presents the main components of fuel prices in CPAT.</p>
+<p><a href="#fig-PriceMainComp">Figure&nbsp;<span>3.85</span></a> below presents the main components of fuel prices in CPAT.</p>
 <div id="fig-PriceMainComp" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/image99.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.84: Main components of baseline prices</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.85: Main components of baseline prices</figcaption><p></p>
 </figure>
 </div>
 <!-- Figure 3‑67: Main components of baseline prices -->
@@ -7174,11 +7226,11 @@ fao_{cgf,t} = \begin{cases}
 </section>
 <section id="power-generation-costs" class="level4" data-number="3.9.3.4">
 <h4 data-number="3.9.3.4" class="anchored" data-anchor-id="power-generation-costs"><span class="header-section-number">3.9.3.4</span> Power generation costs</h4>
-<p>Please note that the ‘old’ cost model from IMF paper is used only in the elasticity-based power model, and only if ‘Old’ costs are selected (See <a href="#fig-PowGenCost">Figure&nbsp;<span>3.85</span></a>).</p>
+<p>Please note that the ‘old’ cost model from IMF paper is used only in the elasticity-based power model, and only if ‘Old’ costs are selected (See <a href="#fig-PowGenCost">Figure&nbsp;<span>3.86</span></a>).</p>
 <div id="fig-PowGenCost" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/PowGenCost.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.85: Generation costs in the elasticity model</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.86: Generation costs in the elasticity model</figcaption><p></p>
 </figure>
 </div>
 <p>Elasticity-based generation costs are defined as follows. The total unit costs of generation (i.e.&nbsp;for each fuel type considered), <span class="math inline">\(gnc_{ocft}\)</span>, is estimated as:</p>
@@ -7202,7 +7254,7 @@ fao_{cgf,t} = \begin{cases}
 <div id="fig-ETSGoalSeek" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/ETSGoalSeeknew.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.86: ETS target price - Goal Seek</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.87: ETS target price - Goal Seek</figcaption><p></p>
 </figure>
 </div>
 <!-- Figure 3‑68: ETS target price - Goal Seek -->
@@ -7349,7 +7401,7 @@ fao_{cgf,t} = \begin{cases}
 <div id="fig-3_73" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/image105.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.87: Dashboard: General settings</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.88: Dashboard: General settings</figcaption><p></p>
 </figure>
 </div>
 <table class="table">
@@ -7759,7 +7811,7 @@ Manual = see ‘Manual inputs’ tab</p>
 <div id="fig-3_74" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/image106.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.88: Dashboard: Advanced mitigation options</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.89: Dashboard: Advanced mitigation options</figcaption><p></p>
 </figure>
 </div>
 <table class="table">
@@ -8173,7 +8225,7 @@ Manual = see ‘Manual inputs’ tab</p>
 <div id="fig-3_75" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/image107.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.89: Dashboard: Advanced power sector options</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.90: Dashboard: Advanced power sector options</figcaption><p></p>
 </figure>
 </div>
 <table class="table">
@@ -9361,8 +9413,8 @@ Manual = Allows the user to enter data. These data will overwrite the data deter
 <table class="table">
 <colgroup>
 <col style="width: 51%">
-<col style="width: 19%">
-<col style="width: 19%">
+<col style="width: 20%">
+<col style="width: 20%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -9825,19 +9877,19 @@ EIA: https://www.eia.gov/outlooks/aeo/tables_ref.php</p>
 <div id="fig-ElectricityDemand1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/image108.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.90: Electricity demand Botswana, Burkina Faso, Namibia, Senegal, Tanzania, and Zimbabwe</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.91: Electricity demand Botswana, Burkina Faso, Namibia, Senegal, Tanzania, and Zimbabwe</figcaption><p></p>
 </figure>
 </div>
 <div id="fig-ElectricityDemand2" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/image109.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.91: Electricity demand Benin, Congo, Guinea, MAlawi, Mali, Niger, and Togo</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.92: Electricity demand Benin, Congo, Guinea, MAlawi, Mali, Niger, and Togo</figcaption><p></p>
 </figure>
 </div>
 <div id="fig-ElectricityDemand3" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/image110.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.92: Electricity demand Eswatini, Gambia, Guinea-Bissau, Lesotho, Liberia, Mauritania, and Sierra Leone</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.93: Electricity demand Eswatini, Gambia, Guinea-Bissau, Lesotho, Liberia, Mauritania, and Sierra Leone</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -9846,19 +9898,19 @@ EIA: https://www.eia.gov/outlooks/aeo/tables_ref.php</p>
 <div id="fig-ElectGenbyFuel1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/image111.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.93: Electricity generation by fuel type, Angola, Botswana, Cote d’Ivoire, Mali, Senegal, Tanzania and Zimbabwe</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.94: Electricity generation by fuel type, Angola, Botswana, Cote d’Ivoire, Mali, Senegal, Tanzania and Zimbabwe</figcaption><p></p>
 </figure>
 </div>
 <div id="fig-ElectGenbyFuel2" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/image112.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.94: Electricity generation by fuel type, Benin, Burkina Faso, Congo, Guinea, Malawi, Namibia, and Togo</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.95: Electricity generation by fuel type, Benin, Burkina Faso, Congo, Guinea, Malawi, Namibia, and Togo</figcaption><p></p>
 </figure>
 </div>
 <div id="fig-ElectGenbyFuel3" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/image113.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.95: Electricity generation by fuel type, Gambia, Guinea-Bissau, Lesotho, Liberia, Mauritania, Niger, and Sierra Leone.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.96: Electricity generation by fuel type, Gambia, Guinea-Bissau, Lesotho, Liberia, Mauritania, Niger, and Sierra Leone.</figcaption><p></p>
 </figure>
 </div>
 </section>
@@ -9867,136 +9919,136 @@ EIA: https://www.eia.gov/outlooks/aeo/tables_ref.php</p>
 <div id="fig-NewInvbyFuel1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/image114.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.96: New Investments By Fuel Type, Cote d’Ivoire, Ghana, Jordan, Nigeria, Senegal, and Tanzania</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.97: New Investments By Fuel Type, Cote d’Ivoire, Ghana, Jordan, Nigeria, Senegal, and Tanzania</figcaption><p></p>
 </figure>
 </div>
 <div id="fig-NewInvbyFuel2" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/image115.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.97: New Investments By Fuel Type, Benin, Botswana, Burkina Faso, Togo, and Zimbabwe</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.98: New Investments By Fuel Type, Benin, Botswana, Burkina Faso, Togo, and Zimbabwe</figcaption><p></p>
 </figure>
 </div>
 <div id="fig-NewInvbyFuel3" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="./03/media/image116.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;3.98: New Investments By Fuel Type, Angola, Congo, Gambia, Namibia, and Niger</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3.99: New Investments By Fuel Type, Angola, Congo, Gambia, Namibia, and Niger</figcaption><p></p>
 </figure>
 </div>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-Agnolucci2020" class="csl-entry" role="listitem">
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-Agnolucci2020" class="csl-entry" role="doc-biblioentry">
 Agnolucci, Paolo, and Vincenzo De Lipsis. 2020. <span>“<span class="nocase">Fuel Demand across UK Industrial Subsectors</span>.”</span> <em>The Energy Journal</em> 41 (6): 65–86. <a href="https://www.iaee.org/en/publications/ejarticle.aspx?id=3578">https://www.iaee.org/en/publications/ejarticle.aspx?id=3578</a>.
 </div>
-<div id="ref-augustine2021storage" class="csl-entry" role="listitem">
+<div id="ref-augustine2021storage" class="csl-entry" role="doc-biblioentry">
 Augustine, Chad, and Nathan Blair. 2021. <span>“Storage Futures Study: Storage Technology Modeling Input Data Report.”</span> National Renewable Energy Lab.(NREL), Golden, CO (United States).
 </div>
-<div id="ref-aydin2018reducing" class="csl-entry" role="listitem">
+<div id="ref-aydin2018reducing" class="csl-entry" role="doc-biblioentry">
 Aydin, Celil, and Ömer Esen. 2018. <span>“Reducing CO2 Emissions in the EU Member States: Do Environmental Taxes Work?”</span> <em>Journal of Environmental Planning and Management</em> 61 (13): 2396–2420.
 </div>
-<div id="ref-Baltagi1984b" class="csl-entry" role="listitem">
+<div id="ref-Baltagi1984b" class="csl-entry" role="doc-biblioentry">
 Baltagi, Badi H, and James M Griffin. 1984. <span>“<span class="nocase">Short and long run effects in pooled models</span>.”</span> <em>International Economic Review</em> 25 (3): 631–45.
 </div>
-<div id="ref-BeckKatz1995" class="csl-entry" role="listitem">
+<div id="ref-BeckKatz1995" class="csl-entry" role="doc-biblioentry">
 Beck, Nathaniel, and Jonathan N. Katz. 1995. <span>“What to Do (and Not to Do) with Time-Series Cross-Section Data.”</span> <em>The American Political Science Review</em> 89 (3): 634–47. <a href="http://www.jstor.org/stable/2082979">http://www.jstor.org/stable/2082979</a>.
 </div>
-<div id="ref-boer2021energy" class="csl-entry" role="listitem">
+<div id="ref-boer2021energy" class="csl-entry" role="doc-biblioentry">
 Boer, Lukas, Mr Andrea Pescatori, and Martin Stuermer. 2021. <em>Energy Transition Metals</em>. International Monetary Fund.
 </div>
-<div id="ref-bogdanov2019radical" class="csl-entry" role="listitem">
+<div id="ref-bogdanov2019radical" class="csl-entry" role="doc-biblioentry">
 Bogdanov, Dmitrii, Javier Farfan, Kristina Sadovskaia, Arman Aghahosseini, Michael Child, Ashish Gulagi, Ayobami Solomon Oyewo, Larissa de Souza Noel Simas Barbosa, and Christian Breyer. 2019. <span>“Radical Transformation Pathway Towards Sustainable Electricity via Evolutionary Steps.”</span> <em>Nature Communications</em> 10 (1): 1077.
 </div>
-<div id="ref-burke2016understanding" class="csl-entry" role="listitem">
+<div id="ref-burke2016understanding" class="csl-entry" role="doc-biblioentry">
 Burke, Paul J, and Zsuzsanna Csereklyei. 2016. <span>“Understanding the Energy-GDP Elasticity: A Sectoral Approach.”</span> <em>Energy Economics</em> 58: 199–210.
 </div>
-<div id="ref-caron2022per" class="csl-entry" role="listitem">
+<div id="ref-caron2022per" class="csl-entry" role="doc-biblioentry">
 Caron, Justin, and Thibault Fally. 2022. <span>“Per Capita Income, Consumption Patterns, and CO2 Emissions.”</span> <em>Journal of the Association of Environmental and Resource Economists</em> 9 (2): 235–71.
 </div>
-<div id="ref-cole2021cost" class="csl-entry" role="listitem">
+<div id="ref-cole2021cost" class="csl-entry" role="doc-biblioentry">
 Cole, Wesley, A Will Frazier, and Chad Augustine. 2021. <span>“Cost Projections for Utility-Scale Battery Storage: 2021 Update.”</span> National Renewable Energy Lab.(NREL), Golden, CO (United States).
 </div>
-<div id="ref-dimitropoulos2018rebound" class="csl-entry" role="listitem">
+<div id="ref-dimitropoulos2018rebound" class="csl-entry" role="doc-biblioentry">
 Dimitropoulos, Alexandros, Walid Oueslati, and Christina Sintek. 2018. <span>“The Rebound Effect in Road Transport: A Meta-Analysis of Empirical Studies.”</span> <em>Energy Economics</em> 75: 163–79.
 </div>
-<div id="ref-DriscollKraay1998" class="csl-entry" role="listitem">
+<div id="ref-DriscollKraay1998" class="csl-entry" role="doc-biblioentry">
 Driscoll, John C., and Aart C. Kraay. 1998. <span>“Consistent Covariance Matrix Estimation with Spatially Dependent Panel Data.”</span> <em>The Review of Economics and Statistics</em> 80 (4): 549–60. <a href="http://www.jstor.org/stable/2646837">http://www.jstor.org/stable/2646837</a>.
 </div>
-<div id="ref-gertler2016demand" class="csl-entry" role="listitem">
+<div id="ref-gertler2016demand" class="csl-entry" role="doc-biblioentry">
 Gertler, Paul J, Orie Shelef, Catherine D Wolfram, and Alan Fuchs. 2016. <span>“The Demand for Energy-Using Assets Among the World’s Rising Middle Classes.”</span> <em>American Economic Review</em> 106 (6): 1366–1401.
 </div>
-<div id="ref-Green_2021" class="csl-entry" role="listitem">
+<div id="ref-Green_2021" class="csl-entry" role="doc-biblioentry">
 Green, Jessica F. 2021. <span>“Does Carbon Pricing Reduce Emissions? A Review of Ex-Post Analyses.”</span> <em>Environmental Research Letters</em> 16 (4): 043004. <a href="https://doi.org/10.1088/1748-9326/abdae9">https://doi.org/10.1088/1748-9326/abdae9</a>.
 </div>
-<div id="ref-haas2000rebound" class="csl-entry" role="listitem">
+<div id="ref-haas2000rebound" class="csl-entry" role="doc-biblioentry">
 Haas, Reinhard, and Peter Biermayr. 2000. <span>“The Rebound Effect for Space Heating Empirical Evidence from Austria.”</span> <em>Energy Policy</em> 28 (6-7): 403–10.
 </div>
-<div id="ref-hirth2016role" class="csl-entry" role="listitem">
+<div id="ref-hirth2016role" class="csl-entry" role="doc-biblioentry">
 Hirth, Lion, and Jan Christoph Steckel. 2016. <span>“The Role of Capital Costs in Decarbonizing the Electricity Sector.”</span> <em>Environmental Research Letters</em> 11 (11): 114010.
 </div>
-<div id="ref-imf2019fiscal" class="csl-entry" role="listitem">
+<div id="ref-imf2019fiscal" class="csl-entry" role="doc-biblioentry">
 IMF. 2019. <span>“Fiscal Policies for Paris Climate Strategies–from Principle to Practice.”</span> <em>IMF Policy Paper No. 2019/010</em>.
 </div>
-<div id="ref-labandeira2017meta" class="csl-entry" role="listitem">
+<div id="ref-labandeira2017meta" class="csl-entry" role="doc-biblioentry">
 Labandeira, Xavier, José M Labeaga, and Xiral López-Otero. 2017. <span>“A Meta-Analysis on the Price Elasticity of Energy Demand.”</span> <em>Energy Policy</em> 102: 549–68.
 </div>
-<div id="ref-liddle2020revisiting" class="csl-entry" role="listitem">
+<div id="ref-liddle2020revisiting" class="csl-entry" role="doc-biblioentry">
 Liddle, Brantley, and Hillard Huntington. 2020. <span>“Revisiting the Income Elasticity of Energy Consumption: A Heterogeneous, Common Factor, Dynamic OECD &amp; Non-OECD Country Panel Analysis.”</span> <em>The Energy Journal</em> 41 (3).
 </div>
-<div id="ref-lorenczik2020projected" class="csl-entry" role="listitem">
+<div id="ref-lorenczik2020projected" class="csl-entry" role="doc-biblioentry">
 Lorenczik, Stefan, Sunah Kim, Brent Wanner, Jose Miguel Bermudez Menendez, Uwe Remme, Taku Hasegawa, Jan Horst Keppler, et al. 2020. <span>“Projected Costs of Generating Electricity-2020 Edition.”</span> Organisation for Economic Co-Operation; Development.
 </div>
-<div id="ref-malla2014household" class="csl-entry" role="listitem">
+<div id="ref-malla2014household" class="csl-entry" role="doc-biblioentry">
 Malla, Sunil, and Govinda R Timilsina. 2014. <span>“Household Cooking Fuel Choice and Adoption of Improved Cookstoves in Developing Countries: A Review.”</span> <em>World Bank Policy Research Working Paper</em>, no. 6903.
 </div>
-<div id="ref-Metcalf2019" class="csl-entry" role="listitem">
+<div id="ref-Metcalf2019" class="csl-entry" role="doc-biblioentry">
 Metcalf, Gilbert E. 2019. <span>“<span class="nocase">On the Economics of a Carbon Tax for the United States</span>.”</span> <a href="https://www.brookings.edu/wp-content/uploads/2019/03/On-the-Economics-of-a-Carbon-Tax-for-the-United-States.pdf">https://www.brookings.edu/wp-content/uploads/2019/03/On-the-Economics-of-a-Carbon-Tax-for-the-United-States.pdf</a>.
 </div>
-<div id="ref-MiguelGalindo2015" class="csl-entry" role="listitem">
+<div id="ref-MiguelGalindo2015" class="csl-entry" role="doc-biblioentry">
 Miguel Galindo, Luis, Joseluis Samaniego, José Eduardo Alatorre, Jimy Ferrer Carbonell, and Orlando Reyes. 2015. <span>“<span class="nocase">Meta-analysis of the income and price elasticities of gasoline demand: public policy implications for Latin America</span>.”</span> <em>CEPAL Review</em>, no. 117 (December): 7–24. <a href="https://repositorio.cepal.org/handle/11362/40057">https://repositorio.cepal.org/handle/11362/40057</a>.
 </div>
-<div id="ref-neri2016costs" class="csl-entry" role="listitem">
+<div id="ref-neri2016costs" class="csl-entry" role="doc-biblioentry">
 Neri, Emilio, Amanda French, Maria Elena Urso, Marc Deffrennes, Geoffrey Rothwell, Ivan Rehak, Inge Weber, Simon Carroll, and Vladislav Daniska. 2016. <span>“Costs of Decommissioning Nuclear Power Plants.”</span> Organisation for Economic Co-Operation; Development.
 </div>
-<div id="ref-Pesaran1995b" class="csl-entry" role="listitem">
+<div id="ref-Pesaran1995b" class="csl-entry" role="doc-biblioentry">
 Pesaran, M Hashem, and Ron Smith. 1995. <span>“<span class="nocase">Estimating long-run relationships from dynamic heterogeneous panels</span>.”</span> <em>Journal of Econometrics</em> 68 (1): 79–113.
 </div>
-<div id="ref-Pesaran2006" class="csl-entry" role="listitem">
+<div id="ref-Pesaran2006" class="csl-entry" role="doc-biblioentry">
 Pesaran, M. Hashem. 2006. <span>“Estimation and Inference in Large Heterogeneous Panels with a Multifactor Error Structure.”</span> <em>Econometrica</em> 74 (4): 967–1012. <a href="http://www.jstor.org/stable/3805914">http://www.jstor.org/stable/3805914</a>.
 </div>
-<div id="ref-Pesaran2015" class="csl-entry" role="listitem">
+<div id="ref-Pesaran2015" class="csl-entry" role="doc-biblioentry">
 ———. 2015. <span>“<span class="nocase">Testing Weak Cross-Sectional Dependence in Large Panels</span>.”</span> <em>Econometric Reviews</em> 34 (6-10): 1089–1117. <a href="https://doi.org/10.1080/07474938.2014.956">https://doi.org/10.1080/07474938.2014.956</a>.
 </div>
-<div id="ref-Rafatya2020" class="csl-entry" role="listitem">
+<div id="ref-Rafatya2020" class="csl-entry" role="doc-biblioentry">
 Rafatya, Ryan, Geoffroy Dolphin, and Felix Pretis. 2020. <span>“<span class="nocase">Carbon Pricing and the Elasticity of CO2 Emissions</span>.”</span> <em>Institute for New Economic Thinking Working Paper Series</em>, October, 1–84. <a href="https://doi.org/10.36687/inetwp140">https://doi.org/10.36687/inetwp140</a>.
 </div>
-<div id="ref-raimi2017decommissioning" class="csl-entry" role="listitem">
+<div id="ref-raimi2017decommissioning" class="csl-entry" role="doc-biblioentry">
 Raimi, Daniel. 2017. <span>“Decommissioning US Power Plants.”</span> <em>Decisions, Costs, and Key Issues. Resources for the Future (RFF) Report</em>.
 </div>
-<div id="ref-Ricke2018" class="csl-entry" role="listitem">
+<div id="ref-Ricke2018" class="csl-entry" role="doc-biblioentry">
 Ricke, Katharine, Laurent Drouet, Ken Caldeira, and Massimo Tavoni. 2018. <span>“<span class="nocase">Country-level social cost of carbon</span>.”</span> <em>Nature Climate Change</em> 8 (10). <a href="https://doi.org/10.1038/s41558-018-0282-y">https://doi.org/10.1038/s41558-018-0282-y</a>.
 </div>
-<div id="ref-rubin2015review" class="csl-entry" role="listitem">
+<div id="ref-rubin2015review" class="csl-entry" role="doc-biblioentry">
 Rubin, Edward S, Inês ML Azevedo, Paulina Jaramillo, and Sonia Yeh. 2015. <span>“A Review of Learning Rates for Electricity Supply Technologies.”</span> <em>Energy Policy</em> 86: 198–218.
 </div>
-<div id="ref-saqib2021updated" class="csl-entry" role="listitem">
+<div id="ref-saqib2021updated" class="csl-entry" role="doc-biblioentry">
 Saqib, Muhammad, and François Benhmad. 2021. <span>“Updated Meta-Analysis of Environmental Kuznets Curve: Where Do We Stand?”</span> <em>Environmental Impact Assessment Review</em> 86: 106503.
 </div>
-<div id="ref-saunders2021energy" class="csl-entry" role="listitem">
+<div id="ref-saunders2021energy" class="csl-entry" role="doc-biblioentry">
 Saunders, Harry D, Joyashree Roy, Inês ML Azevedo, Debalina Chakravarty, Shyamasree Dasgupta, Stephane de la Rue du Can, Angela Druckman, et al. 2021. <span>“Energy Efficiency: What Has Research Delivered in the Last 40 Years?”</span> <em>Annual Review of Environment and Resources</em> 46: 135–65.
 </div>
-<div id="ref-Shmelev2018" class="csl-entry" role="listitem">
+<div id="ref-Shmelev2018" class="csl-entry" role="doc-biblioentry">
 Shmelev, Stanislav E., and Stefan U. Speck. 2018. <span>“<span class="nocase">Green fiscal reform in Sweden: Econometric assessment of the carbon and energy taxation scheme</span>.”</span> Elsevier Ltd. <a href="https://doi.org/10.1016/j.rser.2018.03.032">https://doi.org/10.1016/j.rser.2018.03.032</a>.
 </div>
-<div id="ref-stefanides2021renewable" class="csl-entry" role="listitem">
+<div id="ref-stefanides2021renewable" class="csl-entry" role="doc-biblioentry">
 Stefanides, Manuela. 2021. <span>“Renewable Power Generation Costs in 2020: Cost Declines and Record Capacity Additions-TUESDAY, 22 JUNE 2021• 14: 00-14: 30 CEST.”</span>
 </div>
-<div id="ref-steffen2020estimating" class="csl-entry" role="listitem">
+<div id="ref-steffen2020estimating" class="csl-entry" role="doc-biblioentry">
 Steffen, Bjarne. 2020. <span>“Estimating the Cost of Capital for Renewable Energy Projects.”</span> <em>Energy Economics</em> 88: 104783.
 </div>
-<div id="ref-way2022empirically" class="csl-entry" role="listitem">
+<div id="ref-way2022empirically" class="csl-entry" role="doc-biblioentry">
 Way, Rupert, Matthew C Ives, Penny Mealy, and J Doyne Farmer. 2022. <span>“Empirically Grounded Technology Forecasts and the Energy Transition.”</span> <em>Joule</em> 6 (9): 2057–82.
 </div>
-<div id="ref-zucker2018cost" class="csl-entry" role="listitem">
+<div id="ref-zucker2018cost" class="csl-entry" role="doc-biblioentry">
 Zucker, A. 2018. <span>“Cost Development of Low Carbon Energy Technologies.”</span>
 </div>
 </div>
@@ -10042,7 +10094,7 @@ Zucker, A. 2018. <span>“Cost Development of Low Carbon Energy Technologies.”
 <li id="fn34"><p>For oil, it is worth noting that the component ‘other oil products’ is removed from the calculation as these types of fuels (e.g.&nbsp;light fuel oil) are not subsidized.<a href="#fnref34" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn35"><p>For oil, the component ‘other oil products’ is removed from the calculation as these types of fuels (e.g., light fuel oil) are not subsidized.<a href="#fnref35" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn36"><p>For oil, it is worth noting that the component ‘other oil products’ is removed from the calculation as these types of fuels (e.g.&nbsp;light fuel oil) are not subsidized.<a href="#fnref36" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn37"><p>Note that road damage costs are also calculated in the Transport module. Resulting reduced road damage are currently not accounted for in welfare benefits, although they are also estimated in the Transport module (see <a href="07_Road_Transport.html#sec-roaddam"><span>Section&nbsp;7.3.4</span></a>).<a href="#fnref37" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn37"><p>Note that road damage costs are also calculated in the Transport module. Resulting reduced road damage are currently not accounted for in welfare benefits, although they are also estimated in the Transport module (see <span class="quarto-unresolved-ref">?sec-roaddam</span>).<a href="#fnref37" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn38"><p>Note that additional comparisons are available on demand. Notably, additional comparisons were done disaggregating the results per country, per sector and per fuel when available.<a href="#fnref38" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn39"><p>Rafaty et al.&nbsp;(2020) is comparable to CPAT in the sense that semi-elasticities are assessed globally and across different sectors.<a href="#fnref39" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn40"><p>The RMSE and its normalized version measure how far the projections are from observed historical data. The RMSE is scale-dependant, while the normalized RMSE is not, allowing for comparison across series or countries. Here, the normalization was done using the averages of the observed series as reference.<a href="#fnref40" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
@@ -10077,23 +10129,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
-      }
-    }
-    return false;
-  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
+    target: function(trigger) {
+      return trigger.previousElementSibling;
     }
   });
   clipboard.on('success', function(e) {
@@ -10158,92 +10196,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -10298,13 +10250,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">
-      &nbsp;
-    </div>   
-    <div class="nav-footer-center">WB-IMF Climate Policy Assessment Tool, 2023</div>
-    <div class="nav-footer-right">
-      &nbsp;
-    </div>
+      <div class="nav-footer-center">WB-IMF Climate Policy Assessment Tool, 2023</div>
   </div>
 </footer>
 
