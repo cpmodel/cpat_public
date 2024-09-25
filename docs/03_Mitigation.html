@@ -1193,7 +1193,7 @@ div.csl-indent {
 <caption>Table&nbsp;3.1: Price Forecasting Summary</caption>
 <colgroup>
 <col style="width: 8%">
-<col style="width: 18%">
+<col style="width: 19%">
 <col style="width: 19%">
 <col style="width: 52%">
 </colgroup>
@@ -8286,370 +8286,306 @@ Manual = see ‘Manual inputs’ tab</p>
 </div>
 <table class="table">
 <colgroup>
-<col style="width: 18%">
-<col style="width: 13%">
-<col style="width: 67%">
+<col style="width: 17%">
+<col style="width: 10%">
+<col style="width: 71%">
 </colgroup>
 <thead>
 <tr class="header">
-<th><blockquote class="blockquote">
-<p><strong>Settings</strong></p>
-</blockquote></th>
-<th><blockquote class="blockquote">
-<p><strong>Defaults (*) and additional options</strong></p>
-</blockquote></th>
-<th><blockquote class="blockquote">
-<p><strong>Description</strong></p>
-</blockquote></th>
+<th>Settings</th>
+<th>Defaults (*) and additional options</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><blockquote class="blockquote">
-<p><strong>Elasticity Model Parameters</strong></p>
-</blockquote></td>
+<td><strong>Elasticity Model Parameters:</strong></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="even">
-<td><blockquote class="blockquote">
-<p>Elasticity model uses economy-wide or sectoral power demand?</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>Economy-wide*/Sectoral</p>
-</blockquote></td>
+<td>Elasticity model uses economy-wide or sectoral power demand?</td>
+<td>Economy-wide*/Sectoral</td>
 <td></td>
 </tr>
 <tr class="odd">
-<td><blockquote class="blockquote">
-<p>Use old or new generation costs in elasticity model?</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>New*/Old</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>Old: use Elasticity model original prices.<br>
-New: use Engineer Model (without coal adjusment)</p>
-</blockquote></td>
+<td>Use old or new generation costs in elasticity model?</td>
+<td>New*/Old</td>
+<td>Old: use Elasticity model original prices.New: use Engineer Model (without coal adjusment)</td>
 </tr>
 <tr class="even">
-<td><blockquote class="blockquote">
-<p><strong>Engineer Model Parameters</strong></p>
-</blockquote></td>
-<td></td>
+<td>Use Elasticity Model Power Demand In Engineer Model</td>
+<td>No*/Yes</td>
 <td></td>
 </tr>
 <tr class="odd">
-<td><blockquote class="blockquote">
-<p>k Parameter dispatch</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>2</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>Speed of transitioning between generation types with a different cost</p>
-</blockquote></td>
-</tr>
-<tr class="even">
-<td><blockquote class="blockquote">
-<p>k Parameter investment</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>2</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>Speed of transitioning between generation types with a different cost</p>
-</blockquote></td>
-</tr>
-<tr class="odd">
-<td><blockquote class="blockquote">
-<p>Hydro retirement rate set to zero</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>Yes*/No</p>
-</blockquote></td>
+<td><strong>Engineer Model Parameters:</strong></td>
+<td></td>
 <td></td>
 </tr>
 <tr class="even">
-<td><blockquote class="blockquote">
-<p>Baseline renewable energy subsidy, $/kwh nom</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>$0</p>
-</blockquote></td>
+<td><strong><em>Dispatch</em></strong></td>
+<td></td>
 <td></td>
 </tr>
 <tr class="odd">
-<td><blockquote class="blockquote">
-<p>Apply additional RE subsidy to hydroelectric power?</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>No*/Yes</p>
-</blockquote></td>
+<td>k Parameter dispatch</td>
+<td>2</td>
+<td>Speed of transitioning between generation types with a different cost</td>
+</tr>
+<tr class="even">
+<td>Use Spot Fuel Prices in Engineer Power Model</td>
+<td>No*/Yes</td>
+<td>It uses 5 year centred moving average, where we have data (3y for first year, 4y for second)</td>
+</tr>
+<tr class="odd">
+<td>Maximum Coal Capacity Factor</td>
+<td>90%</td>
 <td></td>
 </tr>
 <tr class="even">
-<td><blockquote class="blockquote">
-<p>Minimum (post subsidy) generation cost $/kwh real</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>$0.01</p>
-</blockquote></td>
+<td>Maximum Gas Capacity Factor</td>
+<td>90%</td>
 <td></td>
 </tr>
 <tr class="odd">
-<td><blockquote class="blockquote">
-<p>Maximum Coal Capacity Factor</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>90%</p>
-</blockquote></td>
+<td>Minimum thermal efficiency</td>
+<td>10%</td>
 <td></td>
 </tr>
 <tr class="even">
-<td><blockquote class="blockquote">
-<p>Maximum Gas Capacity Factor</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>90%</p>
-</blockquote></td>
+<td><strong><em>Override capacity factor outside of:</em></strong></td>
+<td></td>
 <td></td>
 </tr>
 <tr class="odd">
-<td><blockquote class="blockquote">
-<p>Use additional coal intangible cost</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>Yes*/No/Manual</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>Default Yes*: Account for intangible cost of coal.<br>
+<td>Min (Sol/Wnd)</td>
+<td>10%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Min(Others)</td>
+<td>1%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Max(all)</td>
+<td>100%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong><em>PPAs</em></strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Proportion of PPAs in coal and gas Generation</td>
+<td>0%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Phase out any coal and gas PPAs (baseline)?</td>
+<td>Yes*/No</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Phase out any coal and gas PPAs (policy scenario)?</td>
+<td>Yes*/No</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Phase out of PPAs begins</td>
+<td>2023</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Phase out coal and gas PPAs over n years?</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong><em>Calibration</em></strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Use additional coal intangible cost</td>
+<td>Yes*/No/Manual</td>
+<td>Default Yes*: Account for intangible cost of coal.<br>
 No: Do not account for implicit prices of coal.<br>
-Manual: User can manually add data.</p>
-</blockquote></td>
+Manual: User can manually add data.</td>
 </tr>
 <tr class="even">
-<td><blockquote class="blockquote">
-<p>Manual Value for coal intangible cost (base year)</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>0</p>
-</blockquote></td>
+<td>Manual Value for coal intangible cost (base year)</td>
+<td>0</td>
 <td></td>
 </tr>
 <tr class="odd">
-<td><blockquote class="blockquote">
-<p>Manual Value for coal intangible cost (2030)</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>0</p>
-</blockquote></td>
+<td>Manual Value for coal intangible cost (2030)</td>
+<td>0</td>
 <td></td>
 </tr>
 <tr class="even">
-<td><blockquote class="blockquote">
-<p>Maximum cost based early coal retirement proportion</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>80%</p>
-</blockquote></td>
+<td>Use Engineer Covid Adjustment (1=Yes 0=No)</td>
+<td>0</td>
 <td></td>
 </tr>
 <tr class="odd">
-<td><blockquote class="blockquote">
-<p><strong>More Engineer Model Parameters</strong></p>
-</blockquote></td>
+<td><strong><em>Subsidies</em></strong></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="even">
-<td><blockquote class="blockquote">
-<p>WACC: User-, Income- or Tech-dependent?</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>Income*/Tech/Use</p>
-</blockquote></td>
+<td>Treat over/underestimate of supply costs as subsidy/tax</td>
+<td>No*/Yes</td>
+<td>Residual difference between the calculated supply costs and the historical power prices being accounted as a subsidy. If the data does not reflect the supply cost, this difference is considered as an error term.</td>
+</tr>
+<tr class="odd">
+<td>Baseline renewable energy subsidy, $/kwh nom</td>
+<td>$0</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Apply additional RE subsidy to hydroelectric power?</td>
+<td>No*/Yes</td>
 <td></td>
 </tr>
 <tr class="odd">
-<td><blockquote class="blockquote">
-<p>If User-selected global WACC, what value?</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>7.5%</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>The WACC can also be technology-dependent, i.e.&nbsp;it can be specified for each technology. The WACC can be defined globally by the user.</p>
-</blockquote></td>
+<td>Minimum (post subsidy) generation cost $/kwh real</td>
+<td>$0.01</td>
+<td></td>
 </tr>
 <tr class="even">
-<td><blockquote class="blockquote">
-<p>Minimum WACC</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>1%</p>
-</blockquote></td>
+<td><strong><em>Storage</em></strong></td>
+<td></td>
 <td></td>
 </tr>
 <tr class="odd">
-<td><blockquote class="blockquote">
-<p>Percent allocation of ST storage costs to VRE</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>100%</p>
-</blockquote></td>
+<td>Percent allocation of ST storage costs to VRE</td>
+<td>100%</td>
 <td></td>
 </tr>
 <tr class="even">
-<td><blockquote class="blockquote">
-<p>Total hours short term strorage for 100% VRE</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>9 hours</p>
-</blockquote></td>
+<td>Total hours short term strorage for 100% VRE</td>
+<td>9 hours</td>
 <td></td>
 </tr>
 <tr class="odd">
-<td><blockquote class="blockquote">
-<p>kwh storage to kw interface ratio (hours)</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>2 hours</p>
-</blockquote></td>
+<td>kwh storage to kw interface ratio (hours)</td>
+<td>2 hours</td>
 <td></td>
 </tr>
 <tr class="even">
-<td><blockquote class="blockquote">
-<p>Percent allocation of LT storage costs to VRE</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>33%</p>
-</blockquote></td>
+<td>Percent allocation of LT storage costs to VRE</td>
+<td>33%</td>
 <td></td>
 </tr>
 <tr class="odd">
-<td><blockquote class="blockquote">
-<p>Starting point of long term storage requirement (%VRE)</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>75%</p>
-</blockquote></td>
+<td>Starting point of long term storage requirement (%VRE)</td>
+<td>75%</td>
 <td></td>
 </tr>
 <tr class="even">
-<td><blockquote class="blockquote">
-<p>GW electrolyzer per Gwy/y for 100% VRE (%)</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>1</p>
-</blockquote></td>
+<td>GW electrolyzer per Gwy/y for 100% VRE (%)</td>
+<td>1</td>
 <td></td>
 </tr>
 <tr class="odd">
-<td><blockquote class="blockquote">
-<p>kWh of LT storage per kW electrolysis</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>1000kWh</p>
-</blockquote></td>
+<td>kWh of LT storage per kW electrolysis</td>
+<td>1000 kWh</td>
 <td></td>
 </tr>
 <tr class="even">
-<td><blockquote class="blockquote">
-<p>Use Spot Fuel Prices in Engineer Power Model</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>No*/Yes</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>It uses 5 year centred moving average, where we have data (3y for first year, 4y for second)</p>
-</blockquote></td>
-</tr>
-<tr class="odd">
-<td><blockquote class="blockquote">
-<p>Use Engineer Covid Adjustment (1=Yes 0=No)</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>0</p>
-</blockquote></td>
+<td><strong><em>Retirement</em></strong></td>
 <td></td>
-</tr>
-<tr class="even">
-<td><blockquote class="blockquote">
-<p>Max coal/gas invsmnt as a percentage of total gen</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>5%</p>
-</blockquote></td>
 <td></td>
 </tr>
 <tr class="odd">
-<td><blockquote class="blockquote">
-<p>Max hyd/ore/nuc/bio invsmnt as a percentage of total gen</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>2%</p>
-</blockquote></td>
+<td>Cost based early coal retirement proportion</td>
+<td>80%</td>
 <td></td>
 </tr>
 <tr class="even">
-<td><blockquote class="blockquote">
-<p>Max fossil/nuclear growth rate</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>2%</p>
-</blockquote></td>
+<td>Allow cost-based coal phaseout in baseline?</td>
+<td>Yes*/No</td>
+<td>Determines whether cost-based phaseout is allowed in the baseline (proportion not covered by PPAs).</td>
+</tr>
+<tr class="odd">
+<td>Hydro retirement rate set to zero</td>
+<td>Yes*/No</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong><em>Investment</em></strong></td>
+<td></td>
 <td></td>
 </tr>
 <tr class="odd">
-<td><blockquote class="blockquote">
-<p><strong>Engineer: Investment, Overrides and Financing</strong></p>
-</blockquote></td>
+<td>k Parameter investment</td>
+<td>2</td>
+<td>Speed of transitioning between generation types with a different cost</td>
+</tr>
+<tr class="even">
+<td>WACC: User-, Income- or Tech-dependent?</td>
+<td>Income*/Tech/Use</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>If User-selected global WACC, what value?</td>
+<td>7.5%</td>
+<td>The WACC can also be technology-dependent, i.e.&nbsp;it can be specified for each technology. The WACC can be defined globally by the user.</td>
+</tr>
+<tr class="even">
+<td>Minimum WACC</td>
+<td>1%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Max coal/gas/hyd invsmnt as a percentage of total gen</td>
+<td>5%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Max ore/nuc/bio invsmnt as a percentage of total gen</td>
+<td>2%</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>If used, user-defined maximum Wind/Solar Scaleup</td>
+<td>2%</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>% of Transmission costs to include in total levelised costs</td>
+<td>100%</td>
+<td>Calculation of Levelised Costs can not being including Transmission Costs, depending on the quality of the data.</td>
+</tr>
+<tr class="odd">
+<td><strong>Engineer: Investment, Overrides and Financing:</strong></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="even">
-<td><blockquote class="blockquote">
-<p>Plan or enable new investment</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>If present*/Yes/No/Manual</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>If present* = If Nameplate Capacity &gt; 0, then an investment is accounted for in the model, otherwise no.<br>
+<td>Plan or enable new investment</td>
+<td>If present*/Yes/No/Manual</td>
+<td>If present* = If Nameplate Capacity &gt; 0, then an investment is accounted for in the model, otherwise no.<br>
 Yes = Planned investments are enabled.<br>
-No = Disable new investments.<br>
-Manual = Allows the user to enter data. These data will overwrite the data determined by the model and new capacity will be accounted for as: New Nameplate Investments (MW) = Capacity data entered by the user + planned retirement.</p>
-</blockquote></td>
+No = Disable new investments.Manual = Allows the user to enter data. These data will overwrite the data determined by the model and new capacity will be accounted for as: New Nameplate Investments (MW) = Capacity data entered by the user + planned retirement.</td>
 </tr>
 <tr class="odd">
-<td><blockquote class="blockquote">
-<p>Override Capacity Factor</p>
-</blockquote></td>
+<td>Override Capacity Factor</td>
 <td></td>
-<td><blockquote class="blockquote">
-<p>The minimum of capacity factor for solar and wind, as well as for other technologies, and the maximum capacity factor can be modified.</p>
-</blockquote></td>
+<td>The minimum of capacity factor for solar and wind, as well as for other technologies, and the maximum capacity factor can be modified.</td>
 </tr>
 <tr class="even">
-<td><blockquote class="blockquote">
-<p>WACC override (baseline and policy scenario)</p>
-</blockquote></td>
+<td>WACC override (baseline and policy scenario)</td>
 <td></td>
-<td><blockquote class="blockquote">
-<p>The WACC can be specified for the baseline and the policy scenario.</p>
-</blockquote></td>
+<td>The WACC can be specified for the baseline and the policy scenario.</td>
 </tr>
 <tr class="odd">
-<td><blockquote class="blockquote">
-<p>Solar/Wind Max Investment</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>Medium*/Low/High/Vhigh</p>
-</blockquote></td>
-<td><blockquote class="blockquote">
-<p>Percentage of total generation and of existing capacity of generation type</p>
-</blockquote></td>
+<td>Solar/Wind Max Investment</td>
+<td>Medium*/Low/High/Vhigh</td>
+<td>Percentage of total generation and of existing capacity of generation type</td>
 </tr>
 </tbody>
 </table>
