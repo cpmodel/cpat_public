@@ -1471,6 +1471,7 @@ div.csl-indent {
 <p><strong>Floating portion of tax (or subsidy):</strong> Computed by adjusting its historical average with the fluctuation of the gap between the current supply price and its own historical average. Whenever price controls are in place and being phased out, the phase-out factor is multiplied to the result previously obtained.</p>
 <p><strong>Fixed portion of tax:</strong> Assumed to remain at the same level as its average during historical years.</p>
 <p><strong>Fixed portion of subsidy:</strong> Outstanding fixed portion of subsidy obtained after considering its average level during historical years and the phase-out factor for the correspondent year.</p>
+<p><strong>Total carbon price (memo):</strong> Aside from modeling the different variables that contribute to the retail price by fuel and sector, CPAT also includes a memo account to keep track of the evolution of the total price of carbon. Presented at the fuel, sector, and national level, the total carbon price (TCP) is an index that considers the positive and negative signals of elements which are either directly or indirectly pricing carbon (carbon and excise taxes, subsidies, and VAT differentials).</p>
 </section>
 <section id="sec-PricesAggregation" class="level3" data-number="3.2.5">
 <h3 data-number="3.2.5" class="anchored" data-anchor-id="sec-PricesAggregation"><span class="header-section-number">3.2.5</span> Price aggregation</h3>
@@ -7253,6 +7254,30 @@ ncp_{cgf,t} = \; &amp;nct_{cgf,t} \; + \; netsp_{cgf,t} \\
 <p>where <span class="math inline">\(nct_{cgf,t}\)</span> and <span class="math inline">\(netsp_{cgf,t}\)</span> stand for the new carbon tax per energy unit and the new ETS price per energy unit, respectively. In both cases, the value per energy unit is obtained based on the national price per ton of <span class="math inline">\(CO2\)</span> (<span class="math inline">\(NCT_{c,t}\)</span> or <span class="math inline">\(NETSP_{c,t}\)</span>), and scaling it by the country-sector-fuel specific emission factors, <span class="math inline">\(ef_{cgf,t}\)</span>, and the sector-fuel coverage for the new policies within the country in question (<span class="math inline">\(\varphi_{{NCT},{cgf},t}\)</span> and <span class="math inline">\(\varphi_{{NETS},{cgf},t}\)</span>).</p>
 <p>Among the options available, the user can select the sectors or fuel that will be exempt of the policy implemented, as well as the linear phase out of those exemptions, if selected by the user. This is already considered in the sector-fuel coverage <span class="math inline">\(\varphi\)</span>.</p>
 <p><strong>New excise tax</strong> (<span class="math inline">\(nexc_{cgf,t}\)</span>) can be defined by the user, who is able to specify additional per energy unit excise tax in the “Manual inputs” tab.</p>
+<p>Moreover, as a memo account, the model keeps track of the direct and indirect elements pricing carbon emissions through positive or negative price signals. While this depends on indicators which are computed in different ways for the historical and forecasted years, the total carbon pricing values are computed in teh same way for all the years in the model.</p>
+<p><strong>Direct carbon pricing elements (memo account)</strong> consists of the price components in the model that are defined per unit of carbon emissions, namely carbon taxes and ETS permit prices, both the existing and the new ones implemented through the user-defined policies. As for the rest of the price components, these are expressed in constant USD per volume or energy unit.</p>
+<p><span class="math display">\[
+tcp^{DIR}_{cgf,t} = xcp_{cgf,t} + ncp_{cgf,t}
+\]</span> <strong>Indirect carbon pricing elements (memo account)</strong> consists of the price components in the model that affect the price of fossil fuels, but are not defined per unit of carbon emissions. This includes excise taxes, fossil fuel subsidies, and VAT differentials. Note that, given the uncertainty on how the producer-side subsidies affect retail fossil fuel prices at a given point in time, the user is given the option to include them or not as part of the TCP index, the default being not to. The <span class="math inline">\(\theta^{PS}_{TCP}\)</span> plays the role of a boolean variable to control the inclusion of producer subsidies in the calculation of the index. Finally, note as well that the VAT subsidy is computed whenever there is a VAT differential, and takes into account the potential VAT base, which considers only the positive components of the actual VAT base, thus excluding subsidies. Again, these are also expressed in constant USD per volume or energy unit.</p>
+<p><span class="math display">\[
+\begin{align}
+tcp^{IND}_{cgf,t} \; = \; &amp;fixtax_{cgf,t} \; + \; fixsub_{cgf,t} \; + \; flts_{cgf,t} \; + \; nexc_{cgf,t} \; + \; \theta^{PS}_{TCP} \; ps_{cgf,t} \; +  \\
+&amp;\left(vatrate_{cfg,t} \; - \; \overline{vatrate}_{c,t}\right) \times \Big( sp_{cfg,t} \; + \; fixtax_{cgf,t} \; + \;  flts^{+}_{cgf,t} \; + \\
+&amp;\hspace{5.5cm} xcp_{cgf,t} + ncp_{cgf,t}  \Big)_{g \; \in \; [\text{pow, ind}] \; , \; f \; \notin \; [\text{oil, bio}]}
+\end{align}
+\]</span> Where <span class="math inline">\(flts^{+}_{cgf,t}\)</span> stands for the positive components of the floating taxes or subsidies, hence only registered when dealing with floating taxes. Moreover, for the cases of gasoline and diesel, for which a single price is reported for all sectors, the second component of the calculation which relates to the foregone VAT, is weighted by the share of consumption in the base year that corresponded to the residential sector. This, given the assumption that VAT payments from the other sectors give room to tax credit.</p>
+<p><strong>Average total carbon price (TCP):</strong> The indirect and direct carbon pricing components are currently both expressed in constant USD per volume or energy unit. With these, we can already compute a measure by fuel-sector in these units.</p>
+<p><span class="math display">\[
+\begin{align}
+  tcp_{cgf,t} \; = \; &amp;tcp^{DIR}_{cgf,t} \; + \; tcp^{IND}_{cgf,t}  \\
+\end{align}
+\]</span> The sector-fuel total carbon price, <span class="math inline">\(TCP_{cgf,t}\)</span>, expressed in constant USD/tCO2 is obtained after multiplying the measure above with the relevant sector-fuel-specific conversion and emission factors. Once obtained at the fuel-sector level, this measure is aggregated to compute averages at the fuel and national levels, respectively, <span class="math inline">\(TCP_{cf, t}\)</span> and <span class="math inline">\(TCP_{c,t}\)</span>. In both cases, the weighted averages are computed by using CO<span class="math inline">\(_2\)</span> emissions as weights.</p>
+<p><span class="math display">\[
+  TCP_{cf, t} \; = \; \frac{\sum_g TCP_{cgf,t} \; F_{cgf,t} \; ef_{cgf, t}}{\sum_g F_{cgf,t} \; ef_{cgf, t}}
+\]</span></p>
+<p><span class="math display">\[
+TCP_{c, t} \; = \frac{\sum_f TCP_{cf, t} \left(\sum_g F_{cgf,t} \; ef_{cgf, t} \right)}{\sum_f \sum_g F_{cgf,t} \; ef_{cgf, t}}
+\]</span> where, <span class="math inline">\(F\)</span> stands for the fossil fuel consumption in energy units, and <span class="math inline">\(ef\)</span> for the emission factors per energy unit.</p>
 </section>
 </section>
 <section id="power-generation-costs" class="level4" data-number="3.9.3.4">
